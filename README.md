@@ -6,7 +6,7 @@ It's my website but for now only redirect you to other my site
 
 In the future maybe yes, but i will try move it here.
 
-[Click to redirect to the website](https://blackuspl.github.io/DarknessAir)
+[Click to redirect to the website](https://blackuspl.github.io)
 
 ## What is done?
 
