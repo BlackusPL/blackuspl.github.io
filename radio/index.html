@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <title>DarknessAir.INC</title>
     <meta charset="UTF-8">
@@ -9,8 +10,15 @@
         type="image/icon type">
     <link href="../index.css" rel="stylesheet">
 </head>
-<body style="background-image: url('https://cdn.discordapp.com/attachments/763842296697061377/958815300185374770/background.png');rgba: initial;background-blend-mode: overlay;">
-<div id="tab"></div>
+
+<body
+    style="background-image: url('https://cdn.discordapp.com/attachments/763842296697061377/958815300185374770/background.png');background-blend-mode: overlay;">
+    <div id="tab"></div>
+    <div style="padding-top: 10px;padding-left: 10px;background: #111;width: 220px;border: 1px solid white;height: 70px;text-align: center;">
+        Ustaw własne tło<br>
+        <input type="file" id="custombg" accept="image/*"><br>
+        <button id="reset" style="margin-top: 3px;margin-left: 20px;">Reset</button><font size="2"> Przywróć domyślne</font>
+    </div>
     <div class="content">
         <div id="app" style="height: 50vh">
         </div>
@@ -22,4 +30,5 @@
     </footer>
 </body>
 <script src="main.js"></script>
+
 </html>

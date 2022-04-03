@@ -31,12 +31,74 @@ const webamp = new Webamp({
             },
             url: "https://cdn2.coubovich.com/coub_storage/coub/simple/cw_looped_audio_med/58f13a65dd9/63748420a128bed838c91/1605681684_med_1593801249_med.mp3",
             duration: 172
-        }
+        },
+        {
+            metaData: {
+                artist: "Sergio Valentino",
+                title: "Drive Forever (xakavir Remix)"
+            },
+            url: "Sergio Valentino - Drive Forever (xakavir Remix).m4a",
+            duration: 225
+        },
+        {
+            metaData: {
+                artist: "Taca a Xere pra Mim",
+                title: "MC Kaique da VP"
+            },
+            url: "Taca a Xere pra Mim - MC Kaique da VP.mp3",
+            duration: 260
+        },
+        {
+            metaData: {
+                artist: "IceSenpai",
+                title: "stereo love (tiktok version)"
+            },
+            url: "stereo love (tiktok version).m4a",
+            duration: 228
+        },
+        {
+           metaData: {
+                artist: "Nightcore Lab NCL",
+                title: "Die Young"
+            },
+            url: "Nightcore - Die Young.m4a",
+            duration: 179
+        },
+        {
+            metaData: {
+                 artist: "NightcoreLounge",
+                 title: "How Do You Do (Remix)"
+             },
+             url: "How do you do.m4a",
+             duration: 185
+         }
     ],
     initialSkin: {
         url: "./anime_amp_2.wsz"
     },
 });
 webamp.renderWhenReady(document.getElementById('app'));
+
+// code by Byushee#5808
+const image_input = document.querySelector("#custombg");
+var uploaded_image;
+
+image_input.addEventListener('change', function () {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+        uploaded_image = reader.result;
+        document.body.style.backgroundImage = `url(${uploaded_image})`;
+        document.body.style.backgroundBlendMode = 'unset';
+    });
+    reader.readAsDataURL(this.files[0]);
+});
+
+const image_output = document.querySelector("#reset");
+
+image_output.addEventListener('click', function () {
+        document.body.style.backgroundImage = `url(https://cdn.discordapp.com/attachments/763842296697061377/958815300185374770/background.png)`;
+        document.body.style.backgroundBlendMode = 'overlay';
+    });
+//
 
 document.getElementById("tab").innerHTML = '<div class="navbar"><a href="../">Home</a><a href="../pages">Pages</a><a href=".">Music Player</a><div class="subnav">    <button class="subnavbtn">Social Links ↡ <i class="fa fa-caret-down"></i></button>    <div class="subnav-content">        <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>       <a href="https://discord.com/users/410243501494894603">Discord</a>        <a href="https://github.com/BlackusPL">Github</a>    </div></div><div class="subnav">    <button class="subnavbtn">Games ↡ <i class="fa fa-caret-down"></i></button>   <div class="subnav-content">   <a href="../SNS">Saiko No Sutoka Download</a>       <a href="../MR2000">Music Racer 2 Download</a>        <a href="../NSR">Nitro Stunt Race Download</a>        <a href="">More comming soon...</a>    </div></div><a href="../about">About Me</a></div>';

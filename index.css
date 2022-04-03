@@ -129,6 +129,9 @@ text-pages {
   position: absolute;
   color: red;
 }
+center {
+  text-align: center;
+}
 /* Not Used Now
  {
     font-size: 105%;
