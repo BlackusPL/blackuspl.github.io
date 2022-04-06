@@ -18,7 +18,7 @@ In the future maybe yes, but i will try move it here.
 - [x] Make Webamp to play cool songs
 - [ ] Add Playlists for Webamp
 - [ ] Add coockies
-- [x] ~~Move main website here ~~
+- [x] ~~Move main website here~~
 
 ## Copyright
 
