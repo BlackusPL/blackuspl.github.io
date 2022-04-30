@@ -10,14 +10,15 @@ In the future maybe yes, but i will try move it here.
 
 ## What is done?
 
-- [x] Create website which redirect you to the main page
+- [x] Create website which redirect you to ~~the main page~~ my Coub channel
 - [x] New style of website
 - [x] Menu with Social links and main menu
-- [x] Move first page
-- [x] Move all last pages 
+- [x] Move all pages 
 - [X] Make Pages W.I.P
-- [ ] Make better look on website
-- [ ] Move main website here 
+- [x] Make Webamp to play cool songs
+- [ ] Add Playlists for Webamp
+- [ ] Add coockies
+- [x] ~~Move main website here~~
 
 ## Copyright
 
