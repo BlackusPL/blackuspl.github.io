@@ -35,7 +35,7 @@ function jezyk() {
     'Last Updated' : 'Ostatnio Aktualizowane',
     // Here is for ChangeLog translation
     'Translation soon on Gry pages' : 'Tłumaczenie do stron z grami wkrótce',
-    'Updated icon and images on website' : 'Zaaktualizowano ikonę i obraz strony',
+    'Updated icon i images on website' : 'Zaaktualizowano ikonę i obraz strony',
     'Changed text on Main page' : 'Zmieniono główny tekst na stronie głównej',
     'Updated css code' : 'Zaaktualizowano kod CSS',
     'Added "Ostatnio Aktualizowane" text on' : 'Dodano "Ostatnio Aktualizowane" na',
@@ -45,7 +45,7 @@ function jezyk() {
     'Added Changelog list' : 'Dodano listę zmian',
     'Updated code to' : 'Zaaktualizowano kod do',
     'doesnt exist in HTML5 so i fixed it' : 'nie istnieje w HTML5 więc to naprawiłem',
-    'Added Buttons to change language on website' : 'Dodano opcje by zmienić język strony',
+    'Added option to change language on website' : 'Dodano opcje by zmienić język strony',
     'Required cookies enabled' : 'Wymaga włączonych ciasteczek',
     'Changed entired' : 'Zmieniono całą', 'Radio Page' : 'Stronę Odtwarzacza',
     'Now website has a preview of links on other websites' : 'Teraz strona ma podgląd linków na innych stronach',
