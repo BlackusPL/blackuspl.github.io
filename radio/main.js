@@ -74,7 +74,7 @@ const webamp = new Webamp({
          }
     ],
     initialSkin: {
-        url: "./anime_amp_2.wsz"
+        url: "./yuzuki_kokubunji.wsz"
     },
 });
 webamp.renderWhenReady(document.getElementById('app'));
@@ -96,9 +96,37 @@ image_input.addEventListener('change', function () {
 const image_output = document.querySelector("#reset");
 
 image_output.addEventListener('click', function () {
-        document.body.style.backgroundImage = `url(https://cdn.discordapp.com/attachments/763842296697061377/958815300185374770/background.png)`;
+        document.body.style.backgroundImage = `url(https://i.ytimg.com/vi/X10UD5nQDCs/maxresdefault.jpg)`;
         document.body.style.backgroundBlendMode = 'overlay';
     });
 //
-
-document.getElementById("tab").innerHTML = '<div class="navbar"><a href="../">Home</a><a href="../pages">Pages</a><a href=".">Music Player</a><div class="subnav">    <button class="subnavbtn">Social Links ↡ <i class="fa fa-caret-down"></i></button>    <div class="subnav-content">        <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>       <a href="https://discord.com/users/410243501494894603">Discord</a>        <a href="https://github.com/BlackusPL">Github</a>    </div></div><div class="subnav">    <button class="subnavbtn">Games ↡ <i class="fa fa-caret-down"></i></button>   <div class="subnav-content">   <a href="../SNS">Saiko No Sutoka Download</a>       <a href="../MR2000">Music Racer 2 Download</a>        <a href="../NSR">Nitro Stunt Race Download</a>        <a href="">More comming soon...</a>    </div></div><a href="../about">About Me</a></div>';
+document.getElementById("tab").innerHTML = '<div class="navbar">\
+<a href="../">Home</a>\
+<a href="../pages">Pages</a>\
+<a href=".">Music Player</a>\
+<div class="subnav">\
+  <button class="subnavbtn">Social Links ↡ <i class="fa fa-caret-down"></i></button>\
+  <div class="subnav-content">\
+    <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>\
+    <a href="https://discord.com/users/410243501494894603">Discord</a>\
+    <a href="https://github.com/BlackusPL">Github</a>\
+  </div>\
+</div>\
+<div class="subnav">\
+  <button class="subnavbtn">Games ↡ <i class="fa fa-caret-down"></i></button>\
+  <div class="subnav-content">\
+    <a href="../SNS">Saiko No Sutoka Download</a>\
+    <a href="../MR2000">Music Racer 2 Download</a>\
+    <a href="../NSR">Nitro Stunt Race Download</a>\
+    <a href="">More comming soon...</a>\
+  </div>\
+</div>\
+<a href="../about">About Me</a>\
+<div class="subnav">\
+  <button class="subnavbtn">Languages ↡ <i class="fa fa-caret-down"></i></button>\
+  <div class="subnav-content">\
+    <a onclick="jezyk()">Polish</a>\
+    <a onclick="jezykoff()">English</a>\
+  </div>\
+</div>\
+</div>';

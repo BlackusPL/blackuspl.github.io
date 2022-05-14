@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <!--The tab to move in the website-->
   <div class="navbar">
     <a href="./">Home</a>
     <a href="./pages">Pages</a>
@@ -38,7 +39,15 @@
       </div>
     </div>
     <a href="./about">About Me</a>
-  </div>
+    <div class="subnav">
+      <button class="subnavbtn">Languages ↡ <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a onclick="jezyk()">Polish</a>
+        <a onclick="jezykoff()">English</a>
+      </div>
+    </div>
+    </div>
+    <!--end-->
   <div class="content">
     <font size="4">
       <center>
@@ -53,8 +62,13 @@
     <h1 id="Changelog">ChangeLog</h1>
     </center>
     <div aria-placeholder="ChangeLog" style="margin-inline-start: -30%;">
+    <!--Changelog here-->
+    <Font color="red"><h3>15.05.2022 <b style="color: rgb(97, 74, 0)">Cookies Update v1</b></h3></Font>
+    - Added option to change language on website (Required cookies enabled)<br />
+    - Translation soon on Games pages<br />
+    - Changed entired <a href="radio">Radio Page</a><br />
     <Font color="red"><h3>30.04.2022</h3></Font>
-    - Now webiste have embed urls<br>
+    - Now website has a preview of links on other websites<br>
     <Font color="red"><h3><b style="color: blue">BIG UPDATE!!! </b> 06.04.2022</h3></Font>
     - Updated icon and images on website.<br>
     - Changed text on Main page.<br>
@@ -71,18 +85,19 @@
     <Font color="red"><h3>31.03.2022</h3></Font>
     - Added Music Player, Discord widget on Home page and first tests with javascripts.
     <Font color="red"><h3>17.02.2022</h3></Font>
-    - Updated Cursor and About me page.<br>
+    - Added Cursor and About me page.<br>
     - Fixed Website URL.
     <Font color="red"><h3>15.01.2022</h3></Font>
     - Updated icon of website.<br>
     - Added <a href="secret.html">New type of loading website.</a>
     <Font color="red"><h3>24.12.2021</h3></Font>
     - Website was created
+    <!--Changelog end-->
     </div>
     <br><br>
     <footer>
       Copyright © 2021-2022, BlackusPL | All rights reserved | DO NOT DISTRIBUTE
     </footer>
 </body>
-
+<script src="base.js"></script>
 </html>

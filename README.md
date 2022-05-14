@@ -17,7 +17,9 @@ In the future maybe yes, but i will try move it here.
 - [X] Make Pages W.I.P
 - [x] Make Webamp to play cool songs
 - [ ] Add Playlists for Webamp
-- [ ] Add coockies
+- [x] Add Cookies for languages
+- [ ] Cookies to save wallpaper for website
+- [ ] Translation for all pages
 - [x] ~~Move main website here~~
 
 ## Copyright
