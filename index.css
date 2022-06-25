@@ -31,97 +31,10 @@ footer {
     width: 100%;
     height: 1em;
 }
-
-a.download {
-    background: limegreen;
-    color: white;
-    padding: 1em;
-    box-shadow: 1px 1px 3px white;
-    text-decoration: none;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px green;
-    border-radius: 5px;
-    border: 2px solid rgb(0, 242, 0);
-}
-a.download:hover {
-    background: rgb(0, 242, 0);
-    border-color: lime;
-}
-a.download:active {
-    background: rgb(0, 182, 0);
-    border-color: limegreen;
-}
-/* The navigation menu */
-.navbar {
-  overflow: hidden;
-  background-color: #111;
-}
-
-/* Navigation links */
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* The subnavigation menu */
-.subnav {
-  float: left;
-  overflow: hidden;
-}
-
-/* Subnav button */
-.subnav .subnavbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-/* Add a red background color to navigation links on hover */
-.navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: red;
-}
-
-/* Style the subnav content - positioned absolute */
-.subnav-content {
-  display: none;
-  position: absolute;
-  background-color: #666;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Style the subnav links */
-.subnav-content a {
-  float: none;
-  color: black;
-  text-decoration: none;
-  text-align: left;
-  display: block;
-}
-
-/* Add a grey background color on hover */
-.subnav-content a:hover {
-  background-color: #ddd;
-}
-
-/* When you move the mouse over the subnav container, open the subnav content */
-.subnav:hover .subnav-content {
-  display: block;
-}
 .content {
-    margin: 2em auto;
-    position: relative;
-    width: 60%;
+  margin: 2em auto;
+  position: relative;
+  width: 60%;
 }
 text-pages {
   position: absolute;
@@ -130,7 +43,70 @@ text-pages {
 center {
   text-align: center;
 }
-/* Not Used Now
- {
-    font-size: 105%;
- } */
+.skiptranslate
+{
+  display:none;
+}
+body
+{
+  top:0!important;
+}
+ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  background-color:#111;
+  overflow:auto;
+  white-space:nowrap;
+}
+ul a {
+  display:inline-block;
+  color:white;
+  text-align:center;
+  padding:14px 16px;
+  text-decoration:none;
+  transition:0.3s;
+  cursor:pointer;
+  margin-left: -4px;
+}
+ul a:hover {background-color:#333;}
+
+.showtasks a:hover {background-color: #ddd;}
+
+.dropdown:hover .showtasks {display: block;}
+
+.dropdown:hover .dropbtn {background-color:#333;}
+
+.showtasks {
+    display: none; 
+    position: absolute; 
+    float: none;
+    background-color: #666;
+    transition:0.3s;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    min-width: 160px;
+    margin-left: -4px;
+  }
+  .showtasks a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropbtn {
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+    transition:0.3s;
+    background-color:#111;
+    cursor:pointer;
+    border: none;
+    font-size: medium;
+    margin-left: -4px;
+  }
+  .dropdown {
+    display: inline-block;
+  }

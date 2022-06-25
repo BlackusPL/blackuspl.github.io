@@ -1,12 +1,16 @@
-# DarknessAir
 
-It's my website but for now only redirect you to other my site
+# DarknessAir [![Logo](https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png)](https://blackuspl.github.io/DarknessAir)  Welcome Soldier
 
-## Did original website will be moved here?
+![Last Updated](https://img.shields.io/github/last-commit/BlackusPL/DarknessAir?logo=visualstudiocode)
+[![Youtube](https://img.shields.io/youtube/channel/views/UCIDoGSUVBBE9kfXawsvJyQA?label=Youtube%20Views&style=social)](https://www.youtube.com/c/BlackusPL)
+[![Discord](https://discord.com/api/guilds/762615939723690016/widget.png?style=shield)](https://discord.com/invite/4P8cAWqkqY)
+[![](https://img.shields.io/badge/Status-Online-green?logo=github)](https://BlackusPL.github.io/DarknessAir)
 
-In the future maybe yes, but i will try move it here.
+Welcome in my website where you can play music and download 3 exclusive games for free
 
-[Click to redirect to the website](https://blackuspl.github.io/DarknessAir)
+## Why you create it?
+
+I was inspired in programming and i wanna make useful website who is good.
 
 ## What is done?
 
@@ -19,9 +23,9 @@ In the future maybe yes, but i will try move it here.
 - [ ] Add Playlists for Webamp
 - [x] Add Cookies for languages
 - [ ] Cookies to save wallpaper for website
-- [ ] Translation for all pages
+- [x] Translation for all pages
 - [x] ~~Move main website here~~
 
 ## Copyright
 
-You cant copy this website and make your on it. If you want, contact with me.
+Dont try copy my website or you will be punished!!!

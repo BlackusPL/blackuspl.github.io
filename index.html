@@ -13,41 +13,36 @@
   <meta property="og:image" content="https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:url" content="https://blackuspl.github.io/DarknessAir">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <!--The tab to move in the website-->
-  <div class="navbar">
-    <a href="./">Home</a>
-    <a href="./pages">Pages</a>
-    <a href="./radio">Music Player</a>
-    <div class="subnav">
-      <button class="subnavbtn">Social Links ↡ <i class="fa fa-caret-down"></i></button>
-      <div class="subnav-content">
+    <!--The tab to move in the website-->
+  <ul>
+
+    <a href=".." style="margin-left: 0px;">Home</a>
+    <a href="games">Games</a>
+    <a href="radio">Music Player</a>
+    <div class="dropdown">
+      <button class="dropbtn">Social Links ↡ </button>
+      <div class="showtasks">
         <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>
         <a href="https://discord.com/users/410243501494894603">Discord</a>
         <a href="https://github.com/BlackusPL">Github</a>
-      </div>
-    </div>
-    <div class="subnav">
-      <button class="subnavbtn">Games ↡ <i class="fa fa-caret-down"></i></button>
-      <div class="subnav-content">
-        <a href="./SNS">Saiko No Sutoka Download</a>
-        <a href="./MR2000">Music Racer 2 Download</a>
-        <a href="./NSR">Nitro Stunt Race Download</a>
-        <a href="">More comming soon...</a>
-      </div>
-    </div>
-    <a href="./about">About Me</a>
-    <div class="subnav">
-      <button class="subnavbtn">Languages ↡ <i class="fa fa-caret-down"></i></button>
-      <div class="subnav-content">
-        <a onclick="jezyk()">Polish</a>
-        <a onclick="jezykoff()">English</a>
-      </div>
-    </div>
-    </div>
+    </div></div>
+    <a href="about">About Me</a>
+    <a href="news">News</a>
+    <div class="dropdown">
+    <button class="dropbtn">Languages ↡ </button>
+    <div class="showtasks">
+      <a onclick="jezyk()">Polish</a>
+      <a onclick="jezykoff()">English</a>
+    </div></div>
+    <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
+
+    </ul>
     <!--end-->
+    <!-- <div id="searchbar" class="gcse-search"></div> -->
   <div class="content">
     <font size="4">
       <center>
@@ -63,6 +58,14 @@
     </center>
     <div aria-placeholder="ChangeLog" style="margin-inline-start: -30%;">
     <!--Changelog here-->
+    <Font color="red"><h3>25.06.2022 </h3></Font>
+    - Added News page where you can find changelog about website and games<br>
+    - Button Pages was changed to Games<br>
+    - Added Search Button to able search more information about games.<br>
+    - Remake of navigation bar.<br>
+    <Font color="red"><h3>30.05.2022 </h3></Font>
+    - Added Translation to all Games Pages (Uses Google API but doesnt work)<br />
+    - Added song and radio station (RMF MAXXX)<br />
     <Font color="red"><h3>15.05.2022 <b style="color: rgb(97, 74, 0)">Cookies Update v1</b></h3></Font>
     - Added option to change language on website (Required cookies enabled)<br />
     - Translation soon on Games pages<br />
@@ -100,4 +103,5 @@
     </footer>
 </body>
 <script src="base.js"></script>
+<script async src="https://cse.google.com/cse.js?cx=f57e79ca12bca49ec"></script>
 </html>

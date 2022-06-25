@@ -62,7 +62,7 @@ const webamp = new Webamp({
                 title: "Die Young"
             },
             url: "Nightcore - Die Young.m4a",
-            duration: 179
+            duration: 178
         },
         {
             metaData: {
@@ -70,7 +70,22 @@ const webamp = new Webamp({
                  title: "How Do You Do (Remix)"
              },
              url: "How do you do.m4a",
-             duration: 185
+             duration: 184
+         },
+         {
+            metaData: {
+                 artist: "CryJaxx",
+                 title: "Lollipop (feat. Justtjokay)"
+             },
+             url: "CryJaxx - Lollipop (feat. Justtjokay).m4a",
+             duration: 179
+         },
+         {
+            metaData: {
+                 title: "RMF MAXXX Śląsk"
+             },
+             url: "http://217.74.72.6/rmf_maxxx_slk",
+             duration: -1
          }
     ],
     initialSkin: {
@@ -100,33 +115,28 @@ image_output.addEventListener('click', function () {
         document.body.style.backgroundBlendMode = 'overlay';
     });
 //
-document.getElementById("tab").innerHTML = '<div class="navbar">\
-<a href="../">Home</a>\
-<a href="../pages">Pages</a>\
-<a href=".">Music Player</a>\
-<div class="subnav">\
-  <button class="subnavbtn">Social Links ↡ <i class="fa fa-caret-down"></i></button>\
-  <div class="subnav-content">\
-    <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>\
-    <a href="https://discord.com/users/410243501494894603">Discord</a>\
-    <a href="https://github.com/BlackusPL">Github</a>\
-  </div>\
-</div>\
-<div class="subnav">\
-  <button class="subnavbtn">Games ↡ <i class="fa fa-caret-down"></i></button>\
-  <div class="subnav-content">\
-    <a href="../SNS">Saiko No Sutoka Download</a>\
-    <a href="../MR2000">Music Racer 2 Download</a>\
-    <a href="../NSR">Nitro Stunt Race Download</a>\
-    <a href="">More comming soon...</a>\
-  </div>\
-</div>\
-<a href="../about">About Me</a>\
-<div class="subnav">\
-  <button class="subnavbtn">Languages ↡ <i class="fa fa-caret-down"></i></button>\
-  <div class="subnav-content">\
+document.getElementById("tab").innerHTML = '<!--The tab to move in the website-->\
+<ul>\
+\
+  <a href=".." style="margin-left: 0px;">Home</a>\
+  <a href="../games">Games</a>\
+  <a href="">Music Player</a>\
+  <div class="dropdown">\
+    <button class="dropbtn">Social Links ↡ </button>\
+    <div class="showtasks">\
+      <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>\
+      <a href="https://discord.com/users/410243501494894603">Discord</a>\
+      <a href="https://github.com/BlackusPL">Github</a>\
+  </div></div>\
+  <a href="../about">About Me</a>\
+  <a href="../news">News</a>\
+  <div class="dropdown">\
+  <button class="dropbtn">Languages ↡ </button>\
+  <div class="showtasks">\
     <a onclick="jezyk()">Polish</a>\
     <a onclick="jezykoff()">English</a>\
-  </div>\
-</div>\
-</div>';
+  </div></div>\
+  <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>\
+\
+  </ul>\
+  <!--end-->';
