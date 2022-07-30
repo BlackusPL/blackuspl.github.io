@@ -45,6 +45,7 @@ if (document.cookie.indexOf("language") > -1) {
     'Added song and radio station': 'Dodano piosenkę i stacje radiową',
     'Button Pages was changed to Games' : 'Przycisk Strony został zmieniony na Gry',
     'Added News page where you can find changelog about website and games' : 'Dodano stronę Nowości gdzie możecie znaleźć dziennik zmian strony i gier',
+    'Updated Music Racer 2000 page' : 'Zaaktualizowano stronę Music Racer 2000',
     // The end of ChangeLog
     'Music Player': 'Odtwarzacz',
     'Social Links': 'Linki',
@@ -57,7 +58,7 @@ if (document.cookie.indexOf("language") > -1) {
     'English': 'Angielski',
     'Abandoned': 'Porzucone',
     'October': 'Października',
-    'April': 'Kwietnia',
+    'July': 'Lipca',
     'January': 'Stycznia',
     'ChangeLog': 'Dziennik zmian',
     'My Projects': 'Moje Projekty',
@@ -71,6 +72,7 @@ if (document.cookie.indexOf("language") > -1) {
     'If redirect not working go to ': 'Jeżeli klikłeś i nic przejdź na ',
     'Website was created': 'Strona została stworzona',
     'and': 'i',
+    'Latest Coub' : 'Najnowszy Coub',
     ///////////////////////////////////////////////////////
     '': ''
   };
