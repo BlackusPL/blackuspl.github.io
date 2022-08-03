@@ -110,3 +110,8 @@ ul a:hover {background-color:#333;}
   .dropdown {
     display: inline-block;
   }
+  .avatar {
+    border-radius: 100%;
+    width: 32px;
+    content: url("https://cdn.discordapp.com/attachments/763842296697061377/1004035346306183248/ezgif.com-gif-maker_50fps.gif");
+  }

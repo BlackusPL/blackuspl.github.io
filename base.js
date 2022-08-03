@@ -46,6 +46,8 @@ if (document.cookie.indexOf("language") > -1) {
     'Button Pages was changed to Games' : 'Przycisk Strony został zmieniony na Gry',
     'Added News page where you can find changelog about website and games' : 'Dodano stronę Nowości gdzie możecie znaleźć dziennik zmian strony i gier',
     'Updated Music Racer 2000 page' : 'Zaaktualizowano stronę Music Racer 2000',
+    'Added new project in about page' : 'Dodano nowy projekt na stronie o mnie',
+    'Added my avatar in' : 'Dodano mój awatar na',
     // The end of ChangeLog
     'Music Player': 'Odtwarzacz',
     'Social Links': 'Linki',
@@ -58,7 +60,7 @@ if (document.cookie.indexOf("language") > -1) {
     'English': 'Angielski',
     'Abandoned': 'Porzucone',
     'October': 'Października',
-    'July': 'Lipca',
+    'August': 'Sierpnia',
     'January': 'Stycznia',
     'ChangeLog': 'Dziennik zmian',
     'My Projects': 'Moje Projekty',
@@ -102,6 +104,14 @@ if (document.cookie.indexOf("language") > -1) {
     document.querySelector('[id="goog-gt-tt"]').remove()
   }
 };
+
+setTimeout(function(){
+  console.clear();
+  var version = "1.0"
+  console.log("%c Zaawansowana %cKonsola v" + version +" przez BlackusPL %c https://blackuspl.github.io/DarknessAir ", "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
+  console.log("%c Konsola została wyczyszczona " , "background: #000000;color: orange;font-size: 1.2em")
+},1200);
+
 
 /*
 function search() {
