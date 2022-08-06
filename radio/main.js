@@ -1,4 +1,3 @@
-const Webamp = window.Webamp;
 const webamp = new Webamp({
     initialTracks: [{
             metaData: {
@@ -13,15 +12,15 @@ const webamp = new Webamp({
                 artist: "Coub",
                 title: "Timberlake"
             },
-            url: "https://cdn2.coubovich.com/coub_storage/coub/simple/cw_looped_audio_med/b10eda0921b/e22cc222e869fe5902f54/1630299814_mp3-med.mp3",
+            url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/887b0aeddcc/ce72175c69ff0aac305da/1630299817_mp3-high.mp3",
             duration: 257
         },
         {
             metaData: {
-                artist: "Coub",
-                title: "Drive Forever (Chill version)"
+                artist: "Coub / ucaromantic",
+                title: "Polozhenie (slowed + reverb)"
             },
-            url: "https://cdn2.coubovich.com/coub_storage/coub/simple/cw_looped_audio_med/392bb1b2254/1e0b1e4564d318daa2198/1636476658_mp3-med.mp3",
+            url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/4d0bc7a581b/e88e7d8f2b558f8a4029e/1636476662_mp3-high.mp3",
             duration: 154
         },
         {
@@ -29,8 +28,16 @@ const webamp = new Webamp({
                 artist: "Coub",
                 title: "Chika Dance (Remix)"
             },
-            url: "https://cdn2.coubovich.com/coub_storage/coub/simple/cw_looped_audio_med/58f13a65dd9/63748420a128bed838c91/1605681684_med_1593801249_med.mp3",
+            url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_med/58f13a65dd9/63748420a128bed838c91/1605681684_med_1593801249_med.mp3",
             duration: 172
+        },
+        {
+            metaData: {
+                artist: "Coub / DJ Baddmixx",
+                title: "Ziyad's 9Min WarmUp 128Bpm"
+            },
+            url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/4e8ed359cb8/4e28eef57d8c523b22d87/1605668806_high_1548410069_high.mp3",
+            duration: 183
         },
         {
             metaData: {
@@ -42,10 +49,10 @@ const webamp = new Webamp({
         },
         {
             metaData: {
-                artist: "Taca a Xere pra Mim",
-                title: "MC Kaique da VP"
+                artist: "Amøn",
+                title: "Forward Anxious"
             },
-            url: "Taca a Xere pra Mim - MC Kaique da VP.mp3",
+            url: "Amøn - Forward Anxious.m4a",
             duration: 260
         },
         {
@@ -82,10 +89,18 @@ const webamp = new Webamp({
          },
          {
             metaData: {
+                artist: "Skan",
+                title: "Running To You (feat. Drama B)"
+            },
+            url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/5277645807e/aab9f1a2d5dd0182dd81b/1659708702_mp3-high.mp3",
+            duration: 119
+         },
+         {
+            metaData: {
                  title: "RMF MAXXX Śląsk"
              },
              url: "http://217.74.72.6/rmf_maxxx_slk",
-             duration: -1
+             duration: -2
          }
     ],
     initialSkin: {
@@ -93,7 +108,6 @@ const webamp = new Webamp({
     },
 });
 webamp.renderWhenReady(document.getElementById('app'));
-
 // code by Byushee#5808
 const image_input = document.querySelector("#custombg");
 var uploaded_image;
@@ -114,29 +128,6 @@ image_output.addEventListener('click', function () {
         document.body.style.backgroundImage = `url(https://i.ytimg.com/vi/X10UD5nQDCs/maxresdefault.jpg)`;
         document.body.style.backgroundBlendMode = 'overlay';
     });
+
 //
-document.getElementById("tab").innerHTML = '<!--The tab to move in the website-->\
-<ul>\
-\
-  <a href=".." style="margin-left: 0px;">Home</a>\
-  <a href="../games">Games</a>\
-  <a href="">Music Player</a>\
-  <div class="dropdown">\
-    <button class="dropbtn">Social Links ↡ </button>\
-    <div class="showtasks">\
-      <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>\
-      <a href="https://discord.com/users/410243501494894603">Discord</a>\
-      <a href="https://github.com/BlackusPL">Github</a>\
-  </div></div>\
-  <a href="../about">About Me</a>\
-  <a href="../news">News</a>\
-  <div class="dropdown">\
-  <button class="dropbtn">Languages ↡ </button>\
-  <div class="showtasks">\
-    <a onclick="jezyk()">Polish</a>\
-    <a onclick="jezykoff()">English</a>\
-  </div></div>\
-  <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>\
-\
-  </ul>\
-  <!--end-->';
+// document.getElementById("tab").innerHTML = '<!--The tab to move in the website-->\ ';

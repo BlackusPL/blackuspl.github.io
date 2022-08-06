@@ -48,6 +48,9 @@ if (document.cookie.indexOf("language") > -1) {
     'Updated Music Racer 2000 page' : 'Zaaktualizowano stronę Music Racer 2000',
     'Added new project in about page' : 'Dodano nowy projekt na stronie o mnie',
     'Added my avatar in' : 'Dodano mój awatar na',
+    'Updated Webamp to newest version' : 'Zaaktualizowano Webamp do najnowszej wersji',
+    'You can now exit from Music Player when you dont have javascripts' : 'Możesz teraz wyjść z odtwarzacza muzyki, gdy nie masz javascripts',
+    'Fixed songs and added new one' : 'Naprawiono piosenki i dodano nowe',
     // The end of ChangeLog
     'Music Player': 'Odtwarzacz',
     'Social Links': 'Linki',

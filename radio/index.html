@@ -17,18 +17,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body
-    style="background-image: url('https://i.ytimg.com/vi/X10UD5nQDCs/maxresdefault.jpg');background-blend-mode: overlay;">
-    <div id="tab">turn on javascripts to load this</div>
-    <div style="padding-top: 10px;padding-left: 10px;background: #111;width: 220px;border: 1px solid white;height: 70px;text-align: center;">
+<body style="background-image: url('https://i.ytimg.com/vi/X10UD5nQDCs/maxresdefault.jpg');background-blend-mode: overlay;">
+    <!--The tab to move in the website-->
+    <ul>
+        <a href=".." style="margin-left: 0px;">Home</a>
+        <a href="../games">Games</a>
+        <a href="">Music Player</a>
+        <div class="dropdown">
+            <button class="dropbtn">Social Links ↡ </button>
+            <div class="showtasks">
+                <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>
+                <a href="https://discord.com/users/410243501494894603">Discord</a>
+                <a href="https://github.com/BlackusPL">Github</a>
+            </div>
+        </div>
+        <a href="../about">About Me</a>
+        <a href="../news">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">Languages ↡ </button>
+            <div class="showtasks">
+                <a onclick="jezyk()">Polish</a>
+                <a onclick="jezykoff()">English</a>
+            </div>
+        </div>
+        <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
+    </ul>
+      <!--end-->
+    <!-- <div id="tab">turn on javascripts to load this</div> -->
+    <div style="padding-top: 10px;padding-left: 10px;background: #111;width: 220px;border: 1px solid white;height: 95px;text-align: center;">
         Ustaw własne tło<br>
         <input type="file" id="custombg" accept="image/*"><br>
-        <button id="reset" style="margin-top: 3px;margin-left: 20px;">Reset</button><font size="2"> Przywróć domyślne</font>
+        <button id="reset" style="margin-top: 3px;margin-left: 1.6em;">Reset</button><font size="2"> Przywróć domyślne</font>
+        <button id="save" style="margin-top: 3px;margin-left: 2.1em;">Save</button><font size="2"> Zapisz tło - Wkrótce</font>
     </div>
     <div class="content">
-        <div id="app" style="height: 50vh">
-        </div>
-        <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
+        <div id="app" style="height: 50vh"></div>
+        <script src="https://unpkg.com/webamp"></script>
     </div>
     </center>
     <footer>
