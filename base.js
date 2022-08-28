@@ -51,6 +51,9 @@ if (document.cookie.indexOf("language") > -1) {
     'Updated Webamp to newest version' : 'Zaaktualizowano Webamp do najnowszej wersji',
     'You can now exit from Music Player when you dont have javascripts' : 'Możesz teraz wyjść z odtwarzacza muzyki, gdy nie masz javascripts',
     'Fixed songs and added new one' : 'Naprawiono piosenki i dodano nowe',
+    'Fixed links to author profile' : 'Naprawiono linki do profilu autora',
+    'The download link for the game from Steam has been changed to Widget' : 'Link do pobrania gry z Steam został zmieniony na Widget',
+    'If you have suggestions on what to add, write to me' : 'Jak masz propozycje co mam dodać to pisz do mnie',
     // The end of ChangeLog
     'Music Player': 'Odtwarzacz',
     'Social Links': 'Linki',
@@ -67,6 +70,7 @@ if (document.cookie.indexOf("language") > -1) {
     'January': 'Stycznia',
     'ChangeLog': 'Dziennik zmian',
     'My Projects': 'Moje Projekty',
+    'Set custom background' : 'Ustaw własne tło',
     'Last Updated': 'Ostatnio Aktualizowane',
     'All rights reserved': 'Wszelkie prawa zastrzeżone',
     'DO NOT DISTRIBUTE': 'NIE ROZPOWSZECHNIAĆ',
