@@ -12,7 +12,7 @@ const webamp = new Webamp({
                 artist: "Tanir & Tyomcha",
                 title: "Da Da Da (Slowed Version)"
             },
-            url: "/uploads/Dadada (Slowed version).mp3",
+            url: "../uploads/Dadada (Slowed version).mp3",
             duration: 247
         },
         {
