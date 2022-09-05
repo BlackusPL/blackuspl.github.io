@@ -21,6 +21,7 @@ I was inspired in programming and i wanna make useful website who is good.
 - [X] Make Pages W.I.P
 - [x] Make Webamp to play cool songs
 - [ ] Add Playlists for Webamp
+- [x] Add Milkdrop to Webamp
 - [x] Add Cookies for languages
 - [ ] Cookies to save wallpaper for website
 - [x] Translation for all pages

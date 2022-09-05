@@ -51,11 +51,11 @@ body
 {
   top:0!important;
 }
-ul {
+ul[tag="tab"] {
   list-style-type:none;
   margin:0;
   padding:0;
-  background-color:#111;
+  background-color:rgba(17, 17, 17, 0.5);
   overflow:auto;
   white-space:nowrap;
 }
@@ -81,7 +81,7 @@ ul a:hover {background-color:#333;}
     display: none; 
     position: absolute; 
     float: none;
-    background-color: #666;
+    background-color: rgba(75, 75, 75, 0.9);
     transition:0.3s;
     z-index: 1;
     box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
@@ -101,7 +101,7 @@ ul a:hover {background-color:#333;}
     padding:14px 16px;
     text-decoration:none;
     transition:0.3s;
-    background-color:#111;
+    background-color:rgba(10, 10, 10, 0.5);
     cursor:pointer;
     border: none;
     font-size: medium;
@@ -113,5 +113,6 @@ ul a:hover {background-color:#333;}
   .avatar {
     border-radius: 100%;
     width: 32px;
-    content: url("https://cdn.discordapp.com/attachments/763842296697061377/1004035346306183248/ezgif.com-gif-maker_50fps.gif");
+    content: url("https://cdn.discordapp.com/attachments/1015289638740561941/1015368460815044669/ezgif.com-gif-maker_4.gif");
+    /* content: url("https://cdn.discordapp.com/attachments/763842296697061377/1004035346306183248/ezgif.com-gif-maker_50fps.gif"); */
   }

@@ -17,8 +17,8 @@ if (document.cookie.indexOf("language") > -1) {
 
   zmien = {
     // Here is for ChangeLog translation
-    'Remake of navigation bar.': 'Przebudowa paska nawigacyjnego',
-    'Added Search Button to able search more information about games.': 'Dodano przycisk wyszukiwania, aby móc wyszukiwać więcej informacji o grach.',
+    'Remake of navigation bar': 'Przebudowa paska nawigacyjnego',
+    'Added Search Button to able search more information about games': 'Dodano przycisk wyszukiwania, aby móc wyszukiwać więcej informacji o grach.',
     'Translation soon on Games pages': 'Tłumaczenie do stron z grami wkrótce',
     'Updated icon and images on website': 'Zaaktualizowano ikonę i obraz strony',
     'Changed text on Main page': 'Zmieniono główny tekst na stronie głównej',
@@ -54,6 +54,10 @@ if (document.cookie.indexOf("language") > -1) {
     'Fixed links to author profile' : 'Naprawiono linki do profilu autora',
     'The download link for the game from Steam has been changed to Widget' : 'Link do pobrania gry z Steam został zmieniony na Widget',
     'If you have suggestions on what to add, write to me' : 'Jak masz propozycje co mam dodać to pisz do mnie',
+    'Added some new songs' : 'Dodano kilka nowych piosenek',
+    'Added milkdrop to Webamp' : 'Dodano milkdrop do Webampa',
+    'Fixed the Home button being able to exit the website' : 'Naprawiono przycisk Home, którym można było wyjść ze strony',
+    'Fixed Context Menu in Webamp' : 'Naprawiono Menu kontekstowe w Webampie',
     // The end of ChangeLog
     'Music Player': 'Odtwarzacz',
     'Social Links': 'Linki',
