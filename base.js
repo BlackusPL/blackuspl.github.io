@@ -58,6 +58,11 @@ if (document.cookie.indexOf("language") > -1) {
     'Added milkdrop to Webamp' : 'Dodano milkdrop do Webampa',
     'Fixed the Home button being able to exit the website' : 'Naprawiono przycisk Home, którym można było wyjść ze strony',
     'Fixed Context Menu in Webamp' : 'Naprawiono Menu kontekstowe w Webampie',
+    'Changelog will be moved to News soon' : 'Changelog zostanie wkrótce przeniesiony do News',
+    'Changed entire News page' : 'Zmieniono całą stronę Nowości',
+    'Added animated background' : 'Dodano animowane tło',
+    'The newest Coub will now be played in full hd' : 'Najnowszy Coub będzie teraz odtwarzany w pełnej rozdzielczości HD',
+    'Discord widget now have normal position' : 'Widżet Discord ma teraz normalną pozycję',
     // The end of ChangeLog
     'Music Player': 'Odtwarzacz',
     'Social Links': 'Linki',
