@@ -63,6 +63,9 @@ if (document.cookie.indexOf("language") > -1) {
     'Added animated background' : 'Dodano animowane tło',
     'The newest Coub will now be played in full hd' : 'Najnowszy Coub będzie teraz odtwarzany w pełnej rozdzielczości HD',
     'Discord widget now have normal position' : 'Widżet Discord ma teraz normalną pozycję',
+    'Fixed some things in CSS' : 'Naprawiono kilka rzeczy w CSS',
+    'Again next testing google translator' : 'Znowu kolejne testy z google translatorem',
+    'Changed entire Games page': 'Zmieniono całą stronę Gry',
     // The end of ChangeLog
     'Music Player': 'Odtwarzacz',
     'Social Links': 'Linki',

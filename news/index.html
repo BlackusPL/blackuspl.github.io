@@ -21,7 +21,7 @@
 </video>
 
     <!--The tab to move in the website-->
-  <ul tag="tab">
+  <ul id="tab">
 
     <a href="../" style="margin-left: 0px;">Home</a>
     <a href="../games">Games</a>
@@ -51,6 +51,15 @@
     <br>
       <div style="margin: auto 10em; cursor: pointer;" onclick="location.href='../#ChangeLog';"></div>
       <!--Changelog here-->
+      <h3>Update 27.09.2022<br></h3>
+      <div style="text-align: start; margin-left: 25%;color: lightgray">
+        - Fixed some things in CSS<br>
+        - Again next testing google translator <br>
+        - Changed entire Games page
+      </div>
+      <br>
+      <hr style="width: 50%;">
+
       <h3>Update 15.09.2022<br></h3>
       <div style="text-align: start; margin-left: 25%;color: lightgray">
         - Changed entire News page<br>
@@ -183,15 +192,20 @@
         <h3>PlaceHolder<br></h3>
         <a style="display: block;">Last Updated: 25.06.2022</a>
         <a>PlaceHolder description</a>
-  </div>
+      </div>
       <!--Changelog end-->
-  <br>
-  <hr style="width: 50%;"><h1>VERY SOON</h1><br></center>
+  <br><br></center>
     </div>
+    <div id="google_translate_element" style="position: fixed; bottom: 3em;"></div>
     <footer>
         Copyright © 2021-2022, BlackusPL | All rights reserved | DO NOT DISTRIBUTE
       </footer>
 </body>
-<script async src="https://cse.google.com/cse.js?cx=f57e79ca12bca49ec"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+  </script>
 <script src="../base.js"></script>
 </html>

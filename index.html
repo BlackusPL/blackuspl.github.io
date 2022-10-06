@@ -18,7 +18,7 @@
 
 <body>
     <!--The tab to move in the website-->
-  <ul tag="tab">
+  <ul id="tab">
 
     <a style="margin-left: 0px;">Home</a>
     <a href="games">Games</a>
@@ -53,16 +53,22 @@
     </font>
   <h2> Latest Coub</h2>
   </center></div>
-    <iframe src="//coub.com/embed/385lld?muted=false&originalSize=false&hideTopBar=false&startWithHD=true" allow="fullscreen" frameborder="0" width="640" height="334" style="margin-left: 32% !important;"></iframe>
+    <iframe src="//coub.com/embed/385lld?muted=false&originalSize=false&hideTopBar=false&startWithHD=true" allow="fullscreen" frameborder="0" width="640" height="334" style="margin-left: 33%;"></iframe>
     <iframe src="//discord.com/widget?id=762615939723690016&theme=dark" width="300" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" style="margin-left: 10% !important; position: absolute !important;"></iframe>
     <br><br>
     <center>
     <h1>ChangeLog was moved to <a href="./news">News</a></h1>
     </center>
+    <div id="google_translate_element" style="position: fixed; bottom: 3em;"></div>
     <footer>
       Copyright © 2021-2022, BlackusPL | All rights reserved | DO NOT DISTRIBUTE
     </footer>
 </body>
 <script src="base.js"></script>
-<script async src="https://cse.google.com/cse.js?cx=f57e79ca12bca49ec"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+  </script>
 </html>

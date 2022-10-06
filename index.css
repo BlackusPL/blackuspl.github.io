@@ -36,28 +36,25 @@ footer {
   position: relative;
   width: 60%;
 }
-text-pages {
+#text-pages {
   position: absolute;
   color: red;
 }
 center {
   text-align: center;
 }
-.skiptranslate
+/* .skiptranslate
 {
   display:none;
-}
-body
-{
-  top:0!important;
-}
-ul[tag="tab"] {
+} */
+#tab {
   list-style-type:none;
   margin:0;
   padding:0;
   background-color:rgba(17, 17, 17, 0.5);
   overflow:auto;
   white-space:nowrap;
+  font-size: medium;
 }
 ul a {
   display:inline-block;
@@ -115,4 +112,8 @@ ul a:hover {background-color:#333;}
     width: 32px;
     content: url("https://cdn.discordapp.com/attachments/1015289638740561941/1015368460815044669/ezgif.com-gif-maker_4.gif");
     /* content: url("https://cdn.discordapp.com/attachments/763842296697061377/1004035346306183248/ezgif.com-gif-maker_50fps.gif"); */
+  }
+  a[title="Github - BlackusPL"] {
+    color: blue;
+    text-decoration: none;
   }
