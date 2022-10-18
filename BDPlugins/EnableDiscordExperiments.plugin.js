@@ -6,8 +6,8 @@
  * @invite 4P8cAWqkqY
  * @version 1.0.2
  * @website https://blackuspl.github.io/DarknessAir
- * @source https://github.com/BlackusPL/DarknessAir/BDplugins
- * @updateUrl https://blackuspl.github.io/DarknessAir/BDplugins/EnableDiscordExperiments.plugin.js
+ * @source https://github.com/BlackusPL/DarknessAir/tree/main/BDPlugins
+ * @updateUrl https://blackuspl.github.io/DarknessAir/BDPlugins/EnableDiscordExperiments.plugin.js
  */
 module.exports = class blackuspl {
     start() {

@@ -6,8 +6,8 @@
  * @invite 4P8cAWqkqY
  * @version 1.0.0
  * @website https://blackuspl.github.io/DarknessAir
- * @source https://github.com/BlackusPL/DarknessAir/BDPlugins
- * @updateUrl https://blackuspl.github.io/DarknessAir/BDplugins/AsignAllBadges.plugin.js
+ * @source https://github.com/BlackusPL/DarknessAir/tree/main/BDPlugins
+ * @updateUrl https://blackuspl.github.io/DarknessAir/BDPlugins/AsignAllBadges.plugin.js
  */
 module.exports = class blackuspl {
     start() {
