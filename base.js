@@ -126,10 +126,19 @@ if (document.cookie.indexOf("language") > -1) {
 
 setTimeout(function(){
   console.clear();
-  var version = "1.0"
-  console.log("%c Zaawansowana %cKonsola v" + version +" przez BlackusPL %c https://blackuspl.github.io/DarknessAir ", "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
-  console.log("%c Konsola została wyczyszczona " , "background: #000000;color: orange;font-size: 1.2em")
+  var version = "1.1"
+  console.log("%c Advanced %cConsole v" + version +" by BlackusPL %c https://blackuspl.github.io/DarknessAir ", "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
+  console.log("%c Console was cleared " , "background: #000000;color: orange;font-size: 1.2em")
+  console.log("%c Commands under DA_help() " , "background: #000000;color: white;font-size: 1em;word-break: all")
 },1200);
+function DA_help() {
+  console.log("%c Commands ", "background: #000;color: red;font-size: 1.5em")
+  console.log("%c DA_help - Commands list " , "background: #000;color: white;font-size: 1.2em")
+  console.log("%c DA_clear - Clear console " , "background: #000;color: white;font-size: 1.2em")
+}
+function DA_clear() {
+  console.clear()
+}
 
 
 /*
