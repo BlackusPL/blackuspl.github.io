@@ -66,6 +66,11 @@ if (document.cookie.indexOf("language") > -1) {
     'Fixed some things in CSS' : 'Naprawiono kilka rzeczy w CSS',
     'Again next testing google translator' : 'Znowu kolejne testy z google translatorem',
     'Changed entire Games page': 'Zmieniono całą stronę Gry',
+    'You can now Download my plugins on' : 'Możesz teraz pobrać moje pluginy na',
+    'Updated console text' : 'Zaktualizowany tekst konsoli',
+    'New look on My Project in about me page' : 'Nowy wygląd moich Projektów na stronie o mnie',
+    'Video background in now untouchable' : 'Tło jako film jest teraz nietykalne',
+    'If you dont have JavaScript on, you get notification about this' : 'Jeżeli nie posiadasz właczonych JavaScript, to dostaniesz komunikat o tym',
     // The end of ChangeLog
     'Music Player': 'Odtwarzacz',
     'Social Links': 'Linki',

@@ -17,11 +17,11 @@
 </head>
 
 <body>
-<video placeholder="https://coub.com/embed/212yty" src="https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_file/2047bd4a628/aec83e6f782be272bbbfa/muted_mp4_big_size_1568284625_muted_big.mp4" autoplay loop muted style="position: fixed;z-index: -1;left: 0;top: 0;width: 100%;height: 100%;filter: brightness(0.3); object-fit: cover;">
+<video id="videobg" placeholder="https://coub.com/embed/212yty" src="https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_file/2047bd4a628/aec83e6f782be272bbbfa/muted_mp4_big_size_1568284625_muted_big.mp4" autoplay loop muted>
 </video>
 
     <!--The tab to move in the website-->
-  <ul id="tab">
+  <ul id="tab" class="notranslate">
 
     <a href="../" style="margin-left: 0px;">Home</a>
     <a href="../games">Games</a>
@@ -51,6 +51,15 @@
     <br>
       <div style="margin: auto 10em; cursor: pointer;" onclick="location.href='../#ChangeLog';"></div>
       <!--Changelog here-->
+      <h3>Update 23.10.2022<br></h3>
+      <div style="text-align: start; margin-left: 25%;color: lightgray">
+        - New look on My Project in about me page<br>
+        - Video background in now untouchable<br>
+        - If you dont have JavaScript on, you get notification about this
+      </div>
+      <br>
+      <hr style="width: 50%;">
+
       <h3>Update 18.10.2022<br></h3>
       <div style="text-align: start; margin-left: 25%;color: lightgray">
         - You can now Download my plugins on <a href=https://github.com/BlackusPL/DarknessAir/tree/master/BDPlugins/>github</a><br>
@@ -205,7 +214,9 @@
       <!--Changelog end-->
   <br><br></center>
     </div>
-    <div id="google_translate_element" style="position: fixed; bottom: 3em;"></div>
+    <div id="google_translate_element" style="position: fixed; bottom: 3em;">
+    <noscript>You need to enable JavaScript to able to use Translator.</noscript>
+    </div>
     <footer>
         Copyright © 2021-2022, BlackusPL | All rights reserved | DO NOT DISTRIBUTE
       </footer>
