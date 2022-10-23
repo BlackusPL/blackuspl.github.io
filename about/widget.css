@@ -66,6 +66,13 @@
     background: linear-gradient(to right, #6fa720 5%, #588a1b 95%);
     cursor: pointer;
 }
+#widget .btn_addtocart .btn_addtocart_content:hover {
+    color: #fff;
+    background: #6aa621;
+    background: -webkit-linear-gradient( top, #8ed629 5%, #6aa621 95%);
+    background: linear-gradient( to bottom, #8ed629 5%, #6aa621 95%);
+    background: linear-gradient( to right, #8ed629 5%, #6aa621 95%);
+}
 
 a {
     text-decoration: none;
