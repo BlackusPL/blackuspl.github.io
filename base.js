@@ -12,7 +12,8 @@ function jezyk() {
 };
 
 //if (window.location.search.indexOf('l=pl') > -1) {
-if (document.cookie.indexOf("language") > -1) {
+//if (document.cookie.match(new RegExp('(^| )' + "language" + '=([^;]+)'))[2] == "pl") {
+if (document.cookie.indexOf("language") >= 64) {
   var zmien, regex, key, textnodes, node, s;
 
   zmien = {
@@ -135,6 +136,7 @@ setTimeout(function(){
   console.log("%c Advanced %cConsole v" + version +" by BlackusPL %c https://blackuspl.github.io/DarknessAir ", "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
   console.log("%c Console was cleared " , "background: #000000;color: orange;font-size: 1.2em")
   console.log("%c Commands under DA_help() " , "background: #000000;color: white;font-size: 1em;word-break: all")
+  /* document.querySelector('div span[style="white-space:nowrap"]').remove() */
 },1200);
 function DA_help() {
   console.log("%c Commands ", "background: #000;color: red;font-size: 1.5em")
@@ -143,8 +145,7 @@ function DA_help() {
 }
 function DA_clear() {
   console.clear()
-}
-
+};
 
 /*
 function search() {
