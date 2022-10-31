@@ -22,6 +22,14 @@
       color: #00E;
       text-decoration-line: none;
     }
+    iframe:first-child {
+    margin-right: auto;
+    margin-left: 3%;
+    }
+    iframe:last-child {
+    margin-left: auto;
+    margin-right: 3%;
+    }
   </style>
 </head>
 
@@ -64,8 +72,11 @@
     </font>
   <h2> Latest Coub</h2>
   </center></div>
-    <iframe src="//coub.com/embed/385lld?muted=false&originalSize=false&hideTopBar=false&startWithHD=true" allow="fullscreen" frameborder="0" width="640" height="334" style="margin-left: 33%;"></iframe>
-    <iframe src="//discord.com/widget?id=762615939723690016&theme=dark" width="300" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" style="margin-left: 10% !important; position: absolute !important;"></iframe>
+  <div style="display: flex;">
+    <iframe style="border: unset; pointer-events: none;"></iframe>
+    <iframe src="//coub.com/embed/385lld?muted=false&originalSize=false&hideTopBar=false&startWithHD=true" allow="fullscreen" frameborder="0" width="640" height="334"></iframe>
+    <iframe src="//discord.com/widget?id=762615939723690016&theme=dark" width="300" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </div>
     <br>
     <center>
     <div id="BDPlugins">
