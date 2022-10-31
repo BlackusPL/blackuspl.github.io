@@ -1,3 +1,6 @@
+:root {
+  --da-version: "30.10.2022";
+}
 html {
   cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAMgAAADIAGP6560AAAAHdElNRQfmAhETLiHHojX+AAAAAW9yTlQBz6J3mgAAAdhJREFUSMft1E9Ik3EYB/Bne51ts//NubaIJKqBYXMgsoM3QQ9RQQR1KFCx9Wdj1/Tm6BZ26BAIgRP/XDx4WG1zURASEYsdVqNEEOkSbSC5cGzv9P32vO6tUHB73/fs873u9+F5Xp49REZqzHZPXqDDZKYGMpDmEsi8OiB+n/DRMbLoIQSyZvxAJR/ppeN6CIGaFoPAB1R+zV3RQzDwJgQ48RKbG8mb2gdRABtaMIstMeXXSjDwlkdwwM7EOKTNzyFthAK4cHI7TwBpJayFkEcIAKeZqOYxJPx4rp6QgYdAKxN/8whbyEUcNnUEA0kGzjHxP0FUsDZ/0a6GkIEHgBtnd2QARay/vu6oTyhAG87vyi0UUHw/7KID/BtDTWDhPnCJe3AzM43YvywBKKdmnLV7YCBxD/Dy4zZMQRTTGTmfsh+/pTMri4Xo73CHqR7Af6ZOtGOEd+DpC7pGfUp6yEvNKkaQgS7cRhmJV+QhO+/AUSUHqbH2820gfhe4ihy+frH46AhPLPCZqcagZg+ssSFgGT/znstkI5P2e2CNDwKlUn+AnNyw5otkJPO7O5L0bJTO8FU0ar+J8lG9kR2jU7xzRj1H1UBC1HHiEDev63mVUPm992u/9qo/2kT3ZBy6Y5UAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjItMDItMTdUMTk6NDY6MzIrMDA6MDCSamQkAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIyLTAyLTE3VDE5OjQ2OjMyKzAwOjAw4zfcmAAAAABJRU5ErkJggg=='), auto;
 }
@@ -98,7 +101,7 @@ ul a:hover {background-color:#333;}
     padding:14px 16px;
     text-decoration:none;
     transition:0.3s;
-    background-color:rgba(10, 10, 10, 0.5);
+    background-color:transparent;
     cursor:pointer;
     border: none;
     font-size: medium;
@@ -128,3 +131,38 @@ ul a:hover {background-color:#333;}
     object-fit: cover;
     pointer-events: none;
   }
+  footer:after {
+    content: "Version: " var(--da-version);
+    position: absolute;
+    right: 5%;
+  }
+  @font-face {
+    font-family: "PerfectDOS";
+	  font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    src: url("https://saltssaumure.github.io/pios-discord-theme/font/PerfectDosVga.ttf");
+  }
+  *{
+    text-shadow: 0 0 20px;
+  }
+  /* 
+  @import url(https://saltssaumure.github.io/pios-discord-theme/piOStheme.css);
+  
+* {
+	text-shadow: 2px 0 10px var(--mainGlowColor), -2px 0 10px var(--mainGlowColor);
+  --mainGlowColor: hsla(180, calc(1*100%), 50%, calc(0.7 * 1));
+}
+*/
+/*
+.dropdown button{
+	font-family: PerfectDOS, monospace;
+}
+:root
+{
+    --glow-intensity: 1;            /* Intensity of text glow. Range: 0-1, default: 1 (100%) */
+/*    --crt-overlay: none;          /* CRT monitor overlay. Values: block (on) or none (off) */
+    /* The following effects are performance-heavy. */
+/*    --crt-scanline: none;          /* CRT animated scanline. Values: block (on) or none (off) */
+/*    --crt-flicker: none;            /* CRT monitor overlay flickering. Values: flicker (on) or none (off) */
+/*} */
