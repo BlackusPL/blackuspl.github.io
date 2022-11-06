@@ -11,6 +11,43 @@ function jezyk() {
   //window.location.search = 'l=pl'
 };
 
+// code by cyan-2048
+const getID = (e) => document.getElementById(e), qs = (e) => document.querySelector(e);
+/* 
+getID("search_bar").onclick = () => {
+  getID("searchbar").style.display = getID("searchbar").style.display == "block" ? "none" : "block";
+  getID("searchbar").click();
+};
+//
+var script = document.createElement("script");
+script.async;
+script.src = "https://cse.google.com/cse.js?cx=f57e79ca12bca49ec";
+document.head.append(script); */
+
+getID("tab").insertAdjacentHTML('afterend', `<ul id="tab" class="notranslate">
+<a href="/" style="margin-left: 0px;">Home</a>
+<a href="/games">Games</a>
+<a href="/music">Music Player</a>
+<div class="dropdown">
+  <button class="dropbtn">Social Links ↡ </button>
+  <div class="showtasks">
+    <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>
+    <a href="https://discord.com/users/410243501494894603">Discord</a>
+    <a href="https://github.com/BlackusPL">Github</a>
+</div></div>
+<a href="/about">About Me</a>
+<a href="/news">News</a>
+<div class="dropdown">
+<button class="dropbtn">Languages ↡ </button>
+<div class="showtasks">
+  <a onclick="jezyk()">Polish</a>
+  <a onclick="jezykoff()">English</a>
+</div></div>
+<a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
+<a class="secret" href="secret.html">Secret</a>
+</ul>`)
+getID("tab").remove();
+
 //if (window.location.search.indexOf('l=pl') > -1) {
 //if (document.cookie.match(new RegExp('(^| )' + "language" + '=([^;]+)'))[2] == "pl") {
 if (document.cookie.indexOf("language") >= 64) {
@@ -136,6 +173,7 @@ setTimeout(function(){
   console.log("%c Advanced %cConsole v" + version +" by BlackusPL %c https://blackuspl.github.io/DarknessAir ", "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
   console.log("%c Console was cleared " , "background: #000000;color: orange;font-size: 1.2em")
   console.log("%c Commands under DA_help() " , "background: #000000;color: white;font-size: 1em;word-break: all")
+  // window.history.replaceState('#gsc.tab=0', '', ' ')
   /* document.querySelector('div span[style="white-space:nowrap"]').remove() */
 },1200);
 function DA_help() {
@@ -146,13 +184,3 @@ function DA_help() {
 function DA_clear() {
   console.clear()
 };
-
-/*
-function search() {
-    var x = document.getElementById("searchbar");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }*/
