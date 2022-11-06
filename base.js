@@ -22,7 +22,7 @@ getID("search_bar").onclick = () => {
 var script = document.createElement("script");
 script.async;
 script.src = "https://cse.google.com/cse.js?cx=f57e79ca12bca49ec";
-document.head.append(script); */
+document.head.append(script); 
 
 getID("tab").insertAdjacentHTML('afterend', `<ul id="tab" class="notranslate">
 <a href="/" style="margin-left: 0px;">Home</a>
@@ -46,7 +46,7 @@ getID("tab").insertAdjacentHTML('afterend', `<ul id="tab" class="notranslate">
 <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
 <a class="secret" href="secret.html">Secret</a>
 </ul>`)
-getID("tab").remove();
+getID("tab").remove();*/
 
 //if (window.location.search.indexOf('l=pl') > -1) {
 //if (document.cookie.match(new RegExp('(^| )' + "language" + '=([^;]+)'))[2] == "pl") {
