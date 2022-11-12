@@ -4,7 +4,7 @@
  * @author BlackusPL
  * @authorId 410243501494894603
  * @invite 4P8cAWqkqY
- * @version 1.1.0
+ * @version 1.1.1
  * @website https://blackuspl.github.io/DarknessAir
  * @source https://github.com/BlackusPL/DarknessAir/tree/main/BDPlugins
  * @updateUrl https://blackuspl.github.io/DarknessAir/BDPlugins/AsignAllBadges.plugin.js
@@ -21,7 +21,8 @@
         "EARLY_SUPPORTER": 1 << 9,
         "BUG_HUNTER_LEVEL_2": 1 << 14,
         "VERIFIED_BOT_DEVELOPER": 1 << 17,
-        "CERTIFIED_MODERATOR": 1 << 18
+        "CERTIFIED_MODERATOR": 1 << 18,
+        "ACTIVE_DEVELOPER": 1 << 22
     };
 
     webpackChunkdiscord_app.push([[Math.random()], {}, req => {
@@ -45,7 +46,8 @@ let flags = {
         "EARLY_SUPPORTER": 0 << 9,
         "BUG_HUNTER_LEVEL_2": 0 << 14,
         "VERIFIED_BOT_DEVELOPER": 0 << 17,
-        "CERTIFIED_MODERATOR": 0 << 18
+        "CERTIFIED_MODERATOR": 0 << 18,
+        "ACTIVE_DEVELOPER": 0 << 22
     };
 
     webpackChunkdiscord_app.push([[Math.random()], {}, req => {
