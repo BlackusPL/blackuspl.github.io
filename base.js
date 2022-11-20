@@ -168,10 +168,9 @@ if (document.cookie.indexOf("language") > -1) {
 };
 
 setTimeout(function(){
-  console.clear();
   var version = "1.1"
   console.log("%c Advanced %cConsole v" + version +" by BlackusPL %c https://blackuspl.github.io/DarknessAir ", "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
-  console.log("%c Console was cleared " , "background: #000000;color: orange;font-size: 1.2em")
+  console.log("%c Console wasn't cleared " , "background: #000000;color: orange;font-size: 1.2em")
   console.log("%c Commands under DA_help() " , "background: #000000;color: white;font-size: 1em;word-break: all")
   // window.history.replaceState('#gsc.tab=0', '', ' ')
   /* document.querySelector('div span[style="white-space:nowrap"]').remove() */
