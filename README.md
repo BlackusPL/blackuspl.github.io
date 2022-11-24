@@ -20,12 +20,12 @@ I was inspired in programming and i wanna make useful website who is good.
 - [x] New style of website
 - [x] Menu with Social links and main menu
 - [x] Move all pages 
-- [X] Make Pages W.I.P
+- [x] Make Pages W.I.P
 - [x] Make Webamp to play cool songs
-- [ ] Add Playlists for Webamp
+- [`50%`] Add Playlists for Webamp
 - [x] Add Milkdrop to Webamp
 - [x] Add Cookies for languages
-- [ ] Cookies to save wallpaper for website
+- [`1%`] Cookies to save wallpaper for website
 - [x] Translation for all pages
 - [x] ~~Move main website here~~
 
