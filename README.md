@@ -22,7 +22,7 @@ I was inspired in programming and i wanna make useful website who is good.
 - [x] Move all pages 
 - [x] Make Pages W.I.P
 - [x] Make Webamp to play cool songs
-- [`50%`] Add Playlists for Webamp
+- [x] 90% - Add Playlists for Webamp
 - [x] Add Milkdrop to Webamp
 - [x] Add Cookies for languages
 - [`1%`] Cookies to save wallpaper for website

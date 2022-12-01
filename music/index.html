@@ -67,7 +67,7 @@
         <select name="playlists" style="width: 200px; text-align: center;" id="playlists" onchange="changeFunc();">
             <option>---Select Playlist---</option>
             <option value="all">All</option>
-            <option value="phonk">Phonk - W.I.P</option>
+            <option value="phonk">Phonk</option>
             <option value="nightcore">Nightcore</option>
             <option value="coub">Coub songs</option>
         </select>
@@ -82,7 +82,13 @@
     <footer>
         Copyright © 2021-2022, BlackusPL | All rights reserved | DO NOT DISTRIBUTE
     </footer>
+    <audio controls id="audiotest">
+        <source src="https://invidious.weblibre.org/latest_version?id=OVh0bMNSFss&itag=140" type="audio/mp3" />
+    </audio>
 </body>
 <script src="main.js"></script>
 <script src="../base.js"></script>
+<script type="text/javascript">
+    getID('audiotest').volume = 0.2;
+</script>
 </html>
