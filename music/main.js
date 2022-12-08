@@ -10,14 +10,21 @@ window.nightcore = [{
          "artist": "Nightcore Lab NCL",
          "title": "Die Young"
      },
-     "url": "./Nightcore - Die Young.m4a"
+     "url": "./local_music/Nightcore - Die Young.m4a"
  },
 {
      "metaData": {
           "artist": "NightcoreLounge",
           "title": "How Do You Do (Remix)"
       },
-      "url": "./How do you do.m4a"
+      "url": "./local_music/How do you do.m4a"
+},
+{
+    "metaData": {
+         "artist": "Nightcore",
+         "title": "Day after day"
+     },
+     "url": "./local_music/Nightcore_-_Day_after_day.m4a"
 }];
 
 window.coubsong = [{
@@ -89,7 +96,7 @@ window.othersong = [{
         artist: "Amøn",
         title: "Forward Anxious"
     },
-    url: "Amøn - Forward Anxious.m4a"/*,
+    url: "./local_music/Amøn - Forward Anxious.m4a"/*,
     duration: 260 */
 },{
     metaData: {
@@ -103,28 +110,28 @@ window.othersong = [{
          artist: "CryJaxx",
          title: "Lollipop (feat. Justtjokay)"
      },
-     url: "CryJaxx - Lollipop (feat. Justtjokay).m4a"
+     url: "./local_music/CryJaxx - Lollipop (feat. Justtjokay).m4a"
 },
 {
     metaData: {
         artist: "IceSenpai",
         title: "stereo love (tiktok version)"
     },
-    url: "stereo love (tiktok version).m4a"
+    url: "./local_music/stereo love (tiktok version).m4a"
 },
 {
     metaData: {
         artist: "Ryu",
         title: "Din Don Dan"
     },
-    url: "Din_Don_Dan.mp3"
+    url: "./local_music/Din_Don_Dan.mp3"
 },
 {
     metaData: {
         artist: "Sergio Valentino",
         title: "Drive Forever (xakavir Remix)"
     },
-    url: "Sergio Valentino - Drive Forever (xakavir Remix).m4a"
+    url: "./local_music/Sergio Valentino - Drive Forever (xakavir Remix).m4a"
 },
 {
     metaData: {
@@ -145,14 +152,28 @@ window.othersong = [{
         artist: "Skeler",
         title: "ID"
     },
-    url: "./Skeler_-_ID.mp3"
+    url: "./local_music/Skeler_-_ID.mp3"
 },
 {
     metaData: {
         artist: "Tanir & Tyomcha",
         title: "Da Da Da (Slowed Version)"
     },
-    url: "Dadada (Slowed version).mp3"
+    url: "./local_music/Dadada (Slowed version).mp3"
+},
+{
+    metaData: {
+        artist: "Kim & Antent",
+        title: "Never Be"
+    },
+    url: "./local_music/kim & Antent - Never Be.m4a",
+},
+{
+    metaData: {
+        artist: "DVRST",
+        title: "You remember it"
+    },
+    url: "./local_music/DVRST - You remember it.ogg",
 }];
 // End Playlists
 
@@ -160,11 +181,13 @@ const webamp = new Webamp({
     initialTracks: [
         othersong[0],
         coubsong[0],
+        othersong[11],
         coubsong[1],
         coubsong[2],
         othersong[1],
         othersong[2],
         othersong[3],
+        othersong[10],
         othersong[4],
         othersong[5],
         othersong[6],
@@ -178,7 +201,8 @@ const webamp = new Webamp({
         coubsong[7],
         coubsong[8],
         nightcore[0],
-        nightcore[1]
+        nightcore[1],
+        nightcore[2]
     ],
     /*initialSkin: {
         url: "./yuzuki_kokubunji.wsz"
@@ -228,7 +252,7 @@ function changeFunc() {
 if (selectedValue == 'nightcore')
 {
     webamp.setTracksToPlay([
-        nightcore[0],nightcore[1]
+        nightcore[0],nightcore[1],nightcore[2]
 ]);
 };
 if (selectedValue == 'all')
@@ -236,11 +260,13 @@ if (selectedValue == 'all')
     webamp.setTracksToPlay([
         othersong[0],
         coubsong[0],
+        othersong[11],
         coubsong[1],
         coubsong[2],
         othersong[1],
         othersong[2],
         othersong[3],
+        othersong[10],
         othersong[4],
         othersong[5],
         othersong[6],
@@ -254,7 +280,8 @@ if (selectedValue == 'all')
         coubsong[7],
         coubsong[8],
         nightcore[0],
-        nightcore[1]
+        nightcore[1],
+        nightcore[2]
     ])
 };
 if (selectedValue == 'coub')
@@ -273,7 +300,9 @@ if (selectedValue == 'phonk')
         coubsong[2],
         coubsong[3],
         coubsong[0],
+        othersong[11],
         othersong[1],
+        othersong[10],
         othersong[8],
         coubsong[8]
 ])
