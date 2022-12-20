@@ -89,6 +89,13 @@ window.coubsong = [{
         title: "Gimme Gimme Gimme"
     },
     url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/dd3704a9709/ab421f7a8f884a4d64ac8/1668471951_mp3-high.mp3"
+},
+{
+    metaData: {
+        artist: "Coub / Korenburg",
+        title: "I'm Good (BeyBo Remix)"
+    },
+    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/a25baa9fe35/f86091bea2dbb2bff8f80/1670458382_mp3-high.mp3"
 }
 ];
 window.othersong = [{
@@ -200,6 +207,7 @@ const webamp = new Webamp({
         coubsong[6],
         coubsong[7],
         coubsong[8],
+        coubsong[9],
         nightcore[0],
         nightcore[1],
         nightcore[2]
@@ -279,6 +287,7 @@ if (selectedValue == 'all')
         coubsong[6],
         coubsong[7],
         coubsong[8],
+        coubsong[9],
         nightcore[0],
         nightcore[1],
         nightcore[2]
@@ -289,7 +298,7 @@ if (selectedValue == 'coub')
     webamp.setTracksToPlay([
     coubsong[0],coubsong[1],coubsong[2],
     coubsong[3],coubsong[4],coubsong[5],
-    coubsong[6],coubsong[7],coubsong[8]
+    coubsong[6],coubsong[7],coubsong[8],coubsong[9]
 ])
 }
 if (selectedValue == 'phonk')
