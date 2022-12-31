@@ -46,14 +46,7 @@ window.coubsong = [{
             artist: "Coub",
             title: "Clean Flow"
     },
-    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/b42138495a3/39719a4de577c92b69012/1605700433_high_1576103466_high.mp3"
-},
-{
-    metaData: {
-        artist: "Coub",
-        title: "LXTRV-PHONK"
-    },
-    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/34f7b220323/d00ce902c0a53ad491819/1647016111_mp3-high.mp3"
+    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/b42138495a3/39719a4de577c92b69012/1605700433_high_1576103466_high.mp3"
 },
 {
     metaData: {
