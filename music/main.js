@@ -32,63 +32,56 @@ window.coubsong = [{
         artist: "CYPARISS",
         title: "TWXSIDES - Coub"
     },
-    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/ff24745721d/4951e9a72f86141dda57e/1668825480_mp3-high.mp3"
+    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/ff24745721d/4951e9a72f86141dda57e/1668825480_mp3-high.mp3"
 },
     {
         metaData: {
             artist: "Coub",
             title: "ᗪᕮᗩᗪ IᑎSIᗪᕮ"
         },
-        url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/45d42a28406/9eb953b2790c82a40ea68/1668781698_mp3-high.mp3"
+        url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/45d42a28406/9eb953b2790c82a40ea68/1668781698_mp3-high.mp3"
 },
 {
     metaData: {
             artist: "Coub",
             title: "Clean Flow"
     },
-    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/b42138495a3/39719a4de577c92b69012/1605700433_high_1576103466_high.mp3"
-},
-{
-    metaData: {
-        artist: "Coub",
-        title: "LXTRV-PHONK"
-    },
-    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/34f7b220323/d00ce902c0a53ad491819/1647016111_mp3-high.mp3"
+    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/b42138495a3/39719a4de577c92b69012/1605700433_high_1576103466_high.mp3"
 },
 {
     metaData: {
         artist: "Coub",
         title: "Timberlake"
     },
-    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/887b0aeddcc/ce72175c69ff0aac305da/1630299817_mp3-high.mp3"
+    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/887b0aeddcc/ce72175c69ff0aac305da/1630299817_mp3-high.mp3"
 },
 {
     metaData: {
         artist: "Coub / ucaromantic",
         title: "Polozhenie (slowed + reverb)"
     },
-    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/4d0bc7a581b/e88e7d8f2b558f8a4029e/1636476662_mp3-high.mp3"
+    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/4d0bc7a581b/e88e7d8f2b558f8a4029e/1636476662_mp3-high.mp3"
 },
 {
     metaData: {
         artist: "Coub",
         title: "Chika Dance (Remix)"
     },
-    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_med/58f13a65dd9/63748420a128bed838c91/1605681684_med_1593801249_med.mp3"
+    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_med/58f13a65dd9/63748420a128bed838c91/1605681684_med_1593801249_med.mp3"
 },
 {
     metaData: {
         artist: "Coub / DJ Baddmixx",
         title: "Ziyad's 9Min WarmUp 128Bpm"
     },
-    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/4e8ed359cb8/4e28eef57d8c523b22d87/1605668806_high_1548410069_high.mp3"
+    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/4e8ed359cb8/4e28eef57d8c523b22d87/1605668806_high_1548410069_high.mp3"
 },
 {
     metaData: {
         artist: "Coub / TRVNSPORTER",
         title: "Gimme Gimme Gimme"
     },
-    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/dd3704a9709/ab421f7a8f884a4d64ac8/1668471951_mp3-high.mp3"
+    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/dd3704a9709/ab421f7a8f884a4d64ac8/1668471951_mp3-high.mp3"
 },
 {
     metaData: {
@@ -96,6 +89,13 @@ window.coubsong = [{
         title: "I'm Good (BeyBo Remix)"
     },
     url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/a25baa9fe35/f86091bea2dbb2bff8f80/1670458382_mp3-high.mp3"
+},
+{
+    metaData: {
+        artist: "Coub | BLESSED MANE",
+        title: "Youth"
+    },
+    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/27982a5a95b/388d71bd77c31fc1e08ac/1609800684_mp3-high.mp3"
 }
 ];
 window.othersong = [{
@@ -152,7 +152,7 @@ window.othersong = [{
         artist: "Skan",
         title: "Running To You (feat. Drama B)"
     },
-    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/5277645807e/aab9f1a2d5dd0182dd81b/1659708702_mp3-high.mp3"
+    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/5277645807e/aab9f1a2d5dd0182dd81b/1659708702_mp3-high.mp3"
 },
 {
     metaData: {
@@ -181,12 +181,20 @@ window.othersong = [{
         title: "You remember it"
     },
     url: "./local_music/DVRST - You remember it.ogg",
+},
+{
+    metaData: {
+        artist: "MFS",
+        title: "BOW"
+    },
+    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/2fefab69050/38ab995fc3f63e1979f2f/1665704735_mp3-high.mp3"
 }];
 // End Playlists
 
 const webamp = new Webamp({
     initialTracks: [
         othersong[0],
+        coubsong[9],
         coubsong[0],
         othersong[11],
         coubsong[1],
@@ -207,7 +215,7 @@ const webamp = new Webamp({
         coubsong[6],
         coubsong[7],
         coubsong[8],
-        coubsong[9],
+        othersong[12],
         nightcore[0],
         nightcore[1],
         nightcore[2]
@@ -267,6 +275,7 @@ if (selectedValue == 'all')
 {
     webamp.setTracksToPlay([
         othersong[0],
+        coubsong[9],
         coubsong[0],
         othersong[11],
         coubsong[1],
@@ -287,7 +296,7 @@ if (selectedValue == 'all')
         coubsong[6],
         coubsong[7],
         coubsong[8],
-        coubsong[9],
+        othersong[12],
         nightcore[0],
         nightcore[1],
         nightcore[2]
@@ -296,27 +305,42 @@ if (selectedValue == 'all')
 if (selectedValue == 'coub')
 {
     webamp.setTracksToPlay([
-    coubsong[0],coubsong[1],coubsong[2],
-    coubsong[3],coubsong[4],coubsong[5],
-    coubsong[6],coubsong[7],coubsong[8],coubsong[9]
+    coubsong[9],coubsong[0],coubsong[1],
+    coubsong[2],coubsong[3],coubsong[4],
+    coubsong[5],coubsong[6],coubsong[7],
+    coubsong[8],othersong[12]
 ])
 }
 if (selectedValue == 'phonk')
 {
     webamp.setTracksToPlay([
         othersong[0],
+        coubsong[9],
         coubsong[1],
         coubsong[2],
-        coubsong[3],
         coubsong[0],
         othersong[11],
         othersong[1],
         othersong[10],
+        othersong[12],
         othersong[8],
-        coubsong[8]
+        coubsong[7]
 ])
 }
 };
+
+// START set Background with url // if CustomBG have value then set value to input
+if (localStorage.getItem('CustomBG') != null) document.getElementById('imagebgurl').value = `${localStorage.CustomBG}`;
+// when click Svae & Load then create object CustomBG with url to background and set new background from CustomBG
+document.getElementById('saveload').addEventListener('click', function () {
+//  var auffbg = (d) => document.getElementById('imagebgurl').value.endsWith(d);
+//  if (auffbg("png") || auffbg("jpg") || auffbg("gif")) {}
+    var BG = document.getElementById('imagebgurl').value;
+    localStorage.setItem('CustomBG',BG);
+    if (localStorage.getItem('CustomBG').includes(' ') || localStorage.getItem('CustomBG') == '') {localStorage.removeItem('CustomBG'); document.body.style.backgroundImage = `url(https://i.ytimg.com/vi/X10UD5nQDCs/maxresdefault.jpg)`;} 
+    else {document.body.style.backgroundImage = `url(${localStorage.CustomBG})`;};
+});
+// END //
 
 // code by Byushee#5808
 const image_input = document.querySelector("#custombg");

@@ -23,20 +23,36 @@
       color: #00E;
       text-decoration-line: none;
     }
-    iframe:first-child {
+    /*iframe:first-child {
     margin-right: auto;
     margin-left: 3%;
     }
     iframe:last-child {
     margin-left: auto;
     margin-right: 3%;
+    } */
+    #main-table {
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      gap: 200px;
+    }
+    .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    } 
+    body {
+    top: 0px !important; 
+    }
+
+    @media print {
+      #google_translate_element {display: none;}
     }
   </style>
 </head>
 
 <body>
     <!--The tab to move in the website-->
-  <ul id="tab" class="notranslate">
+  <ul id="tab" translate="no">
     <a style="margin-left: 0px;">Home</a>
     <a href="games">Games</a>
     <a href="music">Music Player</a>
@@ -70,11 +86,11 @@
         <p><a href="//coub.com/BlackusPL">Click here</a> to be redirected to my Coub</p>
         <p>If redirect not working go to https://coub.com/BlackusPL</p>
         </main>
-    </font>
+      </font>
   <h2> Latest Coub</h2>
   </center></div>
-  <div style="display: flex;">
-    <iframe width='300' src='//invidious.weblibre.org/embed?listType=playlist&list=UUIDoGSUVBBE9kfXawsvJyQA&volume=40&region=pl&player_style=youtube' style='border:none;'></iframe>
+  <div id="main-table">
+    <iframe width='300' height='334' src='//invidious.weblibre.org/embed?listType=playlist&list=UUIDoGSUVBBE9kfXawsvJyQA&volume=40&region=pl&player_style=youtube' style='border:none;'></iframe>
     <iframe src="//coub.com/embed/39kilo?muted=false&originalSize=false&hideTopBar=false&startWithHD=true" allow="fullscreen" frameborder="0" width="640" height="334"></iframe>
     <iframe src="//discord.com/widget?id=762615939723690016&theme=dark" width="300" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
   </div>
@@ -93,14 +109,14 @@
     <noscript>You need to enable JavaScript to able to use Translator.</noscript>
     </div>
     <footer>
-      Copyright © 2021-2022, BlackusPL | All rights reserved | DO NOT DISTRIBUTE
+      Copyright © 2021-2023, BlackusPL | All rights reserved | DO NOT DISTRIBUTE
     </footer>
 </body>
 <script src="base.js"></script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script type="text/javascript">
   function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
   }
   </script>
 </html>

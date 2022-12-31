@@ -1,12 +1,14 @@
 function jezykoff() {
-  document.cookie = "language=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC";
+  //document.cookie = "language=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC";
+  localStorage.removeItem('language');
   window.location.reload()
   //window.location.search = '';
 };
 
 
 function jezyk() {
-  document.cookie = "language=pl;path=/";
+  //document.cookie = "language=pl;path=/";
+  localStorage.setItem('language', 'pl');
   window.location.reload()
   //window.location.search = 'l=pl'
 };
@@ -50,7 +52,8 @@ getID("tab").remove();*/
 
 //if (window.location.search.indexOf('l=pl') > -1) {
 //if (document.cookie.match(new RegExp('(^| )' + "language" + '=([^;]+)'))[2] == "pl") {
-if (document.cookie.indexOf("language") >= 64) {
+//if (document.cookie.indexOf("language") >= 64) {
+if (localStorage.getItem('language') == 'pl') {
   var zmien, regex, key, textnodes, node, s;
 
   zmien = {
@@ -111,6 +114,10 @@ if (document.cookie.indexOf("language") >= 64) {
     'If you dont have JavaScript on, you get notification about this' : 'Jeżeli nie posiadasz właczonych JavaScript, to dostaniesz komunikat o tym',
     // The end of ChangeLog
     'Music Player': 'Odtwarzacz',
+    'Choose playlist' : 'Wybierz playliste',
+    'Select Playlist' : 'Wybierz Playliste',
+    'All' : 'Wszystkie',
+    'songs' : 'piosenki',
     'Social Links': 'Linki',
     'Games': 'Gry',
     'About Me': 'O mnie',
@@ -157,11 +164,10 @@ if (document.cookie.indexOf("language") >= 64) {
     node.data = s;
   }
 };
-if (document.cookie.indexOf("language") > -1) {
+if (localStorage.getItem('language') == 'pl') {
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'pl'
+      pageLanguage: 'en'
     });
     document.querySelector('[id="goog-gt-tt"]').remove()
   }
