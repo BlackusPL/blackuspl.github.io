@@ -26,9 +26,12 @@ I was inspired in programming and i wanna make useful website who is good.
 - [x] Add Milkdrop to Webamp
 - [x] Add LocalStorage for languages
 - [x] LocalStorage to save wallpaper for website
+- [ ] Add Base64 size limit to uploaded image on Music Player (for antilags)
 - [x] Translation for all pages
 - [x] ~~Move main website here~~
 
 ## Copyright
 
-Dont try copy my website or you will be punished!!!
+> **Warning**
+> 
+> Dont try copy my website or you will be punished!!!

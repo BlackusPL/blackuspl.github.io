@@ -121,12 +121,12 @@ ul a:hover {background-color:#333;}
     top: 0;
     width: 100%;
     height: 100%;
-    filter: brightness(0.3);
+    filter: brightness(0.5);
     object-fit: cover;
     pointer-events: none;
   }
   footer:after {
-    --da-version: "20.12.2022";
+    --da-version: "05.01.2023";
     content: "Version: " var(--da-version);
     position: absolute;
     right: 5%;
