@@ -244,7 +244,8 @@ const webamp = new Webamp({
             metaData: {
                  title: "RMF MAXXX Śląsk"
              },
-             url: "http://217.74.72.6/rmf_maxxx_slk"
+             url: "https://rs7-krk2.rmfstream.pl/rmf_maxxx"
+             // url: "http://217.74.72.6/rmf_maxxx_slk"
          }])
     }
     ],
@@ -352,5 +353,6 @@ image_output.addEventListener('click', function () {
         getID('videobg').src = '';
         // END my code
     });
+console.log("%c[Main] %c(v05012023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
 //
 // document.getElementById("tab").innerHTML = '<!--The tab to move in the website-->\ ';

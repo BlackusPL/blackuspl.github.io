@@ -174,7 +174,8 @@ if (localStorage.getItem('language') == 'pl') {
 };
 
 setTimeout(function(){
-  var version = "1.1"
+  var version = "1.2"
+  console.log("%c[Console] %cv"+ version +" %cSuccesfully Loaded","color: rgb(58, 113, 193)","color: gray; font-size: 75%","color: white")
   console.log("%c Advanced %cConsole v" + version +" by BlackusPL %c https://blackuspl.github.io/DarknessAir ", "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
   console.log("%c Console wasn't cleared " , "background: #000000;color: orange;font-size: 1.2em")
   console.log("%c Commands under DA_help() " , "background: #000000;color: white;font-size: 1em;word-break: all")
@@ -206,3 +207,5 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }
+
+console.log("%c[Base] %c(v11012023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
