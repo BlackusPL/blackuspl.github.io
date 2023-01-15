@@ -127,7 +127,7 @@ ul a:hover {background-color:#333;}
     pointer-events: none;
   }
   footer:after {
-    --da-version: "11.01.2023";
+    --da-version: "15.01.2023";
     content: "Version: " var(--da-version);
     position: absolute;
     right: 5%;

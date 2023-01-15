@@ -1,7 +1,7 @@
 {
     "name": "DarknessAir Web App",
     "short_name": "DarknessAir",
-    "description": "Website where you can download 3 exscluzive apps and more",
+    "description": "Website where you can play music and download 3 exclusive games for free",
     "icons": [
         {
             "src": "https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png",
@@ -19,7 +19,7 @@
     "display": "standalone",
     "orientation": "portrait",
     "background_color": "#F3F3F3",
-    "theme_color": "#1b6de1",
+    "theme_color": "#111",
     "related_applications": [],
     "prefer_related_applications": false
 }
