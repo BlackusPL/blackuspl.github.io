@@ -163,6 +163,14 @@ let othersong = [
 },
 {
     metaData: {
+        artist: "SAGE",
+        title: "Liberation"
+    },
+    url: "./local_music/SAGE_-_LIBERATION.mp3",
+    credits: "https://www.youtube.com/watch?v=Uc5uxHKClQk"
+},
+{
+    metaData: {
         artist: "Sergio Valentino",
         title: "Drive Forever (xakavir Remix)"
     },
@@ -174,6 +182,13 @@ let othersong = [
         title: "See You Again"
     },
     url: "https://blackuspl.discowd.com/r/Skan_-_See_You_Again.mp3"
+},
+{
+    metaData: {
+        artist: "Skan & Marina Sen",
+        title: "Suerte"
+    },
+    url: "./local_music/Skan, Marina Sen - Suerte.mp3"
 },
 {
     metaData: {
@@ -195,6 +210,12 @@ let othersong = [
         title: "Da Da Da (Slowed Version)"
     },
     url: "./local_music/Dadada (Slowed version).mp3"
+},{
+    metaData: {
+        artist: "Tunahan Turhan , Ata Altınoluk",
+        title: "Madrigal"
+    },
+    url: "https://coub-attachments.akamaized.net/coub_storage/raw_video/cw_cutter_mp4_dashed_audio/0661a6f9585/ac87cab81e5ebd39c3d0b/1673034270_separated_audio.m4a"
 }];
 // END Create playlists
 let allTracks = othersong.concat(coubsong, nightcore);
@@ -274,40 +295,41 @@ webamp.renderWhenReady(document.getElementById("app"));
 function changeFunc() {
     var playlists = document.getElementById("playlists");
     var selectedValue = playlists.options[playlists.selectedIndex].value;
-if (selectedValue == 'nightcore')
-{
-    webamp.setTracksToPlay(nightcore, []);
-};
-if (selectedValue == 'all')
-{
-    webamp.setTracksToPlay(allTracks ,[]);
-};
-// START Create single array // that contain coubsong array and othersong with number 6
-var allcoub = coubsong.concat([othersong[6]]);
-// END Create single array //
-if (selectedValue == 'coub')
-{
-    webamp.setTracksToPlay(allcoub ,[]);
-}
-if (selectedValue == 'phonk')
-{
-    webamp.setTracksToPlay([
-        othersong[0],
-        coubsong[0],
-        coubsong[9],
-        coubsong[3],
-        coubsong[1],
-        coubsong[8],
-        othersong[2],
-        othersong[3],
-        othersong[5],
-        othersong[6],
-        othersong[11],
-        coubsong[4]
-])
-}
-};
-
+    switch (selectedValue) {
+        case 'nightcore':
+            webamp.setTracksToPlay(nightcore, []);
+            break;
+        case 'all':
+            webamp.setTracksToPlay(allTracks, []);
+            break;
+        case 'coub':
+            // START Create single array // that contain coubsong array and othersong with number 6
+            var allcoub = coubsong.concat([othersong[6]]);
+            // END Create single array //
+            webamp.setTracksToPlay(allcoub ,[]);
+            break;
+        case 'phonk':
+            webamp.setTracksToPlay([
+                othersong[0],
+                coubsong[0],
+                coubsong[9],
+                coubsong[3],
+                coubsong[1],
+                coubsong[8],
+                othersong[2],
+                othersong[3],
+                othersong[5],
+                othersong[6],
+                othersong[8],
+                othersong[13],
+                coubsong[4]
+            ]);
+            break;
+        default:
+            // kod dla innych wartości
+            break;
+      };
+    };
 // START set Background with url // if CustomBG have value then set value to input
 if (localStorage.getItem('CustomBG') != null) document.getElementById('imagebgurl').value = `${localStorage.CustomBG}`;
 // when click Save & Load then create object named CustomBG with url to background and set new background from CustomBG
