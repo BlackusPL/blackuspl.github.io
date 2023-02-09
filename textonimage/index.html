@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png" type="image/icon type">
+    <meta property="og:image" content="" id="ogImage">
+    <meta property="og:site_name" content="DarknessAir">
+    <meta property="og:title" content="DarknessAir - TextonImage">
+    <meta property="og:description" content="Generated Image">
+    <meta property="og:url" content="https://blackuspl.github.io/DarknessAir/textonimage">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../index.css" rel="stylesheet">
+    <script>
+      window.onload = function() {
+        // Pobieranie parametrów z adresu URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const imageUrl = urlParams.get("url");
+        const text = urlParams.get("text");
+        const color = urlParams.get("color");
+  
+        // Tworzenie canvas
+        const canvas = document.createElement("canvas");
+        canvas.width = 400;
+        canvas.height = 400;
+        const ctx = canvas.getContext("2d");
+  
+        // Rysowanie obrazu na canvas
+        const image = new Image();
+        // image.src = imageUrl;
+        image.src= "./kratosmoment.png"
+        image.onload = function() {
+          ctx.drawImage(image, 0, 0, 400, 400);
+  
+          // Rysowanie tekstu na canvas
+          ctx.fillStyle = color;
+          ctx.font = "36px Arial";
+          ctx.textAlign = "center";
+          ctx.fillText(text, 200, 200);
+  
+          // Ustawianie znacznika meta og:image na obraz z canvas
+          document.body.appendChild(canvas);
+          document.getElementById("ogImage").content = canvas.toDataURL();
+        };
+      };
+    </script>
+  </head>
+  <body>
+    use ?url= , ?text= or ?color=
+
+    <p><a href="..">Go back</a></p>
+  </body>
+</html>
