@@ -26,8 +26,9 @@
   
         // Rysowanie obrazu na canvas
         const image = new Image();
-        // image.src = imageUrl;
-        image.src= "./kratosmoment.png"
+        if (urlParams.get("url") == null) {image.src= "./kratosmoment.png"} else {
+          image.src = imageUrl;
+        }
         image.onload = function() {
           ctx.drawImage(image, 0, 0, 400, 400);
   
