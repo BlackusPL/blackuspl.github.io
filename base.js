@@ -193,7 +193,7 @@ function DA_clear() {
 document.querySelector("footer").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block;position: absolute;right: 14%;"></div>`);
 startTime();
 function startTime() {
-  const today = new Date();
+  const today = new Date(Date.now());
   let h = today.getHours();
   let m = today.getMinutes();
   let s = today.getSeconds();

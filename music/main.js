@@ -111,7 +111,7 @@ let othersong = [
         title: "Forward Anxious"
     },
     url: "./local_music/Amøn - Forward Anxious.m4a"/*,
-    duration: 260 */
+    duration: 260 https://cors-anywhere.riolubruh.repl.co https://cors-anywhere.herokuapp.com*/
 },
 {
     metaData: {
@@ -350,7 +350,7 @@ image_input.addEventListener('change', function () {
     const reader = new FileReader();
     reader.addEventListener('load', () => {
 // when somehow uploaded file is video then send alert to you that you cant do that, if is image then set as background
-        if (!image_input.files[0].type.startsWith('image/')) {alert('This is not a image file! If you want background as video use URL option')} else {
+        if (!image_input.files[0].type.startsWith('image/') && getID('experiments').checked == false) {alert('This is not a image file! If you want background as video use URL option')} else {
         uploaded_image = reader.result;
 // check if converted to Base64 uploaded_image have less than 10 MB
 //        if (uploaded_image.length > 10 * 1024 * 1024) {
