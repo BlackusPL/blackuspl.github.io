@@ -174,21 +174,27 @@ if (localStorage.getItem('language') == 'pl') {
 };
 
 setTimeout(function(){
-  var version = "1.2"
+  var version = "1.3"
   console.log("%c[Console] %cv"+ version +" %cSuccesfully Loaded","color: rgb(58, 113, 193)","color: gray; font-size: 75%","color: white")
   console.log("%c Advanced %cConsole v" + version +" by BlackusPL %c https://blackuspl.github.io/DarknessAir ", "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
-  console.log("%c Console wasn't cleared " , "background: #000000;color: orange;font-size: 1.2em")
-  console.log("%c Commands under DA_help() " , "background: #000000;color: white;font-size: 1em;word-break: all")
+  // console.log("%c Console wasn't cleared " , "background: #000000;color: orange;font-size: 1.2em")
+  console.log("%c Commands under DA.help() " , "background: #000000;color: white;font-size: 1em;word-break: all")
   // window.history.replaceState('#gsc.tab=0', '', ' ')
   /* document.querySelector('div span[style="white-space:nowrap"]').remove() */
 },1200);
-function DA_help() {
+const DA = {
+  help() {
   console.log("%c Commands ", "background: #000;color: red;font-size: 1.5em")
-  console.log("%c DA_help - Commands list " , "background: #000;color: white;font-size: 1.2em")
-  console.log("%c DA_clear - Clear console " , "background: #000;color: white;font-size: 1.2em")
-}
-function DA_clear() {
+  console.log("%c DA.help() - Commands list " , "background: #000;color: white;font-size: 1.2em")
+  console.log("%c DA.clear() - Clear console " , "background: #000;color: white;font-size: 1.2em")
+  console.log("%c DA.version() - Console version " , "background: #000;color: white;font-size: 1.2em")
+},
+  clear() {
   console.clear()
+},
+  version() {
+    console.log("%cVersion: %c1.3" , "color: rgb(58, 113, 193)","color: gray;")
+  }
 };
 document.querySelector("footer").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block;position: absolute;right: 14%;"></div>`);
 startTime();
@@ -208,4 +214,4 @@ function checkTime(i) {
   return i;
 }
 
-console.log("%c[Base] %c(v11012023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
+console.log("%c[Base] %c(v06032023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
