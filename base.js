@@ -207,11 +207,70 @@ function startTime() {
   s = checkTime(s);
   document.getElementById('txt').innerHTML = 'Time: ' + h + ":" + m + ":" + s;
   setTimeout(startTime, 1000);
-}
+};
 
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
-}
+};
 
-console.log("%c[Base] %c(v06032023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
+function discordprofile() {
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://api.lanyard.rest/v1/users/410243501494894603", true);
+xhr.onload = function () {
+  if (this.status == 200) {
+    const discord_data = JSON.parse(this.responseText);
+//    console.log(discord_data);
+    document.getElementById('username').innerHTML = `<a href="https://discord.com/users/` + discord_data.data.discord_user.id + `" style="text-decoration: unset;color: unset;">` + discord_data.data.discord_user.username + '#' + discord_data.data.discord_user.discriminator + `</a>`;
+    document.getElementById('pfp').src = 'https://cdn.discordapp.com/avatars/' + discord_data.data.discord_user.id + '/' + discord_data.data.discord_user.avatar + '.webp?size=4096';
+    document.getElementById('card-title').innerHTML = "@" + discord_data.data.discord_user.username.toLowerCase() + " > plan d";
+    function status() {document.getElementById('status').innerHTML = "Status: " + discord_data.data.discord_status;}
+    function activity(type) {document.getElementById('activity-name').innerHTML = type + discord_data.data.activities[0].name;
+    document.getElementById('activity-state').innerHTML = discord_data.data.activities[0].state ? discord_data.data.activities[0].state : null;
+    document.getElementById('activity-detail').innerHTML = discord_data.data.activities[0].details ? discord_data.data.activities[0].details : null;
+  };
+  switch (discord_data.data.discord_status) {
+      case 'online':
+      document.getElementById('status').style.cssText = 'color: rgb(35, 165, 90);opacity: 1;';
+      status();
+      break;
+      case 'idle':
+      document.getElementById('status').style.cssText = 'color: rgb(250, 168, 26);opacity: 1;';
+      status();
+      break;
+      case 'dnd':
+      document.getElementById('status').style.cssText = 'color: rgb(237 66 69);opacity: 1;';
+      status();
+      break;
+      case 'offline':
+      document.getElementById('status').style.cssText = 'color: #747e8c;opacity: 1;';
+      status();
+      break;
+    }
+  if (typeof discord_data.data.activities[0] !== 'undefined')
+    switch (discord_data.data.activities[0].type) {
+      case 0:
+      activity("In game: ");
+      break;
+      case 1:
+      activity("Streaming: ");
+      break;
+      case 2:
+      activity("Listening: ");
+      break;
+      case 3:
+      activity("Watching: ");
+      break;
+      case 4:
+      activity("");
+      break;
+      case 5:
+      activity("Competing in: ");
+      break;
+    }
+  }
+};
+xhr.send();
+};
+
+console.log("%c[Base] %c(v07032023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");

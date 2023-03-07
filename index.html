@@ -79,6 +79,17 @@
     </ul>
     <!--end-->
     <!-- <div id="searchbar" class="gcse-search"></div> -->
+    <div class="card" style="position: absolute; right: 150px; text-align: center; margin-top: 10px;">
+      <div id="card-title">@unknown</div>
+              <img id="pfp" src="https://tharki-god.github.io/assets/loader.gif" alt="" width="128px">
+          <div class="user-info">
+              <div id="username">Loading...</div>
+              <div id="status"></div>
+                <div id="activity-name" style="font-weight: bold;"></div>
+                  <div id="activity-state"></div>
+                  <div id="activity-detail"></div>
+          </div>
+    </div>
   <div class="content">
     <font size="4">
       <center>
@@ -117,6 +128,7 @@
 <script src="base.js"></script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script type="text/javascript">
+  discordprofile();
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
   }
