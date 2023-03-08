@@ -196,7 +196,7 @@ const DA = {
     console.log("%cVersion: %c1.3" , "color: rgb(58, 113, 193)","color: gray;")
   }
 };
-document.querySelector("footer").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 1.5em;"></div>`);
+document.querySelector("footer").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em;"></div>`);
 startTime();
 function startTime() {
   const today = new Date(Date.now());
