@@ -9,6 +9,7 @@ window.onload = function() {
     const textx = urlParams.get("textx");
     const texty = urlParams.get("texty");
     const txtshadow = urlParams.get("shadow");
+    var txtshadow1 = txtshadow === 'true';
     const color = urlParams.get("color");
     if (urlParams.get("sizex") == null || urlParams.get("sizex") == '') urlParams.set("sizex", 400);
     if (urlParams.get("sizey") == null || urlParams.get("sizey") == '') urlParams.set("sizey", 400);
@@ -51,7 +52,7 @@ window.onload = function() {
     getID('url').value = imageUrl;
     getID('color').value = color;
     if (window.location.search !== '') getID('sizex').value = sizex,
-    getID('sizey').value = sizey, getID('text').value = text, getID('textx').value = textx, getID('texty').value = texty; //getID('textshadow').checked = txtshadow;
+    getID('sizey').value = sizey, getID('text').value = text, getID('textx').value = textx, getID('texty').value = texty, getID('textshadow').checked = txtshadow1;
   };
   function txt2img() {
     window.location.search = '?url=' + getID('url').value + '&text=' + getID('text').value + '&textx=' + getID('textx').value + '&texty=' + getID('texty').value + '&shadow=' + getID('textshadow').checked + '&color=' + getID('color').value + '&sizex=' + getID('sizex').value + '&sizey=' + getID('sizey').value;
