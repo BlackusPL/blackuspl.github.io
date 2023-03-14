@@ -60,7 +60,7 @@ window.onload = function() {
       // Ustawianie znacznika meta og:image na obraz z canvas
       document.querySelectorAll('center')[0].appendChild(canvas);
       try {
-      document.getElementById("ogImage").content = canvas.toDataURL();
+      //document.getElementById("ogImage").content = canvas.toDataURL(); - Temporary disabled
       if (window.location.search !== '') document.getElementById("code").value = canvas.toDataURL();
       console.log("%c[TextOnImage]" + " %cConverting to Base64 was completed succesfully!","color: rgb(58, 113, 193)","color: unset");
       } catch(error) {console.log("%c[TextOnImage]" + " %cCan't convert this to Base64 becouse CORS blocking it (in future will be possible to do that)","color: rgb(58, 113, 193)","color: red")};
