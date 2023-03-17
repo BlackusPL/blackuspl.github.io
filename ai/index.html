@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>DarknessAir.INC</title>
+      <meta charset="UTF-8">
+      <link rel="icon" href="https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png"
+        type="image/icon type">
+      <link href="../index.css" rel="stylesheet">
+      <link href="../manifest.webmanifest" rel="manifest" />
+      <meta property="og:site_name" content="DarknessAir">
+      <meta property="og:title" content="Welcome">
+      <meta property="og:description" content="Welcome in Dark Site">
+      <meta property="og:image" content="https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png">
+      <meta property="og:image:type" content="image/png">
+      <meta property="og:url" content="https://blackuspl.github.io/DarknessAir">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            pre {
+                white-space: pre-wrap;
+            }
+            .content {
+              margin: 1em auto 4em auto !important;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="tab" translate="no">
+            <a style="margin-left: 0px;" href="..">Home</a>
+            <a href="../games">Games</a>
+            <a href="../music">Music Player</a>
+            <div class="dropdown">
+              <button class="dropbtn">Social Links ↡ </button>
+              <div class="showtasks">
+                <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>
+                <a href="https://discord.com/users/410243501494894603">Discord</a>
+                <a href="https://github.com/BlackusPL">Github</a>
+            </div></div>
+            <div class="dropdown">
+                <button class="dropbtn">Usefull stuffs ↡ </button>
+                <div class="showtasks">
+                    <a href="../about">My Projects</a>
+                    <a href="../textonimage/">TextonImage</a>
+                    <a>AI Chat</a>
+                </div>
+            </div>
+            <a href="../news">News</a>
+            <div class="dropdown">
+            <button class="dropbtn">Languages ↡ </button>
+            <div class="showtasks">
+              <a onclick="jezyk()">Polish</a>
+              <a onclick="jezykoff()">English</a>
+            </div></div>
+            <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
+        
+            </ul><br><br>
+            <div class="content">
+            <img class="avatar" style="width: 24px;"> <b>BlackusPL</b><pre>Hello! Use tools on the bottom to talk with ChatGPT. This page is still WIP and I recommend you to use <a href="https://chat.openai.com/chat/">https://chat.openai.com/chat/</a> than this</pre>
+<div id="user"></div>      
+</div>
+<br><br>
+<div style="position: fixed; bottom: 5%;">
+  <table>
+    <tr>
+        <td><textarea placeholder="Prompt" id="textprompt" style="resize: none;"></textarea></td>
+        <td><input placeholder="api key" id="apikey" style="resize: none; width: 100px;" type="password"></input><br>
+        <input id="freekey" style="resize: none;" type="checkbox" onclick="check()">no key (unstable)</input></td>
+        <td><input placeholder="avatar" id="avatarurl" style="resize: none; width: 100px;" type="text"></input></td>
+        <td><button type="submit" onclick="check();ask(document.getElementById('textprompt').value)">Submit</button></td>
+    </tr>
+  </table>
+</div>
+<footer>
+  Copyright © 2021-2023, BlackusPL | All rights reserved | DO NOT DISTRIBUTE
+</footer>  
+    </body>
+    <script src="../base.js"></script>
+    <script src="index.js"></script>
+    <script src="../textonimage/jquery.min.js"></script>
+</html>
