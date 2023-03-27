@@ -8,11 +8,11 @@
       <link href="../index.css" rel="stylesheet">
       <link href="../manifest.webmanifest" rel="manifest" />
       <meta property="og:site_name" content="DarknessAir">
-      <meta property="og:title" content="Welcome">
-      <meta property="og:description" content="Welcome in Dark Site">
+      <meta property="og:title" content="AI Chat">
+      <meta property="og:description" content="Welcome in Dark Site and talk with ChatGPT">
       <meta property="og:image" content="https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png">
       <meta property="og:image:type" content="image/png">
-      <meta property="og:url" content="https://blackuspl.github.io/DarknessAir">
+      <meta property="og:url" content="https://blackuspl.github.io/DarknessAir/ai">
       <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             pre {
@@ -63,7 +63,7 @@
     <tr>
         <td><textarea placeholder="Prompt" id="textprompt" style="resize: none;"></textarea></td>
         <td><input placeholder="api key" id="apikey" style="resize: none; width: 100px;" type="password"></input><br>
-        <input id="freekey" style="resize: none;" type="checkbox" onclick="check()">no key (unstable)</input></td>
+        <input id="freekey" style="resize: none;" type="checkbox" onclick="check()">no key (dead)</input></td>
         <td><input placeholder="avatar" id="avatarurl" style="resize: none; width: 100px;" type="text"></input></td>
         <td><button type="submit" onclick="check();ask(document.getElementById('textprompt').value)">Submit</button></td>
     </tr>
@@ -75,5 +75,4 @@
     </body>
     <script src="../base.js"></script>
     <script src="index.js"></script>
-    <script src="../textonimage/jquery.min.js"></script>
 </html>

@@ -131,7 +131,7 @@ let othersong = [
         artist: "g3ox_em",
         title: "GigaChad Theme (Phonk House Version)"
     },
-    url: "https://blackuspl.discowd.com/r/g3ox_em_-_GigaChad_Theme_(Phonk_House_Version).mp3"
+    url: "https://us-east-1.tixte.net/uploads/blackuspl.discowd.com/g3ox_em_-_GigaChad_Theme_(Phonk_House_Version).mp3"
 },
 {
     metaData: {
@@ -149,10 +149,10 @@ let othersong = [
 },
 {
     metaData: {
-        artist: "MFS",
-        title: "BOW"
+        artist: "АДЛИН",
+        title: "Одна"
     },
-    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/2fefab69050/38ab995fc3f63e1979f2f/1665704735_mp3-high.mp3"
+    url: "./local_music/Одна.mp3"
 },
 {
     metaData: {
@@ -181,7 +181,7 @@ let othersong = [
         artist: "Skan Kai",
         title: "See You Again"
     },
-    url: "https://blackuspl.discowd.com/r/Skan_-_See_You_Again.mp3"
+    url: "https://us-east-1.tixte.net/uploads/blackuspl.discowd.com/Skan_-_See_You_Again.mp3"
 },
 {
     metaData: {
