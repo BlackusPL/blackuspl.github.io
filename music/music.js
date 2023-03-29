@@ -91,7 +91,7 @@ let coubsong = [{
 },
 {
     metaData: {
-        artist: "Coub | BLESSED MANE",
+        artist: "Coub / BLESSED MANE",
         title: "Youth"
     },
     url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/27982a5a95b/388d71bd77c31fc1e08ac/1609800684_mp3-high.mp3"
@@ -102,6 +102,13 @@ let coubsong = [{
         title: "Ziyad's 9Min WarmUp 128Bpm"
     },
     url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/4e8ed359cb8/4e28eef57d8c523b22d87/1605668806_high_1548410069_high.mp3"
+},
+{
+    metaData: {
+        artist: "Coub / YCK",
+        title: "The Game Wasn't Mine to Keep"
+    },
+    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/19378f95fe4/745357923e559dda77824/1679879701_mp3-high.mp3"
 }
 ];
 let othersong = [
@@ -328,17 +335,17 @@ function changeFunc() {
         default:
             // kod dla innych wartości
             break;
-      };
-    };
+      }
+    }
 // START set Background with url // if CustomBG have value then set value to input
-if (localStorage.getItem('CustomBG') != null) document.getElementById('imagebgurl').value = `${localStorage.CustomBG}`;
+if (localStorage.getItem('CustomBG') !== null) document.getElementById('imagebgurl').value = `${localStorage.CustomBG}`;
 // when click Save & Load then create object named CustomBG with url to background and set new background from CustomBG
 document.getElementById('saveload').addEventListener('click', function () {
     var BG = document.getElementById('imagebgurl').value;
     localStorage.setItem('CustomBG',BG);
 // when input has spaces or = null then removes object named CustomBG and set default background, if doesnt includes spaces or != null then set background from CustomBG
-    if (localStorage.getItem('CustomBG').includes(' ') || localStorage.getItem('CustomBG') == '') {localStorage.removeItem('CustomBG'); document.body.style.backgroundImage = `url(https://i.ytimg.com/vi/X10UD5nQDCs/maxresdefault.jpg)`;} 
-    else {getID('videobg').src = `${localStorage.CustomBG}`;document.body.style.backgroundImage = `url(${localStorage.CustomBG})`;};
+    if (localStorage.getItem('CustomBG').includes(' ') || localStorage.getItem('CustomBG') === '') {localStorage.removeItem('CustomBG'); document.body.style.backgroundImage = `url(https://i.ytimg.com/vi/X10UD5nQDCs/maxresdefault.jpg)`;} 
+    else {getID('videobg').src = `${localStorage.CustomBG}`;document.body.style.backgroundImage = `url(${localStorage.CustomBG})`;}
 });
 // END set Background with url //
 
@@ -350,7 +357,7 @@ image_input.addEventListener('change', function () {
     const reader = new FileReader();
     reader.addEventListener('load', () => {
 // when somehow uploaded file is video then send alert to you that you cant do that, if is image then set as background
-        if (!image_input.files[0].type.startsWith('image/') && getID('experiments').checked == false) {alert('This is not a image file! If you want background as video use URL option')} else {
+        if (!image_input.files[0].type.startsWith('image/') && getID('experiments').checked === false) {alert('This is not a image file! If you want background as video use URL option')} else {
         uploaded_image = reader.result;
 // check if converted to Base64 uploaded_image have less than 10 MB
 //        if (uploaded_image.length > 10 * 1024 * 1024) {
@@ -375,6 +382,6 @@ image_output.addEventListener('click', function () {
         getID('videobg').src = '';
         // END my code
     });
-console.log("%c[Main] %c(v05012023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
+console.log("%c[Music] %c(v05012023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
 //
 // document.getElementById("tab").innerHTML = '<!--The tab to move in the website-->\ ';

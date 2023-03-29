@@ -1,17 +1,17 @@
 function jezykoff() {
-  //document.cookie = "language=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC";
-  localStorage.removeItem('language');
-  window.location.reload()
-  //window.location.search = '';
-};
+  document.cookie = "language=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC";
+  //localStorage.removeItem('language');
+  window.location.reload();
+}
 
 
 function jezyk() {
-  //document.cookie = "language=pl;path=/";
-  localStorage.setItem('language', 'pl');
-  window.location.reload()
-  //window.location.search = 'l=pl'
-};
+  var data = new Date();
+  data.setDate(data.getDate() + 3);
+  document.cookie = ("language=pl;path=/;expires=" + data);
+  //localStorage.setItem('language', 'pl');
+  window.location.reload();
+}
 
 // code by cyan-2048
 const getID = (e) => document.getElementById(e), qs = (e) => document.querySelector(e);
@@ -50,10 +50,12 @@ getID("tab").insertAdjacentHTML('afterend', `<ul id="tab" class="notranslate">
 </ul>`)
 getID("tab").remove();*/
 
-//if (window.location.search.indexOf('l=pl') > -1) {
-//if (document.cookie.match(new RegExp('(^| )' + "language" + '=([^;]+)'))[2] == "pl") {
-//if (document.cookie.indexOf("language") >= 64) {
-if (localStorage.getItem('language') == 'pl') {
+//if (localStorage.getItem('language') == 'pl') {
+  function cookievaluefinder(coname) {
+    var finded = document.cookie.split("; ").find((lang) => lang.startsWith(`${coname}=`))?.split("=")[1];
+    return finded;
+  }
+  if (cookievaluefinder('language') == "pl")  {
   var zmien, regex, key, textnodes, node, s;
 
   zmien = {
@@ -121,6 +123,8 @@ if (localStorage.getItem('language') == 'pl') {
     'Social Links': 'Linki',
     'Games': 'Gry',
     'About Me': 'O mnie',
+    'AI Chat' : 'Czat SI',
+    'Usefull stuffs' : 'Przydatne rzeczy',
     'News' : 'Nowości',
     'Languages': 'Języki',
     'Search': 'Wyszukaj',
@@ -163,37 +167,37 @@ if (localStorage.getItem('language') == 'pl') {
     }
     node.data = s;
   }
-};
+}
 if (localStorage.getItem('language') == 'pl') {
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'en'
     });
-    document.querySelector('[id="goog-gt-tt"]').remove()
+    document.querySelector('[id="goog-gt-tt"]').remove();
   }
-};
+}
 
 setTimeout(function(){
-  var version = "1.3"
-  console.log("%c[Console] %cv"+ version +" %cSuccesfully Loaded","color: rgb(58, 113, 193)","color: gray; font-size: 75%","color: white")
+  var version = "1.3";
+  console.log("%c[Console] %cv"+ version +" %cSuccesfully Loaded","color: rgb(58, 113, 193)","color: gray; font-size: 75%","color: white");
   console.log("%c Advanced %cConsole v" + version +" by BlackusPL %c https://blackuspl.github.io/DarknessAir ", "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
   // console.log("%c Console wasn't cleared " , "background: #000000;color: orange;font-size: 1.2em")
-  console.log("%c Commands under DA.help() " , "background: #000000;color: white;font-size: 1em;word-break: all")
+  console.log("%c Commands under DA.help() " , "background: #000000;color: white;font-size: 1em;word-break: all");
   // window.history.replaceState('#gsc.tab=0', '', ' ')
   /* document.querySelector('div span[style="white-space:nowrap"]').remove() */
 },1200);
 const DA = {
   help() {
-  console.log("%c Commands ", "background: #000;color: red;font-size: 1.5em")
-  console.log("%c DA.help() - Commands list " , "background: #000;color: white;font-size: 1.2em")
-  console.log("%c DA.clear() - Clear console " , "background: #000;color: white;font-size: 1.2em")
-  console.log("%c DA.version() - Console version " , "background: #000;color: white;font-size: 1.2em")
+  console.log("%c Commands ", "background: #000;color: red;font-size: 1.5em");
+  console.log("%c DA.help() - Commands list " , "background: #000;color: white;font-size: 1.2em");
+  console.log("%c DA.clear() - Clear console " , "background: #000;color: white;font-size: 1.2em");
+  console.log("%c DA.version() - Console version " , "background: #000;color: white;font-size: 1.2em");
 },
   clear() {
-  console.clear()
+  console.clear();
 },
   version() {
-    console.log("%cVersion: %c1.3" , "color: rgb(58, 113, 193)","color: gray;")
+    console.log("%cVersion: %c1.3" , "color: rgb(58, 113, 193)","color: gray;");
   }
 };
 document.querySelector("footer").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em;"></div>`);
@@ -207,12 +211,12 @@ function startTime() {
   s = checkTime(s);
   document.getElementById('txt').innerHTML = 'Time: ' + h + ":" + m + ":" + s;
   setTimeout(startTime, 1000);
-};
+}
 
 function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  if (i < 10) {i = "0" + i}  // add zero in front of numbers < 10
   return i;
-};
+}
 
 function discordprofile() {
 var xhr = new XMLHttpRequest();
@@ -228,7 +232,7 @@ xhr.onload = function () {
     function activity(type) {document.getElementById('activity-name').innerHTML = type + discord_data.data.activities[0].name;
     document.getElementById('activity-state').innerHTML = discord_data.data.activities[0].state ? discord_data.data.activities[0].state : null;
     document.getElementById('activity-detail').innerHTML = discord_data.data.activities[0].details ? discord_data.data.activities[0].details : null;
-  };
+  }
   const pc = `<svg class="PI-icon_desktop" width="18" height="18" viewBox="-3 -5 28 28"><path fill="currentColor" d="M4 2.5C2.897 2.5 2 3.397 2 4.5V15.5C2 16.604 2.897 17.5 4 17.5H11V19.5H7V21.5H17V19.5H13V17.5H20C21.103 17.5 22 16.604 22 15.5V4.5C22 3.397 21.103 2.5 20 2.5H4ZM20 4.5V13.5H4V4.5H20Z"></path></svg>`;
   const mobile = `<svg class="PI-icon_mobile" width="18" height="18" transform="scale(0.9)" viewBox="-3 -5 32 44"><path fill="currentColor" d="M 2.882812 0.246094 C 1.941406 0.550781 0.519531 2.007812 0.230469 2.953125 C 0.0585938 3.542969 0 7.234375 0 17.652344 L 0 31.554688 L 0.5 32.558594 C 1.117188 33.769531 2.152344 34.5625 3.519531 34.847656 C 4.210938 35 7.078125 35.058594 12.597656 35 C 20.441406 34.941406 20.691406 34.925781 21.441406 34.527344 C 22.347656 34.054688 23.078125 33.3125 23.578125 32.386719 C 23.921875 31.761719 23.941406 30.964844 24 18.085938 C 24.039062 8.503906 24 4.167969 23.847656 3.464844 C 23.558594 2.121094 22.75 1.097656 21.519531 0.492188 L 20.5 0 L 12.039062 0.0195312 C 6.402344 0.0390625 3.328125 0.113281 2.882812 0.246094 Z M 20.382812 14.582031 L 20.382812 22.917969 L 3.652344 22.917969 L 3.652344 6.25 L 20.382812 6.25 Z M 13.789062 27.539062 C 14.5 28.296875 14.597656 29.035156 14.132812 29.925781 C 13.308594 31.496094 10.671875 31.421875 9.902344 29.8125 C 9.539062 29.054688 9.539062 28.730469 9.902344 28.011719 C 10.691406 26.535156 12.632812 26.308594 13.789062 27.539062 Z M 13.789062 27.539062 "></path></svg>`;
   const web = `<svg class="PI-icon_web" width="18" height="18" viewBox="-3 -5 28 28"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.44 4 16.08 4 12C4 11.38 4.08 10.79 4.21 10.21L9 15V16C9 17.1 9.9 18 11 18V19.93ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10H10C10.55 10 11 9.55 11 9V7H13C14.1 7 15 6.1 15 5V4.59C17.93 5.78 20 8.65 20 12C20 14.08 19.2 15.97 17.9 17.39Z"></path></svg>`;
