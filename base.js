@@ -254,9 +254,9 @@ xhr.onload = function () {
       status();
       break;
     }
-  if (discord_data.data.active_on_discord_web) document.getElementById('status').insertAdjacentHTML('beforeend', web)
-	if (discord_data.data.active_on_discord_mobile) document.getElementById('status').insertAdjacentHTML('beforeend', mobile)
-	if (discord_data.data.active_on_discord_desktop) document.getElementById('status').insertAdjacentHTML('beforeend', pc)
+  if (discord_data.data.active_on_discord_web) document.getElementById('status').insertAdjacentHTML('beforeend', web);
+	if (discord_data.data.active_on_discord_mobile) document.getElementById('status').insertAdjacentHTML('beforeend', mobile);
+	if (discord_data.data.active_on_discord_desktop) document.getElementById('status').insertAdjacentHTML('beforeend', pc);
   if (typeof discord_data.data.activities[0] !== 'undefined')
     switch (discord_data.data.activities[0].type) {
       case 0:

@@ -4,7 +4,7 @@ function check() {
 function ask(prompt) {
   try {
     var apikey = document.getElementById('apikey').disabled;
-    if (apikey == true) { apikey = 'free' } else { apikey = document.getElementById('apikey').value }
+    if (apikey === true) { apikey = 'free' } else { apikey = document.getElementById('apikey').value }
     const textPrompt = document.getElementById('textprompt');
     textPrompt.value = '';
     const userEle = document.getElementById('user');
