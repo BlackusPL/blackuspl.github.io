@@ -109,6 +109,13 @@ let coubsong = [{
         title: "The Game Wasn't Mine to Keep"
     },
     url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/19378f95fe4/745357923e559dda77824/1679879701_mp3-high.mp3"
+},
+{
+    metaData: {
+        artist: "Coub / CREEPYMANE",
+        title: "Long Nights"
+    },
+    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/397b0ccf125/b5d252ca891806b72ed59/1644715514_mp3-high.mp3"
 }
 ];
 let othersong = [
@@ -322,6 +329,7 @@ function changeFunc() {
                 coubsong[9],
                 coubsong[3],
                 coubsong[1],
+                coubsong[12],
                 coubsong[8],
                 othersong[2],
                 othersong[3],

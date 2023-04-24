@@ -146,6 +146,22 @@ ul a:hover {background-color:#333;}
   a.secret:focus {
     margin-left: 0em;
   }
+  .card {
+    float: right;
+    text-align: center;
+    border-style: inset;
+    background-color: #1a1c1f;
+    padding: 5px;
+    /* padding: 8px 1.5em 0 0; */
+  }
+  h3 + div.changelog {
+    text-align: start;
+    margin-left: 25%;
+    color: lightgray;
+  }
+  h3 + input:checked + div#changelog{
+    display: block;
+  }
   @media only screen and (max-width: 600px) {
     footer {
       font-size: x-small;
