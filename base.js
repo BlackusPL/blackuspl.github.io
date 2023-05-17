@@ -56,12 +56,12 @@ getID("tab").remove();*/
     var finded = document.cookie.split("; ").find((lang) => lang.startsWith(`${coname}=`))?.split("=")[1];
     return finded;
   }
-  if (window.location.href.split('/')[3] == "DarknessAir") {var web_root = `${window.location.host}/DarknessAir`} else {var web_root = window.location.host}
+  if (window.location.href.split('/')[3] == "DarknessAir") {var web_root = `${'https://' + window.location.host}/DarknessAir`} else {var web_root = window.location.protocol + '//' + window.location.host}
   var zmien, regex, key, textnodes, node, s;
 
   switch(cookievaluefinder('language')) {
     case 'pl':
-  fetch(`https://${web_root}/languages/pl.json`)
+  fetch(`${web_root}/languages/pl.json`)
   .then(response => response.json())
   .then(data => {
     zmien = data;
@@ -69,7 +69,7 @@ getID("tab").remove();*/
   });
       break;
     case 'de':
-    fetch(`https://${web_root}/languages/de.json`)
+    fetch(`${web_root}/languages/de.json`)
     .then(response => response.json())
     .then(data => {
       zmien = data;
@@ -126,6 +126,7 @@ const DA = {
     console.log("%cVersion: %c1.3" , "color: rgb(58, 113, 193)","color: gray;");
   }
 };
+if (document.querySelector("footer")) {
 document.querySelector("footer").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em;"></div>`);
 startTime();
 function startTime() {
@@ -137,6 +138,7 @@ function startTime() {
   s = checkTime(s);
   document.getElementById('txt').innerHTML = 'Time: ' + h + ":" + m + ":" + s;
   setTimeout(startTime, 1000);
+}
 }
 
 function checkTime(i) {
@@ -213,4 +215,4 @@ xhr.onload = function () {
 xhr.send();
 };
 
-console.log("%c[Base] %c(v24042023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
+console.log("%c[Base] %c(v17052023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
