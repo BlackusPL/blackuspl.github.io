@@ -153,8 +153,15 @@ xhr.onload = function () {
   if (this.status == 200) {
     const discord_data = JSON.parse(this.responseText);
 //    console.log(discord_data);
+    let avatar_url = 'https://cdn.discordapp.com/avatars/' + discord_data.data.discord_user.id + '/' + discord_data.data.discord_user.avatar;
     document.getElementById('username').innerHTML = `<a href="https://discord.com/users/` + discord_data.data.discord_user.id + `" style="text-decoration: unset;color: unset;">` + discord_data.data.discord_user.username + '#' + discord_data.data.discord_user.discriminator + `</a>`;
-    document.getElementById('pfp').src = 'https://cdn.discordapp.com/avatars/' + discord_data.data.discord_user.id + '/' + discord_data.data.discord_user.avatar + '.webp?size=4096';
+    fetch(avatar_url + '.gif?size=4096')
+    .then(response => {
+      if (response.ok) {
+        return document.getElementById('pfp').src = avatar_url + '.gif?size=4096';
+      }
+      throw document.getElementById('pfp').src = avatar_url + '.webp?size=4096';
+    });
     document.getElementById('card-title').innerHTML = "@" + discord_data.data.discord_user.username.toLowerCase() + " > profile";
     function status() {document.getElementById('status').innerHTML = "Status: " + discord_data.data.discord_status;}
     function activity(type) {document.getElementById('activity-name').innerHTML = type + discord_data.data.activities[0].name;
