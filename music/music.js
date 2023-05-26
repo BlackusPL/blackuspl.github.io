@@ -390,6 +390,11 @@ image_output.addEventListener('click', function () {
         getID('videobg').src = '';
         // END my code
     });
+
+const vid_bg_dark = document.querySelector("#vid_bg_dark");
+vid_bg_dark.addEventListener('change', function () {
+    document.querySelector('body > video').setAttribute('style',`filter: brightness(${this.value}%);`)
+});
 console.log("%c[Music] %c(v05012023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
 //
 // document.getElementById("tab").innerHTML = '<!--The tab to move in the website-->\ ';

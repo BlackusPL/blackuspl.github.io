@@ -103,6 +103,7 @@ if (localStorage.getItem('language') == 'pl') {
   }
 }
 
+// creates commands to able to use in console
 setTimeout(function(){
   var version = "1.3";
   console.log("%c[Console] %cv"+ version +" %cSuccesfully Loaded","color: rgb(58, 113, 193)","color: gray; font-size: 75%","color: white");
@@ -126,8 +127,10 @@ const DA = {
     console.log("%cVersion: %c1.3" , "color: rgb(58, 113, 193)","color: gray;");
   }
 };
-if (document.querySelector("footer")) {
-document.querySelector("footer").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em;"></div>`);
+
+// search for element with class "footer" and place a clock
+if (document.querySelector("#tab")) {
+document.querySelector("#tab").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em; padding: 1em;"></div>`);
 startTime();
 function startTime() {
   const today = new Date(Date.now());
@@ -146,9 +149,10 @@ function checkTime(i) {
   return i;
 }
 
-function discordprofile() {
+// Szuka po div class "card"
+function discordprofile(id) {
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.lanyard.rest/v1/users/410243501494894603", true);
+xhr.open("GET", `https://api.lanyard.rest/v1/users/${id}`, true);
 xhr.onload = function () {
   if (this.status == 200) {
     const discord_data = JSON.parse(this.responseText);
@@ -221,5 +225,7 @@ xhr.onload = function () {
 };
 xhr.send();
 };
+// end
 
-console.log("%c[Base] %c(v17052023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
+// Send when everything loads
+console.log("%c[Base] %c(v26052023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");

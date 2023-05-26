@@ -11,6 +11,11 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+body[style^="position: relative;"]::after {
+  content: '';
+  display: block;
+  height: 2.5rem; /* Set same as footer's height */
+}
 header {
     font-weight: bold;
     font-size: large;
@@ -24,14 +29,19 @@ b {
 footer {
     border-top: 1px solid #fff;
     font-size: small;
-    position: fixed;
-    bottom: 0;
     left: 0;
-    padding: 1em;
+    height: 2.5rem;
     background: #080808;
+    display: block;
+    position: absolute;
     width: 100%;
-    height: 1em;
-    margin-top: 2em;
+}
+body[style^="position: relative;"] > footer, body video ~ footer {
+  bottom: 0;
+}
+footer > div {
+  padding: 1em;
+  float: left;
 }
 .content {
   margin: 2em auto;
@@ -147,12 +157,13 @@ ul a:hover {background-color:#333;}
     margin-left: 0em;
   }
   .card {
-    float: right;
     text-align: center;
     border-style: inset;
     background-color: #1a1c1f;
     padding: 5px;
     /* padding: 8px 1.5em 0 0; */
+    position: absolute;
+    right: 0;
   }
   h3 + div.changelog {
     text-align: start;
