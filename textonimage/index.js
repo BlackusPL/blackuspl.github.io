@@ -1,21 +1,21 @@
-window.onload = function() {
+function loadimage() {
     // Pobieranie parametrów z adresu URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const imageUrl = urlParams.get("url");
+    const urlParams = new URLSearchParams(window.location.search + window.location.hash);
+    let imageUrl = urlParams.get("url");
     if (urlParams.get("text") === null || urlParams.get("text") === '') urlParams.set("text", "null");
-    const text = urlParams.get("text");
+    let text = urlParams.get("text");
     if (urlParams.get("textx") === null || urlParams.get("textx") === '') urlParams.set("textx", 200);
     if (urlParams.get("texty") === null || urlParams.get("texty") === '') urlParams.set("texty", 200);
-    const textx = urlParams.get("textx");
-    const texty = urlParams.get("texty");
-    const txtshadow = urlParams.get("shadow");
+    let textx = urlParams.get("textx");
+    let texty = urlParams.get("texty");
+    let txtshadow = urlParams.get("shadow");
     var txtshadow1 = txtshadow === 'true';
-    const color = urlParams.get("color");
+    let color = urlParams.get("color");
     if (urlParams.get("sizex") === null || urlParams.get("sizex") === '') urlParams.set("sizex", 400);
     if (urlParams.get("sizey") === null || urlParams.get("sizey") === '') urlParams.set("sizey", 400);
-    const sizex = urlParams.get("sizex");
-    const sizey = urlParams.get("sizey");
-    const cors = urlParams.get("cors");
+    let sizex = urlParams.get("sizex");
+    let sizey = urlParams.get("sizey");
+    let cors = urlParams.get("cors");
     var cors1 = cors === 'true';
 
     // Tworzenie canvas 
@@ -63,21 +63,21 @@ window.onload = function() {
       //document.getElementById("ogImage").content = canvas.toDataURL(); - Temporary disabled
       if (window.location.search !== '') document.getElementById("code").value = canvas.toDataURL();
       console.log("%c[TextOnImage]" + " %cConverting to Base64 was completed succesfully!","color: rgb(58, 113, 193)","color: unset");
-      } catch(error) {console.log("%c[TextOnImage]" + " %cCan't convert this to Base64 becouse CORS blocking it (in future will be possible to do that)","color: rgb(58, 113, 193)","color: red")}
+      } catch(error) {console.log("%c[TextOnImage]" + " %cCan't convert this to Base64 becouse CORS blocking it (Use 'Accept CORS' option)","color: rgb(58, 113, 193)","color: red")}
       console.log("%c[TextOnImage]" + " %cSuccesfully Loaded","color: rgb(58, 113, 193)","color: unset");
     };
-    getID('url').value = imageUrl;
-    getID('color').value = color;
     if (window.location.search !== '') getID('sizex').value = sizex,
     getID('sizey').value = sizey, getID('text').value = text, getID('textx').value = textx, getID('texty').value = texty, getID('textshadow').checked = txtshadow1, getID('cors').checked = cors1;
   };
   function txt2img() {
-    window.location.search = '?url=' + getID('url').value + '&text=' + getID('text').value + '&textx=' + getID('textx').value + '&texty=' + getID('texty').value + '&shadow=' + getID('textshadow').checked + '&color=' + getID('color').value + '&sizex=' + getID('sizex').value + '&sizey=' + getID('sizey').value + '&cors=' + getID('cors').checked;
+    document.querySelector('canvas').remove();
+    window.history.pushState(null, null, '?url=' + getID('url').value + '&text=' + getID('text').value + '&textx=' + getID('textx').value + '&texty=' + getID('texty').value + '&shadow=' + getID('textshadow').checked + '&color=' + getID('color').value + '&sizex=' + getID('sizex').value + '&sizey=' + getID('sizey').value + '&cors=' + getID('cors').checked);
+    loadimage();
   }
   function debugBase64(base64URL) {
     if (base64URL !== '')
     {window.open().document.write('<iframe src="' + base64URL + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>')} else 
-    {alert("You can do that with default image or with Accept CORS option.")}
+    {alert("You can do that with default image or with 'Accept CORS' option.")}
   }
   function viewraw() {
     var x = document.getElementById("code");

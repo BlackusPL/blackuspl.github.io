@@ -1,10 +1,7 @@
-function check() {
-  if (document.getElementById('freekey').checked) { document.getElementById('apikey').disabled = true } else { document.getElementById('apikey').disabled = false }
-}
 function ask(prompt) {
   try {
-    var apikey = document.getElementById('apikey').disabled;
-    if (apikey === true) { apikey = 'free' } else { apikey = document.getElementById('apikey').value }
+    //var apikey = document.getElementById('apikey').disabled;
+    //if (apikey === true) { apikey = 'free' } else { apikey = document.getElementById('apikey').value }
     const textPrompt = document.getElementById('textprompt');
     textPrompt.value = '';
     const userEle = document.getElementById('user');
@@ -16,21 +13,32 @@ function ask(prompt) {
       document.getElementsByName('userav')[i].setAttribute('src',document.getElementById('avatarurl').value ? document.getElementById('avatarurl').value : 'https://modworkshop.net/mydownloads/previews/138412_1676797152_574dcace40fa8cdc397f34c4408edc89.gif');
     }
 
+    if (document.getElementById('customapi').value == '') { customapi = 'https://api.openai.com/v1/chat/completions' } else { customapi = document.getElementById('customapi').value }
     const xhr = new XMLHttpRequest();
-    if (apikey == 'free') { xhr.open('POST', 'https://chatgpt-api.shn.hk/v1', true) } else {
-      xhr.open('POST', 'https://api.openai.com/v1/chat/completions', true);
-      xhr.setRequestHeader('Authorization', 'Bearer ' + apikey);
-    }
+    xhr.open('POST', customapi , true);
+    xhr.setRequestHeader('Authorization', 'Bearer ' + document.getElementById('apikey').value);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = function () {
       if (this.readyState === XMLHttpRequest.DONE) {
-        if (this.status === 200) {
-          const response = JSON.parse(this.responseText);
-          const msg = response.choices[0].message.content;
-          userEle.insertAdjacentHTML('beforebegin', `<img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>${msg.slice(1)}</pre>`);
-        } else {
-          const msg = this.status === 429 ? 'Too many requests' : `Error ${this.status}`;
+          switch(this.status) {
+          default:
+          var msg = `Error ${this.status}`;
           userEle.insertAdjacentHTML('beforebegin', `<img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>${msg}</pre>`);
+          break;
+          case 200:
+          const response = JSON.parse(this.responseText);
+          var msg = response.data.choices[0].message.content;
+          userEle.insertAdjacentHTML('beforebegin', `<img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>${msg.slice(1)}</pre>`);
+          break;
+          case 429:
+          var msg = 'Too many requests';
+          //const msg = this.status === 429 ? 'Too many requests' : `Error ${this.status}`;
+          userEle.insertAdjacentHTML('beforebegin', `<img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>${msg}</pre>`);
+          break;
+          case 405:
+          var msg = 'Method Not Allowed';
+          userEle.insertAdjacentHTML('beforebegin', `<img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>${msg}</pre>`);
+          break;
         }
         document.getElementById('loading').remove();
       }

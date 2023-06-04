@@ -64,9 +64,9 @@
     <tr>
         <td><textarea placeholder="Prompt" id="textprompt" style="resize: none;"></textarea></td>
         <td><input placeholder="api key" id="apikey" style="resize: none; width: 100px;" type="password"></input><br>
-        <input id="freekey" style="resize: none;" type="checkbox" onclick="check()">no key (dead)</input></td>
+        <input id="customapi" style="resize: none; width: 100px;" type="input">custom api</input></td>
         <td><input placeholder="avatar" id="avatarurl" style="resize: none; width: 100px;" type="text"></input></td>
-        <td><button type="submit" onclick="check();ask(document.getElementById('textprompt').value)">Submit</button></td>
+        <td><button type="submit" onclick="ask(document.getElementById('textprompt').value)">Submit</button></td>
     </tr>
   </table>
 </div>

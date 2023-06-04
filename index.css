@@ -37,7 +37,7 @@ footer {
     width: 100%;
 }
 body[style^="position: relative;"] > footer, body video ~ footer {
-  bottom: 0;
+  bottom: 1px;
 }
 footer > div {
   padding: 1em;
