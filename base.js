@@ -158,7 +158,8 @@ xhr.onload = function () {
     const discord_data = JSON.parse(this.responseText);
 //    console.log(discord_data);
     let avatar_url = 'https://cdn.discordapp.com/avatars/' + discord_data.data.discord_user.id + '/' + discord_data.data.discord_user.avatar;
-    document.getElementById('username').innerHTML = `<a href="https://discord.com/users/` + discord_data.data.discord_user.id + `" style="text-decoration: unset;color: unset;">` + discord_data.data.discord_user.username + '#' + discord_data.data.discord_user.discriminator + `</a>`;
+    if (discord_data.data.discord_user.discriminator == "0") {var disusername = `<a href="https://discord.com/users/${discord_data.data.discord_user.id}" style="text-decoration: unset;color: unset;"> @${discord_data.data.discord_user.display_name} </a>`} else {var disusername = `<a href="https://discord.com/users/` + discord_data.data.discord_user.id + `" style="text-decoration: unset;color: unset;">` + discord_data.data.discord_user.username + '#' + discord_data.data.discord_user.discriminator + `</a>`}
+    document.getElementById('username').innerHTML = disusername;
     fetch(avatar_url + '.gif?size=4096')
     .then(response => {
       if (response.ok) {
