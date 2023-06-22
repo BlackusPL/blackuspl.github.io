@@ -199,17 +199,17 @@ let othersong = [
 },
 {
     metaData: {
-        artist: "Skan & Marina Sen",
-        title: "Suerte"
+        artist: "The FifthGuys, Skan, Drama B",
+        title: "Armageddon"
     },
-    url: "./local_music/Skan, Marina Sen - Suerte.mp3"
+    url: "./local_music/The FifthGuys, Skan, Drama B - Armageddon.mp3"
 },
 {
     metaData: {
-        artist: "Skan",
-        title: "Running To You (feat. Drama B)"
+        artist: "4URA & JSTN DMND",
+        title: "Your Highness"
     },
-    url: "https://coub-attachments-2.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/5277645807e/aab9f1a2d5dd0182dd81b/1659708702_mp3-high.mp3"
+    url: "./local_music/4URA & JSTN DMND - Your Highness [NCS Release].mp3"
 },
 {
     metaData: {
