@@ -41,6 +41,7 @@
                     <a href="../about">My Projects</a>
                     <a href="../textonimage/">TextonImage</a>
                     <a>AI Chat</a>
+                    <a href="../codeopen">Code Opener</a>
                 </div>
             </div>
             <a href="../news">News</a>
@@ -59,8 +60,8 @@
 <div id="user"></div>      
 </div>
 <br><br>
-<div style="position: fixed; bottom: 5%;">
-  <table>
+<main>
+  <table style="position: fixed; bottom: 5%;">
     <tr>
         <td><textarea placeholder="Prompt" id="textprompt" style="resize: none;"></textarea></td>
         <td><input placeholder="api key" id="apikey" style="resize: none; width: 100px;" type="password"></input><br>
@@ -69,9 +70,9 @@
         <td><button type="submit" onclick="ask(document.getElementById('textprompt').value)">Submit</button></td>
     </tr>
   </table>
-</div>
-<footer style="bottom: 0;">
-  <div>Copyright © 2021-2023, BlackusPL | All rights reserved | DO NOT DISTRIBUTE</div>
+</main>
+<footer>
+  <p>Copyright © 2021-2023, BlackusPL | All rights reserved | DO NOT DISTRIBUTE</p>
 </footer>  
     </body>
     <script src="../base.js"></script>

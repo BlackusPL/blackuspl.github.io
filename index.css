@@ -33,7 +33,6 @@ footer {
     height: 2.5rem;
     background: #080808;
     display: block;
-    position: absolute;
     width: 100%;
 }
 body[style^="position: relative;"] > footer, body video ~ footer {
@@ -45,7 +44,6 @@ footer > div {
 }
 .content {
   margin: 2em auto;
-  position: relative;
   width: 60%;
 }
 #text-pages {
@@ -64,7 +62,7 @@ center {
   white-space:nowrap;
   font-size: medium;
 }
-ul a {
+ul#tab a {
   display:inline-block;
   color:white;
   text-align:center;
@@ -74,7 +72,7 @@ ul a {
   cursor:pointer;
   margin-left: -4px;
 }
-ul a:hover {background-color:#333;}
+ul#tab a:hover {background-color:#333;}
 
 .showtasks a:hover {background-color: #ddd;}
 
@@ -174,6 +172,35 @@ ul a:hover {background-color:#333;}
   }
   h3 + input:checked + div#changelog{
     display: block;
+  }
+  main {
+    height: 100%;
+  }
+  header {
+      font-weight: unset;
+  }
+  header > main > header {
+      font-weight: bold;
+  }
+  footer > p {
+      padding-left: 1%;
+  }
+  footer {
+      margin-top: 1%;
+      position: unset;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  ul#tab {
+    overflow: unset;
+    margin: 0.5%;
   }
   @media only screen and (max-width: 600px) {
     footer {

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DarknessAir.INC</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png"
+          type="image/icon type">
+        <link href="../index.css" rel="stylesheet">
+        <link href="../manifest.webmanifest" rel="manifest" />
+        <meta property="og:site_name" content="DarknessAir">
+        <meta property="og:title" content="Welcome">
+        <meta property="og:description" content="Welcome in Dark Site">
+        <meta property="og:image" content="https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:url" content="https://blackuspl.github.io/DarknessAir">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+          #body_code {
+            width: 500px; 
+            height: 150px;
+          }
+          #head_code {
+            width: 500px; 
+            height: 75px;
+          }
+          @media only screen and (max-width: 600px) {
+              #body_code {
+              width: calc(100% - 50px); 
+              height: 150px;
+            }
+            #head_code {
+              width: calc(100% - 50px); 
+              height: 75px;
+            }
+          }
+      </style>
+    </head>
+    <body>
+    <!--The tab to move in the website-->
+    <ul id="tab" translate="no">
+        <a href=".." style="margin-left: 0px;">Home</a>
+        <a href="../games">Games</a>
+        <a href="../music">Music Player</a>
+        <div class="dropdown">
+          <button class="dropbtn">Social Links ↡ </button>
+          <div class="showtasks">
+            <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>
+            <a href="https://discord.com/users/410243501494894603">Discord</a>
+            <a href="https://github.com/BlackusPL">Github</a>
+        </div></div>
+        <div class="dropdown">
+          <button class="dropbtn">Usefull stuffs ↡ </button>
+          <div class="showtasks">
+              <a href="../about">My Projects</a>
+              <a href="../textonimage">TextonImage</a>
+              <a href="../ai">AI Chat</a>
+              <a>Code Opener</a>
+          </div>
+        </div>
+        <a href="../news">News</a>
+        <div class="dropdown">
+        <button class="dropbtn">Languages ↡ </button>
+        <div class="showtasks">
+          <a onclick="jezyk('pl')">Polish</a>
+          <a onclick="jezyk('de')">German</a>
+          <a onclick="jezykoff()">English</a>
+        </div></div>
+        <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
+        <a class="secret" href="../secret.html">Secret</a>
+        </ul>
+        <!--end-->
+        <noscript>Turn on javascript! <style>main {display: none;} noscript {height: 100%;}</style></noscript>
+        <main>
+          <center>
+            <header style="margin: 1em auto 0em;"><h2>Code Opener</h2></header>
+            <h3>What this do?</h3>
+            <p>You can paste code of html, html body and head to see how site looks with your code or json code to format it.</p>
+            <p><a href="..">Go back</a></p>
+            <textarea placeholder="There place elements in head" id="head_code"></textarea><br>
+            <textarea placeholder="There place elements that will be in body" id="body_code"></textarea>
+          <div style="margin: 2em auto; position: relative; width: 70%;">
+            <select>
+                <option>HTML</option>
+                <option>JSON</option>
+                <option>JS</option>
+                <option>Custom</option>
+            </select>
+            <div id="afterselectcon"><input type="checkbox" id="afterselect">Full HTML</input></div>
+            <br><br>
+            <button>Submit</button><br>
+          </div>
+            <button onclick="">Clear</button> <button onclick="alert('Test')" id="vieworiginal">Placeholder</button> <button onclick="">Download</button>
+            <br>
+          </center>
+        </main>
+        <footer>
+            <p>Copyright © 2021-2023, BlackusPL | All rights reserved | DO NOT DISTRIBUTE</p>
+        </footer>
+    </body>
+    <script src="../base.js"></script>
+    <script src="index.js"></script>
+</html>
