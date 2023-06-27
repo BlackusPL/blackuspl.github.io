@@ -30,8 +30,9 @@ My main target is to create site where users can knows more about me and test my
 - [x] Add Base64 size limit to uploaded image on Music Player (for antilags)
 - [x] Translation for all pages
 - [x] Rework all pages for footer
-- [ ] New Navbar for better experience
-- [ ] Mobile version compatibility
+- [x] New Navbar for better experience
+- [x] Mobile version compatibility
+- [ ] Add more things for my all projects
 - [x] ~~Move main website here~~
 
 ## Copyright

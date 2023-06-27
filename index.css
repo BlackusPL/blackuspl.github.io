@@ -10,6 +10,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 body[style^="position: relative;"]::after {
   content: '';
@@ -52,15 +54,6 @@ footer > div {
 }
 center {
   text-align: center;
-}
-#tab {
-  list-style-type:none;
-  margin:0;
-  padding:0;
-  background-color:rgba(17, 17, 17, 0.5);
-  overflow:auto;
-  white-space:nowrap;
-  font-size: medium;
 }
 ul a {
   display:inline-block;
@@ -137,7 +130,7 @@ ul a:hover {background-color:#333;}
   }
   @font-face {
     font-family: "PerfectDOS";
-	  font-smooth: never;
+    font-smooth: never;
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: grayscale;
     src: url("https://saltssaumure.github.io/pios-discord-theme/font/PerfectDosVga.ttf");
@@ -149,7 +142,7 @@ ul a:hover {background-color:#333;}
     display: none;
   }
   a.secret {
-    position: absolute; margin-left: -200em;
+    margin-left: -200em;
   }
   a.secret:focus {
     margin-left: 0em;
@@ -193,28 +186,79 @@ ul a:hover {background-color:#333;}
     height: 100%;
     margin: 0;
   }
-  
-  body {
-    display: flex;
-    flex-direction: column;
+  .navbar {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      max-height: 70px;
+      border-bottom: 1px white solid;
+      background: #0005;
+      background-color: rgba(17, 17, 17, 0.5);
   }
-  ul#tab {
-    overflow: unset;
-    margin: 0.5%;
+  .navbar-items {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      vertical-align: middle;
+      max-height: 70px;
   }
-  @media only screen and (max-width: 600px) {
-    footer {
-      font-size: x-small;
+  .main {
+      flex: 1;
+  }
+  .navbar-link {
+      display: inline-flex;
+      vertical-align: middle;
+  }
+  .icon {
+      width: auto;
+      height: 70px;
+  }
+  .navbar-links {
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      line-height: 20px;
+      list-style-type: none;
+  }
+  @media only screen and (max-width: 800px) {
+      footer {
+        font-size: x-small;
+      }
+      ul a {
+        font-size: small;
+      }
+      .dropbtn {
+        font-size: small;
+      }
+      .card {
+        display: none;
+      }
     }
-    ul a {
-      font-size: small;
-    }
-    .dropbtn {
-      font-size: small;
-    }
-    .card {
-      display: none;
-    }
+  @media screen and (max-width: 1080px) {
+  div.navbar {
+      display: block;
+      flex: 0;
+      max-height: unset;
+  }
+  div.navbar-items {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      max-height: unset;
+  }
+  .logo {
+      align-self: center;
+  }
+  .widget {
+      flex-direction: column;
+  }
+  .widget iframe {
+      align-self: center;
+  }
+  }
+  .showtasks {
+      margin-top: 5vh;
   }
   /* 
   @import url(https://saltssaumure.github.io/pios-discord-theme/piOStheme.css);

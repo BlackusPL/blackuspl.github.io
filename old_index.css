@@ -1,0 +1,238 @@
+html {
+  cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAMgAAADIAGP6560AAAAHdElNRQfnBA0VEBsaNUWhAAAAAW9yTlQBz6J3mgAAAbhJREFUSMft1EsvJFEUB/B/3arW3XTQzIxE0B1prxYmFhMzKxs7tu0RtthZEItZ+QA2xMpSQlpsxWNmg1mMmMwXGAt0REjEoxOPVNfj7xaazEpVLaycm1Tu5vxyzs2pAzzHpuZ8qcBPOFmLUX12uUQSwh+gotTI8lcqrPghJBBIVJ3uZcgNX4QDxGNnmTprm/zx1TvhABXxbKaW0P/IKjwTj8BlppmwAsYuuR4LeSLyQCMVS6FmyCrWPBEvACyNT8QqgvIqPAOCQuYV5P5KIuGW+L8CPJ7cFrmSLHA1nS+AsJzkCJNsYqt1It9irlB5ncgDScL8LJuo4AVzN7c32SvLvFv4HX61jfwclHHANlknmSVeLvR/G+rs+TLfNlnoqoWG+NHBjG3qxt60BNqZOyyvRLE8KoQrADXXR2R6YqTn3IraMOU4DSpYC6ZUuHpELR67Pd7+jg+o5+64Db3P5k8I99MoeqvT3YikyqIlW2Nn/KSPkf+guV8wKkIIdISgJorLG893DNLcH4VC1f0fJZYfuk0E8REt6eGpLhR1aP72WwhRRBCW9fjbkFBS6lxgUvOb/h7v8fZxDzhr0tNFNchWAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTA0LTEzVDIxOjE2OjI2KzAwOjAwo385CQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wNC0xM1QyMToxNjoyNiswMDowMNIigbUAAAAASUVORK5CYII='), auto;
+  scroll-behavior: smooth;
+}
+body {
+    background: #111;
+    color: #fff;
+    font-family: sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+body[style^="position: relative;"]::after {
+  content: '';
+  display: block;
+  height: 2.5rem; /* Set same as footer's height */
+}
+header {
+    font-weight: bold;
+    font-size: large;
+}
+li {
+    color: #f1f1f1;
+}
+b {
+    color: #fff;
+}
+footer {
+    border-top: 1px solid #fff;
+    font-size: small;
+    left: 0;
+    height: 2.5rem;
+    background: #080808;
+    display: block;
+    width: 100%;
+}
+body[style^="position: relative;"] > footer, body video ~ footer {
+  bottom: 1px;
+}
+footer > div {
+  padding: 1em;
+  float: left;
+}
+.content {
+  margin: 2em auto;
+  width: 60%;
+}
+#text-pages {
+  position: relative;
+  color: red;
+}
+center {
+  text-align: center;
+}
+#tab {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  background-color:rgba(17, 17, 17, 0.5);
+  overflow:auto;
+  white-space:nowrap;
+  font-size: medium;
+}
+ul a {
+  display:inline-block;
+  color:white;
+  text-align:center;
+  padding:14px 16px;
+  text-decoration:none;
+  transition:0.3s;
+  cursor:pointer;
+  margin-left: -4px;
+}
+ul a:hover {background-color:#333;}
+
+.showtasks a:hover {background-color: #ddd;}
+
+.dropdown:hover .showtasks {display: block;}
+
+.dropdown:hover .dropbtn {background-color:#333;}
+
+.showtasks {
+    display: none; 
+    position: absolute; 
+    float: none;
+    background-color: rgba(75, 75, 75, 0.9);
+    transition:0.3s;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    min-width: 160px;
+    margin-left: -4px;
+  }
+  .showtasks a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropbtn {
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+    transition:0.3s;
+    background-color:transparent;
+    cursor:pointer;
+    border: none;
+    font-size: medium;
+    margin-left: -4px;
+  }
+  .dropdown {
+    display: inline-block;
+  }
+  .avatar {
+    border-radius: 100%;
+    width: 32px;
+    content: url(https://cdn.discordapp.com/attachments/763842296697061377/1062830895565906031/ezgif.com-gif-maker-5.gif);
+    /* content: url("https://cdn.discordapp.com/attachments/1015289638740561941/1015368460815044669/ezgif.com-gif-maker_4.gif"); */
+    /* content: url("https://cdn.discordapp.com/attachments/763842296697061377/1004035346306183248/ezgif.com-gif-maker_50fps.gif"); */
+  }
+  a[title="Github - BlackusPL"] {
+    color: blue;
+    text-decoration: none;
+  }
+  video#videobg {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.5);
+    object-fit: cover;
+    pointer-events: none;
+  }
+  @font-face {
+    font-family: "PerfectDOS";
+	  font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    src: url("https://saltssaumure.github.io/pios-discord-theme/font/PerfectDosVga.ttf");
+  }
+  *{
+    text-shadow: 0 0 20px;
+  }
+  #searchbar {
+    display: none;
+  }
+  a.secret {
+    position: absolute; margin-left: -200em;
+  }
+  a.secret:focus {
+    margin-left: 0em;
+  }
+  .card {
+    text-align: center;
+    border-style: inset;
+    background-color: #1a1c1f;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+  }
+  .card .user-info #username a {
+    all: unset;
+  }
+  h3 + div.changelog {
+    text-align: start;
+    margin-left: 25%;
+    color: lightgray;
+  }
+  h3 + input:checked + div#changelog{
+    display: block;
+  }
+  main {
+    height: 100%;
+  }
+  header {
+      font-weight: unset;
+  }
+  header > main > header {
+      font-weight: bold;
+  }
+  footer > p {
+      padding-left: 1%;
+  }
+  footer {
+      margin-top: 1%;
+      position: unset;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  ul#tab {
+    overflow: unset;
+    margin: 0.5%;
+  }
+  @media only screen and (max-width: 600px) {
+    footer {
+      font-size: x-small;
+    }
+    ul a {
+      font-size: small;
+    }
+    .dropbtn {
+      font-size: small;
+    }
+    .card {
+      display: none;
+    }
+  }
+  /* 
+  @import url(https://saltssaumure.github.io/pios-discord-theme/piOStheme.css);
+  
+* {
+	text-shadow: 2px 0 10px var(--mainGlowColor), -2px 0 10px var(--mainGlowColor);
+  --mainGlowColor: hsla(180, calc(1*100%), 50%, calc(0.7 * 1));
+}
+*/
+/*
+.dropdown button{
+	font-family: PerfectDOS, monospace;
+}
+:root
+{
+    --glow-intensity: 1;            /* Intensity of text glow. Range: 0-1, default: 1 (100%) */
+/*    --crt-overlay: none;          /* CRT monitor overlay. Values: block (on) or none (off) */
+    /* The following effects are performance-heavy. */
+/*    --crt-scanline: none;          /* CRT animated scanline. Values: block (on) or none (off) */
+/*    --crt-flicker: none;            /* CRT monitor overlay flickering. Values: flicker (on) or none (off) */
+/*} */

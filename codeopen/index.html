@@ -33,41 +33,74 @@
               height: 75px;
             }
           }
-      </style>
-    </head>
-    <body>
+</style>
+</head>
+<body>
     <!--The tab to move in the website-->
-    <ul id="tab" translate="no">
-        <a href=".." style="margin-left: 0px;">Home</a>
-        <a href="../games">Games</a>
-        <a href="../music">Music Player</a>
-        <div class="dropdown">
-          <button class="dropbtn">Social Links ↡ </button>
-          <div class="showtasks">
-            <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>
-            <a href="https://discord.com/users/410243501494894603">Discord</a>
-            <a href="https://github.com/BlackusPL">Github</a>
-        </div></div>
-        <div class="dropdown">
-          <button class="dropbtn">Usefull stuffs ↡ </button>
-          <div class="showtasks">
-              <a href="../about">My Projects</a>
-              <a href="../textonimage">TextonImage</a>
-              <a href="../ai">AI Chat</a>
-              <a>Code Opener</a>
-          </div>
+    <div class="navbar">
+        <div class="navbar-items" id="tab">
+          <ul class="navbar-links logo">
+            <li class="navbar-link">
+              <img src="https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png" class="icon">
+            </li>
+          </ul>
+          <ul class="navbar-links main">
+            <li class="navbar-link" style="width: 0; height: 70px;"></li>
+            <li class="navbar-link">
+              <a href=".." class="navbar-item">
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="navbar-link">
+              <a href="../games" class="navbar-item">
+                <span>Games</span>
+              </a>
+            </li>
+            <li class="navbar-link">
+              <a href="../music" class="navbar-item">
+                <span>Music Player</span>
+              </a>
+            </li>
+            <li class="navbar-link dropdown">
+              <a class="navbar-item">
+                <span>Social Links ↡ </span>
+              </a>
+              <div class="showtasks">
+                <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>
+                <a href="https://discord.com/users/410243501494894603">Discord</a>
+                <a href="https://github.com/BlackusPL">Github</a>
+              </div>
+            </li>
+            <li class="navbar-link dropdown">
+              <a class="navbar-item">
+                <span>Usefull stuffs ↡ </span>
+              </a>
+              <div class="showtasks">
+                <a href="../about">My Projects</a>
+                <a href="../textonimage">TextonImage</a>
+                <a href="../ai">AI Chat</a>
+                <a>Code Opener</a>
+              </div>
+            </li>
+            <li class="navbar-link">
+              <a href="../news" class="navbar-item">
+                <span>News</span>
+              </a>
+            </li>
+            <li class="navbar-link dropdown">
+              <a class="navbar-item">
+                <span>Languages ↡ </span>
+              </a>
+              <div class="showtasks">
+                <a onclick="jezyk('pl')">Polish</a>
+                <a onclick="jezyk('de')">German</a>
+                <a onclick="jezykoff()">English</a>
+              </div>
+            </li>
+            <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
+          </ul>    
         </div>
-        <a href="../news">News</a>
-        <div class="dropdown">
-        <button class="dropbtn">Languages ↡ </button>
-        <div class="showtasks">
-          <a onclick="jezyk('pl')">Polish</a>
-          <a onclick="jezyk('de')">German</a>
-          <a onclick="jezykoff()">English</a>
-        </div></div>
-        <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
-        <a class="secret" href="../secret.html">Secret</a>
-        </ul>
+      </div>
         <!--end-->
         <noscript>Turn on javascript! <style>main {display: none;} noscript {height: 100%;}</style></noscript>
         <main>

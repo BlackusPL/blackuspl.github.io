@@ -130,7 +130,7 @@ const DA = {
 
 // search for element with class "footer" and place a clock
 if (document.querySelector("#tab")) {
-document.querySelector("#tab").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em; padding: 1em;"></div>`);
+document.querySelector("#tab").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em; padding: 1em; align-self: center;"></div>`);
 startTime();
 function startTime() {
   const today = new Date(Date.now());
