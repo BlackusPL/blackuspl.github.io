@@ -23,6 +23,10 @@
             width: 500px; 
             height: 75px;
           }
+          #video_src {
+              width: 600px;
+              height: 250px;
+            }
           @media only screen and (max-width: 600px) {
               #body_code {
               width: calc(100% - 50px); 
@@ -31,6 +35,10 @@
             #head_code {
               width: calc(100% - 50px); 
               height: 75px;
+            }
+            #video_src {
+              width: calc(75% - 50px);
+              height: 250px;
             }
           }
 </style>
@@ -107,23 +115,25 @@
           <center>
             <header style="margin: 1em auto 0em;"><h2>Code Opener</h2></header>
             <h3>What this do?</h3>
-            <p>You can paste code of html, html body and head to see how site looks with your code or json code to format it.</p>
+            <p>You can paste code of html or html body and head to see how site looks with your code or json code to format it.</p>
             <p><a href="..">Go back</a></p>
-            <textarea placeholder="There place elements in head" id="head_code"></textarea><br>
-            <textarea placeholder="There place elements that will be in body" id="body_code"></textarea>
+            <textarea placeholder="Elements in head" id="head_code"></textarea><br>
+            <textarea placeholder="Elements that will be in body or html code" id="body_code"></textarea>
           <div style="margin: 2em auto; position: relative; width: 70%;">
             <select>
                 <option>HTML</option>
                 <option>JSON</option>
                 <option>JS</option>
-                <option>Custom</option>
+                <option>Translator</option>
+                <option>Localplayer</option>
+                <option>DataURI</option>
+                <option>soon</option>
             </select>
             <div id="afterselectcon"><input type="checkbox" id="afterselect">Full HTML</input></div>
             <br><br>
+            <button id="clear">Clear</button>
             <button>Submit</button><br>
           </div>
-            <button onclick="">Clear</button> <button onclick="alert('Test')" id="vieworiginal">Placeholder</button> <button onclick="">Download</button>
-            <br>
           </center>
         </main>
         <footer>
