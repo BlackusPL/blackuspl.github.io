@@ -230,6 +230,12 @@ let othersong = [
         title: "Madrigal"
     },
     url: "https://coub-attachments.akamaized.net/coub_storage/raw_video/cw_cutter_mp4_dashed_audio/0661a6f9585/ac87cab81e5ebd39c3d0b/1673034270_separated_audio.m4a"
+},{
+    metaData: {
+        artist: "Килджо",
+        title: "Часики (Speed Up)"
+    },
+    url: "./local_music/Килджо - Часики (Speed Up).mp3"
 }];
 // END Create playlists
 let allTracks = othersong.concat(coubsong, nightcore);
@@ -337,7 +343,8 @@ function changeFunc() {
                 othersong[6],
                 othersong[8],
                 othersong[13],
-                coubsong[4]
+                coubsong[4],
+                othersong[16]
             ]);
             break;
         default:
