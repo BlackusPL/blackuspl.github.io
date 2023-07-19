@@ -1,10 +1,30 @@
+// Inserts Jquery ES5
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://blackuspl.github.io/DarknessAir/textonimage/jquery.min.js');
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    var jqueryjs = document.createElement('script');
+    jqueryjs.textContent = xhr.responseText;
+    document.head.appendChild(jqueryjs);
+  }
+};
+xhr.send();
+// void version ES6
+/*
+async () => {
+  await import('https://blackuspl.github.io/DarknessAir/textonimage/jquery.min.js');
+  // Your code here...
+};
+// you can use only import() but still will be void
+*/
+// When selected language English then removes cookie
 function jezykoff() {
   document.cookie = "language=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC";
   //localStorage.removeItem('language');
   window.location.reload();
 }
 
-
+// function to create languages cookie
 function jezyk(lang) {
   var data = new Date();
   data.setDate(data.getDate() + 3);
