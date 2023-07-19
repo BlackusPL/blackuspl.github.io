@@ -1,7 +1,5 @@
 (() => {
-function id(_) {
-    return document.getElementById(_);
-};
+const id = (_) => document.getElementById(_);
 id('body_code').value = sessionStorage.getItem('body_code');
 id('head_code').value = sessionStorage.getItem('head_code');
 id('body_code').addEventListener('change', function () {

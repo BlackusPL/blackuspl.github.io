@@ -32,6 +32,9 @@
 .content {  
   animation: 2s ease-out 0s 1 showupcontent;
 }
+span[style="white-space:nowrap"] a{
+  padding: unset;
+}
   </style>
 </head>
 
@@ -102,6 +105,11 @@
             </div>
           </li>
           <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
+          <li class="navbar-link">
+            <div id="google_translate_element" class="navbar-item">
+              <noscript>You need to enable JavaScript to able to use Translator.</noscript>
+            </div>
+          </li>
         </ul>    
       </div>
     </div>
@@ -115,6 +123,9 @@
       <h3 class="changelogcon">Update 20.07.2023<br></h3>
       <div class="changelog">
         - Jquery is now available on every pages<br>
+        - Optimize code<br>
+        - Fixed <a href="../music">music player</a> where music.js loads first then base.js caused some errors<br>
+        - Fixed position of translator<br>
       </div>
       <br>
       <hr style="width: 50%;">
@@ -591,9 +602,6 @@
       </div>
       <!--Changelog end-->
   <br><br></center>
-    </div>
-    <div id="google_translate_element">
-    <noscript>You need to enable JavaScript to able to use Translator.</noscript>
     </div>
     <footer>
         <div>Copyright © 2021-2023, BlackusPL | All rights reserved | DO NOT DISTRIBUTE</div>

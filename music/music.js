@@ -353,14 +353,14 @@ function changeFunc() {
       }
     }
 // START set Background with url // if CustomBG have value then set value to input
-if (localStorage.getItem('CustomBG') !== null) document.getElementById('imagebgurl').value = `${localStorage.CustomBG}`;
+if (localStorage.getItem('CustomBG') !== null) $i('imagebgurl').value = `${localStorage.CustomBG}`;
 // when click Save & Load then create object named CustomBG with url to background and set new background from CustomBG
-document.getElementById('saveload').addEventListener('click', function () {
+$i('saveload').addEventListener('click', function () {
     var BG = document.getElementById('imagebgurl').value;
     localStorage.setItem('CustomBG',BG);
 // when input has spaces or = null then removes object named CustomBG and set default background, if doesnt includes spaces or != null then set background from CustomBG
     if (localStorage.getItem('CustomBG').includes(' ') || localStorage.getItem('CustomBG') === '') {localStorage.removeItem('CustomBG'); document.body.style.backgroundImage = `url(https://i.ytimg.com/vi/X10UD5nQDCs/maxresdefault.jpg)`;} 
-    else {getID('videobg').src = `${localStorage.CustomBG}`;document.body.style.backgroundImage = `url(${localStorage.CustomBG})`;}
+    else {$i('videobg').src = `${localStorage.CustomBG}`;document.body.style.backgroundImage = `url(${localStorage.CustomBG})`;}
 });
 // END set Background with url //
 
@@ -372,7 +372,7 @@ image_input.addEventListener('change', function () {
     const reader = new FileReader();
     reader.addEventListener('load', () => {
 // when somehow uploaded file is video then send alert to you that you cant do that, if is image then set as background
-        if (!image_input.files[0].type.startsWith('image/') && getID('experiments').checked === false) {alert('This is not a image file! If you want background as video use URL option')} else {
+        if (!image_input.files[0].type.startsWith('image/') && $i('experiments').checked === false) {alert('This is not a image file! If you want background as video use URL option')} else {
         uploaded_image = reader.result;
 // check if converted to Base64 uploaded_image have less than 10 MB
 //        if (uploaded_image.length > 10 * 1024 * 1024) {
@@ -394,7 +394,7 @@ image_output.addEventListener('click', function () {
         // START my code
         localStorage.removeItem('CustomBG');
         document.getElementById('imagebgurl').value = '';
-        getID('videobg').src = '';
+        $i('videobg').src = '';
         // END my code
     });
 

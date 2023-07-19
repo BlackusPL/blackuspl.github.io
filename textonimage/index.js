@@ -38,7 +38,7 @@ function loadimage() {
           success: function(data){
               var url = window.URL || window.webkitURL;
               image.src = url.createObjectURL(data);
-              $(getID('vieworiginal')).attr('onclick', "window.open('" + image.src + "')");
+              $($i('vieworiginal')).attr('onclick', "window.open('" + image.src + "')");
           },
           error:function(){
               
@@ -66,12 +66,12 @@ function loadimage() {
       } catch(error) {console.log("%c[TextOnImage]" + " %cCan't convert this to Base64 becouse CORS blocking it (Use 'Accept CORS' option)","color: rgb(58, 113, 193)","color: red")}
       console.log("%c[TextOnImage]" + " %cSuccesfully Loaded","color: rgb(58, 113, 193)","color: unset");
     };
-    if (window.location.search !== '') getID('sizex').value = sizex,
-    getID('sizey').value = sizey, getID('text').value = text, getID('textx').value = textx, getID('texty').value = texty, getID('textshadow').checked = txtshadow1, getID('cors').checked = cors1;
+    if (window.location.search !== '') $i('sizex').value = sizex,
+    $i('sizey').value = sizey, $i('text').value = text, $i('textx').value = textx, $i('texty').value = texty, $i('textshadow').checked = txtshadow1, $i('cors').checked = cors1;
   };
   function txt2img() {
     document.querySelector('canvas').remove();
-    window.history.pushState(null, null, '?url=' + getID('url').value + '&text=' + getID('text').value + '&textx=' + getID('textx').value + '&texty=' + getID('texty').value + '&shadow=' + getID('textshadow').checked + '&color=' + getID('color').value + '&sizex=' + getID('sizex').value + '&sizey=' + getID('sizey').value + '&cors=' + getID('cors').checked);
+    window.history.pushState(null, null, '?url=' + $i('url').value + '&text=' + $i('text').value + '&textx=' + $i('textx').value + '&texty=' + $i('texty').value + '&shadow=' + $i('textshadow').checked + '&color=' + $i('color').value + '&sizex=' + $i('sizex').value + '&sizey=' + $i('sizey').value + '&cors=' + $i('cors').checked);
     loadimage();
   }
   function debugBase64(base64URL) {

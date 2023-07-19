@@ -32,9 +32,8 @@ function jezyk(lang) {
   //localStorage.setItem('language', 'pl');
   window.location.reload();
 }
-
 // code by cyan-2048
-const getID = (e) => document.getElementById(e), qs = (e) => document.querySelector(e);
+const $i = (e) => document.getElementById(e), $q = (e) => document.querySelector(e);
 /* 
 getID("search_bar").onclick = () => {
   getID("searchbar").style.display = getID("searchbar").style.display == "block" ? "none" : "block";
@@ -149,8 +148,8 @@ const DA = {
 };
 
 // search for element with class "footer" and place a clock
-if (document.querySelector("#tab")) {
-document.querySelector("#tab").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em; padding: 1em; align-self: center;"></div>`);
+if ($q("#tab")) {
+$q("#tab").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em; padding: 1em; align-self: center;"></div>`);
 startTime();
 function startTime() {
   const today = new Date(Date.now());
