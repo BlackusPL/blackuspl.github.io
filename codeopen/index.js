@@ -134,7 +134,7 @@ function playVideo(files) {
                 id('body_code').placeholder = "Result";
                 id('head_code').style.display = "none";
                 id('body_code').style.display = "";
-                document.querySelector('select').insertAdjacentHTML('afterend','<div id="afterselectcon"><input type="file" accept="video/*" id="afterselect"></input></div>');
+                document.querySelector('select').insertAdjacentHTML('afterend','<div id="afterselectcon"><input type="file" accept="*/*" id="afterselect"></input></div>');
                 id('afterselect').addEventListener('change', function () {
                 function blobToDataURL(blob) {
                     return new Promise((res) => {
