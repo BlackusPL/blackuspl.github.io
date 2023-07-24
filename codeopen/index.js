@@ -17,6 +17,12 @@ id('clear').addEventListener('click', function () {
 function rm_html() {
     try {id('afterselectcon').remove(); id('video_src').remove()} catch {}
 };
+function playVideo(files) {
+    try {
+      URL.revokeObjectURL(id('video_src').src);
+      id('video_src').src = URL.createObjectURL(files[0]);
+    } catch (e) {}
+};
 
     document.querySelector("#afterselectcon ~ button + button").addEventListener('click', function () {
         let type = document.querySelector('select').value;
@@ -55,6 +61,12 @@ function rm_html() {
                 break;
                 case 'Translator':
                     alert('soon')
+                break;
+                case 'Localplayer':
+                    window.open().document.write(`<video style="width: 100%; height: 100%;" src="${id('video_src').src}" controls></video>`)
+                break;
+                case 'DataURI':
+                    alert('This not working for this!')
                 break;
                 case 'soon':
                     alert('soon')
@@ -109,20 +121,33 @@ function rm_html() {
             break;
             case 'Localplayer':
                 rm_html()
-                id('body_code').placeholder = "Result";
                 document.querySelector('select').insertAdjacentHTML('afterend','<div id="afterselectcon"><input type="file" accept="video/*" id="afterselect"></input></div>');
                 document.querySelector('#body_code').insertAdjacentHTML('afterend','<video id="video_src" controls></video>');
-                function playVideo(files) {
-                    try {
-                      URL.revokeObjectURL(id('video_src').src);
-                      id('video_src').src = URL.createObjectURL(files[0]);
-                    } catch (e) {}
-                };
                 id('afterselect').addEventListener('change', function () {
                     playVideo(this.files)
                 });
                 id('head_code').style.display = "none";
                 id('body_code').style.display = "none";
+            break;
+            case 'DataURI':
+                rm_html();
+                id('body_code').placeholder = "Result";
+                id('head_code').style.display = "none";
+                id('body_code').style.display = "";
+                document.querySelector('select').insertAdjacentHTML('afterend','<div id="afterselectcon"><input type="file" accept="video/*" id="afterselect"></input></div>');
+                id('afterselect').addEventListener('change', function () {
+                function blobToDataURL(blob) {
+                    return new Promise((res) => {
+                      var a = new FileReader();
+                      a.onload = () => res(a.result);
+                      a.readAsDataURL(blob);
+                    });
+                };
+                async function dataURLFunc(text) {
+                    id("body_code").value = await blobToDataURL(text);
+                };
+                dataURLFunc(this.files[0]);
+            });
             break;
         }
     })

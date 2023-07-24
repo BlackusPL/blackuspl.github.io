@@ -220,6 +220,9 @@ ul a:hover {background-color:#333;}
       line-height: 20px;
       list-style-type: none;
   }
+  span[style="white-space:nowrap"] a{
+    padding: unset;
+  }
   @media only screen and (max-width: 800px) {
       footer {
         font-size: x-small;

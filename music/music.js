@@ -116,6 +116,22 @@ let coubsong = [{
         title: "Long Nights"
     },
     url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/397b0ccf125/b5d252ca891806b72ed59/1644715514_mp3-high.mp3"
+},
+{
+    metaData: {
+        artist: "Coub / Fraunhofer Diffraction",
+        title: "Someday",
+        coubid: "3c2dbl"
+    },
+    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/e53f8ea00e1/d0788342953689389fbd1/1689180385_mp3-high.mp3"
+},
+{
+    metaData: {
+        artist: "Coub / ZeFilla",
+        title: "Shadow lady (phonk remix)",
+        coubid: "3c0l21"
+    },
+    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/75382d50aff/00be26cf0f06651aff2e6/1688670809_mp3-high.mp3"
 }
 ];
 let othersong = [
@@ -236,6 +252,12 @@ let othersong = [
         title: "Часики (Speed Up)"
     },
     url: "./local_music/Килджо - Часики (Speed Up).mp3"
+},{
+    metaData: {
+        artist: "RbowChickenn",
+        title: "escape from everyone"
+    },
+    url: "./local_music/RbowChickenn - escape from everyone.mp3"
 }];
 // END Create playlists
 let allTracks = othersong.concat(coubsong, nightcore);
@@ -324,7 +346,7 @@ function changeFunc() {
             break;
         case 'coub':
             // START Create single array // that contain coubsong array and othersong with number 6
-            var allcoub = coubsong.concat([othersong[6]]);
+            var allcoub = coubsong.concat([othersong[15]]);
             // END Create single array //
             webamp.setTracksToPlay(allcoub ,[]);
             break;
@@ -344,7 +366,8 @@ function changeFunc() {
                 othersong[8],
                 othersong[13],
                 coubsong[4],
-                othersong[16]
+                othersong[16],
+                coubsong[14]
             ]);
             break;
         default:
