@@ -66,7 +66,20 @@ function playVideo(files) {
                     window.open().document.write(`<video style="width: 100%; height: 100%;" src="${id('video_src').src}" controls></video>`)
                 break;
                 case 'DataURI':
-                    alert('This not working for this!')
+                    switch (id('body_code').value.substring(0, 10)) {
+                        case 'data:audio':
+                            window.open().document.write(`<video controls autoplay name="media"><source src="${id('body_code').value}"></video>`)
+                        break;
+                        case 'data:video':
+                            window.open().document.write(`<video controls autoplay name="media" style="width: 100%; height:100%;"><source src="${id('body_code').value}"></video>`)
+                        break;
+                        case 'data:image':
+                            window.open().document.write(`<image src="${id('body_code').value}">`)
+                        break;
+                        default:
+                            window.open().document.write(`${id('body_code').value}`)
+                        break;
+                    }
                 break;
                 case 'soon':
                     alert('soon')

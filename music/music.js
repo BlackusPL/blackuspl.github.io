@@ -376,7 +376,7 @@ function changeFunc() {
       }
     }
 // START set Background with url // if CustomBG have value then set value to input
-if (localStorage.getItem('CustomBG') !== null) $i('imagebgurl').value = `${localStorage.CustomBG}`;
+if (isNaN(localStorage.getItem('CustomBG'))) $i('imagebgurl').value = `${localStorage.CustomBG}`;
 // when click Save & Load then create object named CustomBG with url to background and set new background from CustomBG
 $i('saveload').addEventListener('click', function () {
     var BG = document.getElementById('imagebgurl').value;
