@@ -1,6 +1,6 @@
 // Inserts Jquery ES5
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://blackuspl.github.io/DarknessAir/textonimage/jquery.min.js');
+xhr.open('GET', 'https://blackuspl.github.io/textonimage/jquery.min.js');
 xhr.onload = function () {
   if (xhr.status === 200) {
     var jqueryjs = document.createElement('script');
@@ -126,7 +126,7 @@ if (localStorage.getItem('language') == 'pl') {
 setTimeout(function(){
   var version = "1.3";
   console.log("%c[Console] %cv"+ version +" %cSuccesfully Loaded","color: rgb(58, 113, 193)","color: gray; font-size: 75%","color: white");
-  console.log("%c Advanced %cConsole v" + version +" by BlackusPL %c https://blackuspl.github.io/DarknessAir ", "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
+  console.log("%c Advanced %cConsole v" + version +" by BlackusPL %c https://blackuspl.github.io/ ", "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
   // console.log("%c Console wasn't cleared " , "background: #000000;color: orange;font-size: 1.2em")
   console.log("%c Commands under DA.help() " , "background: #000000;color: white;font-size: 1em;word-break: all");
   // window.history.replaceState('#gsc.tab=0', '', ' ')

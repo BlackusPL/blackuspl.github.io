@@ -310,8 +310,15 @@ const webamp = new Webamp({
              url: "https://rs7-krk2.rmfstream.pl/rmf_maxxx"
              // url: "http://217.74.72.6/rmf_maxxx_slk"
          }])
-    }
-    ],
+    },{
+        contextMenuName: "[HILLCHILL] The Sound of Phonk / 24/7 Phonk Radio",
+        filePicker: () => Promise.resolve([{
+            metaData: {
+                 title: "[HILLCHILL] The Sound of Phonk / 24/7 Phonk Radio / Website: https://hillchill.net/"
+             },
+             url: "https://radio.hillchill.net/stream"
+         }])
+    }],
     __butterchurnOptions: {
         importButterchurn: () => Promise.resolve(window.butterchurn),
         getPresets: () => {
@@ -369,6 +376,27 @@ function changeFunc() {
                 othersong[16],
                 coubsong[14]
             ]);
+            break;
+        case 'phonk_radio':
+            webamp.setTracksToPlay([
+                {
+                    metaData: {
+                         title: "[HILLCHILL] The Sound of Phonk / 24/7 Phonk Radio / Website: https://hillchill.net/"
+                     },
+                     url: "https://radio.hillchill.net/stream"
+                 }
+                ]);
+            break;
+        case 'custom':
+            let radio = prompt("Type url of radio/stream");
+            webamp.setTracksToPlay([
+                {
+                    metaData: {
+                         title: "Custom Radio (no title)"
+                     },
+                     url: radio
+                 }
+                ]);
             break;
         default:
             // kod dla innych wartości
