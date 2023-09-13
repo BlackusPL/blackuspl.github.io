@@ -234,7 +234,10 @@ ul a:hover {background-color:#333;}
         font-size: small;
       }
       .card {
-        display: none;
+        position: static;
+        margin-bottom: 5%;
+        width: 220px;
+        justify-self: center;
       }
     }
   @media screen and (max-width: 1080px) {

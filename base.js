@@ -45,29 +45,7 @@ script.async;
 script.src = "https://cse.google.com/cse.js?cx=f57e79ca12bca49ec";
 document.head.append(script); 
 
-getID("tab").insertAdjacentHTML('afterend', `<ul id="tab" class="notranslate">
-<a href="/" style="margin-left: 0px;">Home</a>
-<a href="/games">Games</a>
-<a href="/music">Music Player</a>
-<div class="dropdown">
-  <button class="dropbtn">Social Links ↡ </button>
-  <div class="showtasks">
-    <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>
-    <a href="https://discord.com/users/410243501494894603">Discord</a>
-    <a href="https://github.com/BlackusPL">Github</a>
-</div></div>
-<a href="/about">About Me</a>
-<a href="/news">News</a>
-<div class="dropdown">
-<button class="dropbtn">Languages ↡ </button>
-<div class="showtasks">
-  <a onclick="jezyk('pl')">Polish</a>
-  <a onclick="jezyk('de')">German</a>
-  <a onclick="jezykoff()">English</a>
-</div></div>
-<a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
-<a class="secret" href="secret.html">Secret</a>
-</ul>`)
+getID("tab").insertAdjacentHTML('afterend', `<div>Old tab removed from here</div>`)
 getID("tab").remove();*/
 
 //if (localStorage.getItem('language') == 'pl') {

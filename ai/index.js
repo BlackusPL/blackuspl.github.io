@@ -16,7 +16,7 @@ function ask(prompt) {
     if (document.getElementById('customapi').value == '') { customapi = 'https://api.openai.com/v1/chat/completions' } else { customapi = document.getElementById('customapi').value }
     const xhr = new XMLHttpRequest();
     xhr.open('POST', customapi , true);
-    xhr.setRequestHeader('Authorization', 'Bearer ' + document.getElementById('apikey').value);
+    xhr.setRequestHeader('Authorization', 'Bearer ' + document.getElementById('apikey').value); // free https://free.churchless.tech/v1/chat/completions
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = function () {
       if (this.readyState === XMLHttpRequest.DONE) {

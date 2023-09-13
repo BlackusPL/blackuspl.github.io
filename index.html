@@ -5,14 +5,14 @@
 <head>
   <title>DarknessAir.INC</title>
   <meta charset="UTF-8">
-  <link rel="icon" href="https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png"
+  <link rel="icon" href="/BDPlugins/icon.png"
     type="image/icon type">
   <link href="index.css" rel="stylesheet">
   <link href="manifest.webmanifest" rel="manifest" />
   <meta property="og:site_name" content="DarknessAir">
   <meta property="og:title" content="Welcome">
   <meta property="og:description" content="Welcome in Dark Site">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png">
+  <meta property="og:image" content="/BDPlugins/icon.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:url" content="https://blackuspl.github.io/DarknessAir">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +35,7 @@ div#BDPlugins a:visited {
       text-decoration-line: none;
     }
 .card {
-  font-size: unset;
+  font-size: initial;
   margin-right: 0.5%;
 }
 </style>
@@ -46,7 +46,7 @@ div#BDPlugins a:visited {
       <div class="navbar-items" id="tab">
         <ul class="navbar-links logo">
           <li class="navbar-link">
-            <img src="https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png" class="icon">
+            <img src="/BDPlugins/icon.png" class="icon">
           </li>
         </ul>
         <ul class="navbar-links main">
@@ -109,30 +109,12 @@ div#BDPlugins a:visited {
             </div>
           </li>
           <a class="secret" href="secret.html">Secret</a>
-          <div class="card">
-            <noscript>
-              <style>
-                .card {
-                  display: none;
-                }
-              </style>
-            </noscript>
-            <div id="card-title">@unknown</div>
-            <img id="pfp" src="https://placekitten.com/128/128" alt="" width="128px" style="border-radius: 100%">
-            <div class="user-info">
-              <div id="username">Loading...</div>
-              <div id="status"></div>
-              <div id="activity-name" style="font-weight: bold;"></div>
-              <div id="activity-state"></div>
-              <div id="activity-detail"></div>
-            </div>
-          </div>
         </ul>    
       </div>
     </div>
     <!--end-->
     <!--div id="wrapper"-->
-    <header style="margin: 1em auto 0em;">
+    <header style="margin: 1em auto 0em; display: grid;">
             <main style="text-align: center; font-size: large;">
               <header>DarknessAir Website</header>
               <br><br>
@@ -140,6 +122,24 @@ div#BDPlugins a:visited {
               <p>If redirect not working go to https://coub.com/BlackusPL</p>
               <p><a href="./old_index.html">Go to old home page</a></p>
             </main>
+            <div class="card">
+              <noscript>
+                <style>
+                  .card {
+                    display: none;
+                  }
+                </style>
+              </noscript>
+              <div id="card-title">@unknown</div>
+              <img id="pfp" src="https://placekitten.com/128/128" alt="" width="128px" style="border-radius: 100%">
+              <div class="user-info">
+                <div id="username">Loading...</div>
+                <div id="status"></div>
+                <div id="activity-name" style="font-weight: bold;"></div>
+                <div id="activity-state"></div>
+                <div id="activity-detail"></div>
+              </div>
+            </div>
     </header>
     <h2 style="text-align: center; margin-top: unset;">Latest Coub</h2>
     <div class="widget">

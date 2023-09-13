@@ -242,10 +242,10 @@ let othersong = [
     url: "./local_music/Dadada (Slowed version).mp3"
 },{
     metaData: {
-        artist: "Tunahan Turhan , Ata Altınoluk",
-        title: "Madrigal"
+        artist: "Килджо",
+        title: "Только Ты"
     },
-    url: "https://coub-attachments.akamaized.net/coub_storage/raw_video/cw_cutter_mp4_dashed_audio/0661a6f9585/ac87cab81e5ebd39c3d0b/1673034270_separated_audio.m4a"
+    url: "./local_music/Килджо - Только Ты.mp3"
 },{
     metaData: {
         artist: "Килджо",
@@ -353,7 +353,7 @@ function changeFunc() {
             break;
         case 'coub':
             // START Create single array // that contain coubsong array and othersong with number 6
-            var allcoub = coubsong.concat([othersong[15]]);
+            var allcoub = coubsong.concat(/*[othersong[15]]*/);
             // END Create single array //
             webamp.setTracksToPlay(allcoub ,[]);
             break;
@@ -374,6 +374,7 @@ function changeFunc() {
                 othersong[13],
                 coubsong[4],
                 othersong[16],
+                othersong[15],
                 coubsong[14]
             ]);
             break;
