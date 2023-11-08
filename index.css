@@ -5,7 +5,7 @@ html {
 body {
     background: #111;
     color: #fff;
-    font-family: sans-serif;
+    font-family: headupdaisy;
     background-image: url('https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -134,6 +134,10 @@ ul a:hover {background-color:#333;}
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: grayscale;
     src: url("https://saltssaumure.github.io/pios-discord-theme/font/PerfectDosVga.ttf");
+  }
+  @font-face {
+    font-family: "HeadUpDaisy";
+    src: url("https://beatrun.ru/css/HeadUpDaisy.ttf");
   }
   *{
     text-shadow: 0 0 20px;

@@ -258,6 +258,12 @@ let othersong = [
         title: "escape from everyone"
     },
     url: "./local_music/RbowChickenn - escape from everyone.mp3"
+},{
+    metaData: {
+        artist: "Cyrex",
+        title: "TAKE ME"
+    },
+    url: "./local_music/Take Me.mp3"
 }];
 // END Create playlists
 let allTracks = othersong.concat(coubsong, nightcore);
@@ -366,6 +372,7 @@ function changeFunc() {
                 coubsong[1],
                 coubsong[12],
                 coubsong[8],
+                othersong[18],
                 othersong[2],
                 othersong[3],
                 othersong[5],
@@ -373,9 +380,9 @@ function changeFunc() {
                 othersong[8],
                 othersong[13],
                 coubsong[4],
+                coubsong[14],
                 othersong[16],
-                othersong[15],
-                coubsong[14]
+                othersong[15]
             ]);
             break;
         case 'phonk_radio':
@@ -438,6 +445,7 @@ image_input.addEventListener('change', function () {
     reader.readAsDataURL(this.files[0]);
 });
 
+// button to clean user settings
 const image_output = document.querySelector("#reset");
 
 image_output.addEventListener('click', function () {
