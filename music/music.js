@@ -322,7 +322,7 @@ const webamp = new Webamp({
             metaData: {
                  title: "[HILLCHILL] The Sound of Phonk / 24/7 Phonk Radio / Website: https://hillchill.net/"
              },
-             url: "https://radio.hillchill.net/stream"
+             url: "https://edge01.atomicradio.eu/hillchill/highquality"
          }])
     }],
     __butterchurnOptions: {
@@ -391,7 +391,7 @@ function changeFunc() {
                     metaData: {
                          title: "[HILLCHILL] The Sound of Phonk / 24/7 Phonk Radio / Website: https://hillchill.net/"
                      },
-                     url: "https://radio.hillchill.net/stream"
+                     url: "https://edge01.atomicradio.eu/hillchill/highquality"
                  }
                 ]);
             break;
