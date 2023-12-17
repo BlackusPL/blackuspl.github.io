@@ -1,3 +1,4 @@
+// check if your browser support javascript? or can run webamp
 if(!Webamp.browserIsSupported()) {
     alert("Oh no! Webamp does not work!")
     throw new Error("What's the point of anything?")

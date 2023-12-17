@@ -3,6 +3,7 @@ function ask(prompt) {
     //var apikey = document.getElementById('apikey').disabled;
     //if (apikey === true) { apikey = 'free' } else { apikey = document.getElementById('apikey').value }
     const textPrompt = document.getElementById('textprompt');
+    // set textprompt value to null/empty
     textPrompt.value = '';
     const userEle = document.getElementById('user');
     const title = `<img style="width: 24px !important;" name="userav"> <b>User</b><pre>${prompt}</pre>`;

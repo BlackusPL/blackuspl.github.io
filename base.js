@@ -49,6 +49,7 @@ getID("tab").insertAdjacentHTML('afterend', `<div>Old tab removed from here</div
 getID("tab").remove();*/
 
 //if (localStorage.getItem('language') == 'pl') {
+  // function to get value of selected language in cookie
   function cookievaluefinder(coname) {
     var finded = document.cookie.split("; ").find((lang) => lang.startsWith(`${coname}=`))?.split("=")[1];
     return finded;
@@ -138,7 +139,7 @@ function startTime() {
   s = checkTime(s);
   document.getElementById('txt').innerHTML = 'Time: ' + h + ":" + m + ":" + s;
   setTimeout(startTime, 1000);
-}
+  }
 }
 
 function checkTime(i) {

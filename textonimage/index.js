@@ -70,11 +70,13 @@ function loadimage() {
     $i('sizey').value = sizey, $i('text').value = text, $i('textx').value = textx, $i('texty').value = texty, $i('textshadow').checked = txtshadow1, $i('cors').checked = cors1;
   };
   function txt2img() {
+    // removes previous image, add parameters to url bar and load new image
     document.querySelector('canvas').remove();
     window.history.pushState(null, null, '?url=' + $i('url').value + '&text=' + $i('text').value + '&textx=' + $i('textx').value + '&texty=' + $i('texty').value + '&shadow=' + $i('textshadow').checked + '&color=' + $i('color').value + '&sizex=' + $i('sizex').value + '&sizey=' + $i('sizey').value + '&cors=' + $i('cors').checked);
     loadimage();
   }
   function debugBase64(base64URL) {
+    // converts image to base64
     if (base64URL !== '')
     {window.open().document.write('<iframe src="' + base64URL + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>')} else 
     {alert("You can do that with default image or with 'Accept CORS' option.")}

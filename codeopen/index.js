@@ -1,13 +1,16 @@
 (() => {
 const id = (_) => document.getElementById(_);
+// gets value for head and body from session
 id('body_code').value = sessionStorage.getItem('body_code');
 id('head_code').value = sessionStorage.getItem('head_code');
+// if value in body_code or head changed, then add to session storage values
 id('body_code').addEventListener('change', function () {
    sessionStorage.setItem('body_code', `${id('body_code').value}`);
 });
 id('head_code').addEventListener('change', function () {
     sessionStorage.setItem('head_code', `${id('head_code').value}`);
 });
+// cwhen click then clear sessionstorage and values in head and body
 id('clear').addEventListener('click', function () {
     sessionStorage.removeItem('body_code');
     sessionStorage.removeItem('head_code');
@@ -17,6 +20,7 @@ id('clear').addEventListener('click', function () {
 function rm_html() {
     try {id('afterselectcon').remove(); id('video_src').remove()} catch {}
 };
+// embed video from selected file
 function playVideo(files) {
     try {
       URL.revokeObjectURL(id('video_src').src);
