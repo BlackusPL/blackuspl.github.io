@@ -226,5 +226,32 @@ xhr.send();
 };
 // end
 
+if (location.href.split('/')[3] == 'news') {
+  // Get all h3 elements
+let h3Elements = document.getElementsByTagName('h3');
+
+// Loop through all h3 elements
+for (let i = 0; i < h3Elements.length; i++) {
+  // Create a new a element
+  let newSpan = document.createElement('a');
+  newSpan.addEventListener('click', function () {
+    copyid(this.parentElement.id)
+  });
+  newSpan.style = "cursor: copy; width: 0px; color: white; font-size: unset;";
+  newSpan.classList = "material-symbols-outlined";
+  newSpan.textContent = 'share';
+
+  // Append the new span element as a child to the current h3 element
+  h3Elements[i].appendChild(newSpan);
+  }
+};
+
+function copyid(link) {
+  let link_to = web_root+"/news/#"+link;
+  navigator.clipboard.writeText(link_to);
+  console.log('Link copied: '+link_to);
+  //TODO message about copied link
+};
+
 // Send when everything loads
 console.log("%c[Base] %c(v26052023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");

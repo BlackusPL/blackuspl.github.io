@@ -10,11 +10,11 @@
   <link href="../index.css" rel="stylesheet">
   <link href="../manifest.webmanifest" rel="manifest" />
   <meta property="og:site_name" content="DarknessAir">
-  <meta property="og:title" content="Welcome - Games">
-  <meta property="og:description" content="List of Free/Cracked Games that can be downloaded">
+  <meta property="og:title" content="Welcome - Gallery">
+  <meta property="og:description" content="The History of website">
   <meta property="og:image" content="/BDPlugins/icon.png">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:url" content="https://blackuspl.github.io/DarknessAir/games">
+  <meta property="og:url" content="https://blackuspl.github.io/DarknessAir/gallery">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     .font {
@@ -23,13 +23,18 @@
     div.games {
       display: inline-flex;
       margin-bottom: 2%;
-      flex-direction: column
+      flex-direction: column;
+      align-items: center;
     }
-    a:last-child div.games {
-      margin-bottom: 0%;
+    div.games a img {
+      margin-bottom: 0.34em;
+      width: calc(50%);
+    }
+    div.games a {
+      width: calc(50%);
     }
     .content {
-      width: auto;
+      width: 80%;
     }
   </style>
 </head>
@@ -55,7 +60,7 @@
             </a>
           </li>
           <li class="navbar-link">
-            <a class="navbar-item">
+            <a href="../games" class="navbar-item">
               <span>Games</span>
             </a>
           </li>
@@ -80,7 +85,7 @@
             </a>
             <div class="showtasks">
               <a href="../about">My Projects</a>
-              <a href="../gallery">Gallery</a>
+              <a>Gallery</a>
               <a href="../BDPlugins">BDPlugins</a>
               <a href="../textonimage">TextonImage</a>
               <a href="../ai">AI Chat</a>
@@ -107,41 +112,46 @@
       </div>
     </div>
       <!--end-->
-      <main class="content">
+      <div class="content">
         <center>
-    <font size="4">
-      <header><h1>Games</h1>
+      <header><h1>Gallery</h1>
+        <h2>The history of the website</h2>
       </header>
       <br>
-    <a href="SNS" style="text-decoration: none;">
       <div class="games">
-          <img src="https://cdn.akamai.steamstatic.com/steam/apps/1546860/header.jpg" style="width: 350px;">
-          <span id="text-pages">Saiko No Sutoka Free Download<br>
-          <font color="white" class="font">Last Updated: 31 October 2021</font>
+          <a href="2021.png"><img src="2021.png"></a>
+          <span id="text-pages">2021 - The Begining<br>
+          <font color="white" class="font">This is how it looks my website when I started creating it. You can't find files of it becouse in the past I removing commits for some reason. There was nothing, only title, changelog, discord widget and link to other website that I used, so you can guess how HTML file looks.</font>
           </span>
       </div>
-    </a>
+      <hr>
     <br>
-    <a href="MR2000" style="text-decoration: none;">
       <div class="games">
-          <img src="https://cdn.akamai.steamstatic.com/steam/apps/700310/header.jpg" style="width: 350px;">
-          <span id="text-pages">Music Racer 2000 Download<br>
-          <font color="white" class="font"> Last Updated: 03 August 2022</font>
+          <a href="2022.png"><img src="2022.png"></a>
+          <span id="text-pages">2022 - New Plans<br>
+          <font color="white" class="font"> My abilities and experience on creating website got improvement and I decided to start doing something with this website. I started with adding stuffs to home page, next to games, about me and more.</font>
           </span>
       </div>
-    </a>
+      <hr>
     <br>
-    <a href="NSR" style="text-decoration: none;">
       <div class="games">
-          <img src="NSR/test.jpg" style="width: 350px;height: 164px;">
-          <span id="text-pages">Nitro Stunt Racer Download<br>
-          <font color="white" class="font">Last Updated: 14 January 2022</font>
+          <a href="2023.png"><img src="2023.png"></a>
+          <span id="text-pages">2023 - Upgrade<br>
+          <font color="white" class="font"> This time I go to my website on phone and I say "omg what a mess", and it was a sign to upgrade website by changing navbar and in the same time create compatibility for mobile devices. I was inspired on adding usefull tools to my website so I and other people can use it if they need.</font>
           </span>
       </div>
-    </a>
+      <hr>
+    <br>
+      <div class="games">
+          <a href="2024.png"><img src="https://placehold.co/1879x970/000/FFF?text=???"></a>
+          <span id="text-pages">2024 - ???<br>
+          <font color="white" class="font"> My website have some bugs that destroy stylesheet and can freeze device when using scripts in wrong way. In that year my main target is to fix website as much as I can and add some good things that can be used later. One of it is again remake of navbar or new custombg window in music player.</font>
+          </span>
+      </div>
+    <br>
 <!--      <script type = "text/javascript" src = "//www.deszczowce.pl/licznik/licznik.php?id=122424265"></script>-->
-      </center></font>
-  </main>
+      </center>
+    </div>
   <footer>
     <p>Copyright © 2021-2024, BlackusPL | All rights reserved | DO NOT DISTRIBUTE</p>
   </footer>

@@ -65,6 +65,8 @@
             </a>
             <div class="showtasks">
               <a href="../about">My Projects</a>
+              <a href="../gallery">Gallery</a>
+              <a href="../BDPlugins">BDPlugins</a>
               <a href="../textonimage">TextonImage</a>
               <a>AI Chat</a>
               <a href="../codeopen">Code Opener</a>
@@ -98,11 +100,16 @@
 <main>
   <table style="position: fixed; bottom: 5%;">
     <tr>
-        <td><textarea placeholder="Prompt" id="textprompt" style="resize: none;"></textarea></td>
+        <td><input type="text" placeholder="Prompt" id="textprompt" style="height: 2rem"></input></td>
+        <td><select name="api" id="apilist">
+          <option value="OpenAI">OpenAI</option>
+          <option value="Pawan.Krd">Pawan.Krd</option>
+          <option value="customapi" disabled>custom api</option>
+        </select></td>
         <td><input placeholder="api key" id="apikey" style="resize: none; width: 100px;" type="password"></input><br>
-        <input id="customapi" style="resize: none; width: 100px;" type="input">custom api</input></td>
+        <!-- <input id="customapi" style="resize: none; width: 100px;" type="input">custom api</input></td> -->
         <td><input placeholder="avatar" id="avatarurl" style="resize: none; width: 100px;" type="text"></input></td>
-        <td><button type="submit" onclick="ask(document.getElementById('textprompt').value)">Submit</button></td>
+        <td><button type="submit" onclick="ask(document.getElementById('textprompt').value)" id="send_prompt">Submit</button></td>
     </tr>
   </table>
 </main>
@@ -110,6 +117,7 @@
   <p>Copyright © 2021-2024, BlackusPL | All rights reserved | DO NOT DISTRIBUTE</p>
 </footer>  
     </body>
+    <script src="../textonimage/jquery.min.js"></script>
     <script src="../base.js"></script>
     <script src="index.js"></script>
 </html>

@@ -228,7 +228,7 @@ ul a:hover {background-color:#333;}
   span[style="white-space:nowrap"] a{
     padding: unset;
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1165px) {
       footer {
         font-size: x-small;
       }

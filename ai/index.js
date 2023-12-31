@@ -1,7 +1,12 @@
+// Saves apikey in session storage
+document.getElementById('apikey').value = sessionStorage.getItem('apikey');
+
+document.getElementById('send_prompt').addEventListener('click', function () {
+  sessionStorage.setItem('apikey', document.getElementById('apikey').value);
+});
+
 function ask(prompt) {
   try {
-    //var apikey = document.getElementById('apikey').disabled;
-    //if (apikey === true) { apikey = 'free' } else { apikey = document.getElementById('apikey').value }
     const textPrompt = document.getElementById('textprompt');
     // set textprompt value to null/empty
     textPrompt.value = '';
@@ -11,43 +16,51 @@ function ask(prompt) {
     userEle.insertAdjacentHTML('beforebegin', title + loading);
     for (var i = 0; i < document.getElementsByName('userav').length; i++) {
       // if (document.getElementsByName('userav')[i].getAttribute('src') === null || document.getElementsByName('userav')[i].getAttribute('src') === '')
-      document.getElementsByName('userav')[i].setAttribute('src',document.getElementById('avatarurl').value ? document.getElementById('avatarurl').value : 'https://modworkshop.net/mydownloads/previews/138412_1676797152_574dcace40fa8cdc397f34c4408edc89.gif');
+      document.getElementsByName('userav')[i].setAttribute('src',document.getElementById('avatarurl').value ? document.getElementById('avatarurl').value : 'https://storage.modworkshop.net/mods/images/138412_1676797152_574dcace40fa8cdc397f34c4408edc89.gif');
     }
 
-    if (document.getElementById('customapi').value == '') { customapi = 'https://api.openai.com/v1/chat/completions' } else { customapi = document.getElementById('customapi').value }
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', customapi , true);
-    xhr.setRequestHeader('Authorization', 'Bearer ' + document.getElementById('apikey').value); // free https://free.churchless.tech/v1/chat/completions
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onreadystatechange = function () {
-      if (this.readyState === XMLHttpRequest.DONE) {
-          switch(this.status) {
-          default:
-          var msg = `Error ${this.status}`;
-          userEle.insertAdjacentHTML('beforebegin', `<img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>${msg}</pre>`);
-          break;
-          case 200:
-          const response = JSON.parse(this.responseText);
-          var msg = response.data.choices[0].message.content;
-          userEle.insertAdjacentHTML('beforebegin', `<img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>${msg.slice(1)}</pre>`);
-          break;
-          case 429:
-          var msg = 'Too many requests';
-          //const msg = this.status === 429 ? 'Too many requests' : `Error ${this.status}`;
-          userEle.insertAdjacentHTML('beforebegin', `<img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>${msg}</pre>`);
-          break;
-          case 405:
-          var msg = 'Method Not Allowed';
-          userEle.insertAdjacentHTML('beforebegin', `<img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>${msg}</pre>`);
-          break;
-        }
+    switch(document.getElementById('apilist').value) {
+      case 'OpenAI':
+        customapi = 'https://api.openai.com/v1/chat/completions';
+        model = "gpt-3.5-turbo";
+      break;
+      case 'Pawan.Krd':
+        customapi = 'https://api.pawan.krd/v1/chat/completions';
+        model = "pai-001-light";
+      break;
+      case 'customapi':
+        customapi = document.getElementById('customapi').value;
+        model = null;
+      break;
+    }
+      $.ajax({
+        url: customapi,
+        crossDomain: true,
+        method: 'post',
+        headers: {
+          'Authorization': 'Bearer ' + document.getElementById('apikey').value
+        },
+        contentType: 'application/json',
+        data: JSON.stringify({
+          'model': model,
+          'max_tokens': 100,
+          'messages': [
+            {
+              'role': 'system',
+              'content': 'You are an helpful assistant.'
+            },
+            {
+              'role': 'user',
+              'content': prompt
+            }
+          ]
+        })
+      }).done(function(response) {
+        var msg = response.choices[0].message.content;
+        userEle.insertAdjacentHTML('beforebegin', `<img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>${msg}</pre>`);
         document.getElementById('loading').remove();
-      }
-    };
-    xhr.send(JSON.stringify({
-      'model': 'gpt-3.5-turbo',
-      'messages': [{ 'role': 'user', 'content': prompt }]
-    })); 
+        //console.log(response);
+      });
   } catch (error) {
     console.error(error);
   }
