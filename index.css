@@ -12,15 +12,17 @@ body {
     background-size: cover;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
-body[style^="position: relative;"]::after {
-  content: '';
-  display: block;
-  height: 2.5rem; /* Set same as footer's height */
+html, body {
+margin: 0;
 }
 header {
-    font-weight: bold;
     font-size: large;
+    font-weight: unset;
+}
+header > main > header {
+  font-weight: bold;
 }
 li {
     color: #f1f1f1;
@@ -31,14 +33,12 @@ b {
 footer {
     border-top: 1px solid #fff;
     font-size: small;
-    left: 0;
     height: 2.5rem;
     background: #080808;
-    display: block;
-    width: 100%;
+    margin-top: auto;
 }
-body[style^="position: relative;"] > footer, body video ~ footer {
-  bottom: 1px;
+footer > p {
+  padding-left: 1%;
 }
 footer > div {
   padding: 1em;
@@ -170,26 +170,6 @@ ul a:hover {background-color:#333;}
   }
   h3 + input:checked + div#changelog{
     display: block;
-  }
-  main {
-    height: 100%;
-  }
-  header {
-      font-weight: unset;
-  }
-  header > main > header {
-      font-weight: bold;
-  }
-  footer > p {
-      padding-left: 1%;
-  }
-  footer {
-      margin-top: 1%;
-      position: unset;
-  }
-  html, body {
-    height: 100%;
-    margin: 0;
   }
   .navbar {
       display: flex;

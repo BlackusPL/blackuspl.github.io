@@ -238,7 +238,7 @@ for (let i = 0; i < h3Elements.length; i++) {
     copyid(this.parentElement.id)
   });
   newSpan.style = "cursor: copy; width: 0px; color: white; font-size: unset;";
-  newSpan.classList = "material-symbols-outlined";
+  newSpan.classList = "material-symbols-outlined skiptranslate";
   newSpan.textContent = 'share';
 
   // Append the new span element as a child to the current h3 element
