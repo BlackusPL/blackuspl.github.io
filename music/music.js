@@ -305,7 +305,7 @@ let othersong = [
         artist: "Cyrex",
         title: "TAKE ME"
     },
-    url: "./local_music/Take Me.mp3"
+    url: "./local_music/TAKE ME.mp3"
 }];
 // END Create playlists
 let allTracks = othersong.concat(coubsong, nightcore);
