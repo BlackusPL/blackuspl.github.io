@@ -140,7 +140,8 @@ ul a:hover {background-color:#333;}
   }
   @font-face {
     font-family: "HeadUpDaisy";
-    src: url("https://beatrun.ru/css/HeadUpDaisy.ttf");
+    /*src: url("https://beatrun.ru/css/HeadUpDaisy.ttf");*/
+    src: url("/BDPlugins/HeadUpDaisy.ttf");
   }
   @font-face {
     font-family: "Windows XP Tahoma";
