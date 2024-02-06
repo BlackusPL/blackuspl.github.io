@@ -4,6 +4,39 @@ if(!Webamp.browserIsSupported()) {
     throw new Error("What's the point of anything?")
 }
 
+document.getElementById('custombg_window').innerHTML = `Set custom background<br>\
+<input type="file" id="custombg" accept="image/*"><br>\
+<input type="reset" id="reset"> Set Default</input><br>\
+<input style="width: 40%; margin-left: -10%;" type="text" placeholder="Image Url" id="imagebgurl">\
+<input type="button" value="Save & Load" id="saveload"><br>\
+<input type="number" max="100" min="0" id="vid_bg_dark" style="width: 20%;" value="100"> VideoBG bright<br>\
+<input type="checkbox" id="experiments" title="Disables only image upload set" >Experiments function</input>\\
+<!--  <audio src="Dadada (Slowed version).DAA" controls controlslist="nodownload noplaybackrate novolume" /> -->\
+<br><br>\
+<label for="playlists">Choose playlist:</label>\
+<select name="playlists" style="width: 200px; text-align: center;" id="playlists" onchange="changeFunc();">\
+    <option>---Select Playlist---</option>\
+    <option value="all">All</option>\
+    <option value="phonk">Phonk</option>\
+    <option value="phonk_radio">Phonk Radio</option>\
+    <option value="nightcore">Nightcore</option>\
+    <option value="coub">Coub songs</option>\
+    <option value="custom">Custom Radio</option>\
+</select>`;
+
+document.getElementsByName('viewport')[0].insertAdjacentHTML('afterend', `<style SetCustomBackground>
+div#custombg_window {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background: #111;
+    width: 220px;
+    border: 1px solid white;
+    height: 175px;
+    text-align: center;
+}
+</style>`)
+
 // START Create playlists
 
 let nightcore = [{

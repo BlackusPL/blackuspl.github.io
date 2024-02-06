@@ -17,18 +17,6 @@
     <meta property="og:image:type" content="image/png">
     <meta property="og:url" content="https://blackuspl.github.io/music">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style SetCustomBackground>
-        div#custombg_window {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 10px;
-            background: #111;
-            width: 220px;
-            border: 1px solid white;
-            height: 175px;
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body style="background-image: url('https://i.ytimg.com/vi/X10UD5nQDCs/maxresdefault.jpg');background-blend-mode: overlay;">
@@ -105,27 +93,8 @@
     <!-- <div id="tab">turn on javascripts to load this</div> 
     CustomBG_window will be changed to better looking -->
     <div id="custombg_window">
-        Set custom background<br>
-        <input type="file" id="custombg" accept="image/*"><br>
-        <input type="reset" id="reset"> Set Default</input><br>
-        <input style="width: 40%; margin-left: -10%;" type="text" placeholder="Image Url" id="imagebgurl">
-        <input type="button" value="Save & Load" id="saveload"><br>
-        <input type="number" max="100" min="0" id="vid_bg_dark" style="width: 20%;" value="100"> VideoBG bright<br>
-        <input type="checkbox" id="experiments" title="Disables only image upload set" >Experiments function</input>
-      <!--  <audio src="Dadada (Slowed version).DAA" controls controlslist="nodownload noplaybackrate novolume" /> -->
-      <br><br>
-      <label for="playlists">Choose playlist:</label>
-        <select name="playlists" style="width: 200px; text-align: center;" id="playlists" onchange="changeFunc();">
-            <option>---Select Playlist---</option>
-            <option value="all">All</option>
-            <option value="phonk">Phonk</option>
-            <option value="phonk_radio">Phonk Radio</option>
-            <option value="nightcore">Nightcore</option>
-            <option value="coub">Coub songs</option>
-            <option value="custom">Custom Radio</option>
-        </select>
     </div>
-    <center><noscript>You need to enable JavaScript to able to use Music Player.<style>video#videobg {display: none;}</style></noscript></center>
+    <center><noscript>You need to enable JavaScript to able to use Music Player.<style>video#videobg {display: none;} center{padding-top: 1vh;}</style></noscript></center>
     <main>
         <div id="app" style="height: 50vh"></div>
         <script src="https://unpkg.com/webamp/built/webamp.bundle.min.js"></script>

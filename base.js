@@ -247,10 +247,13 @@ for (let i = 0; i < h3Elements.length; i++) {
 };
 
 function copyid(link) {
-  let link_to = web_root+"/news/#"+link;
-  navigator.clipboard.writeText(link_to);
-  console.log('Link copied: '+link_to);
-  //TODO message about copied link
+  let link_to = web_root + "/news/#" + link;
+  navigator.clipboard.writeText(link_to).then(() => {
+    console.log('Link copied: ' + link_to);
+    alert('Link copied: ' + link_to);
+  }).catch((error) => {
+    console.error('Could not copy text: ', error);
+  });
 };
 
 // Send when everything loads
