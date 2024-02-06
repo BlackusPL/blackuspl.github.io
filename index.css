@@ -1,3 +1,7 @@
+* {
+  text-shadow: 0 0 20px;
+  font-family: headupdaisy;
+}
 html {
   cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAMgAAADIAGP6560AAAAHdElNRQfnBA0VEBsaNUWhAAAAAW9yTlQBz6J3mgAAAbhJREFUSMft1EsvJFEUB/B/3arW3XTQzIxE0B1prxYmFhMzKxs7tu0RtthZEItZ+QA2xMpSQlpsxWNmg1mMmMwXGAt0REjEoxOPVNfj7xaazEpVLaycm1Tu5vxyzs2pAzzHpuZ8qcBPOFmLUX12uUQSwh+gotTI8lcqrPghJBBIVJ3uZcgNX4QDxGNnmTprm/zx1TvhABXxbKaW0P/IKjwTj8BlppmwAsYuuR4LeSLyQCMVS6FmyCrWPBEvACyNT8QqgvIqPAOCQuYV5P5KIuGW+L8CPJ7cFrmSLHA1nS+AsJzkCJNsYqt1It9irlB5ncgDScL8LJuo4AVzN7c32SvLvFv4HX61jfwclHHANlknmSVeLvR/G+rs+TLfNlnoqoWG+NHBjG3qxt60BNqZOyyvRLE8KoQrADXXR2R6YqTn3IraMOU4DSpYC6ZUuHpELR67Pd7+jg+o5+64Db3P5k8I99MoeqvT3YikyqIlW2Nn/KSPkf+guV8wKkIIdISgJorLG893DNLcH4VC1f0fJZYfuk0E8REt6eGpLhR1aP72WwhRRBCW9fjbkFBS6lxgUvOb/h7v8fZxDzhr0tNFNchWAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTA0LTEzVDIxOjE2OjI2KzAwOjAwo385CQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wNC0xM1QyMToxNjoyNiswMDowMNIigbUAAAAASUVORK5CYII='), auto;
   scroll-behavior: smooth;
@@ -5,7 +9,6 @@ html {
 body {
     background: #111;
     color: #fff;
-    font-family: headupdaisy;
     background-image: url('https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -139,8 +142,9 @@ ul a:hover {background-color:#333;}
     font-family: "HeadUpDaisy";
     src: url("https://beatrun.ru/css/HeadUpDaisy.ttf");
   }
-  *{
-    text-shadow: 0 0 20px;
+  @font-face {
+    font-family: "Windows XP Tahoma";
+    src: url("/BDPlugins/windows-xp-tahoma.ttf");
   }
   #searchbar {
     display: none;

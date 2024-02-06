@@ -133,6 +133,14 @@ let coubsong = [{
         coubid: "3c0l21"
     },
     url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/75382d50aff/00be26cf0f06651aff2e6/1688670809_mp3-high.mp3"
+},
+{
+    metaData: {
+        artist: "Coub / Danny & Freja",
+        title: "If Only You",
+        coubid: "32zjkg"
+    },
+    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/abf5a1f538c/887870130f4a4f04a13c2/1654446694_mp3-high.mp3"
 }
 ];
 let othersong = [
