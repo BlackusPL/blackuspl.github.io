@@ -4,12 +4,12 @@
     "description": "Website where you can play music and download 3 exclusive games for free",
     "icons": [
         {
-            "src": "https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png",
+            "src": "/BDPlugins/icon.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "https://cdn.discordapp.com/attachments/763842296697061377/961243254840516688/b3a5359531eff2ede4a19f224cf3540fada9ad3b_full-removebg-preview.png",
+            "src": "/BDPlugins/icon.png",
             "sizes": "512x512",
             "type": "image/png"
         }

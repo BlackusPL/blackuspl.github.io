@@ -112,9 +112,9 @@ ul a:hover {background-color:#333;}
   .avatar {
     border-radius: 100%;
     width: 32px;
-    content: url(https://cdn.discordapp.com/attachments/763842296697061377/1062830895565906031/ezgif.com-gif-maker-5.gif);
-    /* content: url("https://cdn.discordapp.com/attachments/1015289638740561941/1015368460815044669/ezgif.com-gif-maker_4.gif"); */
-    /* content: url("https://cdn.discordapp.com/attachments/763842296697061377/1004035346306183248/ezgif.com-gif-maker_50fps.gif"); */
+    content: url(https://cdn.discordapp.com/attachments/763842296697061377/1062830895565906031/ezgif.com-gif-maker-5.gif?ex=65f20ce7&is=65df97e7&hm=31f2ab07c9aa8a218635f28901afa3000282efd60b2d4c593eab8a712e6127de&);
+    /* content: url("https://cdn.discordapp.com/attachments/1015289638740561941/1015368460815044669/ezgif.com-gif-maker_4.gif"); Must be fixed */
+    /* content: url("https://cdn.discordapp.com/attachments/763842296697061377/1004035346306183248/ezgif.com-gif-maker_50fps.gif?ex=65f068c8&is=65ddf3c8&hm=66a90dc79c01b2bd736223c6bb1f24ff99098574d8254bbb521747d952f6a110"); */
   }
   a[title="Github - BlackusPL"] {
     color: blue;

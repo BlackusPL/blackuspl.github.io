@@ -10,7 +10,7 @@ document.getElementById('custombg_window').innerHTML = `Set custom background<br
 <input style="width: 40%; margin-left: -10%;" type="text" placeholder="Image Url" id="imagebgurl">\
 <input type="button" value="Save & Load" id="saveload"><br>\
 <input type="number" max="100" min="0" id="vid_bg_dark" style="width: 20%;" value="100"> VideoBG bright<br>\
-<input type="checkbox" id="experiments" title="Disables only image upload set" >Experiments function</input>\\
+<input type="checkbox" id="experiments" title="Disables only image upload set" >Experiments function</input>\
 <!--  <audio src="Dadada (Slowed version).DAA" controls controlslist="nodownload noplaybackrate novolume" /> -->\
 <br><br>\
 <label for="playlists">Choose playlist:</label>\
