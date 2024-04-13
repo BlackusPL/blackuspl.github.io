@@ -174,7 +174,21 @@ let coubsong = [{
         coubid: "32zjkg"
     },
     url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/abf5a1f538c/887870130f4a4f04a13c2/1654446694_mp3-high.mp3"
-}
+},{
+    metaData: {
+        artist: "Coub / FakeKaway",
+        title: "ambience",
+        coubid: "3e5gsf"
+    },
+    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/52a92fd4280/f4e8e4481602f5b28457a/1712197691_mp3-high.mp3"
+},{
+    metaData: {
+        artist: "Coub / PHANTASZZ",
+        title: "ИΞНΔВNЖУ",
+        coubid: "3e4b5r"
+    },
+    url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/20d4a216063/ae9e40c74e606efb0a608/1711827997_mp3-high.mp3"
+},
 ];
 let othersong = [
 {
@@ -306,6 +320,18 @@ let othersong = [
         title: "TAKE ME"
     },
     url: "./local_music/TAKE ME.mp3"
+},{
+    metaData: {
+        artist: "CYPARISS",
+        title: "Frozen Heart"
+    },
+    url: "./local_music/CYPARISS - Frozen Heart (ReVision).mp3"
+},{
+    metaData: {
+        artist: "chris marcell",
+        title: "ENIGMA"
+    },
+    url: "./local_music/1241026_ENIGMA.mp3"
 }];
 // END Create playlists
 let allTracks = othersong.concat(coubsong, nightcore);
@@ -408,13 +434,14 @@ function changeFunc() {
         case 'phonk':
             webamp.setTracksToPlay([
                 othersong[0],
-                coubsong[0],
                 coubsong[9],
-                coubsong[3],
+                coubsong[0],
                 coubsong[1],
                 coubsong[12],
                 coubsong[8],
+                othersong[20],
                 othersong[18],
+                coubsong[3],
                 othersong[2],
                 othersong[3],
                 othersong[5],

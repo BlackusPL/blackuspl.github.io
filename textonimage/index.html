@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/BDPlugins/icon.png" type="image/icon type">
+    <link href="/manifest.webmanifest" rel="manifest" />
     <meta property="og:image" content="/BDPlugins/icon.png" id="ogImage">
     <meta property="og:site_name" content="DarknessAir">
     <meta property="og:title" content="DarknessAir - TextonImage">
@@ -88,7 +89,7 @@
       <main style="margin: 1em auto 0em;">
         <center>
           <header style="margin: 1em auto 0em;"><h2>TextonImage</h2></header>
-          <p>You can use ?url= , ?text= , ?textx= , ?texty= , ?shadow= (true or false) , ?color= (in hex code) , ?sizex= , ?sizey= and ?cors= (true or false)</p>
+          <p>You can use ?url= , ?text= , ?textsize= , ?textx= , ?texty= , ?shadow= (true or false) , ?color= (in hex code) , ?sizex= , ?sizey= and ?cors= (true or false)</p>
       
           <p><a href="..">Go back</a></p>
           <canvas>
@@ -98,9 +99,11 @@
         <div style="margin: 2em auto; position: relative; width: 70%;">
           <input type="text" placeholder="Link to image" id="url"><br>
           <input type="text" placeholder="Text" id="text"><br>
+          <input type="text" placeholder="Font - soon" id="textfont" disabled><br>
           <input type="number" placeholder="Text horizontally position" id="textx"><br>
           <input type="number" placeholder="Text perpendicularly position" id="texty"><br>
           <input type="color" placeholder="Text color" id="color"> Text color</input><br>
+          <input type="number" placeholder="Text size" id="textsize"></input><br>
           <input type="number" placeholder="Image width" id="sizex"><br>
           <input type="number" placeholder="Image height" id="sizey"><br>
           <input type="checkbox" id="textshadow">Text Shadow</input><br>

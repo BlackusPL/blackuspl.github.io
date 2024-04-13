@@ -157,6 +157,7 @@ ul a:hover {background-color:#333;}
     margin-left: 0em;
   }
   .card {
+    max-width: 20vw;
     text-align: center;
     border-style: inset;
     background-color: #1a1c1f;
