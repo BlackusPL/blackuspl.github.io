@@ -5,6 +5,14 @@ document.getElementById('send_prompt').addEventListener('click', function () {
   sessionStorage.setItem('apikey', document.getElementById('apikey').value);
 });
 
+document.getElementById('apilist').addEventListener('change', function () {
+  if (document.getElementsByName('api')[0][2].selected) {
+    document.getElementById('capilist').style = '';
+  } else {
+    document.getElementById('capilist').style = 'display: none';
+  }
+});
+
 function ask(prompt) {
   try {
     const textPrompt = document.getElementById('textprompt');
@@ -21,24 +29,31 @@ function ask(prompt) {
 
     switch(document.getElementById('apilist').value) {
       case 'OpenAI':
-        customapi = 'https://api.openai.com/v1/chat/completions';
+        api = 'https://api.openai.com/v1/chat/completions';
         model = "gpt-3.5-turbo";
+        key = 'Bearer ' + document.getElementById('apikey').value;
       break;
       case 'Pawan.Krd':
-        customapi = 'https://api.pawan.krd/v1/chat/completions';
+        api = 'https://api.pawan.krd/v1/chat/completions';
         model = "pai-001-light";
+        key = 'Bearer ' + document.getElementById('apikey').value;
       break;
       case 'customapi':
-        customapi = document.getElementById('customapi').value;
-        model = null;
+        api = document.getElementById('customapi').value;
+        model = document.getElementById('model').value;
+        if (document.getElementById('apikey').value !== '') {
+          key = 'Bearer ' + document.getElementById('apikey').value;
+        } else {
+          key = '';
+        }
       break;
     }
       $.ajax({
-        url: customapi,
+        url: api,
         crossDomain: true,
         method: 'post',
         headers: {
-          'Authorization': 'Bearer ' + document.getElementById('apikey').value
+          'Authorization': key
         },
         contentType: 'application/json',
         data: JSON.stringify({

@@ -104,10 +104,10 @@
         <td><select name="api" id="apilist">
           <option value="OpenAI">OpenAI</option>
           <option value="Pawan.Krd">Pawan.Krd</option>
-          <option value="customapi" disabled>custom api</option>
+          <option value="customapi">Custom API</option>
         </select></td>
         <td><input placeholder="api key" id="apikey" style="resize: none; width: 100px;" type="password"></input><br>
-        <!-- <input id="customapi" style="resize: none; width: 100px;" type="input">custom api</input></td> -->
+        <td id="capilist" style="display: none;"><input id="customapi" style="resize: none; width: 100px;" type="input" placeholder="API url">Custom API</input><br><input id="model" style="resize: none; width: 100px;" type="input" placeholder="AI model">AI model</input></td>
         <td><input placeholder="avatar" id="avatarurl" style="resize: none; width: 100px;" type="text"></input></td>
         <td><button type="submit" onclick="ask(document.getElementById('textprompt').value)" id="send_prompt">Submit</button></td>
     </tr>
