@@ -385,12 +385,12 @@ const webamp = new Webamp({
              // url: "http://217.74.72.6/rmf_maxxx_slk"
          }])
     },{
-        contextMenuName: "[HILLCHILL] The Sound of Phonk / 24/7 Phonk Radio",
+        contextMenuName: "[DOPEPHONK] The Sound of Phonk / 24/7 Phonk Radio",
         filePicker: () => Promise.resolve([{
             metaData: {
-                 title: "[HILLCHILL] The Sound of Phonk / 24/7 Phonk Radio / Website: https://hillchill.net/"
+                 title: "[DOPEPHONK] The Sound of Phonk / 24/7 Phonk Radio / Website: https://dopephonk.net/"
              },
-             url: "https://edge01.atomicradio.eu/hillchill/highquality"
+             url: "https://edge01.atomicradio.eu/dopephonk/highquality"
          }])
     }],
     __butterchurnOptions: {
@@ -458,9 +458,9 @@ function changeFunc() {
             webamp.setTracksToPlay([
                 {
                     metaData: {
-                         title: "[HILLCHILL] The Sound of Phonk / 24/7 Phonk Radio / Website: https://hillchill.net/"
+                         title: "[DOPEPHONK] The Sound of Phonk / 24/7 Phonk Radio / Website: https://dopephonk.net/"
                      },
-                     url: "https://edge01.atomicradio.eu/hillchill/highquality"
+                     url: "https://edge01.atomicradio.eu/dopephonk/highquality"
                  }
                 ]);
             break;
