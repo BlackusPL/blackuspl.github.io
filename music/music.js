@@ -3,6 +3,10 @@ if(!Webamp.browserIsSupported()) {
     alert("Oh no! Webamp does not work!")
     throw new Error("What's the point of anything?")
 }
+if(!window.WebGLRenderingContext) {
+    alert("Oh no! Your browser have WebGL disabled!")
+    throw new Error("What's the point of turning this off?")
+}
 
 document.getElementById('custombg_window').innerHTML = `Set custom background<br>\
 <input type="file" id="custombg" accept="image/*"><br>\
