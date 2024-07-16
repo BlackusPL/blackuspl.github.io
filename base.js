@@ -256,5 +256,16 @@ function copyid(link) {
   });
 };
 
+/*fetch('https://coub.com/rss/channel/blackuspl')
+.then(response => response.text())
+.then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+.then(data => {
+var test = data;
+let pubdat = test.querySelectorAll('pubDate')[0].textContent;
+if (pubdat > test.querySelectorAll('pubDate')[1].textContent) {
+    console.log(test.querySelectorAll('link')[2].textContent);
+} else {console.log(test.querySelectorAll('link'))[1].textContent;}
+})*/
+
 // Send when everything loads
 console.log("%c[Base] %c(v26052023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
