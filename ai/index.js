@@ -19,7 +19,7 @@ function ask(prompt) {
     // set textprompt value to null/empty
     textPrompt.value = '';
     const userEle = document.getElementById('user');
-    const title = `<img style="width: 24px !important;" name="userav"> <b>User</b><pre>${prompt}</pre>`;
+    const title = `<img style="width: 24px !important;" name="userav"> <b>User</b><pre>${marked.parse(prompt)}</pre>`;
     const loading = '<div id="loading"><img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>Loading chatbot...</pre></div>';
     userEle.insertAdjacentHTML('beforebegin', title + loading);
     for (var i = 0; i < document.getElementsByName('userav').length; i++) {
@@ -72,7 +72,7 @@ function ask(prompt) {
         })
       }).done(function(response) {
         var msg = response.choices[0].message.content;
-        userEle.insertAdjacentHTML('beforebegin', `<img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>${msg}</pre>`);
+        userEle.insertAdjacentHTML('beforebegin', `<img src="https://chat.openai.com/favicon-32x32.png" style="width: 24px;"> <b>Assistant</b><pre>${marked.parse(msg)}</pre>`);
         document.getElementById('loading').remove();
         //console.log(response);
       });
