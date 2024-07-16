@@ -1,4 +1,7 @@
 ## Plugins
+> **Warning**
+> 
+> There is a chance that plugins doesn't work, Im not gonna update it for now becouse I didnt use BetterDiscord anymore.
 ## [Assign All Badges](https://github.com/BlackusPL/blackuspl.github.io/blob/main/BDPlugins/AsignAllBadges.plugin.js)
 ~~Asign all badges that discord have to your profile. [Code](https://github.com/ImLorio/All-Discord-Exploits/blob/main/Scripts/GetBadgesAndTag.md#gives-you-all-badges) [by ImLorio](https://github.com/ImLorio)~~
 Asign all badges that discord have to your profile. [Code](https://discord.com/channels/603970300668805120/1112809021561381024/1112819116529684651) by [@lles](https://discord.com/users/380045837457162242)
@@ -15,3 +18,7 @@ Enables the experimentals tab in discord settings. ~~[Code](https://github.com/I
 <h2 align="center">Files</h2>
 
 [Fake Windows Update in Polish language](https://blackuspl.github.io/BDPlugins/win-update-pl) - Fake Windows Update, what do you want to know more?
+
+[AWP | MJ CHAN for csgo](https://www.dropbox.com/s/8l6xpsug8bgajkf/p_awp_mj.zip) - Remake from 2016. Made by [N'Drew](https://steamcommunity.com/sharedfiles/filedetails/?id=779295579)
+
+[[PD3 Menu Music] Arknight Offseason](https://www.dropbox.com/scl/fi/1k8jjvg15fc9aabtcvdmt/Arknight_Offseason.pak?rlkey=3yl4gyihr7jagsa7l6wkboa0b) - Replace default Payday 3 menu music with custom Arknight Offseason music

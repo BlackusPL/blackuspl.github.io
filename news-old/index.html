@@ -36,18 +36,12 @@
 h3 ~ hr {
   width: 50%;
 }
-input + .oldch {
-    display: none;
-}
-input:checked + .oldch {
-    display: block
-} 
   </style>
 </head>
 
 <body>
-<video id="videobg" placeholder="https://coub.com/view/3e90yb" autoplay loop muted>
-    <source src="https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_file/cfb0dddc39d/a1cc5df64c72345fca05b/muted_mp4_big_size_1713328028_muted_big.mp4" type="video/mp4" /> <!-- old one https://coub.com/view/39n6r3 and 51d1d934c97/3e5bfce6d41d86b13e3f9/muted_mp4_huge_size_1671244838_muted_huge.mp4 -->
+<video id="videobg" placeholder="https://coub.com/view/3d6mwa" autoplay loop muted>
+    <source src="https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_file/25ee04c2190/df50e90caa57b9e598620/muted_mp4_big_size_1701486220_muted_big.mp4" type="video/mp4" /> <!-- old one https://coub.com/view/39n6r3 and 51d1d934c97/3e5bfce6d41d86b13e3f9/muted_mp4_huge_size_1671244838_muted_huge.mp4 -->
 </video>
 
     <!--The tab to move in the website-->
@@ -99,7 +93,7 @@ input:checked + .oldch {
             </div>
           </li>
           <li class="navbar-link">
-            <a class="navbar-item">
+            <a class="navbar-item" href="../news">
               <span>News</span>
             </a>
           </li>
@@ -130,20 +124,6 @@ input:checked + .oldch {
     <br>
       <div style="margin: auto 10em; cursor: pointer;" onclick="location.href='/#ChangeLog';"></div>
       <!--Changelog here-->
-      <p style="display: inline-block; margin-right: 1em;">Below old system - not gonna be updated</p><input type="checkbox">Show</input>
-
-      <div class="oldch">
-
-      <h3 id="update-160724">Update 16.07.2024</h3>
-      <div class="changelog">
-        - Added Markdown for AI chat<br>
-        - News now have new changelog view system. Archived version <a href="../news-old">here</a><br>
-        - Removed BetterDiscord Plugins from Home page<br>
-        - <mark>[TODO]</mark> Fix share button<br>
-      </div>
-      <br>
-      <hr>
-
       <h3 id="update-260424">Update 26.04.2024</h3>
       <div class="changelog">
         - Now you can use Custom API and model in AI chat<br>
@@ -605,7 +585,7 @@ input:checked + .oldch {
       <br>
       <hr>
 
-      <h3 id="update-270922">Update 27.09.2022</h3>
+      <h3 id="update-050922">Update 27.09.2022</h3>
       <div class="changelog">
         - Fixed some things in CSS<br>
         - Again next testing google translator <br>
@@ -614,7 +594,7 @@ input:checked + .oldch {
       <br>
       <hr>
 
-      <h3 id="update-150922">Update 15.09.2022</h3>
+      <h3 id="update-050922">Update 15.09.2022</h3>
       <div class="changelog">
         - Changed entire News page<br>
         - Added animated background<br>
@@ -747,7 +727,6 @@ input:checked + .oldch {
         <a style="display: block;">Last Updated: 25.06.2022</a>
         <a>PlaceHolder description</a>
       </div>
-    </div>
       <!--Changelog end-->
   <br><br></center>
     </main>
@@ -762,5 +741,4 @@ input:checked + .oldch {
   }
   </script>
 <script src="../base.js"></script>
-<script src="index.js"></script>
 </html>
