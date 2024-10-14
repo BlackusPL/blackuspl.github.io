@@ -6,6 +6,8 @@ function loadimage() {
     let text = urlParams.get("text");
     if (urlParams.get("textsize") === null || urlParams.get("textsize") === '') urlParams.set("textsize", 36);
     let textsize = urlParams.get("textsize");
+    if (urlParams.get("textfont") === null || urlParams.get("textfont") === '') urlParams.set("textfont", "Arial");
+    let textfont = urlParams.get("textfont");
     if (urlParams.get("textx") === null || urlParams.get("textx") === '') urlParams.set("textx", 200);
     if (urlParams.get("texty") === null || urlParams.get("texty") === '') urlParams.set("texty", 200);
     let textx = urlParams.get("textx");
@@ -54,7 +56,7 @@ function loadimage() {
       ctx.fillStyle = color; 
       ctx.strokeStyle = "black";
       ctx.lineWidth = 3;
-      ctx.font = textsize + "px Arial";
+      ctx.font = textsize + "px " + textfont;
       ctx.textAlign = "center";
       if (txtshadow == 'true') ctx.strokeText(text, sizex-textx, sizey-texty);
       ctx.fillText(text, sizex-textx, sizey-texty);
@@ -69,14 +71,14 @@ function loadimage() {
       console.log("%c[TextOnImage]" + " %cSuccesfully Loaded","color: rgb(58, 113, 193)","color: unset");
     };
     if (window.location.search !== '') $i('sizex').value = sizex,
-    $i('sizey').value = sizey, $i('text').value = text, $i('textsize').value = textsize, $i('textx').value = textx, $i('texty').value = texty, $i('textshadow').checked = txtshadow1, $i('cors').checked = cors1;
+    $i('sizey').value = sizey, $i('text').value = text, $i('textsize').value = textsize, $i('textfont').value = textfont, $i('textx').value = textx, $i('texty').value = texty, $i('textshadow').checked = txtshadow1, $i('cors').checked = cors1;
   };
   function txt2img() {
     // removes previous image, add parameters to url bar and load new image
     if (document.querySelector('canvas') !== null) {
       document.querySelector('canvas').remove()
     };
-    window.history.pushState(null, null, '?url=' + $i('url').value + '&text=' + $i('text').value + '&textsize=' + $i('textsize').value + '&textx=' + $i('textx').value + '&texty=' + $i('texty').value + '&shadow=' + $i('textshadow').checked + '&color=' + $i('color').value + '&sizex=' + $i('sizex').value + '&sizey=' + $i('sizey').value + '&cors=' + $i('cors').checked);
+    window.history.pushState(null, null, '?url=' + $i('url').value + '&text=' + $i('text').value + '&textsize=' + $i('textsize').value + '&textfont=' + $i('textfont').value + '&textx=' + $i('textx').value + '&texty=' + $i('texty').value + '&shadow=' + $i('textshadow').checked + '&color=' + $i('color').value + '&sizex=' + $i('sizex').value + '&sizey=' + $i('sizey').value + '&cors=' + $i('cors').checked);
     loadimage();
   }
   function debugBase64(base64URL) {

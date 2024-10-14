@@ -1,5 +1,14 @@
 {
     "id": {
+        "70": {
+            "name" : "15.10.2024",
+            "link_id" : "update-151024",
+            "desc" : [
+                "- Added Fake Terminal with some random commands<br>",
+                "- Now you can use custom font in textonimage<br>",
+                "- New latest coub<br>"
+            ]
+        },
         "69": {
             "name" : "<b style=\"color: yellow\">NEWS UPDATE</b> 16.07.2024",
             "link_id" : "update-160724",
@@ -25,7 +34,7 @@
                 "- Fixed Discord profile width when status is too long<br>",
                 "- Fixed textonimage when image doesn't generate but still try to remove it<br>",
                 "- Added Text Size to textonimage<br>",
-                "- <mark>[Planned]</mark> Custom font for textonimage<br>"
+                "- <s>[Planned] Custom font for textonimage</s><br>"
             ]
         },
         "66": {

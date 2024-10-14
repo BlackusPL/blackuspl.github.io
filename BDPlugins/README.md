@@ -1,7 +1,7 @@
 ## Plugins
 > **Warning**
 > 
-> There is a chance that plugins doesn't work, Im not gonna update it for now becouse I didnt use BetterDiscord anymore.
+> There is a chance that plugins doesn't work, Im not gonna update it for now because I didnt use BetterDiscord anymore.
 ## [Assign All Badges](https://github.com/BlackusPL/blackuspl.github.io/blob/main/BDPlugins/AsignAllBadges.plugin.js)
 ~~Asign all badges that discord have to your profile. [Code](https://github.com/ImLorio/All-Discord-Exploits/blob/main/Scripts/GetBadgesAndTag.md#gives-you-all-badges) [by ImLorio](https://github.com/ImLorio)~~
 Asign all badges that discord have to your profile. [Code](https://discord.com/channels/603970300668805120/1112809021561381024/1112819116529684651) by [@lles](https://discord.com/users/380045837457162242)
