@@ -1,6 +1,6 @@
 // Inserts Jquery ES5
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://blackuspl.github.io/textonimage/jquery.min.js');
+xhr.open('GET', 'https://blackuspl.github.io/tools/textonimage/jquery.min.js');
 xhr.onload = function () {
   if (xhr.status === 200) {
     var jqueryjs = document.createElement('script');
@@ -127,7 +127,8 @@ getID("tab").remove();*/
     var finded = document.cookie.split("; ").find((lang) => lang.startsWith(`${coname}=`))?.split("=")[1];
     return finded;
   }
-  if (window.location.href.split('/')[3] == "DarknessAir") {var web_root = `${'https://' + window.location.host}/DarknessAir`} else {var web_root = window.location.protocol + '//' + window.location.host}
+  //if (window.location.href.split('/')[3] == "DarknessAir") {var web_root = `${'https://' + window.location.host}/DarknessAir`} else {var web_root = window.location.protocol + '//' + window.location.host}
+  var web_root = window.location.protocol + '//' + window.location.host;
   var zmien, regex, key, textnodes, node, s;
 
   switch(cookievaluefinder('language')) {
