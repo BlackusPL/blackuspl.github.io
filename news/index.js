@@ -13,41 +13,37 @@ document.querySelector('main div').insertAdjacentHTML('afterend', '  \    <div i
 fetch('./changes.json')
 .then(response => response.json())
 .then(data => {
-    var test = data;
-    var i = Object.keys(test.id).length - 1;
-    document.querySelector('#change-obj + h3').id = test.id[i].link_id;
-    document.querySelector('#change-obj + h3').innerHTML = `Latest ${test.id[i].name}`;
-    for(let c = 0; c < Object.keys(test.id[i].desc).length; c++) {
-        document.querySelector('#change-obj + h3 + .changelog').innerHTML += test.id[i].desc[c];
+    var i = Object.keys(data.id).length - 1;
+    document.querySelector('#change-obj + h3').id = data.id[0].link_id;
+    document.querySelector('#change-obj + h3').innerHTML = `Latest ${data.id[0].name}`;
+    for(let c = 0; c < Object.keys(data.id[0].desc).length; c++) {
+        document.querySelector('#change-obj + h3 + .changelog').innerHTML += data.id[0].desc[c];
     };
     while (i >= 0) {
-        document.getElementById('change-list').insertAdjacentHTML('beforeend', `
-            <option value="${i}">${test.id[i].name}</option>
-        `);
+        document.getElementById('change-list').insertAdjacentHTML('afterbegin', `<option value="${i}">${data.id[i].name}</option>`);
         i--;
-    }
+    };
+    document.getElementById('change-list')[0].selected = true;
 });
 
 function selchangelog() {
 fetch('./changes.json')
 .then(response => response.json())
 .then(data => {
-var test = data;
-var i = Object.keys(test.id).length - 1;
 var e = document.getElementById('change-list').value;
 function showelse() {
-    document.querySelector('#change-obj + h3').id = test.id[e].link_id;
+    document.querySelector('#change-obj + h3').id = data.id[e].link_id;
     document.querySelector('#change-obj + h3 + .changelog').innerHTML = '';
-    for(let i = 0; i < Object.keys(test.id[e].desc).length; i++) {
-        document.querySelector('#change-obj + h3 + .changelog').innerHTML += test.id[e].desc[i];
+    for(let i = 0; i < Object.keys(data.id[e].desc).length; i++) {
+        document.querySelector('#change-obj + h3 + .changelog').innerHTML += data.id[e].desc[i];
     };
 }
-if(e == i) {
+if(e == 0) {
     showelse()
-    document.querySelector('#change-obj + h3').innerHTML = `Latest ${test.id[i].name}`;
+    document.querySelector('#change-obj + h3').innerHTML = `Latest ${data.id[0].name}`;
 } else {
     showelse()
-    document.querySelector('#change-obj + h3').innerHTML = `${test.id[e].name}`;
+    document.querySelector('#change-obj + h3').innerHTML = `${data.id[e].name}`;
 };
 })
 }

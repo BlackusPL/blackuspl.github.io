@@ -1,8 +1,8 @@
 {
-    "id": {
-        "71": {
-            "name" : "<b style=\"color: lightgreen\">NAVBAR UPDATE</b> 20.10.2024",
-            "link_id" : "update-201024",
+    "id": [
+        {
+            "name" : "<b style=\"color: lightgreen\">NAVBAR UPDATE</b> 17.10.2024",
+            "link_id" : "update-171024",
             "desc" : [
                 "• [Fixed] 'go back' on 404 page moves you to last opened page instead of going back to existing page<br>",
                 "• [Moved] Moved <a href='/tools/ai'>AI</a>, <a href='/tools/codeopen'>CodeOpen</a>, <a href='/tools/terminal'>Terminal</a> and <a href='/tools/textonimage'>TOI</a> to category <a href='/tools'>Tools</a><br>",
@@ -11,11 +11,12 @@
                 "• [AIChat] Changed Pawan.krd version to free one so you don't need to get apikey to use it<br>",
                 "• [AIChat] OpenAI option uses GPT 3.5 Turbo<br>",
                 "• [CodeOpen] Now you can change width and height of localplayer<br>",
-                "• [CodeOpen] Added 'Google It', let him search what you want<br>"
+                "• [CodeOpen] Added 'Google It', let him search what you want<br>",
+                "• [Changed] Changed stucture of changelog system<br>"
             ]
         },
-        "70": {
-            "name" : "15.10.2024",
+        {
+            "name" : "Update 15.10.2024",
             "link_id" : "update-151024",
             "desc" : [
                 "- Added Fake Terminal with some random commands<br>",
@@ -23,7 +24,7 @@
                 "- New latest coub<br>"
             ]
         },
-        "69": {
+        {
             "name" : "<b style=\"color: yellow\">NEWS UPDATE</b> 16.07.2024",
             "link_id" : "update-160724",
             "desc" : [
@@ -33,7 +34,7 @@
                 "- <mark>[TODO]</mark> Fix share button<br>"
             ]
         },
-        "68": {
+        {
             "name" : "Update 26.04.2024",
             "link_id" : "update-260424",
             "desc" : [
@@ -41,7 +42,7 @@
                 "- Some fixes to my secrets (afert 2 years and 9 months)<br>"
             ]
         },
-        "67": {
+        {
             "name" : "Update 14.04.2024",
             "link_id" : "update-140424",
             "desc" : [
@@ -51,7 +52,7 @@
                 "- <s>[Planned] Custom font for textonimage</s><br>"
             ]
         },
-        "66": {
+        {
             "name" : "Update 03.03.2024",
             "link_id" : "update-030324",
             "desc" : [
@@ -59,7 +60,7 @@
                 "- Fixed installing website as app<br>"
             ]
         },
-        "65": {
+        {
             "name" : "Update 06.02.2024",
             "link_id" : "update-060224",
             "desc" : [
@@ -67,14 +68,14 @@
                 "- Some changes to Music Player if user can't use JavaScript<br>"
             ]
         },
-        "64": {
+        {
             "name" : "Update 31.01.2024",
             "link_id" : "update-310124",
             "desc" : [
                 "- Fixed font where sometimes didn't apply<br>"
             ]
         },
-        "63": {
+        {
             "name" : "Update 03.01.2024",
             "link_id" : "update-030124",
             "desc" : [
@@ -83,7 +84,7 @@
                 "- Fixed share button got translated and has been broken<br>"
             ]
         },
-        "62": {
+        {
             "name" : "Update 01.01.2024",
             "link_id" : "update-010124",
             "desc" : [
@@ -96,7 +97,7 @@
                 "- Some improvements<br>"
             ]
         },
-        "61": {
+        {
             "name" : "Update 18.12.2023",
             "link_id" : "update-181223",
             "desc" : [
@@ -106,14 +107,14 @@
                 "- Added new video background to news and games<br>"
             ]
         },
-        "60": {
+        {
             "name" : "Update 19.11.2023",
             "link_id" : "update-191123",
             "desc" : [
                 "- Changed \"Usefull stuffs\" to \"Tools\".<br>"
             ]
         },
-        "59": {
+        {
             "name" : "Update 08.11.2023",
             "link_id" : "update-081123",
             "desc" : [
@@ -122,7 +123,7 @@
                 "- Now you can copy link to target update. For ex. <a href=\"#update-241221\">https://blackuspl.github.io/news/#update-241221</a><br>"
             ]
         },
-        "58": {
+        {
             "name" : "Update 13.09.2023",
             "link_id" : "update-130923",
             "desc" : [
@@ -132,7 +133,7 @@
                 "- Fixed \"Go back\" button on 404 page<br>"
             ]
         },
-        "57": {
+        {
             "name" : "Update 22.08.2023",
             "link_id" : "update-220823",
             "desc" : [
@@ -140,14 +141,14 @@
                 "- Now you can play custom radio in <a href=\"../music\">music player</a><br>"
             ]
         },
-        "56": {
+        {
             "name" : "Update 31.07.2023",
             "link_id" : "update-310723",
             "desc" : [
                 "- Now you can open DataURI converted file in new page<br>"
             ]
         },
-        "55": {
+        {
             "name" : "Update 24.07.2023",
             "link_id" : "update-240723",
             "desc" : [
@@ -156,7 +157,7 @@
                 "- Added translator to main page<br>"
             ]
         },
-        "54": {
+        {
             "name" : "Update 20.07.2023",
             "link_id" : "update-200723",
             "desc" : [
@@ -166,7 +167,7 @@
                 "- Fixed position of translator<br>"
             ]
         },
-        "53": {
+        {
             "name" : "Update 10.07.2023",
             "link_id" : "update-100723",
             "desc" : [
@@ -174,7 +175,7 @@
                 "- New songs<br>"
             ]
         },
-        "52": {
+        {
             "name" : "Update 08.07.2023",
             "link_id" : "update-080723",
             "desc" : [
@@ -183,7 +184,7 @@
                 "- Improved Code Opener<br>"
             ]
         },
-        "51": {
+        {
             "name" : "Update 28.06.2023",
             "link_id" : "update-280623",
             "desc" : [
@@ -191,7 +192,7 @@
                 "- Added website logo to Navbar<br>"
             ]
         },
-        "50": {
+        {
             "name" : "Update 27.06.2023",
             "link_id" : "update-270623",
             "desc" : [
@@ -202,14 +203,14 @@
                 "- <s>[Planned] Mobile version</s><br>"
             ]
         },
-        "49": {
+        {
             "name" : "Update 25.06.2023",
             "link_id" : "update-250623",
             "desc" : [
                 "- Updated BetterDiscord plugins<br>"
             ]
         },
-        "48": {
+        {
             "name" : "Update 22.06.2023",
             "link_id" : "update-220623",
             "desc" : [
@@ -217,7 +218,7 @@
                 "- New songs in <a href=\"../music\">music player</a><br>"
             ]
         },
-        "47": {
+        {
             "name" : "Update 04.06.2023",
             "link_id" : "update-040623",
             "desc" : [
@@ -227,7 +228,7 @@
                 "- Latest YT Video is now from youtube instead of invidious<br>"
             ]
         },
-        "46": {
+        {
             "name" : "Update 26.05.2023",
             "link_id" : "update-260523",
             "desc" : [
@@ -239,7 +240,7 @@
                 "- Added Video BG Brightness field for <a href=\"../music\">music player</a><br>"
             ]
         },
-        "45": {
+        {
             "name" : "Update 24.04.2023",
             "link_id" : "update-240423",
             "desc" : [
@@ -248,7 +249,7 @@
                 "- Css optimization"
             ]
         },
-        "44": {
+        {
             "name" : "<b style=\"color: rgb(0, 89, 255)\">LANGUAGE UPDATE!!! </b> 13.04.2023",
             "link_id" : "update-130423",
             "desc" : [
@@ -257,7 +258,7 @@
                 "- Changed cursor<br>"
             ]
         },
-        "43": {
+        {
             "name" : "Update 29.03.2023",
             "link_id" : "update-290323",
             "desc" : [
@@ -265,7 +266,7 @@
                 "- Cookies back for languages (expires 3 days after selecting language)<br>"
             ]
         },
-        "42": {
+        {
             "name" : "Update 27.03.2023",
             "link_id" : "update-270323",
             "desc" : [
@@ -274,7 +275,7 @@
                 "- No key function for <a href=\"../ai\">AI Chat</a> doesn't work anymore (Project was archived)<br>"
             ]
         },
-        "41": {
+        {
             "name" : "Update 17.03.2023",
             "link_id" : "update-170323",
             "desc" : [
@@ -284,7 +285,7 @@
                 "- <mark>[Planned]</mark> Readable README.md file in popup window<br>"
             ]
         },
-        "40": {
+        {
             "name" : "Update 14.03.2023",
             "link_id" : "update-140323",
             "desc" : [
@@ -294,7 +295,7 @@
                 "- Some improvments if you have turned off javascripts<br>"
             ]
         },
-        "39": {
+        {
             "name" : "Update 10.03.2023",
             "link_id" : "update-100323",
             "desc" : [
@@ -302,7 +303,7 @@
                 "- Fixed problem where generating image with text always turn off text shadow option<br>"
             ]
         },
-        "38": {
+        {
             "name" : "Update 08.03.2023",
             "link_id" : "update-080323",
             "desc" : [
@@ -311,7 +312,7 @@
                 "- <s>[Planned] Fix every misstakes with design</s><br>"
             ]
         },
-        "37": {
+        {
             "name" : "Update 07.03.2023",
             "link_id" : "update-070323",
             "desc" : [
@@ -319,7 +320,7 @@
                 "- <s>[Planned] Change About me to Projects</s><br>"
             ]
         },
-        "36": {
+        {
             "name" : "Update 06.03.2023",
             "link_id" : "update-060323",
             "desc" : [
@@ -328,7 +329,7 @@
                 "- Added Polish Coub to <a href=\"../about\">about me</a><br>"
             ]
         },
-        "35": {
+        {
             "name" : "Update 28.02.2023",
             "link_id" : "update-280223",
             "desc" : [
@@ -337,7 +338,7 @@
                 "- Updated AsingAllBadges to 1.2.5<br>"
             ]
         },
-        "34": {
+        {
             "name" : "Update 24.02.2023",
             "link_id" : "update-240223",
             "desc" : [
@@ -347,7 +348,7 @@
                 "- textx, texty, sizex, sizey now are only numberic<br>"
             ]
         },
-        "33": {
+        {
             "name" : "Update 15.02.2023",
             "link_id" : "update-150323",
             "desc" : [
@@ -357,7 +358,7 @@
                 "- Now you can bypass only image upload accept in <a href=\"../music\">music player</a> by checking experiments checkbox<br>"
             ]
         },
-        "32": {
+        {
             "name" : "Update 09.02.2023",
             "link_id" : "update-090223",
             "desc" : [
@@ -367,7 +368,7 @@
                 "- Roadmap soon...<br>"
             ]
         },
-        "31": {
+        {
             "name" : "Update 02.02.2023",
             "link_id" : "update-020223",
             "desc" : [
@@ -376,7 +377,7 @@
                 "- Soon download for new project (Polish Coub)<br>"
             ]
         },
-        "30": {
+        {
             "name" : "Update 15.01.2023",
             "link_id" : "update-150123",
             "desc" : [
@@ -385,7 +386,7 @@
                 "- video background now have more sources<br>"
             ]
         },
-        "29": {
+        {
             "name" : "Update 05.01.2023",
             "link_id" : "update-050123",
             "desc" : [
@@ -396,7 +397,7 @@
                 "- Reset button now remove saved image or video on <a href=\"../music\">Music Player</a><br>"
             ]
         },
-        "28": {
+        {
             "name" : "Update 01.01.2023",
             "link_id" : "update-010123",
             "desc" : [
@@ -404,7 +405,7 @@
                 "- Now you can save background on <a href=\"../music\">Music Player</a> (only Image URL function)<br>"
             ]
         },
-        "27": {
+        {
             "name" : "Update 20.12.2022",
             "link_id" : "update-201222",
             "desc" : [
@@ -412,7 +413,7 @@
                 "- Added New item from Steam Workshop on About page<br>"
             ]
         },
-        "26": {
+        {
             "name" : "Update 08.12.2022",
             "link_id" : "update-081222",
             "desc" : [
@@ -420,7 +421,7 @@
                 "- Local songs is now in correct location<br>"
             ]
         },
-        "25": {
+        {
             "name" : "Update 01.12.2022",
             "link_id" : "update-011222",
             "desc" : [
@@ -429,7 +430,7 @@
                 "- Added Time Clock<br>"
             ]
         },
-        "24": {
+        {
             "name" : "Update 24.11.2022",
             "link_id" : "update-241122",
             "desc" : [
@@ -437,7 +438,7 @@
                 "- Added Playlists for webamp W.I.P.<br>"
             ]
         },
-        "23": {
+        {
             "name" : "Update 20.11.2022",
             "link_id" : "update-201122",
             "desc" : [
@@ -446,7 +447,7 @@
                 "- Added custom error 404 page<br>"
             ]
         },
-        "22": {
+        {
             "name" : "Update 06.11.2022",
             "link_id" : "update-061122",
             "desc" : [
@@ -456,7 +457,7 @@
                 "- Added description to embed of website<br>"
             ]
         },
-        "21": {
+        {
             "name" : "Update 31.10.2022",
             "link_id" : "update-311022",
             "desc" : [
@@ -468,7 +469,7 @@
                 "- Now text is bright<br>"
             ]
         },
-        "20": {
+        {
             "name" : "Update 30.10.2022",
             "link_id" : "update-301022",
             "desc" : [
@@ -476,7 +477,7 @@
                 "- Small fixes for README.md<br>"
             ]
         },
-        "19": {
+        {
             "name" : "Update 23.10.2022",
             "link_id" : "update-231022",
             "desc" : [
@@ -485,7 +486,7 @@
                 "- If you dont have JavaScript on, you get notification about this<br>"
             ]
         },
-        "18": {
+        {
             "name" : "Update 18.10.2022",
             "link_id" : "update-181022",
             "desc" : [
@@ -494,7 +495,7 @@
                 "- More soon...<br>"
             ]
         },
-        "17": {
+        {
             "name" : "Update 27.09.2022",
             "link_id" : "update-270922",
             "desc" : [
@@ -503,7 +504,7 @@
                 "- Changed entire Games page<br>"
             ]
         },
-        "16": {
+        {
             "name" : "Update 15.09.2022",
             "link_id" : "update-150922",
             "desc" : [
@@ -514,7 +515,7 @@
                 "- Changelog will be moved to News soon<br>"
             ]
         },
-        "15": {
+        {
             "name" : "Update 05.09.2022",
             "link_id" : "update-050922",
             "desc" : [
@@ -525,7 +526,7 @@
                 "- Fixed Context Menu in Webamp<br>"
             ]
         },
-        "14": {
+        {
             "name" : "Update 08.08.2022",
             "link_id" : "update-080822",
             "desc" : [
@@ -534,7 +535,7 @@
                 "- If you have suggestions on what to add, write to me<br>"
             ]
         },
-        "13": {
+        {
             "name" : "Update 06.08.2022",
             "link_id" : "update-060822",
             "desc" : [
@@ -543,7 +544,7 @@
                 "- Fixed songs and added new one<br>"
             ]
         },
-        "12": {
+        {
             "name" : "Update 03.08.2022",
             "link_id" : "update-030822",
             "desc" : [
@@ -552,14 +553,14 @@
                 "- Added my avatar in <a href=../games/SNS>SNS</a>, <a href=../games/MR2000>MR2</a> and <a href=../games/NSR>NSR</a> pages<br>"
             ]
         },
-        "11": {
+        {
             "name" : "Update 30.07.2022",
             "link_id" : "update-300722",
             "desc" : [
                 "- Updated Music Racer 2000 page<br>"
             ]
         },
-        "10": {
+        {
             "name" : "Update 25.06.2022",
             "link_id" : "update-250622",
             "desc" : [
@@ -569,7 +570,7 @@
                 "- Remake of navigation bar<br>"
         ]
         },
-        "9": {
+        {
             "name" : "Update 30.05.2022",
             "link_id" : "update-300522",
             "desc" : [
@@ -577,7 +578,7 @@
                 "- Added song and radio station (RMF MAXXX)<br>"
             ]
         },
-        "8": {
+        {
             "name" : "<b style=\"color: rgb(97, 74, 0)\">Cookies Update v1</b> 15.05.2022",
             "link_id" : "update-150522",
             "desc" : [
@@ -586,14 +587,14 @@
                 "- Changed entired <a href=\"../music\">Music Page</a>"
             ]
         },
-        "7": {
+        {
             "name" : "Update 30.04.2022",
             "link_id" : "update-300422",
             "desc" : [
                 "- Now website has a preview of links on other websites<br>"
             ]
         },
-        "6": {
+        {
             "name" : "<b style=\"color: blue\">BIG UPDATE!!! </b> 06.04.2022",
             "link_id" : "update-060422",
             "desc" : [
@@ -606,7 +607,7 @@
             "- More soon..."
             ]
         },
-        "5": {
+        {
             "name" : "Update 03.04.2022",
             "link_id" : "update-030422",
             "desc" : [
@@ -616,14 +617,14 @@
                 "- Added more songs in <a href=\"../music\">Music Player</a>"
             ]
         },
-        "4": {
+        {
             "name" : "Update 31.03.2022",
             "link_id" : "update-310322",
             "desc" : [
                 "- Added Music Player, Discord widget on Home page and first tests with javascripts"
             ]
         },
-        "3": {
+        {
             "name" : "Update 17.02.2022",
             "link_id" : "update-170222",
             "desc" : [
@@ -631,7 +632,7 @@
                 "- Fixed Website URL"
             ]
         },
-        "2": {
+        {
             "name" : "Update 15.01.2022",
             "link_id" : "update-150122",
             "desc" : [
@@ -639,17 +640,17 @@
                 "- Added <a href=\"../secret.html\">New type of loading website</a>"
             ]
         },
-        "1": {
+        {
             "name" : "Update 24.12.2021",
             "link_id" : "update-241221",
             "desc" : [
                 "- Website was created<br>"
             ]
         },
-        "0": {
+        {
             "name" : "PlaceHolder",
             "link_id" : "",
             "desc" : "PlaceHolder description<br>"
         }
-    }
+    ]
 }
