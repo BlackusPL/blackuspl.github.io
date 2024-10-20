@@ -85,6 +85,9 @@ function playVideo(files) {
                         break;
                     }
                 break;
+                case 'Google It':
+                    window.open(`https://letmegooglethat.com/?q=${id('head_code').value}`, '_blank')
+                break;
                 case 'soon':
                     alert('soon')
                 break;
@@ -95,18 +98,14 @@ function playVideo(files) {
         switch (type_option) {
             default:
                 rm_html()
-                id('head_code').placeholder = "Soon";
-                id('body_code').placeholder = "Soon";
-                id('head_code').style.display = ""
-                id('body_code').style.display = "";
+                id("codeplace").innerHTML = `<textarea placeholder="Soon" id="head_code"></textarea><br> \
+              <textarea placeholder="Soon" id="body_code"></textarea>`;
                 console.log('File type not found')
                 break;
             case 'HTML':
-                id('head_code').style.display = ""
-                id('body_code').style.display = "";
                 rm_html()
-                id('head_code').placeholder = "Elements in head";
-                id('body_code').placeholder = "Elements that will be in body or html code";
+                id("codeplace").innerHTML = `<textarea placeholder="Elements in head" id="head_code"></textarea><br> \
+              <textarea placeholder="Elements that will be in body or html code" id="body_code"></textarea>`;
                 document.querySelector('select').insertAdjacentHTML('afterend','<div id="afterselectcon"><input type="checkbox" id="afterselect">Full HTML</input></div>')
                 id('afterselect').addEventListener('change', function () {
                     if (id('afterselect').checked) {
@@ -118,39 +117,37 @@ function playVideo(files) {
             break;
             case 'JSON':
                 rm_html()
-                id('body_code').placeholder = "JSON code to be formatted";
-                id('head_code').style.display = "none"
-                id('body_code').style.display = "";
+                id("codeplace").innerHTML = `<textarea placeholder="JSON code to be formatted" id="body_code"></textarea>`;
             break;
             case 'JS':
                 rm_html()
-                id('head_code').placeholder = "Code to eval";
-                id('body_code').placeholder = "Result";
-                id('head_code').style.display = ""
-                id('body_code').style.display = "";
+                id("codeplace").innerHTML = `<textarea placeholder="Code to eval" id="head_code"></textarea><br> \
+                <textarea placeholder="Result" id="body_code"></textarea>`;
             break;
             case 'Translator':
                 rm_html()
-                id('head_code').placeholder = "Text to translate";
-                id('body_code').placeholder = "Translated text";
-                id('head_code').style.display = "";
-                id('body_code').style.display = "";
+                id("codeplace").innerHTML = `<textarea placeholder="Text to translate" id="head_code"></textarea><br> \
+                <textarea placeholder="Translated text" id="body_code"></textarea>`;
             break;
             case 'Localplayer':
                 rm_html()
                 document.querySelector('select').insertAdjacentHTML('afterend','<div id="afterselectcon"><input type="file" accept="video/*" id="afterselect"></input></div>');
-                document.querySelector('#body_code').insertAdjacentHTML('afterend','<video id="video_src" controls></video>');
+                document.querySelector('#codeplace').innerHTML = `<video id="video_src" controls></video><br> \
+                <input type="number" name="width"> Width \
+                <input type="number" name="height"> Height`;
                 id('afterselect').addEventListener('change', function () {
                     playVideo(this.files)
                 });
-                id('head_code').style.display = "none";
-                id('body_code').style.display = "none";
+                document.querySelector('[name=width]').addEventListener("change", function () {
+                    id('video_src').style.width = `${document.querySelector('[name=width]').value}px`
+                });
+                document.querySelector('[name=height').addEventListener("change", function () {
+                    id('video_src').style.height = `${document.querySelector('[name=height]').value}px`
+                });
             break;
             case 'DataURI':
                 rm_html();
-                id('body_code').placeholder = "Result";
-                id('head_code').style.display = "none";
-                id('body_code').style.display = "";
+                id("codeplace").innerHTML = `<textarea placeholder="Result" id="body_code"></textarea>`;
                 document.querySelector('select').insertAdjacentHTML('afterend','<div id="afterselectcon"><input type="file" accept="*/*" id="afterselect"></input></div>');
                 id('afterselect').addEventListener('change', function () {
                 function blobToDataURL(blob) {
@@ -166,6 +163,9 @@ function playVideo(files) {
                 dataURLFunc(this.files[0]);
             });
             break;
+            case 'Google It':
+                rm_html();
+                id("codeplace").innerHTML = `<textarea placeholder="Type what you want to search for" id="head_code"></textarea>`;
         }
     })
 

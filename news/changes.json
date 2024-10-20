@@ -1,5 +1,19 @@
 {
     "id": {
+        "71": {
+            "name" : "<b style=\"color: lightgreen\">NAVBAR UPDATE</b> 20.10.2024",
+            "link_id" : "update-201024",
+            "desc" : [
+                "• [Fixed] 'go back' on 404 page moves you to last opened page instead of going back to existing page<br>",
+                "• [Moved] Moved <a href='/tools/ai'>AI</a>, <a href='/tools/codeopen'>CodeOpen</a>, <a href='/tools/terminal'>Terminal</a> and <a href='/tools/textonimage'>TOI</a> to category <a href='/tools'>Tools</a><br>",
+                "• [Changed] Now Navbar uses javascript to load<br>",
+                "• [Info] Because Navbar is js only now, non js version will be only available on Home page<br>",
+                "• [AIChat] Changed Pawan.krd version to free one so you don't need to get apikey to use it<br>",
+                "• [AIChat] OpenAI option uses GPT 3.5 Turbo<br>",
+                "• [CodeOpen] Now you can change width and height of localplayer<br>",
+                "• [CodeOpen] Added 'Google It', let him search what you want<br>"
+            ]
+        },
         "70": {
             "name" : "15.10.2024",
             "link_id" : "update-151024",

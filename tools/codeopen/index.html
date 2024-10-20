@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DarknessAir.INC</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="/BDPlugins/icon.png"
+          type="image/icon type">
+        <link href="/index.css" rel="stylesheet">
+        <link href="/manifest.webmanifest" rel="manifest" />
+        <meta property="og:site_name" content="DarknessAir">
+        <meta property="og:title" content="Welcome">
+        <meta property="og:description" content="Welcome in Dark Site">
+        <meta property="og:image" content="/BDPlugins/icon.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:url" content="https://blackuspl.github.io/DarknessAir">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+          #body_code {
+            width: 500px; 
+            height: 150px;
+          }
+          #head_code {
+            width: 500px; 
+            height: 75px;
+          }
+          #video_src {
+              width: 600px;
+              height: 250px;
+            }
+          @media only screen and (max-width: 600px) {
+              #body_code {
+              width: calc(100% - 50px); 
+              height: 150px;
+            }
+            #head_code {
+              width: calc(100% - 50px); 
+              height: 75px;
+            }
+            #video_src {
+              width: calc(75% - 50px);
+              height: 250px;
+            }
+          }
+</style>
+</head>
+<body>
+    <!--The tab to move in the website-->
+    <div class="navbar">
+      <!-- old navbar that will see only users without javascripts -->
+      <div class="navbar-items" id="tab">
+        <ul class="navbar-links logo">
+          <li class="navbar-link">
+            <img src="/BDPlugins/icon.png" class="icon">
+          </li>
+        </ul>
+        <ul class="navbar-links main">
+          <li class="navbar-link" style="width: 0; height: 70px;"></li>
+          <li class="navbar-link">
+            <a href="/" class="navbar-item">
+              <span>Home</span>
+            </a>
+          </li>
+          <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
+          <li class="navbar-link">
+            <div id="google_translate_element" class="navbar-item">
+              <noscript>You need to enable JavaScript to use Translator and Navbar.</noscript>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+        <!--end-->
+        <noscript>Turn on javascript! <style>main {display: none;} noscript {height: 100%;}</style></noscript>
+        <main>
+          <center>
+            <header style="margin: 1em auto 0em;"><h2>Code Opener</h2></header>
+            <h3>What this do?</h3>
+            <p>You can paste code of html or html body and head to see how site looks with your code or other language code eval it.</p>
+            <p><a href="..">Go back</a></p>
+            <div id="codeplace">
+              <textarea placeholder="Elements in head" id="head_code"></textarea><br>
+              <textarea placeholder="Elements that will be in body or html code" id="body_code"></textarea>
+            </div>
+          <div style="margin: 2em auto; position: relative; width: 70%;">
+            <select>
+                <option>HTML</option>
+                <option>JSON</option>
+                <option>JS</option>
+                <option>Translator</option>
+                <option>Localplayer</option>
+                <option>DataURI</option>
+                <option>Google It</option>
+                <option>soon</option>
+            </select>
+            <div id="afterselectcon"><input type="checkbox" id="afterselect">Full HTML</input></div>
+            <br><br>
+            <button id="clear">Clear</button>
+            <button>Submit</button><br>
+          </div>
+          </center>
+        </main>
+        <footer>
+            <p>Copyright © 2021-2024, BlackusPL | All rights reserved | DO NOT DISTRIBUTE</p>
+        </footer>
+    </body>
+    <script src="/base.js"></script>
+    <script src="index.js"></script>
+</html>

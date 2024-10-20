@@ -1,15 +1,31 @@
 // Saves apikey in session storage
-document.getElementById('apikey').value = sessionStorage.getItem('apikey');
+let apikey = document.getElementById('apikey')
+apikey.value = sessionStorage.getItem('apikey');
 
 document.getElementById('send_prompt').addEventListener('click', function () {
-  sessionStorage.setItem('apikey', document.getElementById('apikey').value);
+  sessionStorage.setItem('apikey', apikey.value);
 });
 
 document.getElementById('apilist').addEventListener('change', function () {
-  if (document.getElementsByName('api')[0][2].selected) {
+  /*if (document.getElementsByName('api')[0][2].selected) {
     document.getElementById('capilist').style = '';
   } else {
     document.getElementById('capilist').style = 'display: none';
+  }*/
+ let capi = document.getElementById('capilist').style = 'display: none';
+  switch(document.getElementsByName('api')[0].selectedIndex) {
+    case 2:
+      document.getElementById('capilist').style = '';
+      apikey.style.display = "";
+      break;
+    case 1:
+      capi;
+      apikey.style.display = "none";
+      break;
+    default:
+      capi;
+      apikey.style.display = "";
+      break;
   }
 });
 
@@ -34,9 +50,9 @@ function ask(prompt) {
         key = 'Bearer ' + document.getElementById('apikey').value;
       break;
       case 'Pawan.Krd':
-        api = 'https://api.pawan.krd/v1/chat/completions';
-        model = "pai-001-light";
-        key = 'Bearer ' + document.getElementById('apikey').value;
+        api = 'https://api.pawan.krd/cosmosrp/v1/chat/completions';
+        model = "gpt-3.5-turbo";
+        key = " ";
       break;
       case 'customapi':
         api = document.getElementById('customapi').value;
