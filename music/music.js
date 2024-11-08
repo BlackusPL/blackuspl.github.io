@@ -26,20 +26,8 @@ document.getElementById('custombg_window').innerHTML = `Set custom background<br
     <option value="nightcore">Nightcore</option>\
     <option value="coub">Coub songs</option>\
     <option value="custom">Custom Radio</option>\
-</select>`;
-
-document.getElementsByName('viewport')[0].insertAdjacentHTML('afterend', `<style SetCustomBackground>
-div#custombg_window {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    background: #111;
-    width: 220px;
-    border: 1px solid white;
-    height: 175px;
-    text-align: center;
-}
-</style>`)
+</select>\ 
+<button onclick="webamp.reopen()">Reopen webamp</button>`;
 
 // START Create playlists
 
@@ -65,6 +53,20 @@ let nightcore = [{
 }];
 
 let coubsong = [{
+    metaData: {
+        artist: "Coub / BlackusPL",
+        title: "𝕐𝕠𝕜𝕠𝕤𝕠 (AVANGARD)",
+        coubid: "3fqoo8"
+    },
+    url: "./local_music/1727735865_looped_1727735864.mp3"
+},{
+    metaData: {
+        artist: "Coub / CiroCool",
+        title: "Dont say goodbye",
+        coubid: "2odxle"
+    },
+    url: "https://attachments-cdn-s.coub.com/coub_storage/coub/simple/cw_looped_audio_high/1cac8d6fb7b/2aab10d9c9a3b000f1153/1611604087_mp3-high.mp3"
+},{
     metaData: {
         artist: "Coub / C152",
         title: "Back in Time"
@@ -173,6 +175,14 @@ let coubsong = [{
 },
 {
     metaData: {
+        artist: "Coub / 1stSin",
+        title: "Sexy Bitch",
+        coubid: "2tyu08"
+    },
+    url: "https://attachments-cdn-s.coub.com/coub_storage/coub/simple/cw_looped_audio_high/3d6fe6dce26/8fbc4169c2af70deebc0f/1625774595_mp3-high.mp3"
+},
+{
+    metaData: {
         artist: "Coub / Danny & Freja",
         title: "If Only You",
         coubid: "32zjkg"
@@ -192,6 +202,14 @@ let coubsong = [{
         coubid: "3e4b5r"
     },
     url: "https://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_looped_audio_high/20d4a216063/ae9e40c74e606efb0a608/1711827997_mp3-high.mp3"
+},
+{
+    metaData: {
+        artist: "Coub / removed coub",
+        title: "fivevfire",
+        coubid: "2a6bab"
+    },
+    url: "./local_music/2a6bab.webm"
 },
 ];
 let othersong = [
@@ -418,6 +436,8 @@ const webamp = new Webamp({
     },
 });
 webamp.renderWhenReady(document.getElementById("app"));
+webamp.setVolume(10); // default: 75 | 75 is too loud for me
+webamp.setSkinFromUrl('./anime_amp_2.wsz');
 
 function changeFunc() {
     var playlists = document.getElementById("playlists");

@@ -1,251 +1,260 @@
 {
     "id": [
         {
+            "name" : "Update 09.11.2024",
+            "link_id" : "update-091124",
+            "desc" : [
+                "• [Added] Now you can Show/Hide CustomBG window in Music Player",
+                "• [Added] 2024 history in Gallery",
+                "• [Added] If you close Webamp by accident, now you can reopen it instead of refreshing page"
+            ]
+        },
+        {
             "name" : "<b style=\"color: lightgreen\">NAVBAR UPDATE</b> 17.10.2024",
             "link_id" : "update-171024",
             "desc" : [
-                "• [Fixed] 'go back' on 404 page moves you to last opened page instead of going back to existing page<br>",
-                "• [Moved] Moved <a href='/tools/ai'>AI</a>, <a href='/tools/codeopen'>CodeOpen</a>, <a href='/tools/terminal'>Terminal</a> and <a href='/tools/textonimage'>TOI</a> to category <a href='/tools'>Tools</a><br>",
-                "• [Changed] Now Navbar uses javascript to load<br>",
-                "• [Info] Because Navbar is js only now, non js version will be only available on Home page<br>",
-                "• [AIChat] Changed Pawan.krd version to free one so you don't need to get apikey to use it<br>",
-                "• [AIChat] OpenAI option uses GPT 3.5 Turbo<br>",
-                "• [CodeOpen] Now you can change width and height of localplayer<br>",
-                "• [CodeOpen] Added 'Google It', let him search what you want<br>",
-                "• [Changed] Changed stucture of changelog system<br>"
+                "• [Fixed] 'go back' on 404 page moves you to last opened page instead of going back to existing page",
+                "• [Moved] Moved <a href='/tools/ai'>AI</a>, <a href='/tools/codeopen'>CodeOpen</a>, <a href='/tools/terminal'>Terminal</a> and <a href='/tools/textonimage'>TOI</a> to category <a href='/tools'>Tools</a>",
+                "• [Changed] Now Navbar uses javascript to load",
+                "• [Info] Because Navbar is js only now, non js version will be only available on Home page",
+                "• [AIChat] Changed Pawan.krd version to free one so you don't need to get apikey to use it",
+                "• [AIChat] OpenAI option uses GPT 3.5 Turbo",
+                "• [CodeOpen] Now you can change width and height of localplayer",
+                "• [CodeOpen] Added 'Google It', let him search what you want",
+                "• [Changed] Changed stucture of changelog system"
             ]
         },
         {
             "name" : "Update 15.10.2024",
             "link_id" : "update-151024",
             "desc" : [
-                "- Added Fake Terminal with some random commands<br>",
-                "- Now you can use custom font in textonimage<br>",
-                "- New latest coub<br>"
+                "- Added Fake Terminal with some random commands",
+                "- Now you can use custom font in textonimage",
+                "- New latest coub"
             ]
         },
         {
             "name" : "<b style=\"color: yellow\">NEWS UPDATE</b> 16.07.2024",
             "link_id" : "update-160724",
             "desc" : [
-                "- Added Markdown for AI chat<br>",
-                "- News now have new changelog view system. Archived version <a href=\"../news-old\">here</a><br>",
-                "- Removed BetterDiscord Plugins from Home page<br>",
-                "- <mark>[TODO]</mark> Fix share button<br>"
+                "- Added Markdown for AI chat",
+                "- News now have new changelog view system. Archived version <a href=\"../news-old\">here</a>",
+                "- Removed BetterDiscord Plugins from Home page",
+                "- <mark>[TODO]</mark> Fix share button"
             ]
         },
         {
             "name" : "Update 26.04.2024",
             "link_id" : "update-260424",
             "desc" : [
-                "- Now you can use Custom API and model in AI chat<br>",
-                "- Some fixes to my secrets (afert 2 years and 9 months)<br>"
+                "- Now you can use Custom API and model in AI chat",
+                "- Some fixes to my secrets (afert 2 years and 9 months)"
             ]
         },
         {
             "name" : "Update 14.04.2024",
             "link_id" : "update-140424",
             "desc" : [
-                "- Fixed Discord profile width when status is too long<br>",
-                "- Fixed textonimage when image doesn't generate but still try to remove it<br>",
-                "- Added Text Size to textonimage<br>",
-                "- <s>[Planned] Custom font for textonimage</s><br>"
+                "- Fixed Discord profile width when status is too long",
+                "- Fixed textonimage when image doesn't generate but still try to remove it",
+                "- Added Text Size to textonimage",
+                "- <s>[Planned] Custom font for textonimage</s>"
             ]
         },
         {
             "name" : "Update 03.03.2024",
             "link_id" : "update-030324",
             "desc" : [
-                "- Fixed Discord links (new system)<br>",
-                "- Fixed installing website as app<br>"
+                "- Fixed Discord links (new system)",
+                "- Fixed installing website as app"
             ]
         },
         {
             "name" : "Update 06.02.2024",
             "link_id" : "update-060224",
             "desc" : [
-                "- Now you will get notification about copied link to share<br>",
-                "- Some changes to Music Player if user can't use JavaScript<br>"
+                "- Now you will get notification about copied link to share",
+                "- Some changes to Music Player if user can't use JavaScript"
             ]
         },
         {
             "name" : "Update 31.01.2024",
             "link_id" : "update-310124",
             "desc" : [
-                "- Fixed font where sometimes didn't apply<br>"
+                "- Fixed font where sometimes didn't apply"
             ]
         },
         {
             "name" : "Update 03.01.2024",
             "link_id" : "update-030124",
             "desc" : [
-                "- Fixed footer (Finally)<br>",
-                "- Optimized stylesheet<br>",
-                "- Fixed share button got translated and has been broken<br>"
+                "- Fixed footer (Finally)",
+                "- Optimized stylesheet",
+                "- Fixed share button got translated and has been broken"
             ]
         },
         {
             "name" : "Update 01.01.2024",
             "link_id" : "update-010124",
             "desc" : [
-                "- Fixed footer in Games<br>",
-                "- Added share button to changelog<br>",
-                "- Updated translations<br>",
-                "- <mark>[WIP]</mark> Added Gallery where you can check the history of website<br>",
-                "- BDPlugins have now own Page<br>",
-                "- Fixed AI Chat, OpenAI uses <var>gpt-3.5-turbo</var>, Pawan.Krd uses <var>pai-001-light</var>, later Custom API<br>",
-                "- Some improvements<br>"
+                "- Fixed footer in Games",
+                "- Added share button to changelog",
+                "- Updated translations",
+                "- <mark>[WIP]</mark> Added Gallery where you can check the history of website",
+                "- BDPlugins have now own Page",
+                "- Fixed AI Chat, OpenAI uses <var>gpt-3.5-turbo</var>, Pawan.Krd uses <var>pai-001-light</var>, later Custom API",
+                "- Some improvements"
             ]
         },
         {
             "name" : "Update 18.12.2023",
             "link_id" : "update-181223",
             "desc" : [
-                "- Updated Latest Coub<br>",
-                "- Added some comments in scripts<br>",
-                "- Added missing instructions in textonimage<br>",
-                "- Added new video background to news and games<br>"
+                "- Updated Latest Coub",
+                "- Added some comments in scripts",
+                "- Added missing instructions in textonimage",
+                "- Added new video background to news and games"
             ]
         },
         {
             "name" : "Update 19.11.2023",
             "link_id" : "update-191123",
             "desc" : [
-                "- Changed \"Usefull stuffs\" to \"Tools\".<br>"
+                "- Changed \"Usefull stuffs\" to \"Tools\"."
             ]
         },
         {
             "name" : "Update 08.11.2023",
             "link_id" : "update-081123",
             "desc" : [
-                "- Fixed fake windows update<br>",
-                "- Added new font<br>",
-                "- Now you can copy link to target update. For ex. <a href=\"#update-241221\">https://blackuspl.github.io/news/#update-241221</a><br>"
+                "- Fixed fake windows update",
+                "- Added new font",
+                "- Now you can copy link to target update. For ex. <a href=\"#update-241221\">https://blackuspl.github.io/news/#update-241221</a>"
             ]
         },
         {
             "name" : "Update 13.09.2023",
             "link_id" : "update-130923",
             "desc" : [
-                "- Removed old tab patern<br>",
-                "- Website icon is now loading from website<br>",
-                "- Now discord profile is visible for mobile users<br>",
-                "- Fixed \"Go back\" button on 404 page<br>"
+                "- Removed old tab patern",
+                "- Website icon is now loading from website",
+                "- Now discord profile is visible for mobile users",
+                "- Fixed \"Go back\" button on 404 page"
             ]
         },
         {
             "name" : "Update 22.08.2023",
             "link_id" : "update-220823",
             "desc" : [
-                "- Fixed 404 error page and base.js by website url changes<br>",
-                "- Now you can play custom radio in <a href=\"../music\">music player</a><br>"
+                "- Fixed 404 error page and base.js by website url changes",
+                "- Now you can play custom radio in <a href=\"../music\">music player</a>"
             ]
         },
         {
             "name" : "Update 31.07.2023",
             "link_id" : "update-310723",
             "desc" : [
-                "- Now you can open DataURI converted file in new page<br>"
+                "- Now you can open DataURI converted file in new page"
             ]
         },
         {
             "name" : "Update 24.07.2023",
             "link_id" : "update-240723",
             "desc" : [
-                "- Added DataURI and updated LocalPlayer in <a href=\"../codeopen\">Code Opener</a><br>",
-                "- Added some songs (I will not gonna alert new added songs in future)<br>",
-                "- Added translator to main page<br>"
+                "- Added DataURI and updated LocalPlayer in <a href=\"../codeopen\">Code Opener</a>",
+                "- Added some songs (I will not gonna alert new added songs in future)",
+                "- Added translator to main page"
             ]
         },
         {
             "name" : "Update 20.07.2023",
             "link_id" : "update-200723",
             "desc" : [
-                "- Jquery is now available on every pages<br>",
-                "- Optimize code<br>",
-                "- Fixed <a href=\"../music\">music player</a> where music.js loads first then base.js caused some errors<br>",
-                "- Fixed position of translator<br>"
+                "- Jquery is now available on every pages",
+                "- Optimize code",
+                "- Fixed <a href=\"../music\">music player</a> where music.js loads first then base.js caused some errors",
+                "- Fixed position of translator"
             ]
         },
         {
             "name" : "Update 10.07.2023",
             "link_id" : "update-100723",
             "desc" : [
-                "- Fixed Playlists<br>",
-                "- New songs<br>"
+                "- Fixed Playlists",
+                "- New songs"
             ]
         },
         {
             "name" : "Update 08.07.2023",
             "link_id" : "update-080723",
             "desc" : [
-                "- Added JS, Localplayer<br>",
-                "- Updated Translation<br>",
-                "- Improved Code Opener<br>"
+                "- Added JS, Localplayer",
+                "- Updated Translation",
+                "- Improved Code Opener"
             ]
         },
         {
             "name" : "Update 28.06.2023",
             "link_id" : "update-280623",
             "desc" : [
-                "- New Navbar and Mobile compatibility<br>",
-                "- Added website logo to Navbar<br>"
+                "- New Navbar and Mobile compatibility",
+                "- Added website logo to Navbar"
             ]
         },
         {
             "name" : "Update 27.06.2023",
             "link_id" : "update-270623",
             "desc" : [
-                "- Rework release for all pages<br>",
-                "- New Project named <a href=\"../codeopen\">Code Opener</a><br>",
-                "- Fixed \"Go back\" in 404 page<br>",
-                "- <s>[Planned] New Navbar for better experience</s><br>",
-                "- <s>[Planned] Mobile version</s><br>"
+                "- Rework release for all pages",
+                "- New Project named <a href=\"../codeopen\">Code Opener</a>",
+                "- Fixed \"Go back\" in 404 page",
+                "- <s>[Planned] New Navbar for better experience</s>",
+                "- <s>[Planned] Mobile version</s>"
             ]
         },
         {
             "name" : "Update 25.06.2023",
             "link_id" : "update-250623",
             "desc" : [
-                "- Updated BetterDiscord plugins<br>"
+                "- Updated BetterDiscord plugins"
             ]
         },
         {
             "name" : "Update 22.06.2023",
             "link_id" : "update-220623",
             "desc" : [
-                "- Rework index.html (soon for all pages)<br>",
-                "- New songs in <a href=\"../music\">music player</a><br>"
+                "- Rework index.html (soon for all pages)",
+                "- New songs in <a href=\"../music\">music player</a>"
             ]
         },
         {
             "name" : "Update 04.06.2023",
             "link_id" : "update-040623",
             "desc" : [
-                "- Added Custom api option for AI Chat<br>",
-                "- More fixes for footer<br>",
-                "- Textonimage now doesn't refresh page every time when image is generating<br>",
-                "- Latest YT Video is now from youtube instead of invidious<br>"
+                "- Added Custom api option for AI Chat",
+                "- More fixes for footer",
+                "- Textonimage now doesn't refresh page every time when image is generating",
+                "- Latest YT Video is now from youtube instead of invidious"
             ]
         },
         {
             "name" : "Update 26.05.2023",
             "link_id" : "update-260523",
             "desc" : [
-                "- Fixed footer location<br>",
-                "- Clock is now in tab, not in footer<br>",
-                "- Css optimization<br>",
-                "- Updated SNS download links<br>",
-                "- Discord Profile now didnt colidate with other elements<br>",
-                "- Added Video BG Brightness field for <a href=\"../music\">music player</a><br>"
+                "- Fixed footer location",
+                "- Clock is now in tab, not in footer",
+                "- Css optimization",
+                "- Updated SNS download links",
+                "- Discord Profile now didnt colidate with other elements",
+                "- Added Video BG Brightness field for <a href=\"../music\">music player</a>"
             ]
         },
         {
             "name" : "Update 24.04.2023",
             "link_id" : "update-240423",
             "desc" : [
-                "- Updated Discord Profile<br>",
-                "- Added one song to <a href=\"../music\">music player</a><br>",
+                "- Updated Discord Profile",
+                "- Added one song to <a href=\"../music\">music player</a>",
                 "- Css optimization"
             ]
         },
@@ -253,337 +262,337 @@
             "name" : "<b style=\"color: rgb(0, 89, 255)\">LANGUAGE UPDATE!!! </b> 13.04.2023",
             "link_id" : "update-130423",
             "desc" : [
-                "- Added German Language<br>",
-                "- Updated dropdown tab langauges<br>",
-                "- Changed cursor<br>"
+                "- Added German Language",
+                "- Updated dropdown tab langauges",
+                "- Changed cursor"
             ]
         },
         {
             "name" : "Update 29.03.2023",
             "link_id" : "update-290323",
             "desc" : [
-                "- Optimized javascripts files<br>",
-                "- Cookies back for languages (expires 3 days after selecting language)<br>"
+                "- Optimized javascripts files",
+                "- Cookies back for languages (expires 3 days after selecting language)"
             ]
         },
         {
             "name" : "Update 27.03.2023",
             "link_id" : "update-270323",
             "desc" : [
-                "- Changed music from \"MFS - Bow\" to \"АДЛИН - Одна\"<br>",
-                "- Fixed some songs links for <a href=\"../music\">Music Player</a><br>",
-                "- No key function for <a href=\"../ai\">AI Chat</a> doesn't work anymore (Project was archived)<br>"
+                "- Changed music from \"MFS - Bow\" to \"АДЛИН - Одна\"",
+                "- Fixed some songs links for <a href=\"../music\">Music Player</a>",
+                "- No key function for <a href=\"../ai\">AI Chat</a> doesn't work anymore (Project was archived)"
             ]
         },
         {
             "name" : "Update 17.03.2023",
             "link_id" : "update-170323",
             "desc" : [
-                "- New category (Usefull Stuffs) where you can find: <a href=\"../about\">Aboutme</a>, <a href=\"../textonimage\">TextonImage</a> and <a href=\"../ai\">AI Chat</a><br>",
-                "- Now you can talk with ChatGPT on my website<br>",
-                "- Removed 1 unecossary file in <a href=\"../about\">about me</a><br>",
-                "- <mark>[Planned]</mark> Readable README.md file in popup window<br>"
+                "- New category (Usefull Stuffs) where you can find: <a href=\"../about\">Aboutme</a>, <a href=\"../textonimage\">TextonImage</a> and <a href=\"../ai\">AI Chat</a>",
+                "- Now you can talk with ChatGPT on my website",
+                "- Removed 1 unecossary file in <a href=\"../about\">about me</a>",
+                "- <mark>[Planned]</mark> Readable README.md file in popup window"
             ]
         },
         {
             "name" : "Update 14.03.2023",
             "link_id" : "update-140323",
             "desc" : [
-                "- Fixed text align to size of window in games<br>",
-                "- Fixed manifest on <a href=\"../about\">aboutme</a><br>",
-                "- Optimized code for my projects<br>",
-                "- Some improvments if you have turned off javascripts<br>"
+                "- Fixed text align to size of window in games",
+                "- Fixed manifest on <a href=\"../about\">aboutme</a>",
+                "- Optimized code for my projects",
+                "- Some improvments if you have turned off javascripts"
             ]
         },
         {
             "name" : "Update 10.03.2023",
             "link_id" : "update-100323",
             "desc" : [
-                "- Now you can use \"Accept CORS\" to generate image with text in Base64 format<br>",
-                "- Fixed problem where generating image with text always turn off text shadow option<br>"
+                "- Now you can use \"Accept CORS\" to generate image with text in Base64 format",
+                "- Fixed problem where generating image with text always turn off text shadow option"
             ]
         },
         {
             "name" : "Update 08.03.2023",
             "link_id" : "update-080323",
             "desc" : [
-                "- Improved mobile users view<br>",
-                "- Fixed position for discord profile (Still broken but less)<br>",
-                "- <s>[Planned] Fix every misstakes with design</s><br>"
+                "- Improved mobile users view",
+                "- Fixed position for discord profile (Still broken but less)",
+                "- <s>[Planned] Fix every misstakes with design</s>"
             ]
         },
         {
             "name" : "Update 07.03.2023",
             "link_id" : "update-070323",
             "desc" : [
-                "- Added my Discord profile on home page<br>",
-                "- <s>[Planned] Change About me to Projects</s><br>"
+                "- Added my Discord profile on home page",
+                "- <s>[Planned] Change About me to Projects</s>"
             ]
         },
         {
             "name" : "Update 06.03.2023",
             "link_id" : "update-060323",
             "desc" : [
-                "- Updated dev console commands<br>",
-                "- Updated Coub to the latest video<br>",
-                "- Added Polish Coub to <a href=\"../about\">about me</a><br>"
+                "- Updated dev console commands",
+                "- Updated Coub to the latest video",
+                "- Added Polish Coub to <a href=\"../about\">about me</a>"
             ]
         },
         {
             "name" : "Update 28.02.2023",
             "link_id" : "update-280223",
             "desc" : [
-                "- Added Download button to textonimage<br>",
-                "- Added Warnings about CORS on textonimage<br>",
-                "- Updated AsingAllBadges to 1.2.5<br>"
+                "- Added Download button to textonimage",
+                "- Added Warnings about CORS on textonimage",
+                "- Updated AsingAllBadges to 1.2.5"
             ]
         },
         {
             "name" : "Update 24.02.2023",
             "link_id" : "update-240223",
             "desc" : [
-                "- Added textx, texty and textshadow to textonimage<br>",
-                "- Added 'View Raw Base64' for textonimage<br>",
-                "- Color text area was changed to Color Picker<br>",
-                "- textx, texty, sizex, sizey now are only numberic<br>"
+                "- Added textx, texty and textshadow to textonimage",
+                "- Added 'View Raw Base64' for textonimage",
+                "- Color text area was changed to Color Picker",
+                "- textx, texty, sizex, sizey now are only numberic"
             ]
         },
         {
             "name" : "Update 15.02.2023",
             "link_id" : "update-150323",
             "desc" : [
-                "- Improved textonimage<br>",
-                "- Added sizex and sizey to textonimage<br>",
-                "- Added GUI for textonimage<br>",
-                "- Now you can bypass only image upload accept in <a href=\"../music\">music player</a> by checking experiments checkbox<br>"
+                "- Improved textonimage",
+                "- Added sizex and sizey to textonimage",
+                "- Added GUI for textonimage",
+                "- Now you can bypass only image upload accept in <a href=\"../music\">music player</a> by checking experiments checkbox"
             ]
         },
         {
             "name" : "Update 09.02.2023",
             "link_id" : "update-090223",
             "desc" : [
-                "- Fixed some links<br>",
-                "- Added <a href=\"../textonimage\">textonimage</a> (Testing for now)<br>",
-                "- New style to 404 error<br>",
-                "- Roadmap soon...<br>"
+                "- Fixed some links",
+                "- Added <a href=\"../textonimage\">textonimage</a> (Testing for now)",
+                "- New style to 404 error",
+                "- Roadmap soon..."
             ]
         },
         {
             "name" : "Update 02.02.2023",
             "link_id" : "update-020223",
             "desc" : [
-                "- Added more songs<br>",
-                "- Optimized code for playlists<br>",
-                "- Soon download for new project (Polish Coub)<br>"
+                "- Added more songs",
+                "- Optimized code for playlists",
+                "- Soon download for new project (Polish Coub)"
             ]
         },
         {
             "name" : "Update 15.01.2023",
             "link_id" : "update-150123",
             "desc" : [
-                "- small fixes<br>",
-                "- testing Progressive Web App function<br>",
-                "- video background now have more sources<br>"
+                "- small fixes",
+                "- testing Progressive Web App function",
+                "- video background now have more sources"
             ]
         },
         {
             "name" : "Update 05.01.2023",
             "link_id" : "update-050123",
             "desc" : [
-                "- Optimized code in <a href=\"../music\">Music Player</a><br>",
-                "- Changed background on News and Games<br>",
-                "- Now you can save video and uploaded image as background on <a href=\"../music\">Music Player</a> (only URL function)<br>",
-                "- Now you cant upload video to set as background (I do that because video was converted to Base64 and its very big data)<br>",
-                "- Reset button now remove saved image or video on <a href=\"../music\">Music Player</a><br>"
+                "- Optimized code in <a href=\"../music\">Music Player</a>",
+                "- Changed background on News and Games",
+                "- Now you can save video and uploaded image as background on <a href=\"../music\">Music Player</a> (only URL function)",
+                "- Now you cant upload video to set as background (I do that because video was converted to Base64 and its very big data)",
+                "- Reset button now remove saved image or video on <a href=\"../music\">Music Player</a>"
             ]
         },
         {
             "name" : "Update 01.01.2023",
             "link_id" : "update-010123",
             "desc" : [
-                "- Languages will now be saved in localStorage, not cookies (localStorage is easier and better then cookies)<br>",
-                "- Now you can save background on <a href=\"../music\">Music Player</a> (only Image URL function)<br>"
+                "- Languages will now be saved in localStorage, not cookies (localStorage is easier and better then cookies)",
+                "- Now you can save background on <a href=\"../music\">Music Player</a> (only Image URL function)"
             ]
         },
         {
             "name" : "Update 20.12.2022",
             "link_id" : "update-201222",
             "desc" : [
-                "- Added more songs<br>",
-                "- Added New item from Steam Workshop on About page<br>"
+                "- Added more songs",
+                "- Added New item from Steam Workshop on About page"
             ]
         },
         {
             "name" : "Update 08.12.2022",
             "link_id" : "update-081222",
             "desc" : [
-                "- Added more songs<br>",
-                "- Local songs is now in correct location<br>"
+                "- Added more songs",
+                "- Local songs is now in correct location"
             ]
         },
         {
             "name" : "Update 01.12.2022",
             "link_id" : "update-011222",
             "desc" : [
-                "- Webamp now have full functional Playlists<br>",
-                "- Added more songs<br>",
-                "- Added Time Clock<br>"
+                "- Webamp now have full functional Playlists",
+                "- Added more songs",
+                "- Added Time Clock"
             ]
         },
         {
             "name" : "Update 24.11.2022",
             "link_id" : "update-241122",
             "desc" : [
-                "- Fixed 404 page<br>",
-                "- Added Playlists for webamp W.I.P.<br>"
+                "- Fixed 404 page",
+                "- Added Playlists for webamp W.I.P."
             ]
         },
         {
             "name" : "Update 20.11.2022",
             "link_id" : "update-201122",
             "desc" : [
-                "- New songs in <a href=\"../music\">Music</a><br>",
-                "- Now you can select skins for Webamp (for now \"Yuzuki Kokubunji\" and \"Anime Webamp V2\")<br>",
-                "- Added custom error 404 page<br>"
+                "- New songs in <a href=\"../music\">Music</a>",
+                "- Now you can select skins for Webamp (for now \"Yuzuki Kokubunji\" and \"Anime Webamp V2\")",
+                "- Added custom error 404 page"
             ]
         },
         {
             "name" : "Update 06.11.2022",
             "link_id" : "update-061122",
             "desc" : [
-                "- Games are now in proper location<br>",
-                "- New type of loading site is now possible to find<br>",
-                "- Changed name site from <a href=\"../music\">radio to music</a><br>",
-                "- Added description to embed of website<br>"
+                "- Games are now in proper location",
+                "- New type of loading site is now possible to find",
+                "- Changed name site from <a href=\"../music\">radio to music</a>",
+                "- Added description to embed of website"
             ]
         },
         {
             "name" : "Update 31.10.2022",
             "link_id" : "update-311022",
             "desc" : [
-                "- Fixed custom background on <a href=\"../music\">Music Player</a><br>",
-                "- Fixed dropdown tab where color was darker then must was<br>",
-                "- On the bottom right, you can see version of website<br>",
-                "- Optimized code<br>",
-                "- Latest Coub is now on center<br>",
-                "- Now text is bright<br>"
+                "- Fixed custom background on <a href=\"../music\">Music Player</a>",
+                "- Fixed dropdown tab where color was darker then must was",
+                "- On the bottom right, you can see version of website",
+                "- Optimized code",
+                "- Latest Coub is now on center",
+                "- Now text is bright"
             ]
         },
         {
             "name" : "Update 30.10.2022",
             "link_id" : "update-301022",
             "desc" : [
-                "- On <a href=\"../\">Home</a> page now you can download my BDPlugins<br>",
-                "- Small fixes for README.md<br>"
+                "- On <a href=\"../\">Home</a> page now you can download my BDPlugins",
+                "- Small fixes for README.md"
             ]
         },
         {
             "name" : "Update 23.10.2022",
             "link_id" : "update-231022",
             "desc" : [
-                "- New look on My Project in about me page<br>",
-                "- Video background in now untouchable<br>",
-                "- If you dont have JavaScript on, you get notification about this<br>"
+                "- New look on My Project in about me page",
+                "- Video background in now untouchable",
+                "- If you dont have JavaScript on, you get notification about this"
             ]
         },
         {
             "name" : "Update 18.10.2022",
             "link_id" : "update-181022",
             "desc" : [
-                "- You can now Download my plugins on <a href=https://github.com/BlackusPL/DarknessAir/tree/master/BDPlugins/>github</a><br>",
-                "- Updated console text <br>",
-                "- More soon...<br>"
+                "- You can now Download my plugins on <a href=https://github.com/BlackusPL/DarknessAir/tree/master/BDPlugins/>github</a>",
+                "- Updated console text ",
+                "- More soon..."
             ]
         },
         {
             "name" : "Update 27.09.2022",
             "link_id" : "update-270922",
             "desc" : [
-                "- Fixed some things in CSS<br>",
-                "- Again next testing google translator <br>",
-                "- Changed entire Games page<br>"
+                "- Fixed some things in CSS",
+                "- Again next testing google translator ",
+                "- Changed entire Games page"
             ]
         },
         {
             "name" : "Update 15.09.2022",
             "link_id" : "update-150922",
             "desc" : [
-                "- Changed entire News page<br>",
-                "- Added animated background<br>",
-                "- The newest Coub will now be played in full hd<br>",
-                "- Discord widget now have normal position<br>",
-                "- Changelog will be moved to News soon<br>"
+                "- Changed entire News page",
+                "- Added animated background",
+                "- The newest Coub will now be played in full hd",
+                "- Discord widget now have normal position",
+                "- Changelog will be moved to News soon"
             ]
         },
         {
             "name" : "Update 05.09.2022",
             "link_id" : "update-050922",
             "desc" : [
-                "- Added <a href=../BDPlugins/win-update-pl>fake update windows screen</a><br>",
-                "- Added some new songs<br>",
-                "- Added milkdrop to Webamp<br>",
-                "- Fixed the Home button being able to exit the website<br>",
-                "- Fixed Context Menu in Webamp<br>"
+                "- Added <a href=../BDPlugins/win-update-pl>fake update windows screen</a>",
+                "- Added some new songs",
+                "- Added milkdrop to Webamp",
+                "- Fixed the Home button being able to exit the website",
+                "- Fixed Context Menu in Webamp"
             ]
         },
         {
             "name" : "Update 08.08.2022",
             "link_id" : "update-080822",
             "desc" : [
-                "- Fixed links to author profile(me)<br>",
-                "- The download link for the game from Steam has been changed to Widget<br>",
-                "- If you have suggestions on what to add, write to me<br>"
+                "- Fixed links to author profile(me)",
+                "- The download link for the game from Steam has been changed to Widget",
+                "- If you have suggestions on what to add, write to me"
             ]
         },
         {
             "name" : "Update 06.08.2022",
             "link_id" : "update-060822",
             "desc" : [
-                "- Updated Webamp to newest version<br>",
-                "- You can now exit from <a href=\"../music\">Music Player</a> when you dont have javascripts<br>",
-                "- Fixed songs and added new one<br>"
+                "- Updated Webamp to newest version",
+                "- You can now exit from <a href=\"../music\">Music Player</a> when you dont have javascripts",
+                "- Fixed songs and added new one"
             ]
         },
         {
             "name" : "Update 03.08.2022",
             "link_id" : "update-030822",
             "desc" : [
-                "- Updated Music Racer 2000 page<br>",
-                "- Added new project in about page<br>",
-                "- Added my avatar in <a href=../games/SNS>SNS</a>, <a href=../games/MR2000>MR2</a> and <a href=../games/NSR>NSR</a> pages<br>"
+                "- Updated Music Racer 2000 page",
+                "- Added new project in about page",
+                "- Added my avatar in <a href=../games/SNS>SNS</a>, <a href=../games/MR2000>MR2</a> and <a href=../games/NSR>NSR</a> pages"
             ]
         },
         {
             "name" : "Update 30.07.2022",
             "link_id" : "update-300722",
             "desc" : [
-                "- Updated Music Racer 2000 page<br>"
+                "- Updated Music Racer 2000 page"
             ]
         },
         {
             "name" : "Update 25.06.2022",
             "link_id" : "update-250622",
             "desc" : [
-                "- Added News page where you can find changelog about website and games<br>",
-                "- Button Pages was changed to Games<br>",
-                "- Added Search Button to able search more information about games<br>",
-                "- Remake of navigation bar<br>"
+                "- Added News page where you can find changelog about website and games",
+                "- Button Pages was changed to Games",
+                "- Added Search Button to able search more information about games",
+                "- Remake of navigation bar"
         ]
         },
         {
             "name" : "Update 30.05.2022",
             "link_id" : "update-300522",
             "desc" : [
-                "- Added Translation to all Games Pages (Uses Google API but doesnt work)<br />",
-                "- Added song and radio station (RMF MAXXX)<br>"
+                "- Added Translation to all Games Pages (Uses Google API but doesnt work)",
+                "- Added song and radio station (RMF MAXXX)"
             ]
         },
         {
             "name" : "<b style=\"color: rgb(97, 74, 0)\">Cookies Update v1</b> 15.05.2022",
             "link_id" : "update-150522",
             "desc" : [
-                "- Added option to change language on website (Required cookies enabled)<br />",
-                "- Translation soon on Games pages<br />",
+                "- Added option to change language on website (Required cookies enabled)",
+                "- Translation soon on Games pages",
                 "- Changed entired <a href=\"../music\">Music Page</a>"
             ]
         },
@@ -591,19 +600,19 @@
             "name" : "Update 30.04.2022",
             "link_id" : "update-300422",
             "desc" : [
-                "- Now website has a preview of links on other websites<br>"
+                "- Now website has a preview of links on other websites"
             ]
         },
         {
             "name" : "<b style=\"color: blue\">BIG UPDATE!!! </b> 06.04.2022",
             "link_id" : "update-060422",
             "desc" : [
-            "- Updated icon and images on website<br>",
-            "- Changed text on Main page<br>",
-            "- Updated css code<br>",
-            "- Added \"Last Updated\" text on <a href=../games>Games</a><br>",
-            "- Optimized and fixed some code from <a href=../games/SNS>SNS</a>, <a href=../games/MR2000>MR2</a> and <a href=../games/NSR>NSR</a> pages<br>",
-            "- Added \"About Game\" for <a href=../games/NSR>NSR page</a><br>",
+            "- Updated icon and images on website",
+            "- Changed text on Main page",
+            "- Updated css code",
+            "- Added \"Last Updated\" text on <a href=../games>Games</a>",
+            "- Optimized and fixed some code from <a href=../games/SNS>SNS</a>, <a href=../games/MR2000>MR2</a> and <a href=../games/NSR>NSR</a> pages",
+            "- Added \"About Game\" for <a href=../games/NSR>NSR page</a>",
             "- More soon..."
             ]
         },
@@ -611,9 +620,9 @@
             "name" : "Update 03.04.2022",
             "link_id" : "update-030422",
             "desc" : [
-                "- Added Changelog list<br>",
-                "- Updated code to HTML5(&lt;center&gt; doesnt exist in HTML5 so i fixed it)<br>",
-                "- Added Button to set custom background and reset it to default on <a href=\"../music\">Music Player</a><br>",
+                "- Added Changelog list",
+                "- Updated code to HTML5(&lt;center&gt; doesnt exist in HTML5 so i fixed it)",
+                "- Added Button to set custom background and reset it to default on <a href=\"../music\">Music Player</a>",
                 "- Added more songs in <a href=\"../music\">Music Player</a>"
             ]
         },
@@ -628,7 +637,7 @@
             "name" : "Update 17.02.2022",
             "link_id" : "update-170222",
             "desc" : [
-                "- Added Cursor and About me page<br>",
+                "- Added Cursor and About me page",
                 "- Fixed Website URL"
             ]
         },
@@ -636,7 +645,7 @@
             "name" : "Update 15.01.2022",
             "link_id" : "update-150122",
             "desc" : [
-                "- Updated icon of website<br>", 
+                "- Updated icon of website", 
                 "- Added <a href=\"../secret.html\">New type of loading website</a>"
             ]
         },
@@ -644,13 +653,8 @@
             "name" : "Update 24.12.2021",
             "link_id" : "update-241221",
             "desc" : [
-                "- Website was created<br>"
+                "- Website was created"
             ]
-        },
-        {
-            "name" : "PlaceHolder",
-            "link_id" : "",
-            "desc" : "PlaceHolder description<br>"
         }
     ]
 }

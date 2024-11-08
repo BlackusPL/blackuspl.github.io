@@ -33,12 +33,24 @@ li {
 b {
     color: #fff;
 }
+div#custombg_window {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background: #111;
+  width: 14em;
+  border: 1px solid white;
+  height: 200px;
+  text-align: center;
+}
 footer {
     border-top: 1px solid #fff;
     font-size: small;
     height: 2.5rem;
     background: #080808;
     margin-top: auto;
+    display: flex;
+    order: 100;
 }
 footer > p {
   padding-left: 1%;
