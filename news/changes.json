@@ -1,6 +1,19 @@
 {
     "id": [
         {
+            "name" : "Update 27.11.2024",
+            "link_id" : "update-271124",
+            "desc" : [
+                "• [Added] 1 game and 1 program to <a href=\"/games\">Games</a>",
+                "• [Added] 1 project to <a href=\"/about\">My Projects</a>",
+                "• [Changed] TOI html fixes",
+                "• [Fixed] CORS works again in TOI and some improvements",
+                "• [Fixed] TOI now loads parameters from URL (fixed after 17 months!)",
+                "• [Added] Latest update now have \"Latest\" in changelog list",
+                "• [Changed] Files are now in table style"
+            ]
+        },
+        {
             "name" : "Update 09.11.2024",
             "link_id" : "update-091124",
             "desc" : [

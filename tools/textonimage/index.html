@@ -45,15 +45,14 @@
       <!--end-->
       <noscript>Turn on javascript to use textonimage! <style>main {display: none;}</style></noscript>
       <main style="margin: 1em auto 0em;">
-        <center>
+        <div class="center">
           <header style="margin: 1em auto 0em;"><h2>TextonImage</h2></header>
           <p>You can use ?url= , ?text= , ?textsize= , ?textfont= , ?textx= , ?texty= , ?shadow= (true or false) , ?color= (in hex code) , ?sizex= , ?sizey= and ?cors= (true or false)</p>
       
           <p><a href="..">Go back</a></p>
-          <canvas>
-        </center>
+        </div>
         <br>
-        <center>
+        <div class="center">
         <div style="margin: 2em auto; position: relative; width: 70%;">
           <input type="text" placeholder="Link to image" id="url"><br>
           <input type="text" placeholder="Text" id="text"><br>
@@ -70,7 +69,7 @@
         </div>
           <button onclick="viewraw()">View raw Base64</button> <button onclick="alert('This works with only CORS accepted images')" id="vieworiginal">View original image</button> <button onclick="download()">Download</button> <button onclick="debugBase64(getID('code').value)">Open in new tab</button>
           <br><textarea style="width: 500px; height: 150px; visibility: hidden;" placeholder="There will be image in base64. For now you can only generate with default image" id="code"></textarea>
-        </center>
+      </div>
       </main>
       <footer>
         <p>Copyright © 2021-2024, BlackusPL | All rights reserved | DO NOT DISTRIBUTE</p>

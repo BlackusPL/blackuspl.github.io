@@ -19,8 +19,11 @@ fetch('./changes.json')
     for(let c = 0; c < Object.keys(data.id[0].desc).length; c++) { // Wypisuje opis najnowszej zmiany
         document.querySelector('#change-obj + h3 + .changelog').innerHTML += data.id[0].desc[c] + "<br>";
     };
+    function datalist(isLatest) {
+        document.getElementById('change-list').insertAdjacentHTML('afterbegin', `<option value="${i}">${isLatest + data.id[i].name}</option>`);
+    }
     while (i >= 0) { // Wypisuje wszystkie zmiany do pól wyboru od największej liczby do najmniejszej
-        document.getElementById('change-list').insertAdjacentHTML('afterbegin', `<option value="${i}">${data.id[i].name}</option>`);
+        (i == 0) ? datalist("Latest ") : datalist('');
         i--;
     };
     document.getElementById('change-list')[0].selected = true; // Wybiera najnowsze zmiany bo wybiera najstarsze

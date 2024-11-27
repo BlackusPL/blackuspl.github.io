@@ -70,6 +70,9 @@ footer > div {
 center {
   text-align: center;
 }
+.center {
+  text-align: center;
+}
 ul a {
   display:inline-block;
   color:white;
@@ -117,9 +120,6 @@ ul a:hover {background-color:#333;}
     border: none;
     font-size: medium;
     margin-left: -4px;
-  }
-  .dropdown {
-    display: inline-block;
   }
   .avatar {
     border-radius: 100%;
