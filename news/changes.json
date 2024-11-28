@@ -1,6 +1,16 @@
 {
     "id": [
         {
+            "name" : "Update 29.11.2024",
+            "link_id" : "update-291124",
+            "desc" : [
+                "• [Added] Share button to selected changelog (missing functionality)",
+                "• [Changed] Selecting changelog no longer sends requests to download all of them again",
+                "• [Changed] <a href=\"/games\">Games</a> now have new placing look",
+                "• [Moved] all changelog scripts to correct place (Why I'm moved here?)"
+            ]
+        },
+        {
             "name" : "Update 27.11.2024",
             "link_id" : "update-271124",
             "desc" : [
