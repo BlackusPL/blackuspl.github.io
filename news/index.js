@@ -61,7 +61,7 @@ if(e == 0) { // sprawdza czy wybrano najnowszą zmiane czy nie
 };
 }
 function copyid(link) {
-    let link_to = web_root + "/news/#" + link;
+    let link_to = window.location.origin + "/news/#" + link;
     navigator.clipboard.writeText(link_to).then(() => {
       console.log('Link copied: ' + link_to);
       alert('Link copied: ' + link_to);

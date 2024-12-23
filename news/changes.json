@@ -1,6 +1,16 @@
 {
     "id": [
         {
+            "name" : "Update 23.12.2024",
+            "link_id" : "update-231224",
+            "desc" : [
+                "• [Added] Webamp skins",
+                "• [Changed] Root url in scripts now goes to Host",
+                "• [Changed] Copyright to 2025",
+                "• [Moved] Discord Profile now are not in 'base.js' file anymore"
+            ]
+        },
+        {
             "name" : "Update 29.11.2024",
             "link_id" : "update-291124",
             "desc" : [
