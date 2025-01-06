@@ -16,6 +16,12 @@ function discordprofile(id) {
           }
           throw document.getElementById('pfp').src = avatar_url + '.webp?size=4096';
         });
+        // Discord banner check
+        discord_data.data.discord_user.banner != undefined ?
+          document.getElementsByClassName('card')[0].style = `background-image: url(https://cdn.discordapp.com/banners/${discord_data.data.discord_user.id}/${discord_data.data.discord_user.banner}.webp?size=4096)`
+          :         
+          document.getElementsByClassName('card')[0].style = `background-image: url(https://usrbg.is-hardly.online/usrbg/v2/${discord_data.data.discord_user.id}?9807=&size=1024&format=gif)`;
+
         document.getElementById('card-title').innerHTML = "@" + discord_data.data.discord_user.username.toLowerCase() + " > profile";
         function status() {document.getElementById('status').innerHTML = "Status: " + discord_data.data.discord_status;}
         function activity(type) {document.getElementById('activity-name').innerHTML = type + discord_data.data.activities[0].name;

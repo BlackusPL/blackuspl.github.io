@@ -1,6 +1,14 @@
 {
     "id": [
         {
+            "name" : "Update 06.01.2025",
+            "link_id" : "update-060125",
+            "desc" : [
+                "• <mark>[Info]</mark> FIRST UPDATE IN 2025",
+                "• [Added] Banner to Discord Profile"
+            ]
+        },
+        {
             "name" : "Update 23.12.2024",
             "link_id" : "update-231224",
             "desc" : [
