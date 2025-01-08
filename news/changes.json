@@ -1,6 +1,14 @@
 {
     "id": [
         {
+            "name" : "Update 08.01.2025",
+            "link_id" : "update-080125",
+            "desc" : [
+                "• [Changed] Discord Profile Redesigned",
+                "• [Fixed] Stylesheet in 404 error page"
+            ]
+        },
+        {
             "name" : "Update 06.01.2025",
             "link_id" : "update-060125",
             "desc" : [
