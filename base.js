@@ -40,7 +40,9 @@ const $i = (e) => document.getElementById(e), $q = (e) => document.querySelector
 document.getElementsByClassName('navbar-items')[0].insertAdjacentHTML('afterend', `<div class="navbar-items" id="tab">
     <ul class="navbar-links logo">
       <li class="navbar-link">
-        <img src="/BDPlugins/icon.png" class="icon">
+        <a href="/" class="a_icon">
+          <img src="/BDPlugins/icon.png" class="icon">
+        </a>
       </li>
     </ul>
     <ul class="navbar-links main">

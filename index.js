@@ -5,9 +5,11 @@ function discordprofile(id) {
     xhr.onload = function () {
       if (this.status == 200) {
         const discord_data = JSON.parse(this.responseText);
-    //    console.log(discord_data);
         let avatar_url = 'https://cdn.discordapp.com/avatars/' + discord_data.data.discord_user.id + '/' + discord_data.data.discord_user.avatar;
-        if (discord_data.data.discord_user.discriminator == "0") {var disusername = `<a href="https://discord.com/users/${discord_data.data.discord_user.id}" style="text-decoration: unset;color: unset;"> @${discord_data.data.discord_user.display_name} </a>`} else {var disusername = `<a href="https://discord.com/users/` + discord_data.data.discord_user.id + `" style="text-decoration: unset;color: unset;">` + discord_data.data.discord_user.username + '#' + discord_data.data.discord_user.discriminator + `</a>`}
+        if (discord_data.data.discord_user.discriminator == "0")
+          {var disusername = `<a href="https://discord.com/users/${discord_data.data.discord_user.id}" style="text-decoration: unset;color: unset;"> @${discord_data.data.discord_user.display_name} </a>`} 
+            else
+          {var disusername = `<a href="https://discord.com/users/${discord_data.data.discord_user.id}" style="text-decoration: unset;color: unset;">${discord_data.data.discord_user.username}#${discord_data.data.discord_user.discriminator}</a>`}
         document.getElementById('username').innerHTML = disusername;
         /*fetch(avatar_url + '.gif?size=4096')
         .then(response => {
@@ -17,18 +19,15 @@ function discordprofile(id) {
           throw document.getElementById('pfp').src = avatar_url + '.webp?size=4096';
         });*/
         document.getElementById('pfp').src = avatar_url;
-        // Discord banner check
-        discord_data.data.discord_user.banner != undefined ?
-          document.getElementsByClassName('card')[0].style = `background-image: url(https://cdn.discordapp.com/banners/${discord_data.data.discord_user.id}/${discord_data.data.discord_user.banner}.webp?size=4096)`
-          :         
-          document.getElementsByClassName('card')[0].style = `background-image: url(https://usrbg.is-hardly.online/usrbg/v2/${discord_data.data.discord_user.id}?9807=&size=1024&format=gif)`;
+        // Discord banner from usrbg
+        document.getElementsByClassName('card')[0].style = `background-image: url(https://usrbg.is-hardly.online/usrbg/v2/${discord_data.data.discord_user.id}?9807=&size=1024&format=gif)`;
 
         document.getElementById('card-title').innerHTML = "@" + discord_data.data.discord_user.username.toLowerCase() + " > profile";
         function status() {document.getElementById('status').innerHTML = "Status: " + discord_data.data.discord_status}
-        function activity(type) {document.getElementById('activity-name').innerHTML = type + discord_data.data.activities[0].name
-        document.getElementById('activity-state').innerHTML = discord_data.data.activities[0].state ? discord_data.data.activities[0].state : null;
-        document.getElementById('activity-detail').innerHTML = discord_data.data.activities[0].details ? discord_data.data.activities[0].details : null;
-      switch (discord_data.data.activities[0].assets.large_image.split(":")[0]) {
+        function activity(type) {document.getElementById('activity-name').innerHTML = type + discord_data.data.activities[0]?.name
+        document.getElementById('activity-state').innerHTML = discord_data.data.activities[0]?.state ? discord_data.data.activities[0].state : null;
+        document.getElementById('activity-detail').innerHTML = discord_data.data.activities[0]?.details ? discord_data.data.activities[0].details : null;
+      switch (discord_data.data.activities[0]?.assets.large_image?.split(":")[0]) {
         default:
           document.getElementById('activity-icon').innerHTML = discord_data.data.activities[0].assets.large_image ? `<img src="${discord_data.data.activities[0].assets.large_image}">` : null;
         break;
@@ -67,11 +66,11 @@ function discordprofile(id) {
           status();
           break;
         }
-      if (discord_data.data.active_on_discord_web) document.getElementById('status').insertAdjacentHTML('beforeend', web);
-        if (discord_data.data.active_on_discord_mobile) document.getElementById('status').insertAdjacentHTML('beforeend', mobile);
-        if (discord_data.data.active_on_discord_desktop) document.getElementById('status').insertAdjacentHTML('beforeend', pc);
-      if (typeof discord_data.data.activities[0] !== 'undefined')
-        switch (discord_data.data.activities[0].type) {
+        discord_data.data.active_on_discord_web ? document.getElementById('status').insertAdjacentHTML('beforeend', web) : undefined;
+        discord_data.data.active_on_discord_mobile ? document.getElementById('status').insertAdjacentHTML('beforeend', mobile) : undefined;
+        discord_data.data.active_on_discord_desktop ? document.getElementById('status').insertAdjacentHTML('beforeend', pc) : undefined;
+      //if (typeof discord_data.data.activities[0] !== 'undefined')
+        switch (discord_data.data.activities[0]?.type) {
           case 0:
           activity("In game: ");
           break;

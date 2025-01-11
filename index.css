@@ -85,6 +85,8 @@ ul a {
 }
 ul a:hover {background-color:#333;}
 
+ul a.a_icon:hover {background-color: unset;}
+
 .showtasks a:hover {background-color: #ddd;}
 
 .dropdown:hover .showtasks {display: block;}
@@ -228,6 +230,10 @@ ul a:hover {background-color:#333;}
   .navbar-link {
       display: inline-flex;
       vertical-align: middle;
+  }
+  .navbar-link a.a_icon {
+    margin: unset;
+    padding: unset;
   }
   .icon {
       width: auto;

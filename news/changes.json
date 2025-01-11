@@ -1,6 +1,15 @@
 {
     "id": [
         {
+            "name" : "Update 11.01.2025",
+            "link_id" : "update-110125",
+            "desc" : [
+                "• [Fixed] Discord Profile errors when some data doesn't exist",
+                "• [Fixed] TOI where \"Open in new tab\" doesn't work and prompts didn't load when refreshed webpage",
+                "• [Added] Clicking on website icon now redirects you to Home page"
+            ]
+        },
+        {
             "name" : "Update 08.01.2025",
             "link_id" : "update-080125",
             "desc" : [
