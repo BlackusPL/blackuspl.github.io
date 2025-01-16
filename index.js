@@ -5,7 +5,7 @@ function discordprofile(id) {
     xhr.onload = function () {
       if (this.status == 200) {
         const discord_data = JSON.parse(this.responseText);
-        let avatar_url = 'https://cdn.discordapp.com/avatars/' + discord_data.data.discord_user.id + '/' + discord_data.data.discord_user.avatar;
+        let avatar_url = `https://cdn.discordapp.com/avatars/${discord_data.data.discord_user.id}/${discord_data.data.discord_user.avatar}?size=4096`;
         if (discord_data.data.discord_user.discriminator == "0")
           {var disusername = `<a href="https://discord.com/users/${discord_data.data.discord_user.id}" style="text-decoration: unset;color: unset;"> @${discord_data.data.discord_user.display_name} </a>`} 
             else

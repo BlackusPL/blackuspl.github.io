@@ -18,6 +18,7 @@ async () => {
 };
 // you can use only import() but still will be void
 */
+let langtime = 1;
 // When selected language English then removes cookie
 function jezykoff() {
   document.cookie = "language=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC";
@@ -31,7 +32,13 @@ function jezyk(lang) {
   data.setDate(data.getDate() + 3);
   document.cookie = (`language=${lang};path=/;expires=` + data);
   //localStorage.setItem('language', 'pl');
-  window.location.reload();
+  //window.location.reload();
+  if (langtime == 0) {
+    window.location.reload();
+  } else {
+    langtime = 0;
+    LanguageLoader();
+  }
 }
 // code by cyan-2048
 const $i = (e) => document.getElementById(e), $q = (e) => document.querySelector(e);
@@ -131,7 +138,7 @@ getID("tab").remove();*/
     return finded;
   }
   var zmien, regex, key, textnodes, node, s;
-
+function LanguageLoader() {
   switch(cookievaluefinder('language')) {
     case 'pl':
   fetch(`${window.location.origin}/languages/pl.json`)
@@ -150,6 +157,8 @@ getID("tab").remove();*/
     });
       break;
   }
+}
+  LanguageLoader();
   function SetZmien() {
   regex = {};
   for (key in zmien) {

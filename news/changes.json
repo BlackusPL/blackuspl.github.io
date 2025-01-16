@@ -1,6 +1,15 @@
 {
     "id": [
         {
+            "name" : "Update 16.01.2025",
+            "link_id" : "update-160125",
+            "desc" : [
+                "• [Fixed] Discord Profile in Tools",
+                "• [Fixed] Avatar in Discord Profile been low quality",
+                "• [Changed] How language selector works"
+            ]
+        },
+        {
             "name" : "Update 11.01.2025",
             "link_id" : "update-110125",
             "desc" : [
