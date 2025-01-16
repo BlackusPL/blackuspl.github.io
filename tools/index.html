@@ -74,13 +74,18 @@ div.content > div > h2 > a {
               </noscript>
               <div id="card-title">@unknown</div>
               <!-- <img id="pfp" src="https://placekitten.com/128/128" src_="https://placehold.co/128/000/FFF?text=Profile\nPicture" alt="" width="128px" style="border-radius: 100%"> -->
-              <img id="pfp" src="https://placehold.co/128/000/FFF?text=Profile\nPicture" alt="Profile Picture" width="128px" style="border-radius: 100%">
               <div class="user-info">
-                <div id="username">Loading...</div>
-                <div id="status"></div>
-                <div id="activity-name" style="font-weight: bold;"></div>
-                <div id="activity-state"></div>
-                <div id="activity-detail"></div>
+                <div id="pfp-info">
+                  <img id="pfp" src="https://placehold.co/128/000/FFF?text=Profile\nPicture" alt="Profile Picture" width="128px" style="border-radius: 100%">
+                  <div id="username">Loading...</div>
+                  <div id="status"></div>
+                </div>
+                <div id="activity">
+                  <div id="activity-icon"></div>
+                  <div id="activity-name" style="font-weight: bold;"></div>
+                  <div id="activity-state"></div>
+                  <div id="activity-detail"></div>
+                </div>
               </div>
             </div>
     </header>
@@ -107,6 +112,7 @@ div.content > div > h2 > a {
 </footer>
 </body>
 <script src="/base.js"></script>
+<script src="/index.js"></script>
 <script type="text/javascript">
     discordprofile('410243501494894603');
     function googleTranslateElementInit() {
