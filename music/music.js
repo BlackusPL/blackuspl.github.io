@@ -23,6 +23,7 @@ document.getElementById('custombg_window').innerHTML = `Set custom background<br
     <option value="all">All</option>\
     <option value="phonk">Phonk</option>\
     <option value="phonk_radio">Phonk Radio</option>\
+    <option value="classics">Classics</option>\
     <option value="nightcore">Nightcore</option>\
     <option value="coub">Coub songs</option>\
     <option value="custom">Custom Radio</option>\
@@ -31,28 +32,47 @@ document.getElementById('custombg_window').innerHTML = `Set custom background<br
 
 // START Create playlists
 
-let nightcore = [
-    {
-        "metaData": {
-            "artist": "Nightcore",
-            "title": "Day after day"
+// cool but hard to read
+let [classics, nightcore] = [
+    [
+        {
+            "metaData": {
+                "artist": "Pitbull",
+                "title": "Give Me Everything"
+            },
+            "url": "https://autumn.revolt.chat/attachments/Q0lKeNKtf2tb4w8eUb1fgF-nsx16Lj67xoB6N7mz8r"
         },
-        "url": "./local_music/Nightcore_-_Day_after_day.m4a"
-    },
-    {
-        "metaData": {
-            "artist": "Nightcore Lab NCL",
-            "title": "Die Young"
+        {
+            "metaData": {
+                "artist": "David Guetta",
+                "title": "Sexy Bitch"
+            },
+            "url": "https://autumn.revolt.chat/attachments/s24qDuASEiwdix3FHgjCEJ64gu6TEPPEWklVo_XmhP"
+        }
+    ],
+    [
+        {
+            "metaData": {
+                "artist": "Nightcore",
+                "title": "Day after day"
+            },
+            "url": "./local_music/Nightcore_-_Day_after_day.m4a"
         },
-        "url": "./local_music/Nightcore - Die Young.m4a"
-    },
-    {
-        "metaData": {
-            "artist": "NightcoreLounge",
-            "title": "How Do You Do (Remix)"
+        {
+            "metaData": {
+                "artist": "Nightcore Lab NCL",
+                "title": "Die Young"
+            },
+            "url": "./local_music/Nightcore - Die Young.m4a"
         },
-        "url": "./local_music/How do you do.m4a"
-    }
+        {
+            "metaData": {
+                "artist": "NightcoreLounge",
+                "title": "How Do You Do (Remix)"
+            },
+            "url": "./local_music/How do you do.m4a"
+        }
+    ]
 ];
 let coubsong = [
     {
@@ -217,9 +237,48 @@ let coubsong = [
             "coubid": "2a6bab"
         },
         "url": "./local_music/2a6bab.webm"
+    },
+    {
+        "metaData": {
+            "artist": "Coub / Almogfx",
+            "title": "nightrun",
+            "coubid": "3vkthx"
+        },
+        "url": "https://attachments-cdn-s.coub.com/coub_storage/coub/simple/cw_looped_audio_high/d11b7ddc8e9/f7b1bbd8b5885473ba33f/1733785492_mp3-high.mp3"
+    },
+    {
+        "metaData": {
+            "artist": "Coub / Hugeloud",
+            "title": "Redlight",
+            "coubid": "3vj9fi"
+        },
+        "url": "https://attachments-cdn-s.coub.com/coub_storage/coub/simple/cw_looped_audio_high/2ca5e461245/588a330f668f9b4afac22/1733759061_mp3-high.mp3"
+    },
+    {
+        "metaData": {
+            "artist": "Coub / DRKHVN!",
+            "title": "Saga Drive",
+            "coubid": "3rhe05"
+        },
+        "url": "https://attachments-cdn-s.coub.com/coub_storage/coub/simple/cw_looped_audio_high/17e9a4223eb/5cf8d129be2ce7faf8def/1731946626_mp3-high.mp3"
+    },
+    {
+        "metaData": {
+            "artist": "Coub / GRAVECHILL",
+            "title": "God Is Dead",
+            "coubid": "41w80b"
+        },
+        "url": "https://attachments-cdn-s.coub.com/coub_storage/coub/simple/cw_looped_audio_high/3fca0e177e1/5985bda67fe6b1527f843/1737218204_mp3-high.mp3"
     }
 ];
 let othersong = [
+    {
+        "metaData": {
+            "artist": "2Scratch",
+            "title": "CLOSER."
+        },
+        "url": "https://autumn.revolt.chat/attachments/7fBSCsrPZNn4FnIVFaHkcSa6UGoCg6_g5exW_y99As/2Scratch%20-%20CLOSER..mp3"
+    },
     {
         "metaData": {
             "artist": "Amøn",
@@ -227,6 +286,13 @@ let othersong = [
         },
         "url": "./local_music/Amøn - Forward Anxious.m4a",
         "_comment": "duration: 260 https://cors-anywhere.riolubruh.repl.co https://cors-anywhere.herokuapp.com"
+    },
+    {
+        "metaData": {
+            "artist": "iwilldiehere",
+            "title": "LUV & PAIN"
+        },
+        "url": "https://autumn.revolt.chat/attachments/qwyEOzKZhKfRapFJ70HNfnS6kipmnob1tCWpcaHyDO/LUV%20&%20PAIN.mp3"
     },
     {
         "metaData": {
@@ -262,13 +328,6 @@ let othersong = [
             "title": "Never Be"
         },
         "url": "./local_music/kim & Antent - Never Be.m4a"
-    },
-    {
-        "metaData": {
-            "artist": "АДЛИН",
-            "title": "Одна"
-        },
-        "url": "./local_music/Одна.mp3"
     },
     {
         "metaData": {
@@ -329,20 +388,6 @@ let othersong = [
     },
     {
         "metaData": {
-            "artist": "Килджо",
-            "title": "Только Ты"
-        },
-        "url": "./local_music/Килджо - Только Ты.mp3"
-    },
-    {
-        "metaData": {
-            "artist": "Килджо",
-            "title": "Часики (Speed Up)"
-        },
-        "url": "./local_music/Килджо - Часики (Speed Up).mp3"
-    },
-    {
-        "metaData": {
             "artist": "RbowChickenn",
             "title": "escape from everyone"
         },
@@ -371,37 +416,10 @@ let othersong = [
     }
 ];
 // END Create playlists
-let allTracks = othersong.concat(coubsong, nightcore);
+let allTracks = othersong.concat(classics, coubsong, nightcore);
 
 const webamp = new Webamp({
-    initialTracks: (allTracks /*,[
-        othersong[0],
-        coubsong[9],
-        coubsong[0],
-        othersong[11],
-        coubsong[1],
-        coubsong[2],
-        othersong[1],
-        othersong[2],
-        othersong[3],
-        othersong[10],
-        othersong[4],
-        othersong[5],
-        othersong[6],
-        othersong[7],
-        othersong[8],
-        othersong[9],
-        coubsong[3],
-        coubsong[4],
-        coubsong[5],
-        coubsong[6],
-        coubsong[7],
-        coubsong[8],
-        othersong[12],
-        nightcore[0],
-        nightcore[1],
-        nightcore[2]
-    ]*/),
+    initialTracks: (allTracks),
     /*initialSkin: {
         url: "./yuzuki_kokubunji.wsz"
     },*/
@@ -460,39 +478,52 @@ function changeFunc() {
     var selectedValue = playlists.options[playlists.selectedIndex].value;
     switch (selectedValue) {
         case 'nightcore':
-            webamp.setTracksToPlay(nightcore, []);
+            webamp.setTracksToPlay(nightcore);
             break;
         case 'all':
             webamp.setTracksToPlay(allTracks, []);
             break;
         case 'coub':
-            // START Create single array // that contain coubsong array and othersong with number 6
+            // START Create single array // that contain coubsong array and othersong with number
             var allcoub = coubsong.concat(/*[othersong[15]]*/);
             // END Create single array //
-            webamp.setTracksToPlay(allcoub ,[]);
+            webamp.setTracksToPlay(allcoub);
             break;
         case 'phonk':
             webamp.setTracksToPlay([
-                othersong[0],
+                othersong[1],
                 coubsong[9],
                 coubsong[0],
-                coubsong[1],
-                coubsong[12],
-                coubsong[8],
-                othersong[20],
+                coubsong[2],
+                coubsong[11],
+                coubsong[10],
+                othersong[19],
                 othersong[18],
+                othersong[17],
                 coubsong[3],
                 othersong[2],
-                othersong[3],
+                othersong[4],
                 othersong[5],
-                othersong[6],
-                othersong[8],
-                othersong[13],
+                othersong[7],
+                othersong[9],
+                othersong[14],
                 coubsong[4],
                 coubsong[14],
                 othersong[16],
-                othersong[15]
+                coubsong[16],
+                coubsong[21],
+                coubsong[22],
+                coubsong[23],
+                coubsong[24],
+                coubsong[25],
             ]);
+            break;
+        case 'classics':
+            webamp.setTracksToPlay(classics.concat(
+                coubsong[12],
+                coubsong[17],
+                coubsong[18],
+            ));
             break;
         case 'phonk_radio':
             webamp.setTracksToPlay([
@@ -572,5 +603,3 @@ vid_bg_dark.addEventListener('change', function () {
     document.querySelector('body > video').setAttribute('style',`filter: brightness(${this.value}%);`)
 });
 console.log("%c[Music] %c(v05012023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
-//
-// document.getElementById("tab").innerHTML = '<!--The tab to move in the website-->\ ';
