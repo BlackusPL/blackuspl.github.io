@@ -1,6 +1,15 @@
 {
     "id": [
         {
+            "name" : "Update 05.02.2025",
+            "link_id" : "update-050225",
+            "desc" : [
+                "• [Fixed] Secret button apearing on all pages",
+                "• [Fixed] Navbar buttons cannot be focused because of new system of adding navbar",
+                "• [Added] Now you can change font in website"
+            ]
+        },
+        {
             "name" : "Update 16.01.2025",
             "link_id" : "update-160125",
             "desc" : [

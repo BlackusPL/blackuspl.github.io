@@ -47,7 +47,7 @@ const $i = (e) => document.getElementById(e), $q = (e) => document.querySelector
 document.getElementsByClassName('navbar-items')[0].insertAdjacentHTML('afterend', `<div class="navbar-items" id="tab">
     <ul class="navbar-links logo">
       <li class="navbar-link">
-        <a href="/" class="a_icon">
+        <a tabindex="0" href="/" class="a_icon">
           <img src="/BDPlugins/icon.png" class="icon">
         </a>
       </li>
@@ -55,17 +55,17 @@ document.getElementsByClassName('navbar-items')[0].insertAdjacentHTML('afterend'
     <ul class="navbar-links main">
       <li class="navbar-link" style="width: 0; height: 70px;"></li>
       <li class="navbar-link">
-        <a href="/" class="navbar-item">
+        <a tabindex="0" href="/" class="navbar-item">
           <span>Home</span>
         </a>
       </li>
       <li class="navbar-link">
-        <a href="/games" class="navbar-item">
+        <a tabindex="0" href="/games" class="navbar-item">
           <span>Games</span>
         </a>
       </li>
       <li class="navbar-link">
-        <a href="/music" class="navbar-item">
+        <a tabindex="0" href="/music" class="navbar-item">
           <span>Music Player</span>
         </a>
       </li>
@@ -93,7 +93,7 @@ document.getElementsByClassName('navbar-items')[0].insertAdjacentHTML('afterend'
         </div>
       </li>
       <li class="navbar-link">
-        <a href="/news" class="navbar-item">
+        <a tabindex="0" href="/news" class="navbar-item">
           <span>News</span>
         </a>
       </li>
@@ -107,16 +107,35 @@ document.getElementsByClassName('navbar-items')[0].insertAdjacentHTML('afterend'
           <a onclick="jezykoff()">English</a>
         </div>
       </li>
-      <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
+      <li class="navbar-link dropdown">
+        <a class="navbar-item">
+          <span>Fonts ↡ </span>
+        </a>
+        <div class="showtasks">
+          <a onclick="CustomFont()">Custom Font</a>
+          <a><select onchange="PresFont(this.value)">
+            <optgroup label="Presets">
+              <option>HeadUpDaisy</option>
+              <option>Windows XP Tahoma</option>
+              <option>PerfectDOS</option>
+              <option>Fredoka</option>
+            </optgroup>
+            <optgroup label="Reset Font?">
+              <option>Confirm</option>
+            </optgroup>
+          </select></a>
+        </div>
+      </li>
+      <a tabindex="0" href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
       <li class="navbar-link">
         <div id="google_translate_element" class="navbar-item">
           <noscript>You need to enable JavaScript to able to use Translator.</noscript>
         </div>
       </li>
-      <a class="secret" href="/secret.html">Secret</a>
     </ul>    
   </div>
   `); document.getElementsByClassName('navbar-items')[0].remove();
+  window.location.pathname != "/" ? undefined : document.querySelector('[class="navbar-link"]:has(#google_translate_element)').insertAdjacentHTML("afterend", `<a tabindex="0" class="secret" href="/secret.html">Secret</a>`);
 /* 
 getID("search_bar").onclick = () => {
   getID("searchbar").style.display = getID("searchbar").style.display == "block" ? "none" : "block";
@@ -184,6 +203,28 @@ if (localStorage.getItem('language') == 'pl') {
     document.querySelector('[id="goog-gt-tt"]').remove();
   }
 }
+
+function CustomFont() {
+  var font = prompt("Font name");
+  var url = prompt("Font URL");
+  document.head.insertAdjacentHTML('beforeend', `<style>
+  @font-face {
+    font-family: ${font};
+    src: url(${url});
+  }
+  * {
+    font-family: ${font};
+  }
+  `);
+};
+
+function PresFont(name) {
+  name == "Confirm" ? window.location.reload() : undefined;
+  document.head.insertAdjacentHTML('beforeend', `<style>
+  * {
+    font-family: ${name};
+  }`);
+};
 
 // creates commands to able to use in console
 setTimeout(function(){
