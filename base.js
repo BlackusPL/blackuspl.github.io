@@ -10,6 +10,8 @@ xhr.onload = function () {
   }
 };
 xhr.send();
+
+const today = new Date(Date.now());
 // void version ES6
 /*
 async () => {
@@ -41,10 +43,9 @@ function jezyk(lang) {
   }
 }
 // code by cyan-2048
-const $i = (e) => document.getElementById(e), $q = (e) => document.querySelector(e);
-
+const $i = (e) => document.getElementById(e), $q = (e) => document.querySelector(e), $c = (e) => document.getElementsByClassName(e);
 // JS Navbar = easier editing + less resources [/BDPlugins/test.png]
-document.getElementsByClassName('navbar-items')[0].insertAdjacentHTML('afterend', `<div class="navbar-items" id="tab">
+$c('navbar-items')[0].insertAdjacentHTML('afterend', `<div class="navbar-items" id="tab">
     <ul class="navbar-links logo">
       <li class="navbar-link">
         <a tabindex="0" href="/" class="a_icon">
@@ -113,7 +114,7 @@ document.getElementsByClassName('navbar-items')[0].insertAdjacentHTML('afterend'
         </a>
         <div class="showtasks">
           <a onclick="CustomFont()">Custom Font</a>
-          <a><select onchange="PresFont(this.value)">
+          <a><select id="Fonts" onchange="PresFont(this.value)">
             <optgroup label="Presets">
               <option>HeadUpDaisy</option>
               <option>Windows XP Tahoma</option>
@@ -134,8 +135,9 @@ document.getElementsByClassName('navbar-items')[0].insertAdjacentHTML('afterend'
       </li>
     </ul>    
   </div>
-  `); document.getElementsByClassName('navbar-items')[0].remove();
-  window.location.pathname != "/" ? undefined : document.querySelector('[class="navbar-link"]:has(#google_translate_element)').insertAdjacentHTML("afterend", `<a tabindex="0" class="secret" href="/secret.html">Secret</a>`);
+  `); $c('navbar-items')[0].remove();
+  window.location.pathname != "/" ? undefined : $q('[class="navbar-link"]:has(#google_translate_element)').insertAdjacentHTML("afterend", `<a tabindex="0" class="secret" href="/secret.html">Secret</a>`);
+  $q("footer p").textContent = `Copyright © 2021-${today.getFullYear() >= 2021 ? today.getFullYear() : 2021}, BlackusPL | All rights reserved | DO NOT DISTRIBUTE`;
 /* 
 getID("search_bar").onclick = () => {
   getID("searchbar").style.display = getID("searchbar").style.display == "block" ? "none" : "block";
@@ -200,9 +202,11 @@ if (localStorage.getItem('language') == 'pl') {
     new google.translate.TranslateElement({
       pageLanguage: 'en'
     });
-    document.querySelector('[id="goog-gt-tt"]').remove();
+    $q('[id="goog-gt-tt"]').remove();
   }
 }
+
+// Fonts Categories
 
 function CustomFont() {
   var font = prompt("Font name");
@@ -224,7 +228,23 @@ function PresFont(name) {
   * {
     font-family: ${name};
   }`);
+  sessionStorage.setItem('font', name);
 };
+
+switch (sessionStorage.getItem('font')) {
+  default:
+  document.head.insertAdjacentHTML('beforeend', `<style>
+  * {
+    font-family: ${sessionStorage.getItem('font')};
+  }`);
+  $q("#Fonts").value = sessionStorage.getItem('font');
+  break;
+  case null:
+  break;
+  case 'Confirm':
+  sessionStorage.removeItem('font');
+  break;
+}
 
 // creates commands to able to use in console
 setTimeout(function(){
@@ -256,13 +276,12 @@ if ($q("#tab")) {
 $q("#tab").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em; padding: 1em; align-self: center;"></div>`);
 startTime();
 function startTime() {
-  const today = new Date(Date.now());
   let h = today.getHours();
   let m = today.getMinutes();
   let s = today.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
-  document.getElementById('txt').innerHTML = 'Time: ' + h + ":" + m + ":" + s;
+  $i('txt').innerHTML = 'Time: ' + h + ":" + m + ":" + s;
   setTimeout(startTime, 1000);
   }
 }

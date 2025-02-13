@@ -4,6 +4,15 @@
             "name" : "Update 05.02.2025",
             "link_id" : "update-050225",
             "desc" : [
+                "• [Added] Selected font are now saved for session only",
+                "• [Info] Custom font later",
+                "• [Changed] Footer copyright year will now be automatically updated"
+            ]
+        },
+        {
+            "name" : "Update 05.02.2025",
+            "link_id" : "update-050225",
+            "desc" : [
                 "• [Fixed] Secret button apearing on all pages",
                 "• [Fixed] Navbar buttons cannot be focused because of new system of adding navbar",
                 "• [Added] Now you can change font in website"

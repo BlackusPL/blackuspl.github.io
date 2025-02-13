@@ -48,7 +48,42 @@ let [classics, nightcore] = [
                 "title": "Sexy Bitch"
             },
             "url": "https://autumn.revolt.chat/attachments/s24qDuASEiwdix3FHgjCEJ64gu6TEPPEWklVo_XmhP"
-        }
+        },
+        {
+            "metaData": {
+                "artist": "Guru",
+                "title": "Infinity 2008"
+            },
+            "url": "./local_music/Guru - Infinity 2008.ogg"
+        },
+        {
+            "metaData": {
+                "artist": "Inna",
+                "title": "Sun is Up"
+            },
+            "url": "./local_music/Inna - Sun is Up.ogg"
+        },
+        {
+            "metaData": {
+                "artist": "Tom Boxer",
+                "title": "Deep in Love"
+            },
+            "url": "./local_music/Tom Boxer - Deep in Love.ogg"
+        },
+        {
+            "metaData": {
+                "artist": "Morandi",
+                "title": "Save me"
+            },
+            "url": "./local_music/Morandi - Save me.ogg"
+        },
+        {
+            "metaData": {
+                "artist": "Pitbull",
+                "title": "Rain Over Me (Nightcore)"
+            },
+            "url": "./local_music/Pitbul - rain over me.ogg"
+        },
     ],
     [
         {
