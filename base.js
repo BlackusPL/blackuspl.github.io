@@ -270,6 +270,7 @@ if ($q("#tab")) {
 $q("#tab").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em; padding: 1em; align-self: center;"></div>`);
 startTime();
 function startTime() {
+  let today = new Date(Date.now());
   let h = today.getHours();
   let m = today.getMinutes();
   let s = today.getSeconds();
