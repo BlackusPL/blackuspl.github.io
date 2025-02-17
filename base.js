@@ -11,6 +11,9 @@ xhr.onload = function () {
 };
 xhr.send();
 
+// code by cyan-2048
+const $i = (e) => document.getElementById(e), $q = (e) => document.querySelector(e); $c = (e) => document.getElementsByClassName(e);
+
 const today = new Date(Date.now());
 // void version ES6
 /*
@@ -42,8 +45,6 @@ function jezyk(lang) {
     LanguageLoader();
   }
 }
-// code by cyan-2048
-const $i = (e) => document.getElementById(e), $q = (e) => document.querySelector(e), $c = (e) => document.getElementsByClassName(e);
 // JS Navbar = easier editing + less resources [/BDPlugins/test.png]
 $c('navbar-items')[0].insertAdjacentHTML('afterend', `<div class="navbar-items" id="tab">
     <ul class="navbar-links logo">
@@ -137,20 +138,13 @@ $c('navbar-items')[0].insertAdjacentHTML('afterend', `<div class="navbar-items" 
   </div>
   `); $c('navbar-items')[0].remove();
   window.location.pathname != "/" ? undefined : $q('[class="navbar-link"]:has(#google_translate_element)').insertAdjacentHTML("afterend", `<a tabindex="0" class="secret" href="/secret.html">Secret</a>`);
-  $q("footer p").textContent = `Copyright © 2021-${today.getFullYear() >= 2021 ? today.getFullYear() : 2021}, BlackusPL | All rights reserved | DO NOT DISTRIBUTE`;
+  $q("footer p").textContent = `Copyright © 2021${today.getFullYear() > 2021 ? -today.getFullYear() : ''}, BlackusPL | All rights reserved | DO NOT DISTRIBUTE`;
 /* 
 getID("search_bar").onclick = () => {
   getID("searchbar").style.display = getID("searchbar").style.display == "block" ? "none" : "block";
   getID("searchbar").click();
 };
-//
-var script = document.createElement("script");
-script.async;
-script.src = "https://cse.google.com/cse.js?cx=f57e79ca12bca49ec";
-document.head.append(script); 
-
-getID("tab").insertAdjacentHTML('afterend', `<div>Old tab removed from here</div>`)
-getID("tab").remove();*/
+*/
 
 //if (localStorage.getItem('language') == 'pl') {
   // function to get value of selected language in cookie

@@ -19,8 +19,21 @@ function discordprofile(id) {
           throw document.getElementById('pfp').src = avatar_url + '.webp?size=4096';
         });*/
         document.getElementById('pfp').src = avatar_url;
-        // Discord banner from usrbg
-        document.getElementsByClassName('card')[0].style = `background-image: url(https://usrbg.is-hardly.online/usrbg/v2/${discord_data.data.discord_user.id}?9807=&size=1024&format=gif)`;
+        // Get banner from discord or from usrbg
+        fetch(`https://corsproxy.io/?https://widgets.vendicated.dev/user?id=${discord_data.data.discord_user.id}&theme=dark&banner=true&full-banner=true&rounded-corners=false&discord-icon=true&badges=true&guess-nitro=true&`)
+        .then(response => response.text())
+        .then(data => {
+            const parser = new DOMParser()
+            // First check if user have banner from nitro, if not use usrbg banner without checking if user exist in usrbg database
+            if (parser.parseFromString(data, "text/html")?.querySelectorAll('.banner img')[0]?.src == undefined) {
+              // Banner from usrbg
+              var bg = `https://usrbg.is-hardly.online/usrbg/v2/${discord_data.data.discord_user.id}?9807=&size=1024&format=gif`;
+            } else {
+              // Banner from Discord
+              var bg = parser.parseFromString(data, "text/html").querySelectorAll('.banner img')[0]?.src;
+            };
+            return document.getElementsByClassName('card')[0].style = `background-image: url(${bg})`;
+        })
 
         document.getElementById('card-title').innerHTML = "@" + discord_data.data.discord_user.username.toLowerCase() + " > profile";
         function status() {document.getElementById('status').innerHTML = "Status: " + discord_data.data.discord_status}

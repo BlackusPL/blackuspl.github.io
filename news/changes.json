@@ -1,8 +1,17 @@
 {
     "id": [
         {
-            "name" : "Update 05.02.2025",
-            "link_id" : "update-050225",
+            "name" : "Update 17.02.2025",
+            "link_id" : "update-170225",
+            "desc" : [
+                "• [Changed] Now Discord Profile will prioritize banner from Discord instead of USRBG when user has banner using nitro",
+                "• [Changed] Footer year if smaller then stay with creation year",
+                "• [Fixed] Translator not showing up on Changelog page"
+            ]
+        },
+        {
+            "name" : "Update 13.02.2025",
+            "link_id" : "update-130225",
             "desc" : [
                 "• [Added] Selected font are now saved for session only",
                 "• [Info] Custom font later",
