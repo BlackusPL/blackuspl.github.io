@@ -1,6 +1,17 @@
 {
     "id": [
         {
+            "name" : "Update 13.03.2025",
+            "link_id" : "update-130325",
+            "desc" : [
+                "• [Added] Now you can clear prompt in TOI",
+                "• [Added] Discord Profile now also detects on what console you are",
+                "• [Changed] Some functions was changed to more optimized version",
+                "• [Fixed] \"Code Opener\" doesn't work because of recently implemented Font system",
+                "• <mark>[Planned]</mark> Remove old changelog system"
+            ]
+        },
+        {
             "name" : "Update 17.02.2025",
             "link_id" : "update-170225",
             "desc" : [

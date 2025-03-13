@@ -14,8 +14,8 @@ id('head_code').addEventListener('change', function () {
 id('clear').addEventListener('click', function () {
     sessionStorage.removeItem('body_code');
     sessionStorage.removeItem('head_code');
-    id('head_code').value = null;
-    id('body_code').value = null;
+    try { id('head_code').value = null } catch {};
+    try { id('body_code').value = null } catch {};
 });
 function rm_html() {
     try {id('afterselectcon').remove(); id('video_src').remove()} catch {}
@@ -29,8 +29,7 @@ function playVideo(files) {
 };
 
     document.querySelector("#afterselectcon ~ button + button").addEventListener('click', function () {
-        let type = document.querySelector('select').value;
-            switch (type) {
+            switch (document.querySelector('center select').value) {
                 default:
                     alert('WTH you select?')
                 break;
@@ -93,9 +92,8 @@ function playVideo(files) {
                 break;
             }
         });
-    document.querySelector('select').addEventListener('change', function () {
-        let type_option = document.querySelector('select').value;
-        switch (type_option) {
+    document.querySelector('center select').addEventListener('change', function () {
+        switch (document.querySelector('center select').value) {
             default:
                 rm_html()
                 id("codeplace").innerHTML = `<textarea placeholder="Soon" id="head_code"></textarea><br> \

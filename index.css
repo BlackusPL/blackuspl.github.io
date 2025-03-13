@@ -177,7 +177,6 @@ ul a.a_icon:hover {background-color: unset;}
     border-style: inset;
     background-color: #1a1c1f;
     padding: 5px;
-    position: absolute;
     right: 0;
     min-width: 100%;
     position: static;

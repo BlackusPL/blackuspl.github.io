@@ -139,20 +139,15 @@ $c('navbar-items')[0].insertAdjacentHTML('afterend', `<div class="navbar-items" 
   `); $c('navbar-items')[0].remove();
   window.location.pathname != "/" ? undefined : $q('[class="navbar-link"]:has(#google_translate_element)').insertAdjacentHTML("afterend", `<a tabindex="0" class="secret" href="/secret.html">Secret</a>`);
   $q("footer p").textContent = `Copyright © 2021${today.getFullYear() > 2021 ? -today.getFullYear() : ''}, BlackusPL | All rights reserved | DO NOT DISTRIBUTE`;
-/* 
-getID("search_bar").onclick = () => {
-  getID("searchbar").style.display = getID("searchbar").style.display == "block" ? "none" : "block";
-  getID("searchbar").click();
-};
-*/
 
 //if (localStorage.getItem('language') == 'pl') {
   // function to get value of selected language in cookie
-  function cookievaluefinder(coname) {
+  /*function cookievaluefinder(coname) {
     var finded = document.cookie.split("; ").find((lang) => lang.startsWith(`${coname}=`))?.split("=")[1];
     return finded;
-  }
-  var zmien, regex, key, textnodes, node, s;
+  }*/
+const cookievaluefinder = (coname) => document.cookie.split("; ").find((lang) => lang.startsWith(`${coname}=`))?.split("=")[1];
+var zmien, regex, key, textnodes, node, s;
 function LanguageLoader() {
   switch(cookievaluefinder('language')) {
     case 'pl':
@@ -266,6 +261,7 @@ const DA = {
 };
 
 // search for element with class "footer" and place a clock
+const checkTime = (i) => i < 10 ? i = "0" + i : i; // add zero in front of numbers < 10
 if ($q("#tab")) {
 $q("#tab").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em; padding: 1em; align-self: center;"></div>`);
 startTime();
@@ -279,11 +275,6 @@ function startTime() {
   $i('txt').innerHTML = 'Time: ' + h + ":" + m + ":" + s;
   setTimeout(startTime, 1000);
   }
-}
-
-function checkTime(i) {
-  if (i < 10) {i = "0" + i}  // add zero in front of numbers < 10
-  return i;
 }
 
 /*fetch('https://coub.com/rss/channel/blackuspl')

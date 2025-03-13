@@ -66,6 +66,7 @@
           <input type="checkbox" id="textshadow">Text Shadow</input><br>
           <input type="checkbox" id="cors">Accept CORS</input><br>
           <button onclick="txt2img()">Submit</button><br>
+          <button onclick="window.location.hash = ''; window.location.search = '';">Clear</button><br>
         </div>
           <button onclick="viewraw()">View raw Base64</button> <button onclick="alert('This works with only CORS accepted images')" id="vieworiginal">View original image</button> <button onclick="download()">Download</button> <button onclick="debugBase64($i('code').value)">Open in new tab</button>
           <br><textarea style="width: 500px; height: 150px; visibility: hidden;" placeholder="There will be image in base64. For now you can only generate with default image" id="code"></textarea>

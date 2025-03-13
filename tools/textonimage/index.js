@@ -1,9 +1,7 @@
 function loadimage() {
     // Pobieranie parametrów z adresu URL
     const urlParams = new URLSearchParams(window.location.search + window.location.hash);
-    function urlshotcut(check, value) {
-      (urlParams.get(check) === null || urlParams.get(check) === '') ? urlParams.set(check, value) : void 0;
-    };
+    const urlshotcut = (check, value) => (urlParams.get(check) === null || urlParams.get(check) === '') ? urlParams.set(check, value) : void 0;
     let imageUrl = urlParams.get("url");
     urlshotcut("text","null"); //if (urlParams.get("text") === null || urlParams.get("text") === '') urlParams.set("text", "null");
     let text = urlParams.get("text");
