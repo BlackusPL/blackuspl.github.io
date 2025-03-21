@@ -200,6 +200,11 @@ if (localStorage.getItem('language') == 'pl') {
 function CustomFont() {
   var font = prompt("Font name");
   var url = prompt("Font URL");
+  sessionStorage.setItem('font', `{
+    "type": "custom",
+    "name": "${font}",
+    "url": "${url}"}
+  `);
   document.head.insertAdjacentHTML('beforeend', `<style>
   @font-face {
     font-family: ${font};
@@ -212,28 +217,43 @@ function CustomFont() {
 };
 
 function PresFont(name) {
-  name == "Confirm" ? window.location.reload() : undefined;
+  if (name == "Confirm") {sessionStorage.setItem('font', `{"type": "Confirm"}`); return window.location.reload()};
   document.head.insertAdjacentHTML('beforeend', `<style>
   * {
     font-family: ${name};
   }`);
-  sessionStorage.setItem('font', name);
+  sessionStorage.setItem('font', `{
+    "type": "preset",
+    "name": "${name}"}
+  `);
 };
 
-switch (sessionStorage.getItem('font')) {
-  default:
+let fonttype = JSON.parse(sessionStorage.getItem('font'));
+switch (fonttype.type) {
+  case "custom":
   document.head.insertAdjacentHTML('beforeend', `<style>
   * {
-    font-family: ${sessionStorage.getItem('font')};
+    font-family: ${fonttype.name};
+    src: url(${fonttype.url});
   }`);
-  $q("#Fonts").value = sessionStorage.getItem('font');
+  $q("#Fonts").insertAdjacentHTML("afterbegin", `<option>${fonttype.name}`)
+  $q("#Fonts").value = fonttype.name;
+  break;
+  case "preset":
+    document.head.insertAdjacentHTML('beforeend', `<style>
+    * {
+      font-family: ${fonttype.name};
+    }`);
+    $q("#Fonts").value = fonttype.name;
   break;
   case null:
   break;
-  case 'Confirm':
+  case "Confirm":
   sessionStorage.removeItem('font');
   break;
 }
+
+//
 
 // creates commands to able to use in console
 setTimeout(function(){
