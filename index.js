@@ -1,3 +1,21 @@
+// Dodaje elementy dla wstawienia danych
+document.querySelector('.card').innerHTML = `
+<div id="card-title">@unknown</div>
+<div class="user-info">
+  <div id="pfp-info">
+    <img id="pfp" src="https://placehold.co/128/000/FFF?text=Profile\nPicture" alt="Profile Picture" width="128px" style="border-radius: 100%">
+    <div id="username">Loading...</div>
+    <div id="status"></div>
+  </div>
+  <div id="activity">
+    <div id="activity-icon"></div>
+    <div id="activity-name" style="font-weight: bold;"></div>
+    <div id="activity-state"></div>
+    <div id="activity-detail"></div>
+  </div>
+</div>
+`;
+
 // Szuka po div class "card"
 function discordprofile(id) {
     var xhr = new XMLHttpRequest();
