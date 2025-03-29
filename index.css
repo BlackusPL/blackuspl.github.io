@@ -44,6 +44,13 @@ div#custombg_window {
   height: 200px;
   text-align: center;
 }
+div#BDPlugins a:visited {
+  color: #00E;
+}
+div#BDPlugins a {
+  color: #00E;
+  text-decoration-line: none;
+}
 footer {
     border-top: 1px solid #fff;
     font-size: small;
