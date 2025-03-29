@@ -1,6 +1,16 @@
 {
     "id": [
         {
+            "name" : "Update 29.03.2025",
+            "link_id" : "update-290325",
+            "desc" : [
+                "• [Changed] Discord Profile now need element with class 'card' to spawn",
+                "• [Changed] README.md",
+                "• [Removed] \"What is done\" section",
+                "• [Fixed] When 'font' doesn't exists then the whole code crash"
+            ]
+        },
+        {
             "name" : "Update 21.03.2025",
             "link_id" : "update-210325",
             "desc" : [

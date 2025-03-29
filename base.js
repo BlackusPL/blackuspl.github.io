@@ -229,7 +229,7 @@ function PresFont(name) {
 };
 
 let fonttype = JSON.parse(sessionStorage.getItem('font'));
-switch (fonttype.type) {
+switch (fonttype?.type) {
   case "custom":
   document.head.insertAdjacentHTML('beforeend', `<style>
   * {
