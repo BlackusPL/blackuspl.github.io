@@ -37,6 +37,12 @@ function discordprofile(id) {
           throw document.getElementById('pfp').src = avatar_url + '.webp?size=4096';
         });*/
         document.getElementById('pfp').src = avatar_url;
+        // Check if user have nameplate // for now disabled
+        // if (discord_data.data.discord_user.collectibles?.nameplate == undefined) {
+        //   document.getElementsByClassName('card')[0].insertAdjacentHTML('afterbegin', `
+        //     <video src="https://cdn.discordapp.com/assets/collectibles/${discord_data.data.discord_user.collectibles.nameplate.asset}asset.webm" loop="" autoplay="" style="position: absolute;right: 0;top: 0;width: auto;height: 100%;z-index: -1;" disablepictureinpicture="" muted=""></video>
+        //     `)
+        // } else {
         // Get banner from discord or from usrbg // sometimes must be https://corsproxy.io?url=
         fetch(`https://corsproxy.io/?https://widgets.vendicated.dev/user?id=${discord_data.data.discord_user.id}&theme=dark&banner=true&full-banner=true&rounded-corners=false&discord-icon=true&badges=true&guess-nitro=true&`)
         .then(response => response.text())
@@ -50,9 +56,9 @@ function discordprofile(id) {
               // Banner from Discord
               var bg = parser.parseFromString(data, "text/html").querySelectorAll('.banner img')[0]?.src;
             };
-            return document.getElementsByClassName('card')[0].style = `background-image: url(${bg})`;
-        })
-
+            return document.getElementsByClassName('card')[0].style['backgroundImage'] = `url(${bg})`;
+          })
+        //}
         document.getElementById('card-title').innerHTML = "@" + discord_data.data.discord_user.username.toLowerCase() + " > profile";
         function status() {document.getElementById('status').innerHTML = "Status: " + discord_data.data.discord_status}
         function activity(type) {document.getElementById('activity-name').innerHTML = type + discord_data.data.activities[0]?.name

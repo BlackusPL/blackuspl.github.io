@@ -1,6 +1,14 @@
 {
     "id": [
         {
+            "name" : "Update 9.04.2025",
+            "link_id" : "update-090425",
+            "desc" : [
+                "• [Added] DCF77 Decoder (temp)",
+                "• [Changed] Discord Profile now loads after DOMContentLoaded"
+            ]
+        },
+        {
             "name" : "Update 29.03.2025",
             "link_id" : "update-290325",
             "desc" : [

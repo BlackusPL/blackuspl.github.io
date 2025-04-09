@@ -186,13 +186,14 @@ ul a.a_icon:hover {background-color: unset;}
     padding: 5px;
     right: 0;
     min-width: 100%;
-    position: static;
+    position: relative;
     margin-bottom: 5%;
     justify-self: center;
     background-size: cover;
     font-size: initial;
     margin-right: 0.5%;
     background-blend-mode: overlay;
+    z-index: -1;
   }
   .card .user-info #username a {
     all: unset;

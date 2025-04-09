@@ -1,13 +1,13 @@
-document.querySelector('main div').insertAdjacentHTML('afterend', '<div id="change-obj">\
-    <label for="change-list">Changelogs --> </label>\
-    <select id="change-list" name="change-list" \onchange="selchangelog()">\
-    </select>\
-  </div>\
-  <h3 id=""></h3>\
-  <div class="changelog">\
-  </div>\
-  <br>\
-  <hr>');
+document.querySelector('main div').insertAdjacentHTML('afterend', `<div id="change-obj">
+    <label for="change-list">Changelogs --> </label>
+    <select id="change-list" name="change-list" onchange="selchangelog()">
+    </select>
+  </div>
+  <h3 id=""></h3>
+  <div class="changelog">
+  </div>
+  <br>
+  <hr>`);
 
 let sharebtn = '<a class="material-symbols-outlined skiptranslate share-btn">share</a>';
 const chlg = [];
@@ -78,9 +78,9 @@ function copyid(link) {
     newSpan.addEventListener('click', function () {
       copyid(this.parentElement.id)
     });
-    newSpan.style = "cursor: copy; width: 0px; color: white; font-size: unset;";
-    newSpan.classList = "material-symbols-outlined skiptranslate";
-    newSpan.textContent = 'share';
+    newSpan['style'] = "cursor: copy; width: 0px; color: white; font-size: unset;";
+    newSpan['classList'] = "material-symbols-outlined skiptranslate";
+    newSpan['textContent'] = 'share';
   
     // Append the new span element as a child to the current h3 element
     i.appendChild(newSpan);

@@ -18,9 +18,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     .widget {
-  display: flex;
-  justify-content: space-around;
-}
+      display: flex;
+      justify-content: space-around;
+    }
+    main {
+      text-align: center;
+      font-size: large;
+    }
+    header {
+      margin: 1em auto 0em;
+      display: grid;
+    }
 </style>
 </head>
 <body>
@@ -89,8 +97,8 @@
     </div>
     <!--end-->
     <!--div id="wrapper"-->
-    <header style="margin: 1em auto 0em; display: grid;">
-            <main style="text-align: center; font-size: large;">
+    <header>
+            <main>
               <header>DarknessAir Website</header>
               <br><br>
               <p><a href="https://coub.com/BlackusPL">Click here</a> to be redirected to my Coub</p>
@@ -124,7 +132,7 @@
 </body>
 <script src="index.js"></script>
 <script src="base.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" defer>
     discordprofile('410243501494894603');
     function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
