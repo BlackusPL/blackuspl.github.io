@@ -46,7 +46,7 @@ function jezyk(lang) {
   }
 }
 // JS Navbar = easier editing + less resources [/BDPlugins/test.png]
-$c('navbar-items')[0].insertAdjacentHTML('afterend', `<div class="navbar-items" id="tab">
+$c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items" id="tab">
     <ul class="navbar-links logo">
       <li class="navbar-link">
         <a tabindex="0" href="/" class="a_icon">
@@ -137,9 +137,9 @@ $c('navbar-items')[0].insertAdjacentHTML('afterend', `<div class="navbar-items" 
       </li>
     </ul>    
   </div>
-  `); $c('navbar-items')[0].remove();
+  `); $c('navbar-items')[0]?.remove();
   window.location.pathname != "/" ? undefined : $q('[class="navbar-link"]:has(#google_translate_element)').insertAdjacentHTML("afterend", `<a tabindex="0" class="secret" href="/secret.html">Secret</a>`);
-  $q("footer p").textContent = `Copyright © 2021${today.getFullYear() > 2021 ? -today.getFullYear() : ''}, BlackusPL | All rights reserved | DO NOT DISTRIBUTE`;
+  if ($q("footer p")) $q("footer p").textContent = `Copyright © 2021${today.getFullYear() > 2021 ? -today.getFullYear() : ''}, BlackusPL | All rights reserved | DO NOT DISTRIBUTE`;
 
 //if (localStorage.getItem('language') == 'pl') {
   // function to get value of selected language in cookie

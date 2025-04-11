@@ -1,6 +1,15 @@
 {
     "id": [
         {
+            "name" : "Update 12.04.2025",
+            "link_id" : "update-120425",
+            "desc" : [
+                "• [Changed] DCF77 Decoder now have main site style",
+                "• [Fixed] Navbar could crash whole code when navbar html element doesn't exists",
+                "• [Fixed] Same with footer"
+            ]
+        },
+        {
             "name" : "Update 9.04.2025",
             "link_id" : "update-090425",
             "desc" : [
