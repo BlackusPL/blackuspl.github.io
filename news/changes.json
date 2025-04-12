@@ -1,6 +1,15 @@
 {
     "id": [
         {
+            "name" : "Update 13.04.2025",
+            "link_id" : "update-130425",
+            "desc" : [
+                "[f] Prompt menu goes out of screen on mobile devices",
+                "[a] Now AIChat also saves avatar, api url and model",
+                "[a] Clicking Enter on prompt now will send the request"
+            ]
+        },
+        {
             "name" : "Update 12.04.2025",
             "link_id" : "update-120425",
             "desc" : [

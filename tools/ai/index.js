@@ -1,17 +1,35 @@
+// Checks if $i is defined
+if (typeof $i == 'undefined') {const $i = (e) => document.getElementById(e)};
+
 // Saves apikey in session storage
-let apikey = document.getElementById('apikey')
+let apikey = $i('apikey')
 apikey.value = sessionStorage.getItem('apikey');
 
-document.getElementById('send_prompt').addEventListener('click', function () {
+let avatarurl = $i('avatarurl')
+avatarurl.value = sessionStorage.getItem('avatarurl');
+
+let customapi = $i('customapi')
+customapi.value = sessionStorage.getItem('customapi');
+
+let apimodel = $i('model')
+apimodel.value = sessionStorage.getItem('apimodel');
+
+$i('send_prompt').addEventListener('click', function () {
   sessionStorage.setItem('apikey', apikey.value);
+  sessionStorage.setItem('avatarurl', avatarurl.value);
+  sessionStorage.setItem('customapi', customapi.value);
+  sessionStorage.setItem('apimodel', apimodel.value);
+});
+
+// Sprawdza czy kliknięto Enter bez SHifta
+document.getElementById('textprompt').addEventListener('keydown', function (event) {
+  if (event.key === 'Enter' && !event.shiftKey) {
+    event.preventDefault();
+    ask(document.getElementById('textprompt').value);
+  }
 });
 
 document.getElementById('apilist').addEventListener('change', function () {
-  /*if (document.getElementsByName('api')[0][2].selected) {
-    document.getElementById('capilist').style = '';
-  } else {
-    document.getElementById('capilist').style = 'display: none';
-  }*/
  let capi = document.getElementById('capilist').style = 'display: none';
   switch(document.getElementsByName('api')[0].selectedIndex) {
     case 2:

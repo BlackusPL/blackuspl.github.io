@@ -19,14 +19,54 @@ fetch('./changes.json')
     loadchangelog()
 });
 
+// Funkcja która odpowiada za dodanie opisu do danej zmiany
+function ch_desc(e) {
+    document.querySelector('#change-obj + h3').id = changelogs.id[e].link_id; // Wpisuje link z najnowszej zmiany
+
+    function showelse() { 
+        document.querySelector('#change-obj + h3 + .changelog').innerHTML = ''; // czyści poprzedni wyświetlony opis
+        document.getElementsByClassName('share-btn')[0].addEventListener('click', function () {
+            copyid(this.parentElement.id) // dodaje kopiowanie linku do danej zmainy
+        });
+    };
+
+    if(e == 0) { // sprawdza czy wybrano najnowszą zmiane czy nie
+        document.querySelector('#change-obj + h3').innerHTML = `Latest ${changelogs.id[0].name + sharebtn}`;
+        showelse()
+    } else {
+        document.querySelector('#change-obj + h3').innerHTML = `${changelogs.id[e].name + sharebtn}`;
+        showelse()
+    };
+
+    for(i of changelogs.id[e].desc) {
+        switch(true) { // Sprawdza czy zmiana jest jako Added, Fixed, itd. a następnie dodaje odpowiedni zamiennik
+             case /\[(a|A)]/.test(i):
+                i = i.replace(/\[(a|A)]/, '• [Added]');
+                break;
+            case /\[(f|F)]/.test(i):
+                i = i.replace(/\[(f|F)]/, '• [Fixed]');
+                break;
+            case /\[(c|C)]/.test(i):
+                i = i.replace(/\[(c|C)]/, '• [Changed]');
+                break;
+            case /\[(r|R)]/.test(i):
+                i = i.replace(/\[(r|R)]/, '• [Removed]');
+                break;
+            case /\[(i|I)]/.test(i):
+                i = i.replace(/\[(i|I)]/, '• [Info]');
+                break;
+            case /\[(p|P)]/.test(i):
+                i = i.replace(/\[(p|P)]/, '• [Planned]');
+                break;
+        }
+        document.querySelector('#change-obj + h3 + .changelog').innerHTML += i + "<br>";
+    };
+};
+
 function loadchangelog() {
     changelogs = chlg[0];
     var i = changelogs.id.length - 1; // ilość zmian
-    document.querySelector('#change-obj + h3').id = changelogs.id[0].link_id; // Wpisuje link z najnowszej zmiany
-    document.querySelector('#change-obj + h3').innerHTML = `Latest ${changelogs.id[0].name + sharebtn}`; // Wpisuje najnowszą zmiane
-    for(c of changelogs.id[0].desc) { // Wypisuje opis najnowszej zmiany
-        document.querySelector('#change-obj + h3 + .changelog').innerHTML += c + "<br>";
-    };
+    ch_desc(0); // Wypisuje opis najnowszej zmiany
     function datalist(isLatest) {
         document.getElementById('change-list').insertAdjacentHTML('afterbegin', `<option value="${i}">${isLatest + changelogs.id[i].name}</option>`);
     }
@@ -41,24 +81,8 @@ function loadchangelog() {
 };
 
 function selchangelog() {
-var e = document.getElementById('change-list').value;
-function showelse() {
-    document.querySelector('#change-obj + h3').id = changelogs.id[e].link_id; 
-    document.querySelector('#change-obj + h3 + .changelog').innerHTML = ''; // czyści poprzedni wyświetlony opis
-    for(i of changelogs.id[e].desc) { // Wypisuje opis danej zmiany jak zostanie wybrana
-        document.querySelector('#change-obj + h3 + .changelog').innerHTML += i + "<br>";
-    };
-    document.getElementsByClassName('share-btn')[0].addEventListener('click', function () {
-        copyid(this.parentElement.id) // dodaje kopiowanie linku do danej zmainy
-    });
-}
-if(e == 0) { // sprawdza czy wybrano najnowszą zmiane czy nie
-    document.querySelector('#change-obj + h3').innerHTML = `Latest ${changelogs.id[0].name + sharebtn}`;
-    showelse()
-} else {
-    document.querySelector('#change-obj + h3').innerHTML = `${changelogs.id[e].name + sharebtn}`;
-    showelse()
-};
+    var e = document.getElementById('change-list').value;
+    ch_desc(e);
 }
 function copyid(link) {
     let link_to = window.location.origin + "/news/#" + link;

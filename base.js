@@ -79,6 +79,7 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
           <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>
           <a href="https://discord.com/users/410243501494894603">Discord</a>
           <a href="https://github.com/BlackusPL">Github</a>
+          <a href="https://app.revolt.chat/invite/amgyN8bh">Revolt</a>
         </div>
       </li>
       <li class="navbar-link dropdown">

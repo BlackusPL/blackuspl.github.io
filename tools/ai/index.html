@@ -56,20 +56,33 @@
 </div>
 <br><br>
 <main>
-  <table style="position: fixed; bottom: 5%;">
-    <tr>
-        <td><textarea type="text" placeholder="Prompt" id="textprompt" style="height: 2rem"></textarea></td>
-        <td><select name="api" id="apilist">
+  <div style="bottom: 5%; width: 100%;">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div>
+        <textarea type="text" placeholder="Prompt" id="textprompt" style="height: 2rem; width: 90%; max-width: 300px;"></textarea>
+      </div>
+      <div>
+        <select name="api" id="apilist">
           <option value="OpenAI">OpenAI - 3.5 turbo</option>
           <option value="Pawan.Krd">Pawan.Krd - no key</option>
           <option value="customapi">Custom API</option>
-        </select></td>
-        <td><input placeholder="api key" id="apikey" style="resize: none; width: 100px;" type="password" /><br>
-        <td id="capilist" style="display: none;"><input id="customapi" style="resize: none; width: 100px;" type="input" placeholder="API url">Custom API</input><br><input id="model" style="resize: none; width: 100px;" type="input" placeholder="AI model">AI model</input></td>
-        <td><input placeholder="avatar" id="avatarurl" style="resize: none; width: 100px;" type="text" /></td>
-        <td><button type="submit" onclick="ask(document.getElementById('textprompt').value)" id="send_prompt">Submit</button></td>
-    </tr>
-  </table>
+        </select>
+      </div>
+      <div>
+        <input placeholder="api key" id="apikey" style="resize: none; width: 90%; max-width: 100px;" type="password" /><br>
+      </div>
+      <div id="capilist" style="display: none;">
+        <input id="customapi" style="resize: none; max-width: 30vw;" type="input" placeholder="API url">Custom API</input><br>
+        <input id="model" style="resize: none; max-width: 30vw;" type="input" placeholder="AI model">AI model</input>
+      </div>
+      <div>
+        <input placeholder="avatar" id="avatarurl" style="resize: none; max-width: 30vw;" type="text" />
+      </div>
+      <div>
+        <button type="submit" onclick="ask(document.getElementById('textprompt').value)" id="send_prompt">Submit</button>
+      </div>
+    </div>
+  </div>
 </main>
 <footer>
   <p>Copyright © 2021-2025, BlackusPL | All rights reserved | DO NOT DISTRIBUTE</p>
