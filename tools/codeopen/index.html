@@ -14,7 +14,19 @@
         <meta property="og:image:type" content="image/png">
         <meta property="og:url" content="https://blackuspl.github.io/DarknessAir">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script
+        src="https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/min/vs/loader.js"
+        integrity="sha256-KPNYT9BLGC384VqaHONbJb6iKzFGSu5QA3K+0Yt/7ho="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
         <style>
+          #codeplace {
+            text-align: -webkit-center;
+          }
+          .view-line {
+            width: 0 !important;
+          }
           #body_code {
             width: 500px; 
             height: 150px;
@@ -78,15 +90,21 @@
             <p>You can paste code of html or html body and head to see how site looks with your code or other language code eval it.</p>
             <p><a href="..">Go back</a></p>
             <div id="codeplace">
-              <textarea placeholder="Elements in head" id="head_code"></textarea><br>
-              <textarea placeholder="Elements that will be in body or html code" id="body_code"></textarea>
+              <div
+                id="head_code"
+                style="border: 1px solid grey"
+              ></div><br>
+              <div
+                id="body_code"
+                style="border: 1px solid grey"
+              ></div>
             </div>
           <div style="margin: 2em auto; position: relative; width: 70%;">
             <select>
                 <option>HTML</option>
                 <option>JSON</option>
-                <option>JS</option>
-                <option>Translator</option>
+                <option value="JavaScript">JS</option>
+                <option>Markdown</option>
                 <option>Localplayer</option>
                 <option>DataURI</option>
                 <option>Google It</option>

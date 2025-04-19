@@ -1,6 +1,15 @@
 {
     "id": [
         {
+            "name" : "Update 19.04.2025",
+            "link_id" : "update-190425",
+            "desc" : [
+                "[c] New Code Opener text area. Now uses Monaco Editor(VS Code)",
+                "[a] Now you can format your code in Code Opener by pasting it or by typing it",
+                "[a] Markdown, you can test how your markdown code will look like"
+            ]
+        },
+        {
             "name" : "Update 13.04.2025",
             "link_id" : "update-130425",
             "desc" : [
