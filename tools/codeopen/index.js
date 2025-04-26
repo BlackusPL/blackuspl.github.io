@@ -1,15 +1,5 @@
 (() => {
 const id = (_) => document.getElementById(_);
-// gets value for head and body from session
-// id('body_code').value = sessionStorage.getItem('body_code');
-// id('head_code').value = sessionStorage.getItem('head_code');
-// // if value in body_code or head changed, then add to session storage values
-// id('body_code').addEventListener('change', function () {
-//    sessionStorage.setItem('body_code', `${id('body_code').value}`);
-// });
-// id('head_code').addEventListener('change', function () {
-//     sessionStorage.setItem('head_code', `${id('head_code').value}`);
-// });
 // embed video from selected file
 function playVideo(files) {
     try {
@@ -30,28 +20,27 @@ require.config({
             wordWrap: "on",
             placeholder: "This is head code",
             "autoIndent": true,
-            "formatOnPaste": true,
-            "formatOnType": true
+            // "formatOnPaste": true,
+            // "formatOnType": true
         });
         var tb = monaco.editor.create(id("body_code"), {
-          value: "",
+          //value: "",
           language: "html",
           theme: 'vs-dark',
           wordWrap: "on",
           placeholder: "Elements that will be in body or html code",
           "autoIndent": true,
-          "formatOnPaste": true,
-          "formatOnType": true
         });
-        // // cwhen click then clear sessionstorage and values in head and body
-        id('clear').addEventListener('click', function () {
-            //     sessionStorage.removeItem('body_code');
-            //     sessionStorage.removeItem('head_code');
+        // when click then clear sessionstorage and values in head and body
+        id('clear').onclick = function () {
+            sessionStorage.removeItem('body_code');
+            sessionStorage.removeItem('head_code');
             th.setValue("")
             tb.setValue("");
-        });
+        };
         var selector = document.querySelector('#codeplace ~ div select');
-        var submit = document.querySelector("#afterselectcon ~ button + button");
+        var submit = document.querySelector("#afterselectcon ~ button:nth-of-type(3)");
+        var pretty = id('pretty');
         //t.setValue(document.querySelector("pre").innerText);
         //document.querySelector("pre").remove();
         function choosen() {
@@ -75,7 +64,7 @@ require.config({
           // Selection Menu
           switch (selector.value) {
             default:
-                tb.setValue("")
+                //tb.setValue("")
                 tb.updateOptions({ placeholder: "Soon", readOnly: true });
                 showhide(1,0);
                 showhide(2,1);
@@ -86,34 +75,34 @@ require.config({
                 showhide(0,1);
                 showhide(1,1);
                 showhide(2,1);
-                th.setValue("")
-                tb.setValue("")
+                //th.setValue("")
+                //tb.setValue("")
                 th.updateOptions({ placeholder: "This is head code" });
                 tb.updateOptions({ placeholder: "Elements that will be in body or html code", readOnly: false });
                 break;
             case 'JSON':
-                tb.setValue("{\n    \"_comment\" : \"JSON code to be formatted\"\n}");
+                //tb.setValue("{\n    \"_comment\" : \"JSON code to be formatted\"\n}");
                 tb.updateOptions({ placeholder: "JSON code to be formatted", readOnly: false });
                 showhide(1,0);
                 showhide(2,1);
                 showhide(0,0);
                 // Usefull for next project
-                setTimeout(() => {
-                    tb.getAction('editor.action.formatDocument').run();
-                }, 500)
+                //setTimeout(() => {
+                //    tb.getAction('editor.action.formatDocument').run();
+                //}, 500)
                 break;
             case 'JavaScript':
-                th.setValue("")
+                //th.setValue("")
                 th.updateOptions({ placeholder: "/* Code to eval */" });
-                tb.setValue("");
+                //tb.setValue("");
                 tb.updateOptions({ placeholder: "Result", readOnly: true });
                 showhide(1,1);
                 showhide(2,1);
                 showhide(0,0);
                 break;
             case 'Markdown':
-                tb.setValue("")
-                tb.updateOptions({ placeholder: "Here goes markdown" });
+                //tb.setValue("")
+                tb.updateOptions({ placeholder: "Here goes markdown", readOnly: false });
                 showhide(1,0);
                 showhide(2,1);
                 showhide(0,0);
@@ -140,7 +129,7 @@ require.config({
                 showhide(0,0);
                 showhide(1,0);
                 showhide(2,1);
-                tb.setValue("")
+                //tb.setValue("")
                 tb.updateOptions({ placeholder: "Result", readOnly: true });
                 document.querySelector('#codeplace ~ div select').insertAdjacentHTML('afterend','<div id="beforecheckbox"><input type="file" accept="*/*" id="afterselect"></input></div>');
                 id('afterselect').addEventListener('change', function () {
@@ -161,7 +150,7 @@ require.config({
                 showhide(0,0);
                 showhide(1,0);
                 showhide(2,1);
-                tb.setValue("")
+                //tb.setValue("")
                 tb.updateOptions({ placeholder: "Type what you want to search for", language: "plaintext", readOnly: false });
             };
         }
@@ -224,8 +213,23 @@ require.config({
                 break;
             };
         };
+        // gets value for head and body from session
+        if (sessionStorage.getItem('body_code')) tb.setValue(sessionStorage.getItem('body_code'));
+        if (sessionStorage.getItem('head_code')) th.setValue(sessionStorage.getItem('head_code'));
+        // if value in body_code or head changed, then add to session storage values
+        id('body_code').onchange = function () {
+            sessionStorage.setItem('body_code', tb.getValue())
+        };
+        id('head_code').onchange = function () {
+            sessionStorage.setItem('head_code', th.getValue());
+        };
+
         selector.onchange = choosen;
         submit.onclick = odpal;
+        pretty.onclick = function () {
+            th.getAction('editor.action.formatDocument').run();
+            tb.getAction('editor.action.formatDocument').run();
+        }
         // document.querySelectorAll("[class=\"view-lines monaco-mouse-cursor-text\"]").forEach((e) => {
         //   e['style'].width = null;
         // });    

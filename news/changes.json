@@ -1,12 +1,22 @@
 {
     "id": [
         {
+            "name" : "Update 27.04.2025",
+            "link_id" : "update-270425",
+            "desc" : [
+                "[f] Markdown textarea could be readonly",
+                "[a] Now when you refresh page, your code will be saved",
+                "[a] Prettier button, now you can format your code"
+            ]
+        },
+        {
             "name" : "Update 19.04.2025",
             "link_id" : "update-190425",
             "desc" : [
                 "[c] New Code Opener text area. Now uses Monaco Editor(VS Code)",
                 "[a] Now you can format your code in Code Opener by pasting it or by typing it",
-                "[a] Markdown, you can test how your markdown code will look like"
+                "[a] Markdown, you can test how your markdown code will look like",
+                "[f] Issue where in DataURi and LocalPlayer, file upload apears in the wrong place"
             ]
         },
         {
