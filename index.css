@@ -193,7 +193,7 @@ ul a.a_icon:hover {background-color: unset;}
     font-size: initial;
     margin-right: 0.5%;
     background-blend-mode: overlay;
-    z-index: -1;
+    z-index: 10;
   }
   .card .user-info #username a {
     all: unset;
@@ -210,6 +210,13 @@ ul a.a_icon:hover {background-color: unset;}
   }
   #activity img {
     max-height: 15vh;
+  }
+  #nameplate-switch {
+    /* margin-top: auto; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
   }
   h3 + div.changelog {
     text-align: start;
@@ -319,6 +326,18 @@ ul a.a_icon:hover {background-color: unset;}
   }
   .gamelobby > a {
     flex: 33%;
+  }
+  .fas {
+    text-align: center;
+    box-sizing: border-box;
+    background-color: buttonface;
+    color: buttontext;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-color: buttonborder;
+    width: 14.8em;
+    user-select: none;
   }
   /* 
   @import url(https://saltssaumure.github.io/pios-discord-theme/piOStheme.css);

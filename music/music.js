@@ -8,6 +8,11 @@ if(!window.WebGLRenderingContext) {
     throw new Error("What's the point of turning this off?")
 }
 
+document.querySelector('main').insertAdjacentHTML('beforebegin', `
+    <input id="toggle" class="toggle-btn" type="checkbox" style="display: none;" /><label class="fas" for="toggle">Show/Hide</label>
+    <div id="custombg_window"></div>
+    `);
+
 document.getElementById('custombg_window').innerHTML = `Set custom background<br>
 <input type="file" id="custombg" accept="image/*"><br>
 <input type="reset" id="reset"> Set Default</input><br>

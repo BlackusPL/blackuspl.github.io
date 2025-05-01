@@ -1,6 +1,14 @@
 {
     "id": [
         {
+            "name" : "Update 1.05.2025",
+            "link_id" : "update-010525",
+            "desc" : [
+                "[f] \"Show/Hide\" button in Music Player was visible even when JS is off",
+                "[a] Nameplates, you can switch between nameplates and banners (default is banner)"
+            ]
+        },
+        {
             "name" : "Update 27.04.2025",
             "link_id" : "update-270425",
             "desc" : [

@@ -13,6 +13,7 @@ document.querySelector('.card').innerHTML = `
     <div id="activity-state"></div>
     <div id="activity-detail"></div>
   </div>
+  <button id="nameplate-switch">S</div>
 </div>
 `;
 
@@ -20,7 +21,7 @@ document.querySelector('.card').innerHTML = `
 function discordprofile(id) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", `https://api.lanyard.rest/v1/users/${id}`, true);
-    xhr.onload = function () {
+    xhr.onload = async function () {
       if (this.status == 200) {
         const discord_data = JSON.parse(this.responseText);
         let avatar_url = `https://cdn.discordapp.com/avatars/${discord_data.data.discord_user.id}/${discord_data.data.discord_user.avatar}?size=4096`;
@@ -37,14 +38,28 @@ function discordprofile(id) {
           throw document.getElementById('pfp').src = avatar_url + '.webp?size=4096';
         });*/
         document.getElementById('pfp').src = avatar_url;
-        // Check if user have nameplate // for now disabled
-        // if (discord_data.data.discord_user.collectibles?.nameplate == undefined) {
-        //   document.getElementsByClassName('card')[0].insertAdjacentHTML('afterbegin', `
-        //     <video src="https://cdn.discordapp.com/assets/collectibles/${discord_data.data.discord_user.collectibles.nameplate.asset}asset.webm" loop="" autoplay="" style="position: absolute;right: 0;top: 0;width: auto;height: 100%;z-index: -1;" disablepictureinpicture="" muted=""></video>
-        //     `)
-        // } else {
+        // Check if user have nameplate
+        document.getElementById('nameplate-switch').onclick = function () {
+          if (discord_data.data.discord_user.collectibles?.nameplate) {
+              const Kard = document.getElementsByClassName('card')[0].getBoundingClientRect();
+              document.getElementsByClassName('card')[0].insertAdjacentHTML('afterbegin', `
+                <video src="https://cdn.discordapp.com/assets/collectibles/${discord_data.data.discord_user.collectibles.nameplate.asset}asset.webm" loop="" autoplay="" style="
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: ${Kard.width}px;
+                height: ${Kard.height-5}px;
+                z-index: -1;
+                pointer-events: none;
+                object-fit: fill;
+                " disablepictureinpicture="" muted="" ></video>
+              `);
+            document.getElementsByClassName('card')[0].style['backgroundImage'] = 'none';
+          }
+          this.remove();
+        };
         // Get banner from discord or from usrbg // sometimes must be https://corsproxy.io?url=
-        fetch(`https://corsproxy.io/?https://widgets.vendicated.dev/user?id=${discord_data.data.discord_user.id}&theme=dark&banner=true&full-banner=true&rounded-corners=false&discord-icon=true&badges=true&guess-nitro=true&`)
+        await fetch(`https://corsproxy.io/?https://widgets.vendicated.dev/user?id=${discord_data.data.discord_user.id}&theme=dark&banner=true&full-banner=true&rounded-corners=false&discord-icon=true&badges=true&guess-nitro=true&`)
         .then(response => response.text())
         .then(data => {
             const parser = new DOMParser()
