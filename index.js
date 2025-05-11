@@ -1,4 +1,5 @@
 // Dodaje elementy dla wstawienia danych
+try {
 document.querySelector('.card').innerHTML = `
 <div id="card-title">@unknown</div>
 <div class="user-info">
@@ -16,6 +17,7 @@ document.querySelector('.card').innerHTML = `
   <button id="nameplate-switch">S</div>
 </div>
 `;
+} catch {};
 
 // Szuka po div class "card"
 function discordprofile(id) {
