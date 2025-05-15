@@ -21,7 +21,9 @@ fetch('./changes.json')
 
 // Funkcja która odpowiada za dodanie opisu do danej zmiany
 function ch_desc(e) {
-    document.querySelector('#change-obj + h3').id = changelogs.id[e].link_id; // Wpisuje link z najnowszej zmiany
+    changelogs.id[e]?.special_name == null ? changelogsname = "Update " + changelogs.id[e].date : changelogsname = changelogs.id[e].special_name;
+    var chnagelogslink = "update-" + changelogs.id[e].date.replaceAll(".20","").replaceAll(".", "");
+    document.querySelector('#change-obj + h3').id = chnagelogslink; // Wpisuje link z najnowszej zmiany
 
     function showelse() { 
         document.querySelector('#change-obj + h3 + .changelog').innerHTML = ''; // czyści poprzedni wyświetlony opis
@@ -31,10 +33,10 @@ function ch_desc(e) {
     };
 
     if(e == 0) { // sprawdza czy wybrano najnowszą zmiane czy nie
-        document.querySelector('#change-obj + h3').innerHTML = `Latest ${changelogs.id[0].name + sharebtn}`;
+        document.querySelector('#change-obj + h3').innerHTML = `Latest Update ${changelogs.id[0].date + sharebtn}`;
         showelse()
     } else {
-        document.querySelector('#change-obj + h3').innerHTML = `${changelogs.id[e].name + sharebtn}`;
+        document.querySelector('#change-obj + h3').innerHTML = `${changelogsname + sharebtn}`;
         showelse()
     };
 
@@ -68,10 +70,14 @@ function loadchangelog() {
     var i = changelogs.id.length - 1; // ilość zmian
     ch_desc(0); // Wypisuje opis najnowszej zmiany
     function datalist(isLatest) {
-        document.getElementById('change-list').insertAdjacentHTML('afterbegin', `<option value="${i}">${isLatest + changelogs.id[i].name}</option>`);
+        document.getElementById('change-list').insertAdjacentHTML('afterbegin', `<option value="${i}">${isLatest}</option>`);
     }
     while (i >= 0) { // Wypisuje wszystkie zmiany do pól wyboru od największej liczby do najmniejszej
-        (i == 0) ? datalist("Latest ") : datalist('');
+        if (changelogs.id[i].special_name !== null && changelogs.id[i]?.special_name !== undefined) {
+            (i == 0) ? datalist(`Latest ${changelogs.id[i].special_name}`) : datalist(`${changelogs.id[i].special_name}`);
+        } else {
+            (i == 0) ? datalist(`Latest Update ${changelogs.id[i].date}`) : datalist(`Update ${changelogs.id[i].date}`);
+        }
         i--;
     };
     document.getElementById('change-list')[0].selected = true; // Wybiera najnowsze zmiany bo wybiera najstarsze
