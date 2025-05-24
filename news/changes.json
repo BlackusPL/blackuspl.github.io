@@ -1,6 +1,13 @@
 {
     "id": [
         {
+            "date" : "24.05.2025",
+            "desc" : [
+                "[a] Code in Code Opener now have font Ligatures",
+                "[c] Font to JetBrains Mono in Code Opener"
+            ]
+        },
+        {
             "date" : "15.05.2025",
             "special_name" : null,
             "desc" : [

@@ -1,16 +1,24 @@
 @import url(https://fonts.googleapis.com/css2?family=Fredoka);
+@import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap);
+:root
+{
+    --main-background: url('https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1');
+    --temp-avatar-url: url("https://blackuspl.discowd.com/r/86-back.gif");
+    --cur-pointer: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAMgAAADIAGP6560AAAAHdElNRQfnBA0VEBsaNUWhAAAAAW9yTlQBz6J3mgAAAbhJREFUSMft1EsvJFEUB/B/3arW3XTQzIxE0B1prxYmFhMzKxs7tu0RtthZEItZ+QA2xMpSQlpsxWNmg1mMmMwXGAt0REjEoxOPVNfj7xaazEpVLaycm1Tu5vxyzs2pAzzHpuZ8qcBPOFmLUX12uUQSwh+gotTI8lcqrPghJBBIVJ3uZcgNX4QDxGNnmTprm/zx1TvhABXxbKaW0P/IKjwTj8BlppmwAsYuuR4LeSLyQCMVS6FmyCrWPBEvACyNT8QqgvIqPAOCQuYV5P5KIuGW+L8CPJ7cFrmSLHA1nS+AsJzkCJNsYqt1It9irlB5ncgDScL8LJuo4AVzN7c32SvLvFv4HX61jfwclHHANlknmSVeLvR/G+rs+TLfNlnoqoWG+NHBjG3qxt60BNqZOyyvRLE8KoQrADXXR2R6YqTn3IraMOU4DSpYC6ZUuHpELR67Pd7+jg+o5+64Db3P5k8I99MoeqvT3YikyqIlW2Nn/KSPkf+guV8wKkIIdISgJorLG893DNLcH4VC1f0fJZYfuk0E8REt6eGpLhR1aP72WwhRRBCW9fjbkFBS6lxgUvOb/h7v8fZxDzhr0tNFNchWAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTA0LTEzVDIxOjE2OjI2KzAwOjAwo385CQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wNC0xM1QyMToxNjoyNiswMDowMNIigbUAAAAASUVORK5CYII=');
+
+}
 * {
   text-shadow: 0 0 20px;
   font-family: headupdaisy;
 }
 html {
-  cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAMgAAADIAGP6560AAAAHdElNRQfnBA0VEBsaNUWhAAAAAW9yTlQBz6J3mgAAAbhJREFUSMft1EsvJFEUB/B/3arW3XTQzIxE0B1prxYmFhMzKxs7tu0RtthZEItZ+QA2xMpSQlpsxWNmg1mMmMwXGAt0REjEoxOPVNfj7xaazEpVLaycm1Tu5vxyzs2pAzzHpuZ8qcBPOFmLUX12uUQSwh+gotTI8lcqrPghJBBIVJ3uZcgNX4QDxGNnmTprm/zx1TvhABXxbKaW0P/IKjwTj8BlppmwAsYuuR4LeSLyQCMVS6FmyCrWPBEvACyNT8QqgvIqPAOCQuYV5P5KIuGW+L8CPJ7cFrmSLHA1nS+AsJzkCJNsYqt1It9irlB5ncgDScL8LJuo4AVzN7c32SvLvFv4HX61jfwclHHANlknmSVeLvR/G+rs+TLfNlnoqoWG+NHBjG3qxt60BNqZOyyvRLE8KoQrADXXR2R6YqTn3IraMOU4DSpYC6ZUuHpELR67Pd7+jg+o5+64Db3P5k8I99MoeqvT3YikyqIlW2Nn/KSPkf+guV8wKkIIdISgJorLG893DNLcH4VC1f0fJZYfuk0E8REt6eGpLhR1aP72WwhRRBCW9fjbkFBS6lxgUvOb/h7v8fZxDzhr0tNFNchWAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTA0LTEzVDIxOjE2OjI2KzAwOjAwo385CQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wNC0xM1QyMToxNjoyNiswMDowMNIigbUAAAAASUVORK5CYII='), auto;
+  cursor: var(--cur-pointer), auto;
   scroll-behavior: smooth;
 }
 body {
     background: #111;
     color: #fff;
-    background-image: url('https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1');
+    background-image: var(--main-background);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -134,7 +142,7 @@ ul a.a_icon:hover {background-color: unset;}
   .avatar {
     border-radius: 100%;
     width: 32px;
-    content: url("https://blackuspl.discowd.com/r/86-back.gif");
+    content: var(--temp-avatar-url);
     /* content: url("https://cdn.discordapp.com/attachments/1015289638740561941/1015368460815044669/ezgif.com-gif-maker_4.gif"); Must be fixed */
     /* content: url("https://cdn.discordapp.com/attachments/763842296697061377/1004035346306183248/ezgif.com-gif-maker_50fps.gif?ex=65f068c8&is=65ddf3c8&hm=66a90dc79c01b2bd736223c6bb1f24ff99098574d8254bbb521747d952f6a110"); */
   }
@@ -152,22 +160,6 @@ ul a.a_icon:hover {background-color: unset;}
     filter: brightness(0.5);
     object-fit: cover;
     pointer-events: none;
-  }
-  @font-face {
-    font-family: "PerfectDOS";
-    font-smooth: never;
-    -webkit-font-smoothing: none;
-    -moz-osx-font-smoothing: grayscale;
-    src: url("https://saltssaumure.github.io/pios-discord-theme/font/PerfectDosVga.ttf");
-  }
-  @font-face {
-    font-family: "HeadUpDaisy";
-    /*src: url("https://beatrun.ru/css/HeadUpDaisy.ttf");*/
-    src: url("/BDPlugins/HeadUpDaisy.ttf");
-  }
-  @font-face {
-    font-family: "Windows XP Tahoma";
-    src: url("/BDPlugins/windows-xp-tahoma.ttf");
   }
   #searchbar {
     display: none;
@@ -346,23 +338,28 @@ ul a.a_icon:hover {background-color: unset;}
     width: 14.8em;
     user-select: none;
   }
+  [style*='font-family: "JetBrains Mono", monospace']>div>span>span {
+    font-family: "JetBrains Mono", monospace;
+  }
+  @font-face {
+    font-family: "PerfectDOS";
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    src: url("https://saltssaumure.github.io/pios-discord-theme/font/PerfectDosVga.ttf");
+  }
+  @font-face {
+    font-family: "HeadUpDaisy";
+    /*src: url("https://beatrun.ru/css/HeadUpDaisy.ttf");*/
+    src: url("/BDPlugins/HeadUpDaisy.ttf");
+  }
+  @font-face {
+    font-family: "Windows XP Tahoma";
+    src: url("/BDPlugins/windows-xp-tahoma.ttf");
+  }
   /* 
-  @import url(https://saltssaumure.github.io/pios-discord-theme/piOStheme.css);
-  
 * {
 	text-shadow: 2px 0 10px var(--mainGlowColor), -2px 0 10px var(--mainGlowColor);
   --mainGlowColor: hsla(180, calc(1*100%), 50%, calc(0.7 * 1));
 }
 */
-/*
-.dropdown button{
-	font-family: PerfectDOS, monospace;
-}
-:root
-{
-    --glow-intensity: 1;            /* Intensity of text glow. Range: 0-1, default: 1 (100%) */
-/*    --crt-overlay: none;          /* CRT monitor overlay. Values: block (on) or none (off) */
-    /* The following effects are performance-heavy. */
-/*    --crt-scanline: none;          /* CRT animated scanline. Values: block (on) or none (off) */
-/*    --crt-flicker: none;            /* CRT monitor overlay flickering. Values: flicker (on) or none (off) */
-/*} */

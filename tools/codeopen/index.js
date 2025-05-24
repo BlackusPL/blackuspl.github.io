@@ -19,6 +19,8 @@ require.config({
             theme: 'vs-dark',
             wordWrap: "on",
             placeholder: "This is head code",
+            fontLigatures: true,
+            fontFamily: '"JetBrains Mono", monospace',
             "autoIndent": true,
             // "formatOnPaste": true,
             // "formatOnType": true
@@ -29,6 +31,8 @@ require.config({
           theme: 'vs-dark',
           wordWrap: "on",
           placeholder: "Elements that will be in body or html code",
+          fontLigatures: true,
+          fontFamily: '"JetBrains Mono", monospace',
           "autoIndent": true,
         });
         // when click then clear sessionstorage and values in head and body

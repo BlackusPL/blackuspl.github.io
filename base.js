@@ -123,6 +123,7 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
               <option>Windows XP Tahoma</option>
               <option>PerfectDOS</option>
               <option>Fredoka</option>
+              <option>JetBrains Mono</option>
             </optgroup>
             <optgroup label="Reset Font?">
               <option>Confirm</option>
