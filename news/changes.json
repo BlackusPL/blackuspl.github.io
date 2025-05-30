@@ -1,6 +1,12 @@
 {
     "id": [
         {
+            "date" : "30.05.2025",
+            "desc" : [
+                "[c] How Playlists works in Music Player"
+            ]
+        },
+        {
             "date" : "24.05.2025",
             "desc" : [
                 "[a] Code in Code Opener now have font Ligatures",
