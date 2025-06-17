@@ -1,6 +1,12 @@
 {
     "id": [
         {
+            "date" : "17.06.2025",
+            "desc" : [
+                "[r] DCF77 Decoder"
+            ]
+        },
+        {
             "date" : "30.05.2025",
             "desc" : [
                 "[c] How Playlists works in Music Player"
