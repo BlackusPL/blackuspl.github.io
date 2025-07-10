@@ -33,7 +33,11 @@ function ch_desc(e) {
     };
 
     if(e == 0) { // sprawdza czy wybrano najnowszą zmiane czy nie
-        document.querySelector('#change-obj + h3').innerHTML = `Latest Update ${changelogs.id[0].date + sharebtn}`;
+        if (changelogs.id[0].special_name !== null && changelogs.id[0]?.special_name !== undefined) {
+            document.querySelector('#change-obj + h3').innerHTML = `Latest ${changelogs.id[0].special_name + sharebtn}`;
+        } else {
+            document.querySelector('#change-obj + h3').innerHTML = `Latest Update ${changelogs.id[0].date + sharebtn}`;
+        }
         showelse()
     } else {
         document.querySelector('#change-obj + h3').innerHTML = `${changelogsname + sharebtn}`;

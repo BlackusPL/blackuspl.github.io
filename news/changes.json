@@ -1,6 +1,18 @@
 {
     "id": [
         {
+            "date" : "11.07.2025",
+            "special_name" : "<b style=\"color: lightgray\">AI CHAT UPDATE</b> 11.07.2025",
+            "desc" : [
+                "[c] Prompt panel position",
+                "[a] Max tokens that AI can use",
+                "[a] Function that checks if API uses chat/completions or completions",
+                "[f] Broken avatars in AI Chat",
+                "[f] Clicking 'Enter' on prompt doesn't save your settings",
+                "[f] Special name in changelog doesn't shows when is as latest update"
+            ]
+        },
+        {
             "date" : "17.06.2025",
             "desc" : [
                 "[r] DCF77 Decoder"

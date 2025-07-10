@@ -21,6 +21,13 @@
             .content {
               margin: 1em auto 4em auto !important;
             }
+            main {
+              margin-top: 2em;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              flex-direction: column;
+            }
         </style>
     </head>
     <body>
@@ -49,15 +56,14 @@
         </ul>
       </div>
     </div>
-   <br><br>
-    <div class="content">
-    <img class="avatar" style="width: 24px;"> <b>BlackusPL</b><pre>Hello! Use tools on the bottom to talk with ChatGPT. This page is still WIP and I recommend you to use <a href="https://chat.openai.com/chat/">https://chat.openai.com/chat/</a> than this. API Url that starts with `http` for some reason are converting to `https`.</pre>
-<div id="user"></div>      
-</div>
-<br><br>
 <main>
-  <div style="bottom: 5%; width: 100%;">
-    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div class="content">
+        <img class="avatar" style="width: 24px;"> <b>BlackusPL</b>
+        <pre>Hello! Use tools on the bottom to talk with ChatGPT. This page is still WIP and I recommend you to use <a href="https://chat.openai.com/chat/">https://chat.openai.com/chat/</a> than this. API Url that starts with `http` for some reason are converting to `https`.</pre>
+        <div id="user"></div>
+      </div>
+      <br><br>
+    <div class="ai-prompt">
       <div>
         <textarea type="text" placeholder="Prompt" id="textprompt" style="height: 2rem; width: 90%; max-width: 300px;"></textarea>
       </div>
@@ -70,6 +76,7 @@
       </div>
       <div>
         <input placeholder="api key" id="apikey" style="resize: none; width: 90%; max-width: 100px;" type="password" /><br>
+        <input placeholder="max tokens" id="max_tokens" style="resize: none; width: 90%; max-width: 100px;" type="number" />
       </div>
       <div id="capilist" style="display: none;">
         <input id="customapi" style="resize: none; max-width: 30vw;" type="input" placeholder="API url">Custom API</input><br>
@@ -82,7 +89,6 @@
         <button type="submit" onclick="ask(document.getElementById('textprompt').value)" id="send_prompt">Submit</button>
       </div>
     </div>
-  </div>
 </main>
 <footer>
   <p>Copyright © 2021-2025, BlackusPL | All rights reserved | DO NOT DISTRIBUTE</p>
