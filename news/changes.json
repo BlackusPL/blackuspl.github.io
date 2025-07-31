@@ -1,6 +1,15 @@
 {
     "id": [
         {
+            "date" : "31.07.2025",
+            "desc" : [
+                "[a] Latest Coub now will be automatically updated",
+                "[f] Url of image not parsing to field in TextOnImage",
+                "[c] Now items from Steam Workshop shows \"Subscribe\" instead of \"Download\"",
+                "[c] Some code changes"
+            ]
+        },
+        {
             "date" : "11.07.2025",
             "special_name" : "<b style=\"color: lightgray\">AI CHAT UPDATE</b> 11.07.2025",
             "desc" : [

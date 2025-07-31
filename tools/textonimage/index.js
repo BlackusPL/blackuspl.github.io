@@ -1,27 +1,30 @@
 function loadimage() {
     // Pobieranie parametrów z adresu URL
-    const urlParams = new URLSearchParams(window.location.search + window.location.hash);
-    const urlshotcut = (check, value) => (urlParams.get(check) === null || urlParams.get(check) === '') ? urlParams.set(check, value) : void 0;
-    let imageUrl = urlParams.get("url");
+    const urlParams = new URLSearchParams(window.location.search + window.location.hash),
+    urlshotcut = (check, value) => (urlParams.get(check) === null || urlParams.get(check) === '') ? urlParams.set(check, value) : void 0;
+
+    let
+      imageUrl = urlParams.get("url"),
+      text = urlParams.get("text"),
+      textsize = urlParams.get("textsize"),
+      textfont = urlParams.get("textfont"),
+      textx = urlParams.get("textx"),
+      texty = urlParams.get("texty"),
+      txtshadow = urlParams.get("shadow"),
+      txtshadow1 = txtshadow === 'true',
+      color = urlParams.get("color"),
+      sizex = urlParams.get("sizex"),
+      sizey = urlParams.get("sizey"),
+      cors = urlParams.get("cors"),
+      cors1 = cors === 'true';
+
     urlshotcut("text","null"); //if (urlParams.get("text") === null || urlParams.get("text") === '') urlParams.set("text", "null");
-    let text = urlParams.get("text");
     urlshotcut("textsize", 36);
-    let textsize = urlParams.get("textsize");
     urlshotcut("textfont", "Arial");
-    let textfont = urlParams.get("textfont");
     urlshotcut("textx", 200);
     urlshotcut("texty", 200);
-    let textx = urlParams.get("textx");
-    let texty = urlParams.get("texty");
-    let txtshadow = urlParams.get("shadow");
-    var txtshadow1 = txtshadow === 'true';
-    let color = urlParams.get("color");
     urlshotcut("sizex", 400);
     urlshotcut("sizey", 400);
-    let sizex = urlParams.get("sizex");
-    let sizey = urlParams.get("sizey");
-    let cors = urlParams.get("cors");
-    var cors1 = cors === 'true';
 
     // Tworzenie canvas 
     const canvas = document.createElement("canvas");
@@ -72,6 +75,7 @@ function loadimage() {
       console.log("%c[TextOnImage]" + " %cSuccesfully Loaded","color: rgb(58, 113, 193)","color: unset");
     };
     if (!!window.location.search)
+      $i('url').value = imageUrl,
       $i('sizex').value = sizex,
       $i('sizey').value = sizey,
       $i('text').value = text,
@@ -108,8 +112,8 @@ function loadimage() {
   function download() {
     try {
     var canvas = document.getElementById("image");
-      var url = canvas.toDataURL("image/png");
-      var link = document.createElement("a");
+      var url = canvas.toDataURL("image/png"),
+      link = document.createElement("a");
       link.href = url;
       link.download = "textonimage.png";
       document.body.appendChild(link);

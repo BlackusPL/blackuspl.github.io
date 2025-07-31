@@ -8,12 +8,12 @@ if(!window.WebGLRenderingContext) {
     throw new Error("What's the point of turning this off?")
 }
 
-document.querySelector('main').insertAdjacentHTML('beforebegin', `
+$q('main').insertAdjacentHTML('beforebegin', `
     <input id="toggle" class="toggle-btn" type="checkbox" style="display: none;" /><label class="fas" for="toggle">Show/Hide</label>
     <div id="custombg_window"></div>
     `);
 
-document.getElementById('custombg_window').innerHTML = `Set custom background<br>
+$i('custombg_window').innerHTML = `Set custom background<br>
 <input type="file" id="custombg" accept="image/*"><br>
 <input type="reset" id="reset"> Set Default</input><br>
 <input style="width: 40%; margin-left: -10%;" type="text" placeholder="Image Url" id="imagebgurl">
@@ -38,8 +38,7 @@ document.getElementById('custombg_window').innerHTML = `Set custom background<br
 // START Create playlists
 
 // cool but hard to read
-let [classics, nightcore, coubsong, phonk, othersong] = [[], [], [], [], []];
-let allTracks;
+let [classics, nightcore, coubsong, phonk, othersong] = [[], [], [], [], []], allTracks;
 // END Create playlists
 async function create_playlist() {
         conplaylists = await fetch('./playlists.json');
@@ -120,13 +119,13 @@ const webamp = new Webamp({
         milkdrop: { position: { x: 275, y: 0 }, size: [0, 9] }
     },
 });
-webamp.renderWhenReady(document.getElementById("app"));
+webamp.renderWhenReady($i("app"));
 webamp.setVolume(10); // default: 75 | 75 is too loud for me
 webamp.setSkinFromUrl('./dosamp.wsz');
 
 function changeFunc() {
-    var playlists = document.getElementById("playlists");
-    var selectedValue = playlists.options[playlists.selectedIndex].value;
+    var playlists = $i("playlists"),
+    selectedValue = playlists.options[playlists.selectedIndex].value;
     switch (selectedValue) {
         case 'nightcore':
             webamp.setTracksToPlay(nightcore);
@@ -136,7 +135,7 @@ function changeFunc() {
             break;
         case 'coub':
             // START Create single array // that contain coubsong array and othersong with number
-            var allcoub = coubsong.concat(/*[othersong[15]]*/);
+            allcoub = coubsong.concat(/*[othersong[15]]*/);
             // END Create single array //
             webamp.setTracksToPlay(allcoub);
             break;
@@ -176,7 +175,7 @@ function changeFunc() {
 if (isNaN(localStorage.getItem('CustomBG'))) $i('imagebgurl').value = `${localStorage.CustomBG}`;
 // when click Save & Load then create object named CustomBG with url to background and set new background from CustomBG
 $i('saveload').addEventListener('click', function () {
-    var BG = document.getElementById('imagebgurl').value;
+    var BG = $i('imagebgurl').value;
     localStorage.setItem('CustomBG',BG);
 // when input has spaces or = null then removes object named CustomBG and set default background, if doesnt includes spaces or != null then set background from CustomBG
     if (localStorage.getItem('CustomBG').includes(' ') || localStorage.getItem('CustomBG') === '') {localStorage.removeItem('CustomBG'); document.body.style.backgroundImage = `url(https://i.ytimg.com/vi/X10UD5nQDCs/maxresdefault.jpg)`;} 
@@ -185,7 +184,9 @@ $i('saveload').addEventListener('click', function () {
 // END set Background with url //
 
 // code by Byushee#5808
-const image_input = document.querySelector("#custombg");
+const image_input = $q("#custombg"),
+image_output = $q("#reset"), // button to clear user settings
+vid_bg_dark = $q("#vid_bg_dark");
 var uploaded_image;
 
 image_input.addEventListener('change', function () {
@@ -206,21 +207,17 @@ image_input.addEventListener('change', function () {
     reader.readAsDataURL(this.files[0]);
 });
 
-// button to clean user settings
-const image_output = document.querySelector("#reset");
-
 image_output.addEventListener('click', function () {
         document.body.style.backgroundImage = `url(https://i.ytimg.com/vi/X10UD5nQDCs/maxresdefault.jpg)`;
         document.body.style.backgroundBlendMode = 'overlay';
         // START my code
         localStorage.removeItem('CustomBG');
-        document.getElementById('imagebgurl').value = '';
+        $i('imagebgurl').value = '';
         $i('videobg').src = '';
         // END my code
     });
 
-const vid_bg_dark = document.querySelector("#vid_bg_dark");
 vid_bg_dark.addEventListener('change', function () {
-    document.querySelector('body > video').setAttribute('style',`filter: brightness(${this.value}%);`)
+    $q('body > video').setAttribute('style',`filter: brightness(${this.value}%);`)
 });
 console.log("%c[Music] %c(v05012023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");

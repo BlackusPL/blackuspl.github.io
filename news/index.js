@@ -1,4 +1,4 @@
-document.querySelector('main div').insertAdjacentHTML('afterend', `<div id="change-obj">
+$q('main div').insertAdjacentHTML('afterend', `<div id="change-obj">
     <label for="change-list">Changelogs --> </label>
     <select id="change-list" name="change-list" onchange="selchangelog()">
     </select>
@@ -23,24 +23,24 @@ fetch('./changes.json')
 function ch_desc(e) {
     changelogs.id[e]?.special_name == null ? changelogsname = "Update " + changelogs.id[e].date : changelogsname = changelogs.id[e].special_name;
     var chnagelogslink = "update-" + changelogs.id[e].date.replaceAll(".20","").replaceAll(".", "");
-    document.querySelector('#change-obj + h3').id = chnagelogslink; // Wpisuje link z najnowszej zmiany
+    $q('#change-obj + h3').id = chnagelogslink; // Wpisuje link z najnowszej zmiany
 
     function showelse() { 
-        document.querySelector('#change-obj + h3 + .changelog').innerHTML = ''; // czyści poprzedni wyświetlony opis
-        document.getElementsByClassName('share-btn')[0].addEventListener('click', function () {
+        $q('#change-obj + h3 + .changelog').innerHTML = ''; // czyści poprzedni wyświetlony opis
+        $c('share-btn')[0].addEventListener('click', function () {
             copyid(this.parentElement.id) // dodaje kopiowanie linku do danej zmainy
         });
     };
 
     if(e == 0) { // sprawdza czy wybrano najnowszą zmiane czy nie
         if (changelogs.id[0].special_name !== null && changelogs.id[0]?.special_name !== undefined) {
-            document.querySelector('#change-obj + h3').innerHTML = `Latest ${changelogs.id[0].special_name + sharebtn}`;
+            $q('#change-obj + h3').innerHTML = `Latest ${changelogs.id[0].special_name + sharebtn}`;
         } else {
-            document.querySelector('#change-obj + h3').innerHTML = `Latest Update ${changelogs.id[0].date + sharebtn}`;
+            $q('#change-obj + h3').innerHTML = `Latest Update ${changelogs.id[0].date + sharebtn}`;
         }
         showelse()
     } else {
-        document.querySelector('#change-obj + h3').innerHTML = `${changelogsname + sharebtn}`;
+        $q('#change-obj + h3').innerHTML = `${changelogsname + sharebtn}`;
         showelse()
     };
 
@@ -65,7 +65,7 @@ function ch_desc(e) {
                 i = i.replace(/\[(p|P)]/, '• [Planned]');
                 break;
         }
-        document.querySelector('#change-obj + h3 + .changelog').innerHTML += i + "<br>";
+        $q('#change-obj + h3 + .changelog').innerHTML += i + "<br>";
     };
 };
 
@@ -74,7 +74,7 @@ function loadchangelog() {
     var i = changelogs.id.length - 1; // ilość zmian
     ch_desc(0); // Wypisuje opis najnowszej zmiany
     function datalist(isLatest) {
-        document.getElementById('change-list').insertAdjacentHTML('afterbegin', `<option value="${i}">${isLatest}</option>`);
+        $i('change-list').insertAdjacentHTML('afterbegin', `<option value="${i}">${isLatest}</option>`);
     }
     while (i >= 0) { // Wypisuje wszystkie zmiany do pól wyboru od największej liczby do najmniejszej
         if (changelogs.id[i].special_name !== null && changelogs.id[i]?.special_name !== undefined) {
@@ -84,14 +84,14 @@ function loadchangelog() {
         }
         i--;
     };
-    document.getElementById('change-list')[0].selected = true; // Wybiera najnowsze zmiany bo wybiera najstarsze
-    document.getElementsByClassName('share-btn')[0].addEventListener('click', function () {
+    $i('change-list')[0].selected = true; // Wybiera najnowsze zmiany bo wybiera najstarsze
+    $c('share-btn')[0].addEventListener('click', function () {
         copyid(this.parentElement.id) // dodaje kopiowanie linku do danej zmainy
     })
 };
 
 function selchangelog() {
-    var e = document.getElementById('change-list').value;
+    var e = $i('change-list').value;
     ch_desc(e);
 }
 function copyid(link) {

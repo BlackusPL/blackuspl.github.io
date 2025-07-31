@@ -489,5 +489,13 @@
             "tags": ["phonk"]
         },
         "url": "./local_music/1241026_ENIGMA.mp3"
+    },
+    {
+        "metaData": {
+            "artist": "Morgan Wallen",
+            "title": "Love Somebody (97Kickstvr Remix)",
+            "tags": ["phonk"]
+        },
+        "url": "https://cdn.revoltusercontent.com/attachments/fkK-JiIii9ZmGZ2zgJVrj7NqxV5h23Ti3jyXkb9oDS/Morgan%20Wallen%20-%20Love%20Somebody%20(97Kickstvr%20Remix)%20%5Bchill%20wave%5D.mp3"
     }
 ]

@@ -1,32 +1,30 @@
+// code by cyan-2048, edited by BlackusPL
+const
+  $i = (e) => document.getElementById(e),
+  $q = (e) => document.querySelector(e),
+  $c = (e) => document.getElementsByClassName(e),
+  say = console.log,
+  today = new Date(Date.now()),
+  cookie = (e) => document.cookie = e,
+  xhr = new XMLHttpRequest();
+
 // Inserts Jquery ES5
 
-var xhr = new XMLHttpRequest();
 xhr.open('GET', `${window.location.origin}/tools/textonimage/jquery.min.js`);
 xhr.onload = function () {
   if (xhr.status === 200) {
     var jqueryjs = document.createElement('script');
-    jqueryjs.textContent = xhr.responseText;
+    jqueryjs.type = 'text/javascript';
+    jqueryjs.src = `${window.location.origin}/tools/textonimage/jquery.min.js`;
     document.head.appendChild(jqueryjs);
   }
 };
 xhr.send();
 
-// code by cyan-2048
-const $i = (e) => document.getElementById(e), $q = (e) => document.querySelector(e); $c = (e) => document.getElementsByClassName(e);
-
-const today = new Date(Date.now());
-// void version ES6
-/*
-async () => {
-  await import('https://blackuspl.github.io/DarknessAir/textonimage/jquery.min.js');
-  // Your code here...
-};
-// you can use only import() but still will be void
-*/
 let langtime = 1;
 // When selected language English then removes cookie
 function jezykoff() {
-  document.cookie = "language=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC";
+  cookie("language=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC");
   //localStorage.removeItem('language');
   window.location.reload();
 }
@@ -35,7 +33,7 @@ function jezykoff() {
 function jezyk(lang) {
   var data = new Date();
   data.setDate(data.getDate() + 3);
-  document.cookie = (`language=${lang};path=/;expires=` + data);
+  cookie(`language=${lang};path=/;expires=` + data);
   //localStorage.setItem('language', 'pl');
   //window.location.reload();
   if (langtime == 0) {
@@ -258,27 +256,30 @@ switch (fonttype?.type) {
 //
 
 // creates commands to able to use in console
+let version = "1.4";
 setTimeout(function(){
-  var version = "1.3";
-  console.log("%c[Console] %cv"+ version +" %cSuccesfully Loaded","color: rgb(58, 113, 193)","color: gray; font-size: 75%","color: white");
-  console.log("%c Advanced %cConsole v" + version +` by BlackusPL %c ${window.location.origin} `, "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
-  // console.log("%c Console wasn't cleared " , "background: #000000;color: orange;font-size: 1.2em")
-  console.log("%c Commands under DA.help() " , "background: #000000;color: white;font-size: 1em;word-break: all");
+  say("%c[Console] %c(v"+ version +") %cSuccesfully Loaded","color: rgb(58, 113, 193)","color: gray; font-size: 75%","color: white");
+  say("%c Advanced %cConsole v" + version +` by BlackusPL %c ${window.location.origin} `, "background: #000000;color: #7EBE45" , "background: #000000;color: #7EBE45" , "");
+  say("%c Commands under DA.help() " , "background: #000000;color: white;font-size: 1em;word-break: all");
   // window.history.replaceState('#gsc.tab=0', '', ' ')
   /* document.querySelector('div span[style="white-space:nowrap"]').remove() */
 },1200);
 const DA = {
   help() {
-  console.log("%c Commands ", "background: #000;color: red;font-size: 1.5em");
-  console.log("%c DA.help() - Commands list " , "background: #000;color: white;font-size: 1.2em");
-  console.log("%c DA.clear() - Clear console " , "background: #000;color: white;font-size: 1.2em");
-  console.log("%c DA.version() - Console version " , "background: #000;color: white;font-size: 1.2em");
+  say("%c Commands ", "background: #000;color: red;font-size: 1.5em");
+  say("%c DA.help() - Commands list " , "background: #000;color: white;font-size: 1.2em");
+  say("%c DA.clear() - Clear console " , "background: #000;color: white;font-size: 1.2em");
+  say("%c DA.say(<text>) - Output text " , "background: #000;color: white;font-size: 1.2em");
+  say("%c DA.version() - Console version " , "background: #000;color: white;font-size: 1.2em");
 },
   clear() {
   console.clear();
 },
   version() {
-    console.log("%cVersion: %c1.3" , "color: rgb(58, 113, 193)","color: gray;");
+    say("%cVersion: %c"+version , "color: rgb(58, 113, 193)","color: gray;");
+  },
+  say(content) {
+    say(content);
   }
 };
 
@@ -288,10 +289,10 @@ if ($q("#tab")) {
 $q("#tab").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em; padding: 1em; align-self: center;"></div>`);
 startTime();
 function startTime() {
-  let today = new Date(Date.now());
-  let h = today.getHours();
-  let m = today.getMinutes();
-  let s = today.getSeconds();
+  let today = new Date(Date.now()),
+  h = today.getHours(),
+  m = today.getMinutes(),
+  s = today.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
   $i('txt').innerHTML = 'Time: ' + h + ":" + m + ":" + s;
@@ -299,16 +300,5 @@ function startTime() {
   }
 }
 
-/*fetch('https://coub.com/rss/channel/blackuspl')
-.then(response => response.text())
-.then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-.then(data => {
-var test = data;
-let pubdat = test.querySelectorAll('pubDate')[0].textContent;
-if (pubdat > test.querySelectorAll('pubDate')[1].textContent) {
-    console.log(test.querySelectorAll('link')[2].textContent);
-} else {console.log(test.querySelectorAll('link'))[1].textContent;}
-})*/
-
 // Send when everything loads
-console.log("%c[Base] %c(v26052023) %cSuccesfully Loaded","color: purple","color: gray; font-size: 75%","color: white");
+say("%c[Base] %cSuccesfully Loaded","color: purple","color: white");

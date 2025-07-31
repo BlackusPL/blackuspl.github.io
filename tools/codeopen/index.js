@@ -42,9 +42,9 @@ require.config({
             th.setValue("")
             tb.setValue("");
         };
-        var selector = document.querySelector('#codeplace ~ div select');
-        var submit = document.querySelector("#afterselectcon ~ button:nth-of-type(3)");
-        var pretty = id('pretty');
+        var selector = document.querySelector('#codeplace ~ div select'),
+            submit = document.querySelector("#afterselectcon ~ button:nth-of-type(3)"),
+            pretty = id('pretty');
         //t.setValue(document.querySelector("pre").innerText);
         //document.querySelector("pre").remove();
         function choosen() {

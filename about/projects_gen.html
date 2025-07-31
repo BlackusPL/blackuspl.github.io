@@ -40,23 +40,25 @@
 </body>
 <script>
     const urlParams = new URLSearchParams(window.location.search);
-    var url = urlParams.get("url");
-    var url_download = urlParams.get("url_download");
-    var appname = urlParams.get("name");
-    var platform = urlParams.get("plat");
-    var desc = urlParams.get("desc");
-    var plat_ico = urlParams.get("plat_ico");
-    var ico = urlParams.get("ico");
+    var url = urlParams.get("url"),
+    url_download = urlParams.get("url_download"),
+    appname = urlParams.get("name"),
+    platform = urlParams.get("plat"),
+    desc = urlParams.get("desc"),
+    plat_ico = urlParams.get("plat_ico"),
+    ico = urlParams.get("ico");
+    var main_text = document.getElementsByClassName('main_text')[0].children[0];
+    main_text.setAttribute("href", url);
+    main_text.innerText = 'Download ' + appname;
     switch(plat_ico) {
         case 'github':
         document.getElementById('widget').style = "background-image: url(https://icones.pro/wp-content/uploads/2021/06/icone-github-grise.png)";
         break;
         case 'steam':
         document.getElementById('widget').style = "background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/steam_ico.png)";
+        main_text.innerText = 'Subscribe ' + appname;
+        document.getElementsByClassName('btn_addtocart_content')[0].innerText = 'Subscribe';
     }
-    var main_text = document.getElementsByClassName('main_text')[0].children[0];
-    main_text.setAttribute("href", url);
-    main_text.innerText = 'Download ' + appname;
     var tail = document.getElementsByClassName('tail')[0].children[0];
     tail.setAttribute("href", url);
     tail.children[0].innerText = 'on ' + platform;

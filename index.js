@@ -164,3 +164,21 @@ function discordprofile(id) {
     xhr.send();
   };
 // end
+
+// Fetch Coub RSS feed and get the latest video link
+// This is a workaround for CORS issues, using a proxy
+if (window.location.origin == ("https://darknessair.ovh","https://127.0.0.1","https://blackuspl.github.io","https://blackuspl.local") && document.querySelectorAll('.widget iframe')[1]) {
+fetch('https://corsproxy.io/?https://coub.com/rss/channel/blackuspl')
+.then(response => response.text())
+.then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+.then(data => {
+var test = data;
+let pubdat = (n) => test.querySelectorAll('pubDate')[n].textContent;
+if (pubdat(0) > pubdat(1)) { // if 1st video date is newer than 2nd
+    emblink = test.querySelectorAll('guid')[0].textContent.split('/')[4];
+} else {
+  emblink = test.querySelectorAll('guid')[1].textContent.split('/')[4];
+}
+document.querySelectorAll('.widget iframe')[1].src = "https://coub.com/embed/" + emblink + "?muted=false&autostart=false&originalSize=false&startWithHD=true&hideTopBar=true&startAt=0&loop=true";
+})
+}
