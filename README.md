@@ -16,12 +16,24 @@ Welcome in my website where you can listen music, use my projects and download 5
 
 ## Why you create it?
 
-I was inspired in programming and I wanted make usefull website for good reason.
+I was inspired in programming and I wanted make usefull website for good reason.\
 My main target is to create site where users can knows more about me and test my project who I created for fun.
 
+## Features
+
+My websites offers tools like:
+- [AI](https://blackuspl.github.io/tools/ai)
+- [Code Opener](https://blackuspl.github.io/tools/codeopen)
+- [Fake Terminal](https://blackuspl.github.io/tools/terminal)
+- [Text on Image](https://blackuspl.github.io/tools/textonimage)
+
+It also offers [Music Player](https://blackuspl.github.io/music) with support for custom radio and some archived games/apps.\
+Thats not over, it also have funny link under https://blackuspl.github.io/papiez.jpg that displays gif with video player on discord.\
+And at the end, here is [Fake Windows Update](https://blackuspl.github.io/BDPlugins/win-update-pl) if you dont want to work in school.
 
 ## Copyright
 
-> **Warning**
+> [!WARNING]
 > 
-> Dont try copy my website or you will be punished!!!
+> Dont try copy my website or you will be punished!!!\
+> BetterDiscord plugins are outdated and will not be fixed
