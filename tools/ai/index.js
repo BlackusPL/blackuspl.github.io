@@ -36,7 +36,7 @@ $i('textprompt').addEventListener('keydown', function (event) {
 
 $i('apilist').addEventListener('change', function () {
  let capi = $i('capilist').style = 'display: none';
-  switch(document.getElementsByName('api')[0].selectedIndex) {
+  switch($i('apilist')[0].selectedIndex) {
     case 2:
       $i('capilist').style = '';
       apikey.style.display = "";
@@ -69,12 +69,12 @@ function ask(prompt) {
     switch($i('apilist').value) {
       case 'OpenAI':
         api = 'https://api.openai.com/v1/chat/completions';
-        model = "gpt-3.5-turbo";
+        model = "gpt-mini";
         key = 'Bearer ' + $i('apikey').value;
       break;
-      case 'Pawan.Krd':
-        api = 'https://api.pawan.krd/cosmosrp/v1/chat/completions';
-        model = "gpt-3.5-turbo";
+      case 'ch.at':
+        api = 'https://ch.at/v1/chat/completions';
+        model = "claude-4-sonnet";
         key = " ";
       break;
       case 'customapi':
@@ -89,9 +89,8 @@ function ask(prompt) {
     }
     max_tokens = $i('max_tokens').value
     // Metoda do /chat/completions i /completions
-    var chat = JSON.stringify({
+    var chat = {
       model,
-      max_tokens,
       'messages': [
         {
           'role': 'system',
@@ -102,17 +101,17 @@ function ask(prompt) {
           'content': prompt
         }
       ]
-    })
-    var compl = JSON.stringify({
+    }
+    var compl = {
       model,
       max_tokens,
       prompt
-    })
+    }
     
-    if (/chat\/completions/gm.test($i("customapi").value)) {
-      msg_prompt = chat;
+    if (/chat\/completions/gm.test($i("customapi").value) || $i("apilist").value == "ch.at") {
+      var msg_prompt = chat;
     } else {
-      msg_prompt = compl;
+      var msg_prompt = compl;
     };
       $.ajax({
         url: api,
@@ -122,9 +121,9 @@ function ask(prompt) {
           'Authorization': key
         },
         contentType: 'application/json',
-        data: msg_prompt
+        data: JSON.stringify(msg_prompt)
       }).done(function(response) {
-        var msg = /chat\/completions/gm.test($i("customapi").value) ? response.choices[0].message.content : response.choices[0].text;
+        var msg = /chat\/completions/gm.test($i("customapi").value) || $i("apilist").value == "ch.at" ? response.choices[0].message.content : response.choices[0].text;
         userEle.insertAdjacentHTML('beforebegin', `<img src="https://cdn.oaistatic.com/assets/favicon-180x180-od45eci6.webp" style="width: 24px;"> <b>Assistant</b><code>${marked.parse(msg)}</code>`);
         $i('loading').remove();
         //console.log(response);

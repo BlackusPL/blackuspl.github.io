@@ -28,6 +28,9 @@
               justify-content: space-between;
               flex-direction: column;
             }
+            .ai-prompt div {
+              display: grid;
+            }
         </style>
     </head>
     <body>
@@ -59,7 +62,7 @@
 <main>
       <div class="content">
         <img class="avatar" style="width: 24px;"> <b>BlackusPL</b>
-        <pre>Hello! Use tools on the bottom to talk with ChatGPT. This page is still WIP and I recommend you to use <a href="https://chat.openai.com/chat/">https://chat.openai.com/chat/</a> than this. API Url that starts with `http` for some reason are converting to `https`.</pre>
+        <pre>Hello! Use tools on the top to talk with selected model. This page is still WIP and I recommend you to use <a href="https://chatgpt.com">https://chatgpt.com</a> or any other AI than this. API Url that starts with `http` for some reason are converting to `https`.</pre>
         <div id="user"></div>
       </div>
       <br><br>
@@ -69,18 +72,18 @@
       </div>
       <div>
         <select name="api" id="apilist">
-          <option value="OpenAI">OpenAI - 3.5 turbo</option>
-          <option value="Pawan.Krd">Pawan.Krd - no key</option>
+          <option value="OpenAI">OpenAI - 4.1 mini</option>
+          <option value="ch.at">ch.at - no key</option>
           <option value="customapi">Custom API</option>
         </select>
       </div>
       <div>
-        <input placeholder="api key" id="apikey" style="resize: none; width: 90%; max-width: 100px;" type="password" /><br>
+        <input placeholder="api key" id="apikey" style="resize: none; width: 90%; max-width: 100px;" type="password" />
         <input placeholder="max tokens" id="max_tokens" style="resize: none; width: 90%; max-width: 100px;" type="number" />
       </div>
       <div id="capilist" style="display: none;">
-        <input id="customapi" style="resize: none; max-width: 30vw;" type="input" placeholder="API url">Custom API</input><br>
-        <input id="model" style="resize: none; max-width: 30vw;" type="input" placeholder="AI model">AI model</input>
+        <input id="customapi" style="resize: none; max-width: 30vw;" type="input" placeholder="API url">Custom API
+        <input id="model" style="resize: none; max-width: 30vw;" type="input" placeholder="AI model">AI model
       </div>
       <div>
         <input placeholder="avatar" id="avatarurl" style="resize: none; max-width: 30vw;" type="text" />

@@ -1,6 +1,16 @@
 {
     "id": [
         {
+            "date" : "06.10.2025",
+            "desc" : [
+                "[c] Video background on some pages",
+                "[c] Free ai chat",
+                "[i] (Soon) Models for free ai chat",
+                "[i] Updated Chatgpt model (from gpt-3.5-turbo to gpt-mini)",
+                "[i] Some changes to README.md"
+            ]
+        },
+        {
             "date" : "31.07.2025",
             "desc" : [
                 "[a] Latest Coub now will be automatically updated",
