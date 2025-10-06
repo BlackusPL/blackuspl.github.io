@@ -21,7 +21,7 @@ xhr.onload = function () {
 };
 xhr.send();
 
-let langtime = 1;
+// let langtime = 1;
 // When selected language English then removes cookie
 function jezykoff() {
   cookie("language=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC");
@@ -36,12 +36,12 @@ function jezyk(lang) {
   cookie(`language=${lang};path=/;expires=` + data);
   //localStorage.setItem('language', 'pl');
   //window.location.reload();
-  if (langtime == 0) {
+  //if (langtime == 0) {
     window.location.reload();
-  } else {
-    langtime = 0;
-    LanguageLoader();
-  }
+  //} else {
+  //  langtime = 0;
+  //  LanguageLoader();
+  //}
 }
 // JS Navbar = easier editing + less resources [/BDPlugins/test.png]
 $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items" id="tab">
@@ -61,17 +61,17 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
       </li>
       <li class="navbar-link">
         <a tabindex="0" href="/games" class="navbar-item">
-          <span>Games</span>
+          <span lid="games">Games</span>
         </a>
       </li>
       <li class="navbar-link">
         <a tabindex="0" href="/music" class="navbar-item">
-          <span>Music Player</span>
+          <span lid="music">Music Player</span>
         </a>
       </li>
       <li class="navbar-link dropdown">
         <a class="navbar-item">
-          <span>Social Links ↡ </span>
+          <span lid="social">Social Links ↡ </span>
         </a>
         <div class="showtasks">
           <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>
@@ -82,38 +82,38 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
       </li>
       <li class="navbar-link dropdown">
         <a href="/tools" class="navbar-item">
-          <span>Tools ↡ </span>
+          <span lid="tools">Tools ↡ </span>
         </a>
         <div class="showtasks">
-          <a href="/about">My Projects</a>
-          <a href="/gallery">Gallery</a>
+          <a href="/about" lid="about">My Projects</a>
+          <a href="/gallery" lid="gallery">Gallery</a>
           <a href="/BDPlugins">BDPlugins</a>
           <a href="/tools/textonimage">TextonImage</a>
-          <a href="/tools/ai">AI Chat</a>
-          <a href="/tools/codeopen">Code Opener</a>
+          <a href="/tools/ai" lid="ai">AI Chat</a>
+          <a href="/tools/codeopen" lid="codeopen">Code Opener</a>
         </div>
       </li>
       <li class="navbar-link">
         <a tabindex="0" href="/news" class="navbar-item">
-          <span>News</span>
+          <span lid="news">News</span>
         </a>
       </li>
       <li class="navbar-link dropdown">
         <a class="navbar-item">
-          <span>Languages ↡ </span>
+          <span lid="languages">Languages ↡ </span>
         </a>
         <div class="showtasks">
-          <a onclick="jezyk('pl')">Polish</a>
-          <a onclick="jezyk('de')">German</a>
-          <a onclick="jezykoff()">English</a>
+          <a onclick="jezyk('pl')" lid="pl">Polish</a>
+          <a onclick="jezyk('de')" lid="de">German</a>
+          <a onclick="jezykoff()" lid="en">English</a>
         </div>
       </li>
       <li class="navbar-link dropdown">
         <a class="navbar-item">
-          <span>Fonts ↡ </span>
+          <span lid="fonts">Fonts ↡ </span>
         </a>
         <div class="showtasks">
-          <a onclick="CustomFont()">Custom Font</a>
+          <a onclick="CustomFont()" lid="custom-font">Custom Font</a>
           <a><select id="Fonts" onchange="PresFont(this.value)">
             <optgroup label="Presets">
               <option>HeadUpDaisy</option>
@@ -123,12 +123,12 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
               <option>JetBrains Mono</option>
             </optgroup>
             <optgroup label="Reset Font?">
-              <option>Confirm</option>
+              <option lid="confirm">Confirm</option>
             </optgroup>
           </select></a>
         </div>
       </li>
-      <a tabindex="0" href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
+      <a tabindex="0" href="https://cse.google.com/cse?cx=f57e79ca12bca49ec" lid="search">Search</a>
       <li class="navbar-link">
         <div id="google_translate_element" class="navbar-item">
           <noscript>You need to enable JavaScript to able to use Translator.</noscript>
@@ -147,7 +147,7 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
     return finded;
   }*/
 const cookievaluefinder = (coname) => document.cookie.split("; ").find((lang) => lang.startsWith(`${coname}=`))?.split("=")[1];
-var zmien, regex, key, textnodes, node, s;
+var zmien//, regex, key, textnodes, node, s;
 function LanguageLoader() {
   switch(cookievaluefinder('language')) {
     case 'pl':
@@ -166,11 +166,14 @@ function LanguageLoader() {
       SetZmien();
     });
       break;
+    default:
+      SetZmien();
+      break;
   }
 }
   LanguageLoader();
   function SetZmien() {
-  regex = {};
+  /*regex = {};
   for (key in zmien) {
     regex[key] = new RegExp(key, 'g');
   }
@@ -184,7 +187,24 @@ function LanguageLoader() {
       s = s.replace(regex[key], zmien[key]);
     }
     node.data = s;
-  }
+  }*/
+    // Znajdź wszystkie elementy z atrybutem lid
+    const elementsWithLid = document.querySelectorAll('[lid]');
+    
+    elementsWithLid.forEach(element => {
+      const key = element.getAttribute('lid');
+      try {
+        // Sprawdź czy mamy tłumaczenie dla tego klucza
+        if (zmien[key]) {
+          element.innerHTML = zmien[key];
+        }
+        // Zawsze usuń atrybut lid, niezależnie czy znaleziono tłumaczenie czy nie
+        element.removeAttribute('lid');
+      } catch (e) {
+        // Mimo błędu, usuń atrybut lid
+        element.removeAttribute('lid');
+      }
+    });
 }
 if (localStorage.getItem('language') == 'pl') {
   function googleTranslateElementInit() {

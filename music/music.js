@@ -9,31 +9,31 @@ if(!window.WebGLRenderingContext) {
 }
 
 $q('main').insertAdjacentHTML('beforebegin', `
-    <input id="toggle" class="toggle-btn" type="checkbox" style="display: none;" /><label class="fas" for="toggle">Show/Hide</label>
+    <input id="toggle" class="toggle-btn" type="checkbox" style="display: none;" /><label class="fas" for="toggle" lid="show/hide">Show/Hide</label>
     <div id="custombg_window"></div>
     `);
 
-$i('custombg_window').innerHTML = `Set custom background<br>
+$i('custombg_window').innerHTML = `<span lid="set_custom_background">Set custom background</span><br>
 <input type="file" id="custombg" accept="image/*"><br>
-<input type="reset" id="reset"> Set Default</input><br>
+<input type="reset" id="reset"><span lid="set_default"> Set Default</span><br>
 <input style="width: 40%; margin-left: -10%;" type="text" placeholder="Image Url" id="imagebgurl">
 <input type="button" value="Save & Load" id="saveload"><br>
-<input type="number" max="100" min="0" id="vid_bg_dark" style="width: 20%;" value="100"> VideoBG bright<br>
-<input type="checkbox" id="experiments" title="Disables only image upload set" >Experiments function</input>
+<input type="number" max="100" min="0" id="vid_bg_dark" style="width: 20%;" value="100"><span lid="v_bright"> VideoBG bright</span><br>
+<input type="checkbox" id="experiments" title="Disables only image upload set"><span lid="exp_func">Experiments function</span></input>
 <!--  <audio src="Dadada (Slowed version).DAA" controls controlslist="nodownload noplaybackrate novolume" /> -->
 <br><br>
-<label for="playlists">Choose playlist:</label>
+<label for="playlists" lid="choose_playlist">Choose playlist:</label>
 <select name="playlists" style="width: 200px; text-align: center;" id="playlists" onchange="changeFunc();">
-    <option>---Select Playlist---</option>
+    <option lid="choose_playlist-op">---Select Playlist---</option>
     <option value="all">All</option>
     <option value="phonk">Phonk</option>
     <option value="phonk_radio">Phonk Radio</option>
     <option value="classics">Classics</option>
     <option value="nightcore">Nightcore</option>
     <option value="coub">Coub songs</option>
-    <option value="custom">Custom Radio</option>
+    <option value="custom" lid="custom_radio">Custom Radio</option>
 </select>
-<button onclick="webamp.reopen()">Reopen webamp</button>`;
+<button onclick="webamp.reopen()" lid="reopen_webamp">Reopen webamp</button>`;
 
 // START Create playlists
 

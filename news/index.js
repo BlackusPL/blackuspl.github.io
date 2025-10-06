@@ -1,5 +1,5 @@
 $q('main div').insertAdjacentHTML('afterend', `<div id="change-obj">
-    <label for="change-list">Changelogs --> </label>
+    <label for="change-list" lid="changelogs">Changelogs --> </label>
     <select id="change-list" name="change-list" onchange="selchangelog()">
     </select>
   </div>
