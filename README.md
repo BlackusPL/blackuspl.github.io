@@ -8,7 +8,7 @@
 [![Youtube](https://img.shields.io/youtube/channel/views/UCIDoGSUVBBE9kfXawsvJyQA?label=Youtube%20Views&style=plastic&logo=youtube&logoColor=red)](https://www.youtube.com/c/BlackusPL)
 [![Discord](https://img.shields.io/discord/762615939723690016?logo=discord&logoColor=white&label=Discord&labelColor=697ec4&color=7289da&link=https%3A%2F%2Fdiscord.com%2Finvite%2F4P8cAWqkqY
 )](https://discord.com/invite/4P8cAWqkqY)
-[![Revolt](https://img.shields.io/revolt/invite/amgyN8bh?logo=revolt.chat&label=Revolt&labelColor=black&color=grey
+[![Stoat](https://img.shields.io/revolt/invite/amgyN8bh?logo=revolt.chat&label=Revolt&labelColor=black&color=grey
 )](https://app.revolt.chat/invite/amgyN8bh)
 </div>
 

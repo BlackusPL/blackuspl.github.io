@@ -77,7 +77,7 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
           <a href="https://www.youtube.com/c/BlackusPL">Youtube</a>
           <a href="https://discord.com/users/410243501494894603">Discord</a>
           <a href="https://github.com/BlackusPL">Github</a>
-          <a href="https://app.revolt.chat/invite/amgyN8bh">Revolt</a>
+          <a href="https://app.revolt.chat/invite/amgyN8bh">Stoat</a>
         </div>
       </li>
       <li class="navbar-link dropdown">
@@ -138,7 +138,7 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
   </div>
   `); $c('navbar-items')[0]?.remove();
   window.location.pathname != "/" ? undefined : $q('[class="navbar-link"]:has(#google_translate_element)').insertAdjacentHTML("afterend", `<a tabindex="0" class="secret" href="/secret.html">Secret</a>`);
-  if ($q("footer p")) $q("footer p").textContent = `Copyright © 2021${today.getFullYear() > 2021 ? -today.getFullYear() : ''}, BlackusPL | All rights reserved | DO NOT DISTRIBUTE`;
+  if ($q("footer p")) $q("footer p").innerHTML = `Copyright © 2021${today.getFullYear() > 2021 ? -today.getFullYear() : ''}, BlackusPL | <span lid="footer_part">All rights reserved | DO NOT DISTRIBUTE</span>`;
 
 //if (localStorage.getItem('language') == 'pl') {
   // function to get value of selected language in cookie
