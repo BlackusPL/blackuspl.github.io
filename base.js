@@ -35,7 +35,6 @@ function jezyk(lang) {
   data.setDate(data.getDate() + 3);
   cookie(`language=${lang};path=/;expires=` + data);
   //localStorage.setItem('language', 'pl');
-  //window.location.reload();
   //if (langtime == 0) {
     window.location.reload();
   //} else {

@@ -88,6 +88,14 @@ function loadchangelog() {
     $c('share-btn')[0].addEventListener('click', function () {
         copyid(this.parentElement.id) // dodaje kopiowanie linku do danej zmainy
     })
+    if (window.location.hash !== '') {
+        for (e in chlg[0].id) {
+            if (chlg[0].id[e].date == window.location.hash.slice(8,14).replace(/(.{2})/g,"$1.").slice(0,8).replace(/(.{6})/g,"$120")) {
+                $i('change-list').value = e;
+                return ch_desc(e);
+            }
+        }
+    }
 };
 
 function selchangelog() {

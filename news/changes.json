@@ -1,6 +1,14 @@
 {
     "id": [
         {
+            "date" : "20.10.2025",
+            "desc" : [
+                "[c] Language System, now uses tags instead of full sentences",
+                "[c] Revolt to Stoat",
+                "[f] Changelog share links"
+            ]
+        },
+        {
             "date" : "06.10.2025",
             "desc" : [
                 "[c] Video background on some pages",
