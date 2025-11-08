@@ -1,6 +1,15 @@
 {
     "id": [
         {
+            "date" : "08.11.2025",
+            "desc" : [
+                "[a] Missing sentences in German translation",
+                "[c] Now translation translates placeholders and labels too",
+                "[c] Images in gallery, now they use webp format instead of png",
+                "[r] Coub RSS channel because they removed it"
+            ]
+        },
+        {
             "date" : "20.10.2025",
             "desc" : [
                 "[c] Language System, now uses tags instead of full sentences",

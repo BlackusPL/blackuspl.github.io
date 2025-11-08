@@ -167,7 +167,7 @@ function discordprofile(id) {
 
 // Fetch Coub RSS feed and get the latest video link
 // This is a workaround for CORS issues, using a proxy
-if (window.location.origin == ("https://darknessair.ovh","https://127.0.0.1","https://blackuspl.github.io","https://blackuspl.local") && document.querySelectorAll('.widget iframe')[1]) {
+/*if (window.location.origin == ("https://darknessair.ovh","https://127.0.0.1","https://blackuspl.github.io","https://blackuspl.local") && document.querySelectorAll('.widget iframe')[1]) {
 fetch('https://corsproxy.io/?https://coub.com/rss/channel/blackuspl')
 .then(response => response.text())
 .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
@@ -181,4 +181,4 @@ if (pubdat(0) > pubdat(1)) { // if 1st video date is newer than 2nd
 }
 document.querySelectorAll('.widget iframe')[1].src = "https://coub.com/embed/" + emblink + "?muted=false&autostart=false&originalSize=false&startWithHD=true&hideTopBar=true&startAt=0&loop=true";
 })
-}
+} */

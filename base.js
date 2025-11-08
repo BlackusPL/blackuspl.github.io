@@ -114,14 +114,14 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
         <div class="showtasks">
           <a onclick="CustomFont()" lid="custom-font">Custom Font</a>
           <a><select id="Fonts" onchange="PresFont(this.value)">
-            <optgroup label="Presets">
+            <optgroup label="Presets" lid="presets">
               <option>HeadUpDaisy</option>
               <option>Windows XP Tahoma</option>
               <option>PerfectDOS</option>
               <option>Fredoka</option>
               <option>JetBrains Mono</option>
             </optgroup>
-            <optgroup label="Reset Font?">
+            <optgroup label="Reset Font?" lid="reset-font">
               <option lid="confirm">Confirm</option>
             </optgroup>
           </select></a>
@@ -195,11 +195,17 @@ function LanguageLoader() {
       try {
         // Sprawdź czy mamy tłumaczenie dla tego klucza
         if (zmien[key]) {
-          element.innerHTML = zmien[key];
+          if (element.label) {
+            element.label = zmien[key];
+          } else if (element.placeholder !== undefined) {
+            element.placeholder = zmien[key];
+          } else if (element.innerText !== undefined) {
+            element.innerHTML = zmien[key];
+          }
         }
         // Zawsze usuń atrybut lid, niezależnie czy znaleziono tłumaczenie czy nie
-        element.removeAttribute('lid');
-      } catch (e) {
+        element.removeAttribute("lid");
+      } catch {
         // Mimo błędu, usuń atrybut lid
         element.removeAttribute('lid');
       }
