@@ -1,6 +1,18 @@
 {
     "id": [
         {
+            "date" : "20.11.2025",
+            "desc" : [
+                "[c] BDPlugins page has been changed to <a href=\"/files/\">Files</a>",
+                "[c] BDPlugins can still be located in <a href=\"/files/\">Files</a> page or in /files/BDPlugins/ path",
+                "[f] Metadata on many pages because they was wrong for a long time",
+                "[r] One font because it was removed",
+                "[r] BDPlugins from Home page",
+                "[a] Revolt Plugins aka Legacy Stoat Plugins (Can be found in /files/RevoltPlugins/ folder)"
+
+            ]
+        },
+        {
             "date" : "08.11.2025",
             "desc" : [
                 "[a] Missing sentences in German translation",

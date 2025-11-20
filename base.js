@@ -47,7 +47,7 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
     <ul class="navbar-links logo">
       <li class="navbar-link">
         <a tabindex="0" href="/" class="a_icon">
-          <img src="/BDPlugins/icon.png" class="icon">
+          <img src="/files/icon.png" class="icon">
         </a>
       </li>
     </ul>
@@ -86,7 +86,7 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
         <div class="showtasks">
           <a href="/about" lid="about">My Projects</a>
           <a href="/gallery" lid="gallery">Gallery</a>
-          <a href="/BDPlugins">BDPlugins</a>
+          <a href="/files" lid="files">Files</a>
           <a href="/tools/textonimage">TextonImage</a>
           <a href="/tools/ai" lid="ai">AI Chat</a>
           <a href="/tools/codeopen" lid="codeopen">Code Opener</a>
@@ -116,7 +116,6 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
           <a><select id="Fonts" onchange="PresFont(this.value)">
             <optgroup label="Presets" lid="presets">
               <option>HeadUpDaisy</option>
-              <option>Windows XP Tahoma</option>
               <option>PerfectDOS</option>
               <option>Fredoka</option>
               <option>JetBrains Mono</option>

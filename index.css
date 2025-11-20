@@ -363,11 +363,7 @@ ul a.a_icon:hover {background-color: unset;}
   @font-face {
     font-family: "HeadUpDaisy";
     /*src: url("https://beatrun.ru/css/HeadUpDaisy.ttf");*/
-    src: url("/BDPlugins/HeadUpDaisy.ttf");
-  }
-  @font-face {
-    font-family: "Windows XP Tahoma";
-    src: url("/BDPlugins/windows-xp-tahoma.ttf");
+    src: url("/files/fonts/HeadUpDaisy.ttf");
   }
   /* 
 * {
