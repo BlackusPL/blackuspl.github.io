@@ -22,7 +22,7 @@ document.querySelector('.card').innerHTML = `
 // Szuka po div class "card"
 function discordprofile(id) {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", `https://api.lanyard.rest/v1/users/${id}`, true);
+    xhr.open("GET", `https://api.lanyard.rest/v1/users/${id}`, true); // maybe https://dcdn.dstn.to/profile/, but problem will be with activities
     xhr.onload = async function () {
       if (this.status == 200) {
         const discord_data_raw = await JSON.parse(this.responseText);
@@ -33,7 +33,7 @@ function discordprofile(id) {
             else
           {var disusername = `<a href="https://discord.com/users/${discord_data.discord_user.id}" style="text-decoration: unset;color: unset;">${discord_data.discord_user.username}#${discord_data.discord_user.discriminator}</a>`}
         document.getElementById('username').innerHTML = disusername;
-        if (discord_data.discord_user.clan !== null) document.getElementById('username').insertAdjacentHTML('afterend', `<div class="clan-tag"><img src="https://cdn.discordapp.com/clan-badges/${discord_data.discord_user.clan?.identity_guild_id}/${discord_data.discord_user.clan?.badge}?size=16">${discord_data.discord_user.clan?.tag}</div>`);
+        if (discord_data.discord_user?.primary_guild !== null) document.getElementById('username').insertAdjacentHTML('afterend', `<div class="clan-tag"><img src="https://cdn.discordapp.com/clan-badges/${discord_data.discord_user.primary_guild?.identity_guild_id}/${discord_data.discord_user.primary_guild?.badge}?size=16">${discord_data.discord_user.primary_guild?.tag}</div>`);
         /*fetch(avatar_url + '.gif?size=4096')
         .then(response => {
           if (response.ok) {
