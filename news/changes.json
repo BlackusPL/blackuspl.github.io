@@ -1,6 +1,14 @@
 {
     "id": [
         {
+            "date" : "25.11.2025",
+            "desc" : [
+                "[f] Clan tag didn't work in Discord Profile",
+                "[a] Avatar Decorations in Discord Profile",
+                "[c] Some CSS optimizations"
+            ]
+        },
+        {
             "date" : "20.11.2025",
             "desc" : [
                 "[c] BDPlugins page has been changed to <a href=\"/files/\">Files</a>",

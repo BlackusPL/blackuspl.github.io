@@ -4,7 +4,8 @@ document.querySelector('.card').innerHTML = `
 <div id="card-title">@unknown</div>
 <div class="user-info">
   <div id="pfp-info">
-    <img id="pfp" src="https://placehold.co/128/000/FFF?text=Profile\nPicture" alt="Profile Picture" width="128px" style="border-radius: 100%">
+    <img id="decoration" width="144px" loading="lazy" />
+    <img id="pfp" src="https://placehold.co/128/000/FFF?text=Profile\nPicture" alt="Profile Picture" width="128px" style="border-radius: 100%" />
     <div id="username">Loading...</div>
     <div id="status"></div>
   </div>
@@ -42,6 +43,12 @@ function discordprofile(id) {
           throw document.getElementById('pfp').src = avatar_url + '.webp?size=4096';
         });*/
         document.getElementById('pfp').src = avatar_url;
+
+        // Decoration
+        if (discord_data.discord_user?.avatar_decoration_data !== null) {
+          document.getElementById('decoration').src = `https://cdn.discordapp.com/avatar-decoration-presets/${discord_data.discord_user.avatar_decoration_data?.asset}.png`;
+        }
+
         // Check if user have nameplate
         document.getElementById('nameplate-switch').onclick = function () {
           if (discord_data.discord_user.collectibles?.nameplate) {
