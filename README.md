@@ -1,6 +1,6 @@
 <div align="center">
 
-# DarknessAir [![Logo](https://blackuspl.github.io/BDPlugins/icon.png)](https://blackuspl.github.io/)  Welcome Soldier
+# DarknessAir [![Logo](https://blackuspl.github.io/files/icon.png)](https://blackuspl.github.io/)  Welcome Soldier
 
 ![Last Updated](https://img.shields.io/github/last-commit/BlackusPL/blackuspl.github.io?logo=htmx)
 [![Website](https://img.shields.io/website?url=https://blackuspl.github.io&up_message=online&down_message=offline&logo=html5&label=Status
@@ -29,7 +29,7 @@ My websites offers tools like:
 
 It also offers [Music Player](https://blackuspl.github.io/music) with support for custom radio and some archived games/apps.\
 Thats not over, it also have funny link under https://blackuspl.github.io/papiez.jpg that displays gif with video player on discord.\
-And at the end, here is [Fake Windows Update](https://blackuspl.github.io/BDPlugins/win-update-pl) if you dont want to work in school.
+And at the end, here is [Fake Windows Update](https://blackuspl.github.io/files/win-update-pl) if you dont want to work in school.
 
 ## Copyright
 
