@@ -282,14 +282,14 @@ ul {
     justify-content: center;
     order: -1;
   }
+  #txt {
+    display: inline-block;
+    margin-right: 2em;
+    padding: 1em;
+    align-self: center;
+  }
   @media only screen and (max-width: 1165px) {
-      footer {
-        font-size: x-small;
-      }
-      ul a {
-        font-size: small;
-      }
-      .dropbtn {
+      ul a, .dropbtn, footer {
         font-size: small;
       }
       .card {

@@ -137,6 +137,7 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
   `); $c('navbar-items')[0]?.remove();
   window.location.pathname != "/" ? undefined : $q('[class="navbar-link"]:has(#google_translate_element)').insertAdjacentHTML("afterend", `<a tabindex="0" class="secret" href="/secret.html">Secret</a>`);
   if ($q("footer p")) $q("footer p").innerHTML = `Copyright © 2021${today.getFullYear() > 2021 ? -today.getFullYear() : ''}, BlackusPL | <span lid="footer_part">All rights reserved | DO NOT DISTRIBUTE</span>`;
+  if (screen.width <= 1080) document.querySelector('a[href="/tools"').removeAttribute('href');
 
 //if (localStorage.getItem('language') == 'pl') {
   // function to get value of selected language in cookie
@@ -310,7 +311,7 @@ const DA = {
 // search for element with class "footer" and place a clock
 const checkTime = (i) => i < 10 ? i = "0" + i : i; // add zero in front of numbers < 10
 if ($q("#tab")) {
-$q("#tab").insertAdjacentHTML('beforeend', `<div id="txt" style="display: inline-block; float: right; margin-right: 2em; padding: 1em; align-self: center;"></div>`);
+$q("#tab").insertAdjacentHTML('beforeend', `<div id="txt"></div>`);
 startTime();
 function startTime() {
   let today = new Date(Date.now()),
