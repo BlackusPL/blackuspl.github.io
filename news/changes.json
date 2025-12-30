@@ -1,6 +1,15 @@
 {
     "id": [
         {
+            "date" : "30.12.2025",
+            "desc" : [
+                "[c] CustomBG window in Music Player",
+                "[c] Some CSS optimizations",
+                "[f] Tools link for mobile view",
+                "[a] History of 2025 in Gallery"
+            ]
+        },
+        {
             "date" : "25.11.2025",
             "desc" : [
                 "[f] Clan tag didn't work in Discord Profile",

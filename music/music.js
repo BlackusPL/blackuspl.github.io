@@ -8,18 +8,30 @@ if(!window.WebGLRenderingContext) {
     throw new Error("What's the point of turning this off?")
 }
 
-$q('main').insertAdjacentHTML('beforebegin', `
-    <input id="toggle" class="toggle-btn" type="checkbox" style="display: none;" /><label class="fas" for="toggle" lid="show/hide">Show/Hide</label>
-    <div id="custombg_window"></div>
-    `);
+// custombg window
+let detailsf = document.createElement("details"),
+    sumf = document.createElement("summary"),
+    fieldsc = document.createElement("fieldset");
 
-$i('custombg_window').innerHTML = `<span lid="set_custom_background">Set custom background</span><br>
-<input type="file" id="custombg" accept="image/*"><br>
-<input type="reset" id="reset"><span lid="set_default"> Set Default</span><br>
+detailsf.open = true;
+
+sumf.className = "fas";
+sumf.setAttribute("lid","show/hide");
+sumf.textContent = "Show/Hide";
+
+fieldsc.id = "custombg_window";
+
+detailsf.append(sumf, fieldsc);
+
+$q('main').insertAdjacentElement('beforebegin', detailsf);
+
+$i('custombg_window').innerHTML = `<legend lid="set_custom_background">Set custom background</legend>
+<input type="file" id="custombg" accept="image/*">
+<input type="reset" id="reset"><span lid="set_default"> Set Default</span>
 <input style="width: 40%; margin-left: -10%;" type="text" placeholder="Image Url" id="imagebgurl">
-<input type="button" value="Save & Load" id="saveload"><br>
-<input type="number" max="100" min="0" id="vid_bg_dark" style="width: 20%;" value="100"><span lid="v_bright"> VideoBG bright</span><br>
-<input type="checkbox" id="experiments" title="Disables only image upload set"><span lid="exp_func">Experiments function</span></input>
+<input type="button" value="Save & Load" id="saveload" title="Save and load custom background">
+<input type="number" max="100" min="0" id="vid_bg_dark" style="width: 20%;" value="100"><span lid="v_bright" title="Changes video brightness"> VideoBG bright</span><br>
+<input type="checkbox" id="experiments" title="Disables only image upload set"><span lid="exp_func" title="Allows you to select video as background instead of using url">Experiments function</span></input>
 <!--  <audio src="Dadada (Slowed version).DAA" controls controlslist="nodownload noplaybackrate novolume" /> -->
 <br><br>
 <label for="playlists" lid="choose_playlist">Choose playlist:</label>

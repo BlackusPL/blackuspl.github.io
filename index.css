@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Fredoka);
-@import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Fredoka&family=JetBrains+Mono:wght@100..800&display=swap);
 :root
 {
     --main-background: url('https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1');
@@ -7,15 +6,11 @@
     --cur-pointer: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAMgAAADIAGP6560AAAAHdElNRQfnBA0VEBsaNUWhAAAAAW9yTlQBz6J3mgAAAbhJREFUSMft1EsvJFEUB/B/3arW3XTQzIxE0B1prxYmFhMzKxs7tu0RtthZEItZ+QA2xMpSQlpsxWNmg1mMmMwXGAt0REjEoxOPVNfj7xaazEpVLaycm1Tu5vxyzs2pAzzHpuZ8qcBPOFmLUX12uUQSwh+gotTI8lcqrPghJBBIVJ3uZcgNX4QDxGNnmTprm/zx1TvhABXxbKaW0P/IKjwTj8BlppmwAsYuuR4LeSLyQCMVS6FmyCrWPBEvACyNT8QqgvIqPAOCQuYV5P5KIuGW+L8CPJ7cFrmSLHA1nS+AsJzkCJNsYqt1It9irlB5ncgDScL8LJuo4AVzN7c32SvLvFv4HX61jfwclHHANlknmSVeLvR/G+rs+TLfNlnoqoWG+NHBjG3qxt60BNqZOyyvRLE8KoQrADXXR2R6YqTn3IraMOU4DSpYC6ZUuHpELR67Pd7+jg+o5+64Db3P5k8I99MoeqvT3YikyqIlW2Nn/KSPkf+guV8wKkIIdISgJorLG893DNLcH4VC1f0fJZYfuk0E8REt6eGpLhR1aP72WwhRRBCW9fjbkFBS6lxgUvOb/h7v8fZxDzhr0tNFNchWAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTA0LTEzVDIxOjE2OjI2KzAwOjAwo385CQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wNC0xM1QyMToxNjoyNiswMDowMNIigbUAAAAASUVORK5CYII=');
 
 }
-* {
-  text-shadow: 0 0 20px;
-  font-family: headupdaisy;
-}
 html {
   cursor: var(--cur-pointer), auto;
   scroll-behavior: smooth;
 }
-body {
+body, fieldset select option {
     background: #111;
     color: #fff;
     background-image: var(--main-background);
@@ -25,6 +20,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: headupdaisy;
+    text-shadow: 0 0 20px;
+}
+fieldset * {
+  font-family: headupdaisy;
+  text-shadow: 0 0 20px;
 }
 html, body {
 margin: 0;
@@ -42,11 +43,12 @@ li {
 b {
     color: #fff;
 }
-div#custombg_window {
+fieldset#custombg_window {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
   background: #111;
+  color: #FFF;
   width: 14em;
   border: 1px solid white;
   height: 200px;
@@ -82,10 +84,7 @@ footer {
   position: relative;
   color: red;
 }
-center {
-  text-align: center;
-}
-.center {
+center, .center {
   text-align: center;
 }
 ul {
@@ -357,7 +356,7 @@ ul {
     padding-inline: 6px;
     border-width: 2px;
     border-color: buttonborder;
-    width: 14.8em;
+    width: 17.5rem;
     user-select: none;
   }
   [style*='font-family: "JetBrains Mono", monospace']>div>span>span {
