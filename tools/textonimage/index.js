@@ -38,7 +38,7 @@ function loadimage() {
     if (imageUrl === null || imageUrl === '') {image.src= "./kratosmoment.png"} else {
       if (cors == 'false') {image.src = imageUrl} else {
         $.ajax({
-          url:`https://corsproxy.io/?${encodeURIComponent(imageUrl)}`, // old site https://cors-anywhere.riolubruh.repl.co/
+          url:`https://proxy.darknessair.ovh/?${encodeURIComponent(imageUrl)}`, // old site https://cors-anywhere.riolubruh.repl.co/
           cache:false,
           xhrFields:{
               responseType: 'blob'

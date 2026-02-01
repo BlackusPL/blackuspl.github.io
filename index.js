@@ -21,7 +21,7 @@ document.querySelector('.card').innerHTML = `
 } catch {};
 
 // Szuka po div class "card"
-function discordprofile(id) {
+async function discordprofile(id) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", `https://api.lanyard.rest/v1/users/${id}`, true); // maybe https://dcdn.dstn.to/profile/, but problem will be with activities
     xhr.onload = async function () {
@@ -70,7 +70,7 @@ function discordprofile(id) {
           this.remove();
         };
         // Get banner from discord or from usrbg // sometimes must be https://corsproxy.io?url=
-        await fetch(`https://corsproxy.io/?https://widgets.vendicated.dev/user?id=${discord_data.discord_user.id}&theme=dark&banner=true&full-banner=true&rounded-corners=false&discord-icon=true&badges=true&guess-nitro=true&`)
+        await fetch(`https://proxy.darknessair.ovh/?https://widgets.vendicated.dev/user?id=${discord_data.discord_user.id}&theme=dark&banner=true&full-banner=true&rounded-corners=false&discord-icon=true&badges=true&guess-nitro=true&`)
         .then(response => response.text())
         .then(data => {
             const parser = new DOMParser()

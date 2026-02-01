@@ -103,12 +103,20 @@ const webamp = new Webamp({
              // url: "http://217.74.72.6/rmf_maxxx_slk"
          }])
     },{
+        contextMenuName: "Radio Piekary Śląskie",
+        filePicker: () => Promise.resolve([{
+            metaData: {
+                 title: "Radio Piekary Śląskie"
+             },
+             url: "https://stream.rcs.revma.com/87c7ec8843bwv"
+         }])
+    },{
         contextMenuName: "[DOPEPHONK] The Sound of Phonk / 24/7 Phonk Radio",
         filePicker: () => Promise.resolve([{
             metaData: {
                  title: "[DOPEPHONK] The Sound of Phonk / 24/7 Phonk Radio / Website: https://dopephonk.net/"
              },
-             url: "https://edge01.atomicradio.eu/dopephonk/highquality"
+             url: "https://listen.atomic.radio/dopephonk"
          }])
     }],
     __butterchurnOptions: {
@@ -163,7 +171,7 @@ function changeFunc() {
                     metaData: {
                          title: "[DOPEPHONK] The Sound of Phonk / 24/7 Phonk Radio / Website: https://dopephonk.net/"
                      },
-                     url: "https://edge01.atomicradio.eu/dopephonk/highquality"
+                     url: "https://edge01.atomicradio.eu/dopephonk"
                  }
                 ]);
             break;
