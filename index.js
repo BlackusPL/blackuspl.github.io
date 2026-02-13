@@ -90,12 +90,15 @@ async function discordprofile(id) {
         function activity(type) {document.getElementById('activity-name').innerHTML = type + discord_data.activities[0]?.name
         document.getElementById('activity-state').innerHTML = discord_data.activities[0]?.state ? discord_data.activities[0].state : null;
         document.getElementById('activity-detail').innerHTML = discord_data.activities[0]?.details ? discord_data.activities[0].details : null;
-      switch (discord_data.activities[0]?.assets?.large_image?.split(":")[0]) {
+        let largeimg = discord_data.activities[0]?.assets?.large_image;
+      switch (largeimg?.split(":")[0]) {
         default:
-          document.getElementById('activity-icon').innerHTML = discord_data.activities[0].assets?.large_image ? `<img src="${discord_data.activities[0].assets?.large_image}">` : null;
+          if (Boolean(/^\d+$/.exec(largeimg))) {
+            document.getElementById('activity-icon').innerHTML = largeimg ? `<img src="https://cdn.discordapp.com/app-assets/${discord_data.activities[0].application_id}/${largeimg}">` : null;
+          } else document.getElementById('activity-icon').innerHTML = largeimg ? `<img src="${largeimg}">` : null;
         break;
         case 'mp':
-          document.getElementById('activity-icon').innerHTML = `<img src="//media.discordapp.net/${discord_data.activities[0].assets?.large_image.split(":")[1]}">`;
+          document.getElementById('activity-icon').innerHTML = `<img src="//media.discordapp.net/${largeimg.split(":")[1]}">`;
         break;
         case 'spotify':
           document.getElementById('activity-icon').innerHTML = `<img src="${discord_data.spotify.album_art_url}">`;
