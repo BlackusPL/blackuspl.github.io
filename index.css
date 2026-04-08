@@ -1,18 +1,19 @@
 @import url(https://fonts.googleapis.com/css2?family=Fredoka&family=JetBrains+Mono:wght@100..800&display=swap);
 :root
 {
-    --main-background: url('https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1');
+    --main-background: url('/files/background.webp');
     --temp-avatar-url: url("https://blackuspl.discowd.com/r/86-back.gif");
     --cur-pointer: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAMgAAADIAGP6560AAAAHdElNRQfnBA0VEBsaNUWhAAAAAW9yTlQBz6J3mgAAAbhJREFUSMft1EsvJFEUB/B/3arW3XTQzIxE0B1prxYmFhMzKxs7tu0RtthZEItZ+QA2xMpSQlpsxWNmg1mMmMwXGAt0REjEoxOPVNfj7xaazEpVLaycm1Tu5vxyzs2pAzzHpuZ8qcBPOFmLUX12uUQSwh+gotTI8lcqrPghJBBIVJ3uZcgNX4QDxGNnmTprm/zx1TvhABXxbKaW0P/IKjwTj8BlppmwAsYuuR4LeSLyQCMVS6FmyCrWPBEvACyNT8QqgvIqPAOCQuYV5P5KIuGW+L8CPJ7cFrmSLHA1nS+AsJzkCJNsYqt1It9irlB5ncgDScL8LJuo4AVzN7c32SvLvFv4HX61jfwclHHANlknmSVeLvR/G+rs+TLfNlnoqoWG+NHBjG3qxt60BNqZOyyvRLE8KoQrADXXR2R6YqTn3IraMOU4DSpYC6ZUuHpELR67Pd7+jg+o5+64Db3P5k8I99MoeqvT3YikyqIlW2Nn/KSPkf+guV8wKkIIdISgJorLG893DNLcH4VC1f0fJZYfuk0E8REt6eGpLhR1aP72WwhRRBCW9fjbkFBS6lxgUvOb/h7v8fZxDzhr0tNFNchWAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTA0LTEzVDIxOjE2OjI2KzAwOjAwo385CQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wNC0xM1QyMToxNjoyNiswMDowMNIigbUAAAAASUVORK5CYII=');
-
+    --color-white: #fff;
+    --color-black: #111;
 }
 html {
   cursor: var(--cur-pointer), auto;
   scroll-behavior: smooth;
 }
 body, fieldset select option {
-    background: #111;
-    color: #fff;
+    background: var(--color-black);
+    color: var(--color-white);
     background-image: var(--main-background);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -41,16 +42,16 @@ li {
     color: #f1f1f1;
 }
 b {
-    color: #fff;
+    color: var(--color-white);
 }
 fieldset#custombg_window {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
-  background: #111;
-  color: #FFF;
+  background: var(--color-black);
+  color: var(--color-white);
   width: 14em;
-  border: 1px solid white;
+  border: 1px solid var(--color-white);
   height: 200px;
   text-align: center;
 }
@@ -61,7 +62,7 @@ div#Files {
   }
 }
 footer {
-  border-top: 1px solid #fff;
+  border-top: 1px solid var(--color-white);
   font-size: small;
   height: 2.5rem;
   background: #080808;
@@ -192,6 +193,10 @@ ul {
     .user-info #username a {
       all: unset;
     }
+    #activity-state a, #activity-detail a {
+      color: var(--color-white);
+      text-decoration: none;
+    }
     .user-info {
       display: flex;
       align-items: center;
@@ -239,7 +244,7 @@ ul {
       flex-direction: row;
       flex: 1;
       max-height: 70px;
-      border-bottom: 1px white solid;
+      border-bottom: 1px var(--color-white) solid;
       background: #0005;
       background-color: rgba(17, 17, 17, 0.5);
   }

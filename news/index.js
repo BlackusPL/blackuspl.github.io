@@ -12,7 +12,7 @@ $q('main div').insertAdjacentHTML('afterend', `<div id="change-obj">
 let sharebtn = '<a class="material-symbols-outlined skiptranslate share-btn">share</a>';
 const chlg = [];
 
-fetch('./changes.json')
+fetch('/news/changes.json')
 .then(response => response.json())
 .then(data => {
     chlg.push(data);
@@ -22,7 +22,7 @@ fetch('./changes.json')
 // Funkcja która odpowiada za dodanie opisu do danej zmiany
 function ch_desc(e) {
     changelogs.id[e]?.special_name == null ? changelogsname = "Update " + changelogs.id[e].date : changelogsname = changelogs.id[e].special_name;
-    var chnagelogslink = "update-" + changelogs.id[e].date.replaceAll(".20","").replaceAll(".", "");
+    let chnagelogslink = "update-" + changelogs.id[e].date.replaceAll(".20","").replaceAll(".", "");
     $q('#change-obj + h3').id = chnagelogslink; // Wpisuje link z najnowszej zmiany
 
     function showelse() { 
@@ -71,7 +71,7 @@ function ch_desc(e) {
 
 function loadchangelog() {
     changelogs = chlg[0];
-    var i = changelogs.id.length - 1; // ilość zmian
+    let i = changelogs.id.length - 1; // ilość zmian
     ch_desc(0); // Wypisuje opis najnowszej zmiany
     function datalist(isLatest) {
         $i('change-list').insertAdjacentHTML('afterbegin', `<option value="${i}">${isLatest}</option>`);
@@ -99,7 +99,7 @@ function loadchangelog() {
 };
 
 function selchangelog() {
-    var e = $i('change-list').value;
+    let e = $i('change-list').value;
     ch_desc(e);
 }
 function copyid(link) {

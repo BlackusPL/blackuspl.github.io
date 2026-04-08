@@ -1,6 +1,14 @@
 {
     "id": [
         {
+            "date" : "08.04.2026",
+            "desc" : [
+                "[a] State, Details and Icon URL if activity have it in Discord Profile",
+                "[a] 2 mods in <a href=\"/files/\">Files</a>",
+                "[c] Some links (mostly in scripts)"
+            ]
+        },
+        {
             "date" : "30.12.2025",
             "desc" : [
                 "[c] CustomBG window in Music Player",

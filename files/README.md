@@ -8,6 +8,8 @@
 | [Archive.org](https://archive.org/details/tt-server-maker) | TT Server Maker by Tamás Török | Lost Media program that allows you to create and manage your minecraft server. In 2024 they shutdown his services to use/download files. Finds out this program still works if you had files that is located in "%localappdata%\Apps\2.0" |
 | [ModWorkshop](https://modworkshop.net/mod/50365) | [PD3 Menu Music] c152 - Back In Time | Replace default Payday 3 menu music with c152 - Back In Time |
 | [NexusMods](https://www.nexusmods.com/payday3/mods/186) [ModWorkshop](https://modworkshop.net/mod/54182) | [PD3 Heist Track] Ariis - Goofy Phonk (Slowed) (2 Variants) | Adds Goofy Phonk song as a Heist Track to Payday 3. Second variant (Miside Action) is the same as goofy phonk but with different stealth audio |
+| [ModWorkshop](https://modworkshop.net/mod/55105) | [PD2 Menu Tracks] Arknights Endfield Website Music | 2 variants of Arknights Endfield Website background music |
+| [ModWorkshop](https://modworkshop.net/mod/55730) | [PD2] "I just hit the jackpot" over slot machine win | This mod replaces win sound from slot machine with viral "I just hit the jackpot" |
 
 <br>
 <h2 align="center">Revolt (legacy) Plugins</h2>

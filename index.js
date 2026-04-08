@@ -24,6 +24,7 @@ document.querySelector('.card').innerHTML = `
 async function discordprofile(id) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", `https://api.lanyard.rest/v1/users/${id}`, true); // maybe https://dcdn.dstn.to/profile/, but problem will be with activities
+    //xhr.open("GET", "https://blackuspl.local/test/temp_data.json", true);
     xhr.onload = async function () {
       if (this.status == 200) {
         const discord_data_raw = await JSON.parse(this.responseText);
@@ -88,20 +89,36 @@ async function discordprofile(id) {
         document.getElementById('card-title').innerHTML = "@" + discord_data.discord_user.username.toLowerCase() + " > profile";
         function status() {document.getElementById('status').innerHTML = "Status: " + discord_data.discord_status}
         function activity(type) {document.getElementById('activity-name').innerHTML = type + discord_data.activities[0]?.name
-        document.getElementById('activity-state').innerHTML = discord_data.activities[0]?.state ? discord_data.activities[0].state : null;
-        document.getElementById('activity-detail').innerHTML = discord_data.activities[0]?.details ? discord_data.activities[0].details : null;
+        if (Boolean(discord_data.activities[0]?.state_url)) {
+          document.getElementById('activity-state').innerHTML = `<a href="${discord_data.activities[0]?.state_url}" target="_blank">${discord_data.activities[0]?.state}</a>`;
+        } else {
+          document.getElementById('activity-state').innerHTML = discord_data.activities[0]?.state ? discord_data.activities[0].state : null;
+        }
+        if (Boolean(discord_data.activities[0]?.details_url)) {
+          document.getElementById('activity-detail').innerHTML = `<a href="${discord_data.activities[0]?.details_url}" target="_blank">${discord_data.activities[0]?.details}</a>`;
+        } else {
+          document.getElementById('activity-detail').innerHTML = discord_data.activities[0]?.details ? discord_data.activities[0].details : null;
+        }
         let largeimg = discord_data.activities[0]?.assets?.large_image;
+        let largeimgurl = discord_data.activities[0]?.assets?.large_url;
+        function checkimgurl(parser) {
+          if (Boolean(largeimgurl)) {
+            return `<a href="${largeimgurl}" target="_blank">${parser}</a>`;
+          } else {
+            return parser;
+          }
+        }
       switch (largeimg?.split(":")[0]) {
         default:
           if (Boolean(/^\d+$/.exec(largeimg))) {
-            document.getElementById('activity-icon').innerHTML = largeimg ? `<img src="https://cdn.discordapp.com/app-assets/${discord_data.activities[0].application_id}/${largeimg}">` : null;
-          } else document.getElementById('activity-icon').innerHTML = largeimg ? `<img src="${largeimg}">` : null;
+            document.getElementById('activity-icon').innerHTML = largeimg ? `<img src="https://cdn.discordapp.com/app-assets/${discord_data.activities[0].application_id}/${largeimg}"></a>` : null;
+          } else document.getElementById('activity-icon').innerHTML = largeimg ? checkimgurl(`<img src="${largeimg}">`) : null;
         break;
         case 'mp':
-          document.getElementById('activity-icon').innerHTML = `<img src="//media.discordapp.net/${largeimg.split(":")[1]}">`;
+          document.getElementById('activity-icon').innerHTML = checkimgurl(`<img src="//media.discordapp.net/${largeimg.split(":")[1]}">`);
         break;
         case 'spotify':
-          document.getElementById('activity-icon').innerHTML = `<img src="${discord_data.spotify.album_art_url}">`;
+          document.getElementById('activity-icon').innerHTML = checkimgurl(`<img src="${discord_data.spotify.album_art_url}">`);
           document.getElementById('activity-detail').innerHTML = `<a style="color: #FFF" href="https://open.spotify.com/track/${discord_data.spotify.track_id}">${discord_data.activities[0].details}</a>`;
         break;
       }
