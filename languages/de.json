@@ -1,6 +1,6 @@
 {
     "__comment_tab_start": "",
-    "games": "Spiele",
+    "archives": "Archiv",
     "music": "Spieler",
     "social": "Links ↡ ",
     "tools": "Werkzeuge ↡ ",
@@ -31,7 +31,7 @@
     "files_": "<a href=\"files\">Dateien</a> speichern jetzt BetterDiscord Plugins und mehr",
     "terminal_new": "!!!Reinigen Sie das neue Terminal!!!",
     "__comment_games_page": "",
-    "ga": "Spiele/Anwendungen",
+    "ga": "Archivierte Spiele/Anwendungen",
     "archive_info": "Dies dient nur Archivzwecken",
     "game_v": "Spielversion",
     "program_v": "Programmversion",

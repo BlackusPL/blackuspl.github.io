@@ -1,6 +1,6 @@
 {
     "__comment_tab_start": "",
-    "games": "Gry",
+    "archives": "Archiwa",
     "music": "Odtwarzacz",
     "social": "Linki ↡ ",
     "tools": "Narzędzia ↡ ",
@@ -31,7 +31,7 @@
     "files_": "<a href=\"files\">Pliki</a> teraz przechowują wtyczki BetterDiscord i więcej",
     "terminal_new": "!!!Obczaj nowy Terminal!!!",
     "__comment_games_page": "",
-    "ga": "Gry/Aplikacje",
+    "ga": "Archiwa Gier/Aplikacji",
     "archive_info": "Służy to wyłącznie celom archiwalnym",
     "game_v": "Wersja Gry",
     "program_v": "Wersja Programu",

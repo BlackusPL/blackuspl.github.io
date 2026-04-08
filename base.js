@@ -59,11 +59,6 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
         </a>
       </li>
       <li class="navbar-link">
-        <a tabindex="0" href="/games" class="navbar-item">
-          <span lid="games">Games</span>
-        </a>
-      </li>
-      <li class="navbar-link">
         <a tabindex="0" href="/music" class="navbar-item">
           <span lid="music">Music Player</span>
         </a>
@@ -125,6 +120,11 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
             </optgroup>
           </select></a>
         </div>
+      </li>
+      <li class="navbar-link">
+        <a tabindex="0" href="/games" class="navbar-item">
+          <span lid="archives">Archives</span>
+        </a>
       </li>
       <a tabindex="0" href="https://cse.google.com/cse?cx=f57e79ca12bca49ec" lid="search">Search</a>
       <li class="navbar-link">
