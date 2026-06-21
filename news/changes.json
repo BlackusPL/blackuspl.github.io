@@ -1,6 +1,13 @@
 {
     "id": [
         {
+            "date" : "21.06.2026",
+            "desc" : [
+                "[a] <a href=\"/tools/steamembeder/\">Steam Embeder</a>, a simple tool to embed projects into your website in Steam App style",
+                "[i] From my testing, TextOnImage is broken and will be fixed soon"
+            ]
+        },
+        {
             "date" : "08.04.2026",
             "desc" : [
                 "[a] State, Details and Icon URL if activity have it in Discord Profile",

@@ -63,5 +63,7 @@
     "codeopen_desc": "Sie können den HTML oder den HTML Code HTML oder Körper und Kopf einfügen, um zu sehen, wie die Seite mit diesem Code aussieht oder andere Codes Sprachen, um sie auszuführen",
     "go_back": "Komm zurück",
     "__comment_news_page": "",
-    "changelogs": "Tagebücher der Veränderung --> "
+    "changelogs": "Tagebücher der Veränderung --> ",
+    "__comment_steamembeder_page": "",
+    "steamembeder_desc": "Ein einfaches Werkzeug, um Projekte in Ihren Webseiten im Steam App-Stil einzubetten."
 }

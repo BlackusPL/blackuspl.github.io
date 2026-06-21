@@ -82,6 +82,7 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
           <a href="/about" lid="about">My Projects</a>
           <a href="/gallery" lid="gallery">Gallery</a>
           <a href="/files" lid="files">Files</a>
+          <a href="/tools/steamembeder">Steam Embeder</a>
           <a href="/tools/textonimage">TextonImage</a>
           <a href="/tools/ai" lid="ai">AI Chat</a>
           <a href="/tools/codeopen" lid="codeopen">Code Opener</a>

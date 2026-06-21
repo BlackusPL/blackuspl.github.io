@@ -40,32 +40,36 @@
 </body>
 <script>
     const urlParams = new URLSearchParams(window.location.search);
-    var url = urlParams.get("url"),
+    let url = urlParams.get("url"),
     url_download = urlParams.get("url_download"),
     appname = urlParams.get("name"),
     platform = urlParams.get("plat"),
     desc = urlParams.get("desc"),
     plat_ico = urlParams.get("plat_ico"),
     ico = urlParams.get("ico");
-    var main_text = document.getElementsByClassName('main_text')[0].children[0];
+    let main_text = document.getElementsByClassName('main_text')[0].children[0];
     main_text.setAttribute("href", url);
-    main_text.innerText = 'Download ' + appname;
     switch(plat_ico) {
         case 'github':
-        document.getElementById('widget').style = "background-image: url(https://icones.pro/wp-content/uploads/2021/06/icone-github-grise.png)";
+            document.getElementById('widget').style = "background-image: url(https://simpleicons.org/icons/github.svg)";
         break;
         case 'steam':
-        document.getElementById('widget').style = "background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/steam_ico.png)";
-        main_text.innerText = 'Subscribe ' + appname;
-        document.getElementsByClassName('btn_addtocart_content')[0].innerText = 'Subscribe';
+            document.getElementById('widget').style = "background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/steam_ico.png)";
+            main_text.innerText = 'Subscribe ' + appname;
+            document.getElementsByClassName('btn_addtocart_content')[0].innerText = 'Subscribe';
+        break;
+        default:
+            document.getElementById('widget').style = `background-image: url(https://simpleicons.org/icons/${plat_ico}.svg)`;
+        break;
     }
-    var tail = document.getElementsByClassName('tail')[0].children[0];
-    tail.setAttribute("href", url);
-    tail.children[0].innerText = 'on ' + platform;
-    document.getElementsByClassName('btn_addtocart_content')[0].setAttribute("href", url_download);
-    var description = document.getElementsByClassName('desc')[0];
-    description.children[0].setAttribute('href', url);
-    description.children[0].children[0].setAttribute('src', ico);
-    description.childNodes[2].nodeValue = desc;
+    main_text.innerText = 'Download ' + appname;
+    let tail = document.getElementsByClassName('tail')[0].children[0];
+        tail.setAttribute("href", url);
+        tail.children[0].innerText = 'on ' + platform;
+        document.getElementsByClassName('btn_addtocart_content')[0].setAttribute("href", url_download);
+    let description = document.getElementsByClassName('desc')[0];
+        description.children[0].setAttribute('href', url);
+        description.children[0].children[0].setAttribute('src', ico);
+        description.childNodes[2].nodeValue = desc;
 </script>
 </html>

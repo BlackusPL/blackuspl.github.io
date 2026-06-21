@@ -63,5 +63,7 @@
     "codeopen_desc": "Możesz wkleić kod html lub body i head html by zobaczyć jak wygląda strona z tym kodem lub inne języki kodów by je uruchomić",
     "go_back": "Wróć",
     "__comment_news_page": "",
-    "changelogs": "Dzienniki zmian --> "
+    "changelogs": "Dzienniki zmian --> ",
+    "__comment_steamembeder_page": "",
+    "steamembeder_desc": "Proste narzędzie do osadzania projektów na Twojej stronie internetowej w stylu aplikacji Steam."
 }

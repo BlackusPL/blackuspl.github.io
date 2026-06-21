@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/files/icon.png" type="image/icon type">
+    <link href="/manifest.webmanifest" rel="manifest" />
+    <meta property="og:image" content="/files/icon.png" id="ogImage">
+    <meta property="og:site_name" content="DarknessAir">
+    <meta property="og:title" content="DarknessAir - Steam Embeder">
+    <meta property="og:description" content="A simple tool to embed projects into your website in Steam App style.">
+    <meta property="og:url" content="https://blackuspl.github.io/tools/steamembeder">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/index.css" rel="stylesheet">
+    <style>
+      iframe {
+        width: 100%;
+        max-width: 646px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--The tab to move in the website-->
+    <div class="navbar">
+      <!-- old navbar that will see only users without javascripts -->
+      <div class="navbar-items" id="tab">
+        <ul class="navbar-links logo">
+          <li class="navbar-link">
+            <img src="/files/icon.png" class="icon">
+          </li>
+        </ul>
+        <ul class="navbar-links main">
+          <li class="navbar-link" style="width: 0; height: 70px;"></li>
+          <li class="navbar-link">
+            <a href="/" class="navbar-item">
+              <span>Home</span>
+            </a>
+          </li>
+          <a href="https://cse.google.com/cse?cx=f57e79ca12bca49ec">Search</a>
+          <li class="navbar-link">
+            <div id="google_translate_element" class="navbar-item">
+              <noscript>You need to enable JavaScript to use Translator and Navbar.</noscript>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+      <!--end-->
+      <noscript>Turn on javascript to use steamembeder! <style>main {display: none;}</style></noscript>
+      <main style="margin: 1em auto 0em;">
+        <div class="center">
+          <header style="margin: 1em auto 0em;"><h2>Steam Embeder</h2></header>
+          <p lid="steamembeder_desc">A simple tool to embed projects into your website in Steam App style.</p>
+      
+          <p><a href=".." lid="go_back">Go back</a></p>
+        </div>
+        <br>
+        <div class="center">
+        <form id="EmbederForm">
+          <input type="text" placeholder="Link to project" name="url" /><br>
+          <input type="text" placeholder="Link to open/download" name="url_download" /><br>
+          <input type="text" placeholder="Project name" name="name" /><br>
+          <input type="text" placeholder="Platform" name="plat" /><br>
+          <input type="text" placeholder="Description" name="desc" /><br>
+          <input type="text" placeholder="Platform icon" name="plat_ico" /><br>
+          <input type="text" placeholder="Project icon" name="ico" /><br>
+          <input type="checkbox" name="preview" id="preview" checked> Show Preview<br>
+
+          <button type="submit">Submit</button>
+          <button type="reset">Clear</button><br>
+        </form>
+          <textarea style="width: 500px; height: 15px;" placeholder="The url will be generated here" id="embed_url" readonly></textarea>
+          <br><iframe id="embed_preview" frameborder="0" width="646" height="190"></iframe></textarea>
+      </div>
+      </main>
+      <footer>
+        <p>Copyright © 2021-present, BlackusPL | All rights reserved | DO NOT DISTRIBUTE</p>
+      </footer>
+  </body>
+  <script src="/base.js"></script>
+  <script src="index.js"></script>
+</html>
