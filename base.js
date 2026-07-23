@@ -136,7 +136,7 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
     </ul>    
   </div>
   `); $c('navbar-items')[0]?.remove();
-  window.location.pathname != "/" ? undefined : $q('[class="navbar-link"]:has(#google_translate_element)').insertAdjacentHTML("afterend", `<a tabindex="0" class="secret" href="/secret.html">Secret</a>`);
+  window.location.pathname != "/" ? null : $q('[class="navbar-link"]:has(#google_translate_element)').insertAdjacentHTML("afterend", `<a tabindex="0" class="secret" href="/secret.html">Secret</a>`);
   if ($q("footer p")) $q("footer p").innerHTML = `Copyright © 2021${today.getFullYear() > 2021 ? -today.getFullYear() : ''}, BlackusPL | <span lid="footer_part">All rights reserved | DO NOT DISTRIBUTE</span>`;
   if (screen.width <= 1080) document.querySelector('a[href="/tools"').removeAttribute('href');
 

@@ -66,7 +66,7 @@ async function discordprofile(id) {
                 object-fit: fill;
                 " disablepictureinpicture="" muted="" ></video>
               `);
-            document.getElementsByClassName('card')[0].style['backgroundImage'] = 'none';
+            document.getElementsByClassName('card')[0].style['backgroundImage'] = null;
           }
           this.remove();
         };
@@ -76,7 +76,7 @@ async function discordprofile(id) {
         .then(data => {
             const parser = new DOMParser()
             // First check if user have banner from nitro, if not use usrbg banner without checking if user exist in usrbg database
-            if (parser.parseFromString(data, "text/html")?.querySelectorAll('.banner img')[0]?.src == undefined) {
+            if (parser.parseFromString(data, "text/html")?.querySelectorAll('.banner img')[0]?.src == null) {
               // Banner from usrbg
               var bg = `https://usrbg.is-hardly.online/usrbg/v2/${discord_data.discord_user.id}?9807=&size=1024&format=gif`;
             } else {
@@ -162,9 +162,9 @@ async function discordprofile(id) {
             continue;
           }
         }
-        discord_data.active_on_discord_web ? document.getElementById('status').insertAdjacentHTML('beforeend', web) : undefined;
-        discord_data.active_on_discord_mobile ? document.getElementById('status').insertAdjacentHTML('beforeend', mobile) : undefined;
-        discord_data.active_on_discord_desktop ? document.getElementById('status').insertAdjacentHTML('beforeend', pc) : undefined;
+        discord_data.active_on_discord_web ? document.getElementById('status').insertAdjacentHTML('beforeend', web) : null;
+        discord_data.active_on_discord_mobile ? document.getElementById('status').insertAdjacentHTML('beforeend', mobile) : null;
+        discord_data.active_on_discord_desktop ? document.getElementById('status').insertAdjacentHTML('beforeend', pc) : null;
       //if (typeof discord_data.activities[0] !== 'undefined')
         switch (discord_data.activities[0]?.type) {
           case 0:

@@ -1,7 +1,7 @@
 {
     "name": "DarknessAir Web App",
     "short_name": "DarknessAir",
-    "description": "Website where you can play music and download 3 exclusive games for free",
+    "description": "Website where you can play music, download archived games/apps and more for free",
     "icons": [
         {
             "src": "/files/icon.png",

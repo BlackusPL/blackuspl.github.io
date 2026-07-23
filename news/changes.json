@@ -1,6 +1,14 @@
 {
     "id": [
         {
+            "date" : "23.07.2026",
+            "desc" : [
+                "[a] Error response in AI Chat",
+                "[f] TextOnImage",
+                "[r] Old home page"
+            ]
+        },
+        {
             "date" : "21.06.2026",
             "desc" : [
                 "[a] <a href=\"/tools/steamembeder/\">Steam Embeder</a>, a simple tool to embed projects into your website in Steam App style",

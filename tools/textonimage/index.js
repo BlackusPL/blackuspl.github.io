@@ -1,7 +1,16 @@
 function loadimage() {
     // Pobieranie parametrów z adresu URL
-    const urlParams = new URLSearchParams(window.location.search + window.location.hash),
-    urlshotcut = (check, value) => (urlParams.get(check) === null || urlParams.get(check) === '') ? urlParams.set(check, value) : void 0;
+    const url = new URL(window.location.href),
+    urlParams = new URLSearchParams(url.search),
+    urlshotcut = (check, value) => {if (!urlParams.has(check)) {urlParams.set(check, value)}};
+
+    urlshotcut("text","null"); //if (urlParams.get("text") === null || urlParams.get("text") === '') urlParams.set("text", "null");
+    urlshotcut("textsize", 36);
+    urlshotcut("textfont", "Arial");
+    urlshotcut("textx", 200);
+    urlshotcut("texty", 200);
+    urlshotcut("sizex", 400);
+    urlshotcut("sizey", 400);
 
     let
       imageUrl = urlParams.get("url"),
@@ -18,14 +27,9 @@ function loadimage() {
       cors = urlParams.get("cors"),
       cors1 = cors === 'true';
 
-    urlshotcut("text","null"); //if (urlParams.get("text") === null || urlParams.get("text") === '') urlParams.set("text", "null");
-    urlshotcut("textsize", 36);
-    urlshotcut("textfont", "Arial");
-    urlshotcut("textx", 200);
-    urlshotcut("texty", 200);
-    urlshotcut("sizex", 400);
-    urlshotcut("sizey", 400);
 
+    const newUrl = url.toString(); 
+    window.history.pushState(null, '', newUrl);
     // Tworzenie canvas 
     const canvas = document.createElement("canvas");
     canvas.width = sizex;
@@ -92,7 +96,23 @@ function loadimage() {
     if (!!document.querySelector('canvas')) {
       document.querySelector('canvas').remove()
     };
-    window.history.pushState(null, null, '?url=' + $i('url').value + '&text=' + $i('text').value + '&textsize=' + $i('textsize').value + '&textfont=' + $i('textfont').value + '&textx=' + $i('textx').value + '&texty=' + $i('texty').value + '&shadow=' + $i('textshadow').checked + '&color=' + $i('color').value + '&sizex=' + $i('sizex').value + '&sizey=' + $i('sizey').value + '&cors=' + $i('cors').checked);
+    const url = new URL(window.location.href),
+    setUrlParam = (name, value) => {
+      url.searchParams.set(name, value);
+    };
+    setUrlParam("url", $i('url').value || "");
+    setUrlParam("text", $i('text').value || "null");
+    setUrlParam("textsize", $i('textsize').value || 36);
+    setUrlParam("textfont", $i('textfont').value || "Arial");
+    setUrlParam("textx", $i('textx').value || 200);
+    setUrlParam("texty", $i('texty').value || 200);
+    setUrlParam("shadow", $i('textshadow').checked ? "true" : "");
+    setUrlParam("color", $i('color').value || "black");
+    setUrlParam("sizex", $i('sizex').value || 400);
+    setUrlParam("sizey", $i('sizey').value || 400);
+    setUrlParam("cors", $i('cors').checked ? "true" : "");
+
+    window.history.pushState(null, null, url.toString());
     loadimage();
   }
   function debugBase64(base64URL) {

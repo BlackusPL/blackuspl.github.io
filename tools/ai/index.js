@@ -1,5 +1,5 @@
 // Checks if $i is defined
-if (typeof $i == 'undefined') {const $i = (e) => document.getElementById(e)};
+if (typeof $i == null) {const $i = (e) => document.getElementById(e)};
 
 // Saves apikey in session storage
 let
@@ -22,7 +22,7 @@ function session_storage() {
   sessionStorage.setItem('apimodel', apimodel.value);
   sessionStorage.setItem('max_tokens', max_tokens.value);
 }
-
+// TODO Doesn't work at all, must be fixed
 $i('send_prompt').addEventListener('click', session_storage());
 
 // Sprawdza czy kliknięto Enter bez SHifta
@@ -36,18 +36,18 @@ $i('textprompt').addEventListener('keydown', function (event) {
 
 $i('apilist').addEventListener('change', function () {
  let capi = $i('capilist').style = 'display: none';
-  switch($i('apilist')[0].selectedIndex) {
+  switch($i('apilist').selectedIndex) {
     case 2:
-      $i('capilist').style = '';
-      apikey.style.display = "";
+      $i('capilist').style = null;
+      apikey.style.display = null;
       break;
     case 1:
       capi;
-      apikey.style.display = "none";
+      apikey.style.display = null;
       break;
     default:
       capi;
-      apikey.style.display = "";
+      apikey.style.display = null;
       break;
   }
 });
@@ -56,16 +56,15 @@ function ask(prompt) {
   try {
     const textPrompt = $i('textprompt'),
     userEle = $i('user'),
-    title = `<img style="width: 24px !important;" name="userav"> <b>User</b><code>${marked.parse(prompt)}</code>`,
+    title = `<div><img style="width: 24px !important;" name="userav"> <b>User</b><code>${marked.parse(prompt)}</code></div>`,
     loading = '<div id="loading"><img src="https://cdn.oaistatic.com/assets/favicon-180x180-od45eci6.webp" style="width: 24px;"> <b>Assistant</b><div>Loading chatbot...</div></div>';
     // set textprompt value to null/empty
     textPrompt.value = '';
     userEle.insertAdjacentHTML('beforebegin', title + loading);
-    for (var i = 0; i < document.getElementsByName('userav').length; i++) {
+    for (let i = 0; i < document.getElementsByName('userav').length; i++) {
       // if (document.getElementsByName('userav')[i].getAttribute('src') === null || document.getElementsByName('userav')[i].getAttribute('src') === '')
       document.getElementsByName('userav')[i].setAttribute('src',$i('avatarurl').value ? $i('avatarurl').value : 'https://storage.modworkshop.net/mods/images/138412_1676797152_574dcace40fa8cdc397f34c4408edc89.gif');
     }
-
     switch($i('apilist').value) {
       case 'OpenAI':
         api = 'https://api.openai.com/v1/chat/completions';
@@ -89,6 +88,7 @@ function ask(prompt) {
     }
     max_tokens = $i('max_tokens').value
     // Metoda do /chat/completions i /completions
+    // TODO Add more methods and seperate them into different functions
     var chat = {
       model,
       'messages': [
@@ -107,11 +107,11 @@ function ask(prompt) {
       max_tokens,
       prompt
     }
-    
+    // TODO msg_prompt is not defined.
     if (/chat\/completions/gm.test($i("customapi").value) || $i("apilist").value == "ch.at") {
-      var msg_prompt = chat;
+      const msg_prompt = chat;
     } else {
-      var msg_prompt = compl;
+      const msg_prompt = compl;
     };
       $.ajax({
         url: api,
@@ -122,9 +122,12 @@ function ask(prompt) {
         },
         contentType: 'application/json',
         data: JSON.stringify(msg_prompt)
+      }).fail(function(response) {
+        userEle.insertAdjacentHTML('beforebegin', `<div><img src="https://cdn.oaistatic.com/assets/favicon-180x180-od45eci6.webp" style="width: 24px;"> <b>Assistant</b><pre>${'Error fetching AI response: ' + response.responseJSON.error.message}</pre></div>`);
+        $i('loading').remove();
       }).done(function(response) {
-        var msg = /chat\/completions/gm.test($i("customapi").value) || $i("apilist").value == "ch.at" ? response.choices[0].message.content : response.choices[0].text;
-        userEle.insertAdjacentHTML('beforebegin', `<img src="https://cdn.oaistatic.com/assets/favicon-180x180-od45eci6.webp" style="width: 24px;"> <b>Assistant</b><code>${marked.parse(msg)}</code>`);
+        let msg = /chat\/completions/gm.test($i("customapi").value) || $i("apilist").value == "ch.at" ? response.choices[0].message.content : response.choices[0].text;
+        userEle.insertAdjacentHTML('beforebegin', `<div><img src="https://cdn.oaistatic.com/assets/favicon-180x180-od45eci6.webp" style="width: 24px;"> <b>Assistant</b><pre>${marked.parse(msg)}</pre></div>`);
         $i('loading').remove();
         //console.log(response);
       });
