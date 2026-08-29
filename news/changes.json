@@ -1,6 +1,13 @@
 {
     "id": [
         {
+            "date" : "29.08.2026",
+            "desc" : [
+                "[f] Issue where Music Player loads all songs from playlist instead of waiting for user to click on song",
+                "[c] Some audio files from .m4a to .opus format"
+            ]
+        },
+        {
             "date" : "23.07.2026",
             "desc" : [
                 "[a] Error response in AI Chat",
