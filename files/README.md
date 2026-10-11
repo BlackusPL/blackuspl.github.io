@@ -10,6 +10,7 @@
 | [NexusMods](https://www.nexusmods.com/payday3/mods/186) [ModWorkshop](https://modworkshop.net/mod/54182) | [PD3 Heist Track] Ariis - Goofy Phonk (Slowed) (2 Variants) | Adds Goofy Phonk song as a Heist Track to Payday 3. Second variant (Miside Action) is the same as goofy phonk but with different stealth audio |
 | [ModWorkshop](https://modworkshop.net/mod/55105) | [PD2 Menu Tracks] Arknights Endfield Website Music | 2 variants of Arknights Endfield Website background music |
 | [ModWorkshop](https://modworkshop.net/mod/55730) | [PD2] "I just hit the jackpot" over slot machine win | This mod replaces win sound from slot machine with viral "I just hit the jackpot" |
+| [Github](https://github.com/BlackusPL/Tweetcraft-Skin-Importer) | Tweetcraft Skin Importer | Import Minecraft skins into Tweetcraft |
 
 <br>
 <h2 align="center">Revolt (legacy) Plugins</h2>
@@ -40,14 +41,19 @@ These plugins are only for Revolt, the legacy version.
 ## [Assign All Badges](https://github.com/BlackusPL/blackuspl.github.io/blob/main/files/BDPlugins/AsignAllBadges.plugin.js)
 ~~Asign all badges that discord have to your profile. [Code](https://github.com/ImLorio/All-Discord-Exploits/blob/main/Scripts/GetBadgesAndTag.md#gives-you-all-badges) [by ImLorio](https://github.com/ImLorio)~~
 Asign all badges that discord have to your profile. [Code](https://discord.com/channels/603970300668805120/1112809021561381024/1112819116529684651) by [@lles](https://discord.com/users/380045837457162242)
+<details>
+<summary>Versions</summary>
+
 ### Version 1.3.0 - Fixed plugin. Added AI Tag and all badges
 ### Version 1.2.5 - Merged Reload and Remove buttons to one, Added System and Bot Tag
 ### Version 1.2.0 - Works again (soon customizable)
 ### Version 1.1.1 - Added Active Developer badge
 ### Version 1.1.0 - Added settings where you can Reload and Remove All badges 
+</details>
+
 ## [Enable Discord Experiments](https://github.com/BlackusPL/blackuspl.github.io/blob/main/files/BDPlugins/EnableDiscordExperiments.plugin.js)
 Enables the experimentals tab in discord settings. ~~[Code](https://github.com/ImLorio/All-Discord-Exploits/blob/main/Scripts/GetExperiments.md) [by ImLorio](https://github.com/ImLorio)~~
 
 > **Warning**
 > 
-> There is a chance that plugins doesn't work, Im not gonna update it for now because I didnt use BetterDiscord anymore.
+> There is a chance that plugins doesn't work. I'm not going to update them for now because I didn't use BetterDiscord anymore.

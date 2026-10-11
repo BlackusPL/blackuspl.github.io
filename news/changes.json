@@ -1,6 +1,13 @@
 {
     "id": [
         {
+            "date" : "11.10.2026",
+            "desc" : [
+                "[a] Discord VR and Embedded to Discord Profile",
+                "[c] README in <a href=\"/files/\">Files</a>"
+            ]
+        },
+        {
             "date" : "29.08.2026",
             "desc" : [
                 "[f] Issue where Music Player loads all songs from playlist instead of waiting for user to click on song",
