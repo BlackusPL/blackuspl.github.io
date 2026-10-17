@@ -117,7 +117,7 @@ $c('navbar-items')[0]?.insertAdjacentHTML('afterend', `<div class="navbar-items"
               <option>JetBrains Mono</option>
             </optgroup>
             <optgroup label="Reset Font?" lid="reset-font">
-              <option lid="confirm">Confirm</option>
+              <option lid="confirm" style="color: red;">Confirm</option>
             </optgroup>
           </select></a>
         </div>
@@ -195,15 +195,28 @@ function LanguageLoader() {
       const key = element.getAttribute('lid');
       try {
         // Sprawdź czy mamy tłumaczenie dla tego klucza
-        if (zmien[key]) {
-          if (element.label) {
-            element.label = zmien[key];
-          } else if (element.placeholder !== undefined) {
-            element.placeholder = zmien[key];
-          } else if (element.innerText !== undefined) {
-            element.innerHTML = zmien[key];
-          }
+        switch (true) {
+          default:
+            element.label ? element.label = zmien[key] : element.innerHTML = zmien[key];
+            break;
+          case key.endsWith('_%ph'):
+            element.placeholder = zmien[key.slice(0, key.length - 4)];
+            break;
+          case key.endsWith('_%val'):
+            element.value = zmien[key.slice(0, key.length - 5)];
+            break;
         }
+        // if (zmien[key]) {
+        //   if (element.label) {
+        //     element.label = zmien[key];
+        //   } else if (element.placeholder !== undefined) {
+        //     element.placeholder = zmien[key];
+        //   } else if (element.innerText !== undefined) {
+        //     element.innerHTML = zmien[key];
+        //   } else if (element.value !== undefined) {
+        //     element.value = zmien[key];
+        //   }
+        // }
         // Zawsze usuń atrybut lid, niezależnie czy znaleziono tłumaczenie czy nie
         element.removeAttribute("lid");
       } catch {

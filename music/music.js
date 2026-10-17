@@ -29,7 +29,7 @@ $i('custombg_window').innerHTML = `<legend lid="set_custom_background">Set custo
 <input type="file" id="custombg" accept="image/*">
 <input type="reset" id="reset"><span lid="set_default"> Set Default</span>
 <input style="width: 40%; margin-left: -10%;" type="text" placeholder="Image Url" id="imagebgurl">
-<input type="button" value="Save & Load" id="saveload" title="Save and load custom background">
+<input type="button" value="Save & Load" id="saveload" lid="save_load_%val" title="Save and load custom background">
 <input type="number" max="100" min="0" id="vid_bg_dark" style="width: 20%;" value="100"><span lid="v_bright" title="Changes video brightness"> VideoBG bright</span><br>
 <input type="checkbox" id="experiments" title="Disables only image upload set"><span lid="exp_func" title="Allows you to select video as background instead of using url">Experiments function</span></input>
 <!--  <audio src="Dadada (Slowed version).DAA" controls controlslist="nodownload noplaybackrate novolume" /> -->

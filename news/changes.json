@@ -1,6 +1,13 @@
 {
     "id": [
         {
+            "date" : "18.10.2026",
+            "desc" : [
+                "[c] Latest Coub now will be automatically updated",
+                "[c] How translation works"
+            ]
+        },
+        {
             "date" : "11.10.2026",
             "desc" : [
                 "[a] Discord VR and Embedded to Discord Profile",
