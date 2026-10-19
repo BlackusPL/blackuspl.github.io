@@ -1,6 +1,14 @@
 {
     "id": [
         {
+            "date" : "20.10.2026",
+            "desc" : [
+                "[c] Moved webamp skins to /music/skins folder",
+                "[c] Show/Hide button in Music Player now inverts color depends on background image/video",
+                "[c] Show/Hide button style"
+            ]
+        },
+        {
             "date" : "18.10.2026",
             "desc" : [
                 "[c] Latest Coub now will be automatically updated",

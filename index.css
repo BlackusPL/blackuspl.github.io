@@ -355,12 +355,14 @@ ul {
   .fas {
     text-align: center;
     box-sizing: border-box;
-    background-color: buttonface;
+    background-color: transparent;
     color: buttontext;
     padding-block: 1px;
     padding-inline: 6px;
     border-width: 2px;
-    border-color: buttonborder;
+    border-style: dashed;
+    mix-blend-mode: difference;
+    filter: invert(1);
     width: 17.5rem;
     user-select: none;
   }

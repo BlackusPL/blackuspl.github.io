@@ -86,9 +86,11 @@ const webamp = new Webamp({
         url: "./yuzuki_kokubunji.wsz"
     },*/
     availableSkins: [
-        { url: "./dosamp.wsz", name: "DOSAMP" },
-        { url: "./anime_amp_2.wsz", name: "Anime Webamp V2" },
-        { url: "./yuzuki_kokubunji.wsz", name: "Yuzuki Kokubunji skin" }
+        { url: "./skins/dosamp.wsz", name: "DOSAMP" },
+        { url: "./skins/anime_amp_2.wsz", name: "Anime Webamp V2" },
+        { url: "./skins/dolt_rei_ayanami.wsz", name: "Dolt Rei Ayanami" },
+        { url: "./skins/SSE_Rei_Ayanami_.wsz", name: "SSE Rei Ayanami" },
+        { url: "./skins/yuzuki_kokubunji.wsz", name: "Yuzuki Kokubunji skin" }
       ],
       filePickers: [{
         // The name that will appear in the context menu.
@@ -141,7 +143,7 @@ const webamp = new Webamp({
 });
 webamp.renderWhenReady($i("app"));
 webamp.setVolume(10); // default: 75 | 75 is too loud for me
-webamp.setSkinFromUrl('./dosamp.wsz');
+webamp.setSkinFromUrl('./skins/dosamp.wsz');
 
 function changeFunc() {
     var playlists = $i("playlists"),

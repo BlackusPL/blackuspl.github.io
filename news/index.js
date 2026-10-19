@@ -19,6 +19,7 @@ fetch('/news/changes.json')
     loadchangelog()
 });
 
+// TODO: Show previous changelog
 // Funkcja która odpowiada za dodanie opisu do danej zmiany
 function ch_desc(e) {
     changelogs.id[e]?.special_name == null ? changelogsname = "Update " + changelogs.id[e].date : changelogsname = changelogs.id[e].special_name;

@@ -1,6 +1,24 @@
 [
     {
         "metaData": {
+            "artist": "MRJay & LOSTMANE",
+            "title": "Control",
+            "tags": ["phonk"]
+        },
+        "url": "./local_music/MRJay & LOSTMANE - Control.opus",
+        "duration": 136
+    },
+    {
+        "metaData": {
+            "artist": "CADU!",
+            "title": "EMPTY",
+            "tags": ["phonk"]
+        },
+        "url": "./local_music/CADU! - EMPTY.opus",
+        "duration": 199
+    },
+    {
+        "metaData": {
             "artist": "Asketa",
             "title": "Electric (Slowed)",
             "tags": ["phonk"]
@@ -106,6 +124,26 @@
         },
         "url": "./local_music/How do you do.opus",
         "duration": 185
+    },
+    {
+        "metaData": {
+            "artist": "Coub / FakeKaway",
+            "title": "above the world",
+            "coubid": "s41b1eip7l",
+            "tags": ["coubsong", "phonk"]
+        },
+        "url": "https://media.coub.com/assets/01a11725-cd3e-7163-9fbc-536e0b3062ae/g-c57c7bd8-fd71-4e17-a431-284a4c28e27a/coub-audio-high.mp3",
+        "duration": 140
+    },
+    {
+        "metaData": {
+            "artist": "Coub / Kiwi",
+            "title": "Stay in My Dreams",
+            "coubid": "1zlhy8q46n",
+            "tags": ["coubsong", "phonk"]
+        },
+        "url": "https://media.coub.com/assets/01a0dedc-88c7-7a27-b30c-8ddf883bcdc8/g-a1d42ced-e740-464d-9dba-775255a83ac6/coub-audio-high.mp3",
+        "duration": 108
     },
     {
         "metaData": {
